@@ -1,0 +1,33 @@
+.svg-arrow-down {
+	width: toRem(7);
+	height: toRem(7);
+}
+.svg-phone {
+	width: toRem(18);
+	height: toRem(18);
+}
+.svg-dotted {
+	width: 10px;
+	height: 5px;
+}
+.divider {
+	display: flex;
+	height: 100%;
+	width: 1px;
+	background-color: var(--inverse);
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: toRem(15) toRem(30);
+	border-radius: toRem(8);
+	&_colored {
+		background-color: var(--primary);
+		color: var(--text-inverse);
+		&:hover {
+			background-color: var(--secondary);
+		}
+	}
+}

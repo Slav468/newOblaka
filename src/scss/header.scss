@@ -1,0 +1,130 @@
+.header {
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid var(--inverse);
+
+	&__container {
+		width: 100%;
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: toRem(15) 0;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: percent(270, 1700);
+	}
+
+	&__menu {
+		display: flex;
+		width: auto;
+		width: percent(983, 1700);
+	}
+	&__contacts {
+		width: percent(410, 1700);
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.header-logo {
+	&__logo {
+	}
+
+	&__slogan {
+	}
+}
+.header-menu {
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		gap: percent(40, 983);
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: toRem(6);
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: toRem(14);
+		padding: toRem(15) 0;
+		cursor: pointer;
+	}
+	&__dotted {
+		align-self: flex-end;
+		justify-content: flex-end;
+		& .svg-dotted {
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+		}
+	}
+	&__svg {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+	&__dropdown {
+		position: absolute;
+	}
+}
+
+.header-contacts {
+	&__block {
+		display: flex;
+		flex-direction: column;
+	}
+	&__button {
+	}
+}
+
+.contacts-block {
+	&__phone {
+		position: relative;
+		display: flex;
+	}
+	&__social {
+		display: flex;
+		align-items: center;
+	}
+}
+.contacts-phone {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+	&__svg {
+	}
+	&__link {
+	}
+	&__arrow {
+	}
+	&__dropdown {
+	}
+}
+
+.block-social {
+	&__messengers {
+	}
+	&__divider {
+	}
+	&__social {
+	}
+}
+.messengers {
+	&__item {
+	}
+}
+
+.social {
+	&__item {
+	}
+}
