@@ -12,7 +12,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(13) 0;
+		// padding: toRem(13) 0;
 	}
 
 	&__logo {
@@ -44,23 +44,36 @@
 }
 
 .menu {
+	&__body {
+		width: 100%;
+		display: flex;
+	}
 	&__list {
 		width: 100%;
 		display: flex;
 		justify-content: flex-start;
 		gap: percent(40, 983);
 	}
+
 	&__item {
+		position: relative;
 		display: flex;
 		align-items: center;
 		gap: toRem(6);
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: toRem(14);
-		padding: toRem(15) 0;
-		cursor: pointer;
+		padding: toRem(30.5) 0;
+		&:hover {
+			.menu__link,
+			.svg-arrow-down,
+			.svg-dotted {
+				color: var(--primary);
+			}
+		}
 	}
 	&__link {
+		cursor: pointer;
 	}
 	&__dotted {
 		align-self: flex-end;
@@ -76,8 +89,15 @@
 		align-items: flex-end;
 		justify-content: center;
 	}
-	&__dropdown {
+	&__drop {
 		position: absolute;
+		background-color: #fff;
+		bottom: -190px;
+		left: 0;
+		z-index: 5;
+		border-radius: toRem(8);
+		// overflow: hidden;
+		box-shadow: 0 5px 30px 0 rgba(34, 34, 34, 0.1);
 	}
 	&__dotted {
 	}
@@ -160,5 +180,35 @@
 		width: toRem(27);
 		height: toRem(27);
 		cursor: pointer;
+	}
+}
+
+.submenu {
+	width: 100vw;
+	max-width: 435px;
+	display: flex;
+	flex-direction: column;
+	gap: toRem(8);
+	padding: toRem(24);
+	border-radius: toRem(8);
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17.07px;
+
+	&__item {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		&:hover {
+			.submenu__link,
+			.svg-arrow-down {
+				color: var(--primary);
+			}
+		}
+	}
+
+	&__link {
+		text-transform: none;
 	}
 }
