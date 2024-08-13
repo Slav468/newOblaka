@@ -1,6 +1,6 @@
 .svg-arrow-down {
-	width: toRem(7);
-	height: toRem(7);
+	width: toRem(8);
+	height: toRem(8);
 }
 .svg-phone {
 	width: toRem(18);
@@ -12,17 +12,29 @@
 }
 .divider {
 	display: flex;
-	height: 100%;
+	height: toRem(20);
 	width: 1px;
 	background-color: var(--inverse);
+}
+.section {
+	margin: toRem(32) 0;
 }
 
 .button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: toRem(15) toRem(30);
+	padding: toRem(15) toRem(18);
 	border-radius: toRem(8);
+	font-weight: 600;
+	font-size: toRem(15);
+	border: 1px solid var(--primary);
+	color: var(--primary);
+	&:hover {
+		background-color: var(--primary);
+		color: var(--text-inverse);
+	}
+
 	&_colored {
 		background-color: var(--primary);
 		color: var(--text-inverse);
@@ -30,4 +42,28 @@
 			background-color: var(--secondary);
 		}
 	}
+	&_width-colored {
+		font-weight: 700;
+		font-size: toRem(16);
+		text-align: center;
+		padding: toRem(14) toRem(38);
+		background-color: var(--primary);
+		color: var(--text-inverse);
+		&:hover {
+			background-color: var(--secondary);
+		}
+	}
+}
+
+.title_h1 {
+	font-weight: 700;
+	font-size: toRem(38);
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.text {
+	font-weight: 500;
+	font-size: toRem(16);
+	line-height: 1.5;
 }

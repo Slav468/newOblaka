@@ -12,7 +12,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(15) 0;
+		padding: toRem(13) 0;
 	}
 
 	&__logo {
@@ -31,17 +31,19 @@
 		width: percent(410, 1700);
 		display: flex;
 		justify-content: space-between;
+		gap: toRem(18);
 	}
 }
 
-.header-logo {
+.logo {
 	&__logo {
 	}
 
 	&__slogan {
 	}
 }
-.header-menu {
+
+.menu {
 	&__list {
 		width: 100%;
 		display: flex;
@@ -57,6 +59,8 @@
 		font-size: toRem(14);
 		padding: toRem(15) 0;
 		cursor: pointer;
+	}
+	&__link {
 	}
 	&__dotted {
 		align-self: flex-end;
@@ -75,14 +79,16 @@
 	&__dropdown {
 		position: absolute;
 	}
+	&__dotted {
+	}
 }
 
-.header-contacts {
+.contacts {
 	&__block {
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
-	}
-	&__button {
+		gap: toRem(2);
 	}
 }
 
@@ -94,37 +100,65 @@
 	&__social {
 		display: flex;
 		align-items: center;
+		gap: toRem(14);
 	}
 }
+
 .contacts-phone {
 	&__wrapper {
+		position: relative;
 		display: flex;
 		align-items: center;
+		gap: toRem(14);
 	}
+
 	&__svg {
 	}
+
 	&__link {
+		font-weight: 700;
+		font-size: toRem(16);
 	}
 	&__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-self: flex-end;
 	}
 	&__dropdown {
+		position: absolute;
 	}
 }
 
 .block-social {
 	&__messengers {
+		display: flex;
 	}
 	&__divider {
 	}
 	&__social {
+		display: flex;
 	}
 }
+
 .messengers {
 	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(27);
+		height: toRem(27);
+		cursor: pointer;
 	}
 }
 
 .social {
 	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(27);
+		height: toRem(27);
+		cursor: pointer;
 	}
 }

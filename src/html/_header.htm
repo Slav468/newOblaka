@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="header__container">
 		<div class="header__content">
-			<div class="header__logo header-logo">
+			<div class="header__logo logo">
 				<a class="header-logo__logo" href="#">
 					<svg
 						width="190"
@@ -144,53 +144,73 @@
 				</a>
 				<div class="header-logo__slogan"></div>
 			</div>
-			<nav class="header__menu header-menu">
-				<ul class="header-menu__list">
-					<li class="header-menu__item">
-						<span>О компании</span>
-						<div class="header-menu__svg">
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<!-- 1 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">О компании</a>
+						<div class="menu__svg">
 							<svg class="svg-arrow-down">
 								<use xlink:href="@img/icons/icons.svg#arrowDown"></use>
 							</svg>
 						</div>
-						<ul class="header-menu__dropdown"></ul>
+						<ul class="menu__dropdown"></ul>
 					</li>
-					<li class="header-menu__item">
-						Услуги
-						<div class="header-menu__svg">
+					<!-- 2 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">Услуги</a>
+						<div class="menu__svg">
 							<svg class="svg-arrow-down">
 								<use xlink:href="@img/icons/icons.svg#arrowDown"></use>
 							</svg>
 						</div>
-						<ul class="header-menu__dropdown"></ul>
+						<ul class="menu__dropdown"></ul>
 					</li>
-					<li class="header-menu__item">
-						каталог
-						<div class="header-menu__svg">
+					<!-- 3 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">каталог</a>
+						<div class="menu__svg">
 							<svg class="svg-arrow-down">
 								<use xlink:href="@img/icons/icons.svg#arrowDown"></use>
 							</svg>
 						</div>
-						<ul class="header-menu__dropdown"></ul>
+						<ul class="menu__dropdown"></ul>
 					</li>
-					<li class="header-menu__item">портфолио</li>
-					<li class="header-menu__item">цены</li>
-					<li class="header-menu__item">НОВОСТИ</li>
-					<li class="header-menu__item">Блог</li>
-					<li class="header-menu__item">Контакты</li>
-					<li class="header-menu__item header-menu__dotted">
-						<div class="header-menu__svg">
+					<!-- 4 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">портфолио</a>
+					</li>
+					<!-- 5 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">цены</a>
+					</li>
+					<!-- 6 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">НОВОСТИ</a>
+					</li>
+					<!-- 7 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">Блог</a>
+					</li>
+					<!-- 8 -->
+					<li class="menu__item">
+						<a href="#" class="menu__link">Контакты</a>
+					</li>
+					<!-- 9 -->
+					<li class="menu__item menu__dotted">
+						<div class="menu__svg">
 							<svg class="svg-dotted">
 								<use xlink:href="@img/icons/icons.svg#dotted"></use>
 							</svg>
 						</div>
-						<ul class="header-menu__dropdown"></ul>
+						<ul class="menu__dropdown"></ul>
 					</li>
 				</ul>
 			</nav>
-			<div class="header__contacts header-contacts">
-				<div class="header-contacts__block contacts-block">
-					<div class="contacts-block__phone contacts-phone">
+			<div class="header__contacts contacts">
+				<div class="contacts__block">
+					<!-- phone -->
+					<div class="contacts-phone">
 						<div class="contacts-phone__wrapper">
 							<div class="contacts-phone__svg">
 								<svg class="svg-phone">
@@ -204,9 +224,12 @@
 								</svg>
 							</div>
 						</div>
+						<!-- dropdown -->
 						<div class="contacts-phone__dropdown"></div>
 					</div>
+					<!-- social -->
 					<div class="contacts-block__social">
+						<!-- messengers -->
 						<div class="block-social__messengers messengers">
 							<a href="#" class="messengers__item">
 								<svg
@@ -260,7 +283,8 @@
 							</a>
 						</div>
 
-						<div class="block-social__divider divider"></div>
+						<div class="divider"></div>
+						<!-- social nets -->
 						<div class="block-social__social social">
 							<a href="#" class="social__item"
 								><svg
@@ -332,11 +356,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="header-contacts__button">
-					<button class="button button_colored" type="button">
-						Заказать звонок
-					</button>
-				</div>
+
+				<button class="button button_colored" type="button">
+					Заказать звонок
+				</button>
 			</div>
 		</div>
 	</div>

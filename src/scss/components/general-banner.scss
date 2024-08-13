@@ -1,0 +1,68 @@
+.banner {
+	&__container {
+	}
+}
+
+.banner {
+	&__wrapper {
+	}
+	&__slider {
+		position: relative;
+		height: toRem(552);
+		border-radius: toRem(8);
+	}
+	&__slide {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: toRem(40);
+
+		&::after {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+	&__pagination {
+		position: absolute;
+		right: toRem(123);
+		bottom: toRem(55);
+		z-index: 2;
+	}
+}
+
+.banner {
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(15);
+		max-width: percent(1290, 1700);
+		margin-left: toRem(123);
+		margin-top: toRem(55);
+	}
+	&__img {
+		position: absolute;
+		z-index: -2;
+	}
+
+	&__title {
+		color: var(--text-inverse);
+	}
+
+	&__text {
+		color: var(--text-inverse);
+	}
+
+	& .button {
+		margin-left: toRem(123);
+	}
+}

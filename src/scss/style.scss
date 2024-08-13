@@ -33,10 +33,10 @@ $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1920;
+$maxWidthContainer: 1700;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
-$containerPadding: 110;
+$containerPadding: 0;
 
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -166,6 +166,7 @@ body {
 
 // Підключення стилів окремих блоків
 @import 'header';
+@import './components/components';
 @import 'footer';
 
 // Підключення стилів окремих сторінок
