@@ -1,50 +1,51 @@
 import fs from 'fs';
 import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyPlugin from "copy-webpack-plugin";
+import CopyPlugin from 'copy-webpack-plugin';
 
 import * as path from 'path';
 
-const srcFolder = "src";
-const builFolder = "dist";
+const srcFolder = 'src';
+const builFolder = 'dist';
 const rootFolder = path.basename(path.resolve());
 
-let pugPages = fs.readdirSync(srcFolder).filter(fileName => fileName.endsWith('.pug'))
-let htmlPages = []
-
+let pugPages = fs
+	.readdirSync(srcFolder)
+	.filter(fileName => fileName.endsWith('.pug'));
+let htmlPages = [];
 
 if (!pugPages.length) {
-	htmlPages = [new FileIncludeWebpackPlugin({
-		source: srcFolder,
-		htmlBeautifyOptions: {
-			"indent-with-tabs": true,
-			'indent_size': 3
-		},
-		replace: [
-			{ regex: '<link rel="stylesheet" href="css/style.min.css">', to: '' },
-			{ regex: '../img', to: 'img' },
-			{ regex: '@img', to: 'img' },
-			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
-		],
-	})];
+	htmlPages = [
+		new FileIncludeWebpackPlugin({
+			source: srcFolder,
+			htmlBeautifyOptions: {
+				'indent-with-tabs': true,
+				indent_size: 3,
+			},
+			replace: [
+				{ regex: '<link rel="stylesheet" href="css/style.min.css">', to: '' },
+				{ regex: '../img', to: 'img' },
+				{ regex: '@img', to: 'img' },
+				{ regex: 'NEW_PROJECT_NAME', to: rootFolder },
+			],
+		}),
+	];
 }
 const paths = {
 	src: path.resolve(srcFolder),
-	build: path.resolve(builFolder)
-}
+	build: path.resolve(builFolder),
+};
 const config = {
-	mode: "development",
+	mode: 'development',
 	devtool: 'inline-source-map',
 	optimization: {
-		minimize: false
+		minimize: false,
 	},
-	entry: [
-		`${paths.src}/js/app.js`
-	],
+	entry: [`${paths.src}/js/app.js`],
 	output: {
 		path: `${paths.build}`,
 		filename: 'js/app.min.js',
-		publicPath: '/'
+		publicPath: '/',
 	},
 	devServer: {
 		historyApiFallback: true,
@@ -54,7 +55,7 @@ const config = {
 		port: 'auto',
 		hot: true,
 		host: 'local-ip', // localhost
-		//В режимі розробника папка 
+		//В режимі розробника папка
 		// результатом (dist) буде створюватися на диску)
 		//devMiddleware: {
 		//	writeToDisk: true,
@@ -64,7 +65,7 @@ const config = {
 			`${paths.src}/**/*.pug`,
 			`${paths.src}/**/*.json`,
 			`${paths.src}/**/*.htm`,
-			`${paths.src}/img/**/*.*`
+			`${paths.src}/img/**/*.*`,
 		],
 	},
 	module: {
@@ -79,9 +80,10 @@ const config = {
 						options: {
 							search: '@img',
 							replace: '../img',
-							flags: 'g'
-						}
-					}, {
+							flags: 'g',
+						},
+					},
+					{
 						loader: 'css-loader',
 						options: {
 							sourceMap: true,
@@ -89,7 +91,7 @@ const config = {
 							modules: false,
 							url: {
 								filter: (url, resourcePath) => {
-									if (url.includes("img/") || url.includes("fonts/")) {
+									if (url.includes('img/') || url.includes('fonts/')) {
 										return false;
 									}
 									return true;
@@ -102,24 +104,27 @@ const config = {
 						loader: 'sass-loader',
 						options: {
 							sourceMap: true,
-						}
+						},
 					},
 				],
-			}, {
+			},
+			{
 				test: /\.pug$/,
 				use: [
 					{
-						loader: 'pug-loader'
-					}, {
+						loader: 'pug-loader',
+					},
+					{
 						loader: 'string-replace-loader',
 						options: {
 							search: '@img',
 							replace: 'img',
-							flags: 'g'
-						}
-					}
-				]
-			}, {
+							flags: 'g',
+						},
+					},
+				],
+			},
+			{
 				test: /\.(jsx)$/,
 				exclude: /node_modules/,
 				use: [
@@ -128,55 +133,65 @@ const config = {
 						options: {
 							search: '@img',
 							replace: '../../img',
-							flags: 'g'
-						}
-					}, {
-						loader: "babel-loader",
+							flags: 'g',
+						},
+					},
+					{
+						loader: 'babel-loader',
 						options: {
-							presets: ["@babel/preset-react"]
-						}
-					}
+							presets: ['@babel/preset-react'],
+						},
+					},
 				],
-			}, {
+			},
+			{
 				test: /\.(png|jpe?g|gif|svg)$/i,
 				use: [
 					{
 						loader: 'file-loader',
 					},
 				],
-			}
+			},
 		],
 	},
 	plugins: [
 		...htmlPages,
-		...pugPages.map(pugPage => new HtmlWebpackPlugin({
-			minify: false,
-			template: `${srcFolder}/${pugPage}`,
-			filename: `${pugPage.replace(/\.pug/, '.html')}`
-		})),
+		...pugPages.map(
+			pugPage =>
+				new HtmlWebpackPlugin({
+					minify: false,
+					template: `${srcFolder}/${pugPage}`,
+					filename: `${pugPage.replace(/\.pug/, '.html')}`,
+				})
+		),
 		new CopyPlugin({
 			patterns: [
 				{
-					from: `${srcFolder}/img`, to: `img`,
+					from: `${srcFolder}/img`,
+					to: `img`,
 					noErrorOnMissing: true,
-					force: true
-				}, {
-					from: `${srcFolder}/files`, to: `files`,
+					force: true,
+				},
+				{
+					from: `${srcFolder}/files`,
+					to: `files`,
 					noErrorOnMissing: true,
-					force: true
-				}, {
-					from: `${paths.src}/favicon.ico`, to: `./`,
-					noErrorOnMissing: true
-				}
+					force: true,
+				},
+				{
+					from: `${paths.src}/favicon.ico`,
+					to: `./`,
+					noErrorOnMissing: true,
+				},
 			],
-		})
+		}),
 	],
 	resolve: {
 		alias: {
-			"@scss": `${paths.src}/scss`,
-			"@js": `${paths.src}/js`,
-			"@img": `${paths.src}/img`
+			'@scss': `${paths.src}/scss`,
+			'@js': `${paths.src}/js`,
+			'@img': `${paths.src}/img`,
 		},
 	},
-}
+};
 export default config;
