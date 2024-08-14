@@ -36,7 +36,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1700;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
-$containerPadding: 0;
+$containerPadding: 20;
 
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -166,6 +166,7 @@ body {
 
 // Підключення стилів окремих блоків
 @import 'header';
+@import 'base/menu';
 @import './components/components';
 @import 'footer';
 

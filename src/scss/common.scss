@@ -6,8 +6,12 @@
 	width: toRem(18);
 	height: toRem(18);
 }
+.svg-email {
+	width: toRem(18);
+	height: toRem(18);
+}
 .svg-dotted {
-	width: 10px;
+	width: 20px;
 	height: 5px;
 }
 .divider {
@@ -52,6 +56,22 @@
 		&:hover {
 			background-color: var(--secondary);
 		}
+	}
+}
+
+.mobile-back {
+	display: none;
+	align-items: center;
+	padding: toRem(14);
+	gap: toRem(10);
+	& .svg-arrow-back {
+		width: 15px;
+		height: 15px;
+		transform: rotate(180deg);
+	}
+	& span {
+		font-size: toRem(15);
+		font-weight: 600;
 	}
 }
 
