@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const dropButton = document.querySelectorAll('.menu__svg');
 	const subDropButton = document.querySelectorAll('.submenu__svg');
 	const mobileBackButtons = document.querySelectorAll('.mobile-back');
+	const contactsPhoneButton = document.querySelectorAll(
+		'.contacts-phone__arrow'
+	);
 
 	function dropMenu(array, selector) {
 		array.forEach(item => {
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	dropMenu(dropButton, '.menu__item');
 	dropMenu(subDropButton, '.submenu__item');
+	dropMenu(contactsPhoneButton, '.contacts-phone');
 
 	function removeDrop(array) {
 		array.forEach(item => {

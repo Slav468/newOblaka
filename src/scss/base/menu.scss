@@ -10,7 +10,7 @@
 			height: 100%;
 			left: -100%;
 			top: 0;
-			// overflow: auto;
+			overflow: auto;
 			padding: toRem(80) toRem(15) toRem(15) toRem(15);
 			transition: left 0.3s;
 			background-color: #fff;
@@ -27,6 +27,7 @@
 				top: 0;
 				transition: left 0.3s;
 				z-index: 2;
+				background-color: #fff;
 				box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.4);
 			}
 			.menu-open & {
