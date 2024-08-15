@@ -118,10 +118,14 @@
 	&__dotted {
 		align-self: flex-end;
 		justify-content: flex-end;
-		& .svg-dotted {
+		& .dotted-svg {
 			display: flex;
 			align-items: flex-end;
 			justify-content: flex-end;
+		}
+
+		& .menu__svg {
+			display: none;
 		}
 	}
 	&__svg {
@@ -141,6 +145,7 @@
 	&__dotted {
 	}
 }
+
 .submenu {
 	width: 100vw;
 	max-width: 435px;
@@ -198,6 +203,9 @@
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		font-weight: 500;
+		font-size: toRem(14);
+		color: var(--text-accent);
 	}
 
 	&__svg {
@@ -213,7 +221,7 @@
 
 .sub-submenu {
 	width: 100vw;
-	max-width: 435px;
+	max-width: 220px;
 	display: none;
 	flex-direction: column;
 	padding: toRem(12) 0;
@@ -246,6 +254,13 @@
 
 	&__link {
 		text-transform: none;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-weight: 500;
+		font-size: toRem(14);
+		color: var(--text-accent);
 	}
 }
 
@@ -279,6 +294,12 @@
 			}
 		}
 	}
+
+	@media (any-hover: none) {
+		& .mobile-back {
+			display: flex;
+		}
+	}
 	&__wrapper {
 		position: relative;
 		display: flex;
@@ -298,7 +319,7 @@
 	}
 	&__dropdown {
 		position: absolute;
-		top: -17px;
+		top: -12px;
 		left: -5px;
 		z-index: 5;
 		background-color: var(--bg-primary);
@@ -342,7 +363,7 @@
 	&__item {
 		display: flex;
 		flex-direction: column;
-		padding: toRem(12) toRem(8) toRem(12) toRem(30);
+		padding: toRem(4) toRem(8) toRem(12) toRem(30);
 	}
 
 	&__link {
@@ -386,6 +407,10 @@
 		width: toRem(27);
 		height: toRem(27);
 		cursor: pointer;
+		& svg {
+			height: toRem(17);
+			width: toRem(17);
+		}
 	}
 }
 
@@ -397,5 +422,9 @@
 		width: toRem(27);
 		height: toRem(27);
 		cursor: pointer;
+		& svg {
+			height: toRem(17);
+			width: toRem(17);
+		}
 	}
 }
