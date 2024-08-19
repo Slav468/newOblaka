@@ -41,5 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
 	removeDrop(mobileBackButtons);
+});
+
+window.addEventListener('resize', e => {
+	const subMenu = document.getElementById('dotted-menu');
+	const menu = document.querySelector('.menu');
+	const menuList = document.querySelector('.menu__list');
+	const menuItems = menuList.children;
+
+	let width = menu.offsetWidth;
+	let totalWidthItem = 0;
+
+	for (let item of menuItems) {
+		totalWidthItem += item.clientWidth + 983 * 0.035;
+	}
+
+	if (totalWidthItem >= width && menuItems.length > 2) {
+		let element = menuList.removeChild(menuItems[menuItems.length - 2]);
+		element.className = 'submenu__item';
+		let elemArray = element.children;
+
+		for (let item of elemArray) {
+			if (item.className === 'menu__link') {
+				item.className = 'submenu__link';
+			}
+		}
+
+		subMenu.append(element);
+	} else {
+		return;
+	}
 });
