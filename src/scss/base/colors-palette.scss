@@ -4,24 +4,25 @@
 :root {
 	// Site colors (Кольори сайту):
 	// =================================================================
-	--primary: #46b4de; // Site main color - (Основний колір сайту)
-	--secondary: #2ba8da; // Site secondary color - (Додатковий колір сайту)
-	--inverse: #e7e7e7; // Site inverse color - (Наприклад: для створення контрасту між фоном та текстом)
+	--primary: #46b4de; // Site main color
+	--secondary: #2ba8da; // Site secondary color
+	--inverse: #e7e7e7; // Site inverse color
 
 	--accent: #0090c1; // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
 
 	// Background colors (Фонові кольори):
 	// =================================================================
-	--bg-primary: #ffffff; // BG primary background color - (Основний фоновий колір сайту)
-	--bg-secondary: #f4f4f4; // BG secondary background color - (Додатковий фоновий колір сайту)
+	--bg-primary: #ffffff; // BG primary background color
+	--bg-secondary: #f4f4f4; // BG secondary background color
+	--bg-dark: #2f3338;
 	--bg-accent: #46b4de; // BG accent - наприклад, може бути використаний для встановлення кольору фону для акцентних елементів, таких як кнопки або іконки.
-	--bg-inverse: #000000; // BG inverse - наприклад, може використовуватися для налаштування кольору фону на світлому тексті.
+	--bg-inverse: #000000; // BG inverse
 
 	// Text colors (Текстові кольори):
 	// =================================================================
-	--text-primary: #333333; // Text primary text color - (Основний текстовий колір сайту)
-	--text-secondary: #a1a1a1; // Text secondary text color - (Додатковий текстовий колір сайту)
+	--text-primary: #333333; // Text primary text color
+	--text-secondary: #a1a1a1; // Text secondary text color
 	--text-accent: #000000; // Text accent - наприклад, може використовуватися для встановлення кольору тексту для акцентних елементів на сторінці, таких як заголовки або кнопки.
-	--text-inverse: #ffffff; // Text inverse - наприклад, може використовуватися для налаштування кольору тексту на темному фоні.
+	--text-inverse: #ffffff; // Text inverse
 	// =================================================================
 }

@@ -31,23 +31,20 @@ function initSliders() {
 	if (document.querySelector('.banner__slider')) {
 		// Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-
 		new Swiper('.banner__slider', {
 			modules: [Navigation, Pagination],
 			loop: true,
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 'auto',
 			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 800,
-
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
 			lazy: true,
-
 			/*
 			// Ефекти
 			effect: 'fade',
@@ -56,14 +53,11 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 			*/
-
 			// Пагінація
-
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
-
 			// Скроллбар
 			/*
 			scrollbar: {
@@ -71,7 +65,6 @@ function initSliders() {
 				draggable: true,
 			},
 			*/
-
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.swiper-button-prev',

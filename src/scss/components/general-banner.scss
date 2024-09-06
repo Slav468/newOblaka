@@ -1,5 +1,65 @@
 .banner {
-	&__wrapper {
+	&__container {
+		display: flex;
+	}
+
+	&:has(.banner__second) {
+		& .banner__container {
+			gap: toRem(20);
+		}
+		& .banner__general {
+			flex: 1 1 percent(1100, 1700);
+		}
+		& .banner-second {
+			flex: 1 1 percent(540, 1700);
+			&__content {
+				display: flex;
+				flex-direction: column;
+				gap: toRem(20);
+				width: 100%;
+			}
+
+			&__item {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				align-items: flex-end;
+				height: 100%;
+				width: 100%;
+				border-radius: var(--radius8);
+				overflow: hidden;
+				@include imageOverlay();
+			}
+
+			&__img {
+				position: absolute;
+				display: flex;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: right;
+				z-index: -2;
+			}
+
+			&__title {
+				position: relative;
+				z-index: 2;
+				display: inline-flex;
+				width: 100%;
+				padding: 0 toRem(20) toRem(40) toRem(20);
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 150%;
+				color: var(--text-inverse);
+			}
+		}
+	}
+	&__general {
+		display: flex;
+		flex: 1 1 70%;
+	}
+	&__second {
+		display: flex;
 	}
 	&__slider {
 		position: relative;
@@ -11,21 +71,11 @@
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: center;
 		gap: toRem(40);
-
-		&::after {
-			content: ' ';
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: flex;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-			background-color: rgba(0, 0, 0, 0.5);
-		}
+		max-width: toRem(1700);
+		@include imageOverlay();
 	}
 	&__pagination {
 		position: absolute;
@@ -33,31 +83,52 @@
 		bottom: toRem(55);
 		z-index: 2;
 	}
-}
-
-.banner {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: percent(1460, 1700);
+		gap: toRem(55);
+	}
 	&__description {
 		display: flex;
 		flex-direction: column;
 		gap: toRem(15);
-		max-width: percent(1290, 1700);
-		margin-left: toRem(123);
-		margin-top: toRem(55);
 	}
 	&__img {
 		position: absolute;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: right;
 		z-index: -2;
 	}
-
 	&__title {
 		color: var(--text-inverse);
 	}
-
 	&__text {
 		color: var(--text-inverse);
 	}
 
-	& .button {
-		margin-left: toRem(123);
+	&__buttons {
+		display: flex;
+		gap: toRem(20);
+		flex-wrap: wrap;
+		& .button {
+			align-self: flex-start;
+		}
+	}
+
+	&_width {
+		& .banner__container {
+			max-width: none;
+		}
+		& .banner__slider {
+			height: toRem(720);
+		}
+		& .banner__slide {
+			max-width: none;
+		}
 	}
 }

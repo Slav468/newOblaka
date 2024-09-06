@@ -4,8 +4,8 @@
 		font-family: $font_name;
 		font-display: swap;
 		src:
-			url("../fonts/#{$file_name}.woff2") format("woff2"),
-			url("../fonts/#{$file_name}.woff") format("woff");
+			url('../fonts/#{$file_name}.woff2') format('woff2'),
+			url('../fonts/#{$file_name}.woff') format('woff');
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
@@ -29,7 +29,7 @@
 //Currency
 @mixin currency($sym) {
 	&::after {
-		content: "#{$sym}";
+		content: '#{$sym}';
 	}
 }
 
@@ -61,7 +61,14 @@
 }
 
 // Адаптивна властивість (clamp)
-@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+@mixin adaptiveValue(
+	$property,
+	$startSize,
+	$minSize,
+	$keepSize: 0,
+	$widthFrom: $containerWidth,
+	$widthTo: $minWidth
+) {
 	@if ($startSize==0) {
 		$startSize: 0.000001;
 	}
@@ -87,13 +94,20 @@
 	@if ($yIntersection==0) {
 		$yIntersection: 0.000001;
 	}
-	$flyValue: #{toRem($yIntersection)}" + " #{$slope * 100}vw;
+	$flyValue: #{toRem($yIntersection)}' + ' #{$slope * 100}vw;
 
 	// Отримання значення властивості
-	$propertyValue: #{"clamp(" toRem($minSize) "," $flyValue "," toRem($startSize) ")"};
+	$propertyValue: #{'clamp(' toRem($minSize) ',' $flyValue ',' toRem($startSize)
+		')'};
 	// Якщо негативні значення
 	@if ($minSize > $startSize) {
-		$propertyValue: #{"clamp(" toRem($startSize) "," $flyValue "," toRem($minSize) ")"};
+		$propertyValue: #{'clamp('
+			toRem($startSize)
+			','
+			$flyValue
+			','
+			toRem($minSize)
+			')'};
 	}
 
 	// Встановлюємо значення за замовчуванням
@@ -123,10 +137,17 @@
 }
 
 // Grid-контейнер
-@mixin gridContainer($type: 0, $container: $maxWidthContainer, $paddingStart: math.div($containerPadding, 2), $paddingEnd: math.div($containerPadding, 2)) {
+@mixin gridContainer(
+	$type: 0,
+	$container: $maxWidthContainer,
+	$paddingStart: math.div($containerPadding, 2),
+	$paddingEnd: math.div($containerPadding, 2)
+) {
 	display: grid;
 	min-width: 0;
-	grid-template-columns: toRem($paddingStart) 1fr minmax(auto, toRem($container)) 1fr toRem($paddingEnd);
+	grid-template-columns:
+		toRem($paddingStart) 1fr minmax(auto, toRem($container))
+		1fr toRem($paddingEnd);
 	> * {
 		min-width: 0;
 		@if $type==1 {
@@ -144,5 +165,19 @@
 		} @else {
 			grid-column: 3 / 4;
 		}
+	}
+}
+
+@mixin imageOverlay {
+	&::after {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, #000 100%);
 	}
 }

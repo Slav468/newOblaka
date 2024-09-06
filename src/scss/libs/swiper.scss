@@ -191,11 +191,11 @@
 .swiper-button-prev {
 	position: absolute;
 	bottom: 35px;
-	width: 52px;
-	height: 52px;
+	width: 32px;
+	height: 32px;
 	border-radius: 100%;
 	overflow: hidden;
-	background-color: var(--bg-primary);
+	background-color: var(--text-secondary);
 	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
 	z-index: 10;
 	cursor: pointer;
@@ -203,9 +203,12 @@
 	align-items: center;
 	justify-content: center;
 	// color: var(--swiper-navigation-color, var(--swiper-theme-color));
+	& svg {
+		color: var(--text-inverse);
+	}
 	&:hover {
 		svg {
-			color: #ffffff;
+			color: var(--text-inverse);
 		}
 		& {
 			background-color: var(--swiper-theme-color);
@@ -230,8 +233,10 @@
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-	right: 130px;
-	left: auto;
+	right: auto;
+	left: 20px;
+	top: 50%;
+	transform: translateY(50%);
 	& svg {
 		height: 15px;
 		width: 20px;
@@ -243,8 +248,10 @@
 // }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-	right: 65px;
+	right: 20px;
 	left: auto;
+	top: 50%;
+	transform: translateY(50%);
 	& svg {
 		transform: rotate(180deg);
 		height: 15px;
@@ -275,8 +282,9 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-	bottom: 54px;
-	right: 208px;
+	bottom: 30px;
+	right: 50%;
+	transform: translateX(50%);
 }
 .swiper-pagination-bullets-dynamic {
 	overflow: hidden;
@@ -309,7 +317,8 @@
 	height: 10px;
 	display: inline-block;
 	border-radius: 50%;
-	background: #ffffff;
+	background: var(--text-secondary);
+
 	&:hover {
 		background-color: var(--swiper-theme-color);
 		& {

@@ -1,0 +1,174 @@
+.footer {
+	background: var(--bg-dark);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding: toRem(30) toRem(10);
+	}
+
+	// .footer__top
+	&__top {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	// .footer__bottom
+	&__bottom {
+	}
+}
+.footer-top {
+	// .footer-top__left
+	&__left {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(15);
+		max-width: percent(965, 1700);
+		width: 100%;
+	}
+
+	// .footer-top__right
+	&__right {
+	}
+}
+.footer-left {
+	// .footer-left__navigation
+	&__navigation {
+		display: flex;
+	}
+
+	// .footer-left__logo
+	&__logo {
+		display: flex;
+	}
+
+	// .footer-left__description
+	&__description {
+		font-weight: 500;
+		font-size: toRem(14);
+		color: var(--text-inverse);
+		line-height: 1.5;
+	}
+}
+.navigation {
+	// .navigation__list
+	&__list {
+		display: flex;
+		width: 100%;
+		gap: percent(20, 1700);
+	}
+
+	// .navigation__item
+	&__item {
+	}
+
+	// .navigation__link
+	&__link {
+		font-weight: 600;
+		font-size: toRem(18);
+		color: var(--text-inverse);
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+}
+
+.footer-right {
+	// .footer-right__title
+	&__title {
+	}
+}
+.address {
+	// .address__svg
+	&__svg {
+	}
+
+	// .address__wrapper
+	&__wrapper {
+	}
+
+	// .address__city
+	&__city {
+	}
+
+	// .address__street
+	&__street {
+	}
+}
+
+.contacts {
+	// .contacts__block
+	&__block {
+	}
+}
+.contacts-phone {
+	// .contacts-phone__wrapper
+	&__wrapper {
+	}
+
+	// .contacts-phone__svg
+	&__svg {
+	}
+
+	// .contacts-phone__link
+	&__link {
+	}
+
+	// .contacts-phone__arrow
+	&__arrow {
+	}
+
+	// .contacts-phone__dropdown
+	&__dropdown {
+	}
+}
+
+.phone-dropdown {
+	// .phone-dropdown__list
+	&__list {
+	}
+
+	// .phone-dropdown__item
+	&__item {
+	}
+
+	// .phone-dropdown__link
+	&__link {
+	}
+
+	// .phone-dropdown__text
+	&__text {
+	}
+}
+
+.contacts-block {
+	// .contacts-block__social
+	&__social {
+	}
+}
+
+.block-social {
+	// .block-social__messengers
+	&__messengers {
+	}
+
+	// .block-social__social
+	&__social {
+	}
+}
+.messengers {
+	// .messengers__item
+	&__item {
+	}
+}
+
+.social {
+	// .social__item
+	&__item {
+	}
+}
+.footer-bottom {
+}

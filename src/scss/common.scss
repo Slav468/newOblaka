@@ -1,3 +1,12 @@
+.wrapper {
+	max-width: toRem(1920);
+	margin: 0 auto;
+	// overflow: hidden;
+}
+.icon-wrap {
+	width: toRem(27);
+	height: toRem(27);
+}
 .svg-arrow-down {
 	width: toRem(8);
 	height: toRem(8);
@@ -36,15 +45,20 @@
 	color: var(--primary);
 	&:hover {
 		background-color: var(--primary);
-		color: var(--text-inverse);
+		color: var(--inverse);
 	}
 
 	&_colored {
 		background-color: var(--primary);
-		color: var(--text-inverse);
+		color: var(--inverse);
 		&:hover {
 			background-color: var(--secondary);
 		}
+	}
+	&_width {
+		width: toRem(270);
+		font-weight: 700;
+		font-size: toRem(16);
 	}
 	&_width-colored {
 		font-weight: 700;
@@ -52,10 +66,13 @@
 		text-align: center;
 		padding: toRem(14) toRem(38);
 		background-color: var(--primary);
-		color: var(--text-inverse);
+		color: var(--inverse);
 		&:hover {
 			background-color: var(--secondary);
 		}
+	}
+	&_width-inverse {
+		background-color: var(--inverse);
 	}
 }
 
