@@ -523,6 +523,7 @@ function removeDrop() {
 		element.classList.remove('drop');
 	});
 }
+
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add('menu-open');
@@ -531,6 +532,7 @@ export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove('menu-open');
 }
+
 // Модуль "показати ще" =======================================================================================================================================================================================================================
 export function showMore() {
 	window.addEventListener('load', function (e) {

@@ -4,7 +4,8 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		padding: toRem(30) toRem(10);
+		padding: toRem(30) 0 0 0;
+		gap: toRem(30);
 	}
 
 	// .footer__top
@@ -16,6 +17,11 @@
 
 	// .footer__bottom
 	&__bottom {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid #ddd;
 	}
 }
 .footer-top {
@@ -23,13 +29,18 @@
 	&__left {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(15);
+		gap: toRem(30);
 		max-width: percent(965, 1700);
 		width: 100%;
 	}
 
 	// .footer-top__right
 	&__right {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(15);
+		max-width: toRem(400);
+		width: 100%;
 	}
 }
 .footer-left {
@@ -48,7 +59,6 @@
 		font-weight: 500;
 		font-size: toRem(14);
 		color: var(--text-inverse);
-		line-height: 1.5;
 	}
 }
 .navigation {
@@ -56,11 +66,7 @@
 	&__list {
 		display: flex;
 		width: 100%;
-		gap: percent(20, 1700);
-	}
-
-	// .navigation__item
-	&__item {
+		gap: 2.27%;
 	}
 
 	// .navigation__link
@@ -68,6 +74,7 @@
 		font-weight: 600;
 		font-size: toRem(18);
 		color: var(--text-inverse);
+		text-transform: uppercase;
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--primary);
@@ -79,96 +86,150 @@
 .footer-right {
 	// .footer-right__title
 	&__title {
+		font-weight: 600;
+		font-size: toRem(18);
+		color: var(--text-inverse);
 	}
-}
-.address {
-	// .address__svg
-	&__svg {
+	& .address {
+		display: flex;
+		// .address__svg
+		&__svg {
+			color: var(--text-inverse);
+		}
+
+		// .address__city
+		&__city {
+			color: var(--text-inverse);
+		}
+
+		// .address__street
+		&__street {
+			color: var(--text-inverse);
+		}
+	}
+	& .contacts-phone {
+		// .contacts-phone__svg
+		&__svg {
+			color: var(--text-inverse);
+		}
+
+		// .contacts-phone__link
+		&__link {
+			color: var(--text-inverse);
+		}
+
+		// .contacts-phone__arrow
+		&__arrow {
+			color: var(--text-inverse);
+		}
 	}
 
-	// .address__wrapper
-	&__wrapper {
+	& .contacts__block {
+		gap: toRem(13);
 	}
 
-	// .address__city
-	&__city {
+	& .messengers {
+		// .messengers__item
+		&__item {
+			& .svg-item {
+				color: var(--text-inverse);
+				@media (any-hover: hover) {
+					&:hover {
+						color: var(--primary);
+					}
+				}
+			}
+		}
 	}
 
-	// .address__street
-	&__street {
-	}
-}
-
-.contacts {
-	// .contacts__block
-	&__block {
-	}
-}
-.contacts-phone {
-	// .contacts-phone__wrapper
-	&__wrapper {
-	}
-
-	// .contacts-phone__svg
-	&__svg {
-	}
-
-	// .contacts-phone__link
-	&__link {
-	}
-
-	// .contacts-phone__arrow
-	&__arrow {
-	}
-
-	// .contacts-phone__dropdown
-	&__dropdown {
-	}
-}
-
-.phone-dropdown {
-	// .phone-dropdown__list
-	&__list {
-	}
-
-	// .phone-dropdown__item
-	&__item {
-	}
-
-	// .phone-dropdown__link
-	&__link {
-	}
-
-	// .phone-dropdown__text
-	&__text {
-	}
-}
-
-.contacts-block {
-	// .contacts-block__social
-	&__social {
-	}
-}
-
-.block-social {
-	// .block-social__messengers
-	&__messengers {
-	}
-
-	// .block-social__social
-	&__social {
-	}
-}
-.messengers {
-	// .messengers__item
-	&__item {
+	& .social {
+		// .social__item
+		&__item {
+			& .svg-item {
+				color: var(--text-inverse);
+				@media (any-hover: hover) {
+					&:hover {
+						color: var(--primary);
+					}
+				}
+			}
+		}
 	}
 }
 
-.social {
-	// .social__item
-	&__item {
-	}
-}
 .footer-bottom {
+	// .footer-bottom__copyright
+
+	&__copyright {
+		display: flex;
+		width: percent(400, 1700);
+		padding: toRem(22) 0;
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 14px;
+		color: #ddd;
+	}
+
+	// .footer-bottom__payment
+
+	&__payment {
+		max-width: percent(830, 1700);
+		width: 100%;
+	}
+
+	// .footer-bottom__made
+
+	&__made {
+	}
+}
+.payment {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(20);
+
+	// .payment__text
+	&__text {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 14px;
+		letter-spacing: 0.05em;
+		color: #ddd;
+	}
+
+	// .payment__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .payment__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(44);
+	}
+}
+.made {
+	display: flex;
+	width: percent(400, 1700);
+
+	align-items: center;
+	gap: toRem(15);
+	// .made__text
+	&__text {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 14px;
+		color: #ddd;
+	}
+
+	// .made__logo
+
+	&__logo {
+		max-width: toRem(120);
+		width: 100%;
+	}
 }

@@ -2,13 +2,16 @@
 	&__container {
 		display: flex;
 	}
-
+	// если есть маленькие блоки
 	&:has(.banner__second) {
 		& .banner__container {
 			gap: toRem(20);
 		}
 		& .banner__general {
-			flex: 1 1 percent(1100, 1700);
+			flex: 1 1 65.5%;
+			& .banner__img {
+				object-position: 55%;
+			}
 		}
 		& .banner-second {
 			flex: 1 1 percent(540, 1700);
@@ -53,7 +56,13 @@
 				color: var(--text-inverse);
 			}
 		}
+
+		.swiper-pagination-bullet {
+			width: toRem(10);
+			height: toRem(10);
+		}
 	}
+
 	&__general {
 		display: flex;
 		flex: 1 1 70%;
@@ -118,6 +127,10 @@
 		& .button {
 			align-self: flex-start;
 		}
+		& .button:first-child {
+			width: 221px;
+			padding: 15px 20px;
+		}
 	}
 
 	&_width {
@@ -125,10 +138,17 @@
 			max-width: none;
 		}
 		& .banner__slider {
-			height: toRem(720);
+			height: toRem(715);
+			border-radius: 0;
 		}
 		& .banner__slide {
 			max-width: none;
+		}
+
+		& .banner__content {
+			height: 100%;
+			justify-content: flex-end;
+			padding-bottom: 7%;
 		}
 	}
 }

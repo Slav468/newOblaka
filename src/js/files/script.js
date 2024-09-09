@@ -1,5 +1,5 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile } from './functions.js';
+import { bodyLock, bodyUnlock } from './functions.js';
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
 
@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	const contactsPhoneButton = document.querySelectorAll(
 		'.contacts-phone__arrow'
 	);
+	const asideDropButtons = document.querySelectorAll('.aside-menu__svg');
+	const asideCloseButton = document.querySelector('.aside-menu__close');
+
+	function closeAsideMenu() {
+		asideCloseButton.addEventListener('click', () => {
+			bodyUnlock();
+			document.documentElement.classList.remove('menu-open');
+		});
+	}
+
+	closeAsideMenu();
 
 	function dropMenu(array, selector) {
 		array.forEach(item => {
@@ -23,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 	dropMenu(dropButton, '.menu__item');
+	dropMenu(asideDropButtons, '.aside-menu__item');
 	dropMenu(contactsPhoneButton, '.contacts-phone');
 
 	function removeDrop(array) {
@@ -40,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
-
 	removeDrop(mobileBackButtons);
 
 	window.addEventListener('resize', () => {
