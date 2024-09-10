@@ -1,0 +1,47 @@
+.about {
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+		flex: 1 0 41%;
+		align-items: flex-start;
+	}
+	&:has(.about__img) {
+		.block {
+			&__body {
+				flex-direction: row;
+				@media (max-width: toRem(1200)) {
+					flex-direction: column-reverse;
+				}
+			}
+		}
+
+		.about {
+			&__img {
+				position: relative;
+				width: auto;
+				height: 100%;
+				border-radius: var(--radius8);
+				overflow: hidden;
+				display: flex;
+				align-self: center;
+
+				img {
+					object-fit: contain;
+					object-position: center;
+					border-radius: var(--radius8);
+				}
+			}
+
+			&__overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: rgba(0, 0, 0, 0.2);
+				z-index: 2;
+			}
+		}
+	}
+}

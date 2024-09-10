@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('menu-open');
 		});
 	}
-
 	closeAsideMenu();
 
 	function dropMenu(array, selector) {

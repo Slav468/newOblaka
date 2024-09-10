@@ -1,0 +1,17 @@
+.decorate {
+	background: var(--decorBg);
+	width: toRem(32);
+	height: toRem(32);
+	border-radius: 50%;
+	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__svg {
+		width: toRem(5);
+		height: toRem(13);
+		color: var(--text-inverse);
+	}
+}

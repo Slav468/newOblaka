@@ -1,20 +1,28 @@
 <!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{ "title":"ITOblaka" })
+	@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{}) @@include('html/_header-menuDown.htm',{})
-			@@include('html/components/_aside-body-menu.htm',{})
-			@@include('html/_header-menuLeft.htm',{})
+			@@include('html/pageBlock/headers/_header.htm',{})
+			@@include('html/pageBlock/headers/_header-menuDown.htm',{})
+			@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
+			@@include('html/elements/_aside-body-menu.htm',{})
 
 			<main class="page">
-				@@include('html/components/general-banner.htm',{})
-				@@include('html/components/general-banner-width.htm',{})
-				@@include('html/components/general-banner-withSmall.htm',{})
+				@@include('html/pageBlock/banners/general-banner.htm',{})
+				@@include('html/pageBlock/banners/general-banner-withSmall.htm',{})
+				@@include('html/pageBlock/banners/general-banner-width.htm',{})
+				@@include('html/pageBlock/teaser/_teaser-horizontal.htm',{})
+				@@include('html/pageBlock/teaser/_teaser.htm',{})
+				@@include('html/pageBlock/about/_about.htm',{})
+				@@include('html/pageBlock/service/_service-block.htm',{})
+				@@include('html/pageBlock/projects/_projects.htm',{})
+				@@include('html/pageBlock/directions/_directions.htm',{})
+				@@include('html/pageBlock/employees/_employees.htm',{})
 			</main>
-			@@include('html/_footer.htm',{})
+			@@include('html/pageBlock/footer/_footer.htm',{})
 		</div>
 
-		@@include('html/_js.htm',{})
+		@@include('html/pageBlock/_js.htm',{})
 	</body>
 </html>

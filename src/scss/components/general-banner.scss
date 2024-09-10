@@ -136,6 +136,7 @@
 	&_width {
 		& .banner__container {
 			max-width: none;
+			padding: 0;
 		}
 		& .banner__slider {
 			height: toRem(715);

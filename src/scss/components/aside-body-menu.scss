@@ -34,6 +34,13 @@
 		align-items: center;
 		justify-content: center;
 		gap: toRem(15);
+		@media (any-hover: hover) {
+			&:hover {
+				& .svg-arrow-close {
+					color: var(--for-false);
+				}
+			}
+		}
 	}
 
 	&__body {

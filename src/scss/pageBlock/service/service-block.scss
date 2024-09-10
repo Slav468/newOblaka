@@ -1,0 +1,121 @@
+.service {
+	width: 100%;
+
+	&__content {
+		position: relative;
+	}
+
+	&__list {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(20);
+	}
+
+	&__card {
+		width: calc((100% - toRem(60)) / 4);
+		height: toRem(391);
+		border-radius: var(--radius8);
+		border: 1px solid var(--border);
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+
+		@media (max-width: toRem(1440)) {
+			width: calc((100% - 40px) / 3);
+		}
+		@media (max-width: toRem(1000)) {
+			width: calc((100% - 20px) / 2);
+		}
+
+		@media (max-width: toRem(598)) {
+			width: 100%;
+		}
+
+		img {
+			display: flex;
+			width: 100%;
+			transition: 0.3s;
+			object-fit: cover;
+		}
+
+		&:hover {
+			box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+		}
+	}
+
+	&__img {
+		&-wrap {
+			width: 100%;
+			height: percent(216, 391);
+			overflow: hidden;
+			display: flex;
+		}
+	}
+
+	&__link {
+		display: flex;
+		width: 100%;
+	}
+
+	&__item {
+		&-wrap {
+			padding: 0 toRem(14);
+			overflow: hidden;
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			gap: toRem(10);
+			align-self: flex-start;
+			border-radius: var(--radius8);
+
+			@media (max-width: toRem(1300)) {
+				padding: toRem(16) toRem(14) toRem(8);
+				gap: toRem(8);
+			}
+			& h3 {
+				margin: 0;
+				font-size: toRem(16);
+				font-weight: 600;
+				line-height: 19.5px;
+				display: inline-flex;
+				height: toRem(40);
+				overflow: hidden;
+				@media (max-width: toRem(1440)) {
+					font-size: toRem(14);
+				}
+			}
+			& .text_card {
+				max-height: toRem(100);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				@media (max-width: toRem(991)) {
+					max-height: toRem(95);
+				}
+			}
+
+			& .price {
+				@media (max-width: toRem(598)) {
+					align-self: center;
+				}
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: toRem(20);
+		padding: 0 toRem(14);
+		margin-bottom: toRem(20);
+	}
+	&__button {
+		padding: toRem(13) toRem(15);
+		min-height: toRem(40);
+		font-weight: 700;
+		font-size: toRem(16);
+	}
+}

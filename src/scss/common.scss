@@ -164,9 +164,25 @@
 }
 
 .text {
-	font-weight: 500;
-	font-size: toRem(16);
-	line-height: 1.5;
+	&_banner {
+		font-weight: 500;
+		font-size: toRem(16);
+		line-height: 1.5;
+	}
+	&_subtitle {
+		font-weight: 500;
+		font-size: toRem(18);
+		line-height: 1.56;
+		color: var(--text-primary);
+	}
+	&_general {
+		font-weight: 400;
+		font-size: toRem(16);
+		line-height: 1.5;
+		color: var(--text-primary);
+	}
+	&_light {
+	}
 }
 
 .address {
@@ -205,5 +221,36 @@
 		font-weight: 500;
 		font-size: toRem(14);
 		line-height: 1.4;
+	}
+}
+
+[class*='_desktopView'] {
+	display: flex;
+
+	@media (max-width: toRem(991)) {
+		display: none;
+	}
+}
+
+[class*='_mobileView'] {
+	display: none;
+
+	@media (max-width: toRem(991)) {
+		display: flex;
+		border-radius: initial;
+	}
+}
+
+.scroll-vertical {
+	&::-webkit-scrollbar {
+		display: block;
+		width: 2px;
+		height: 100%;
+		background-color: var(--scrollTrack);
+	}
+	&::-webkit-scrollbar-thumb {
+		display: block;
+		width: 2px;
+		background-color: var(--scrollThumb);
 	}
 }
