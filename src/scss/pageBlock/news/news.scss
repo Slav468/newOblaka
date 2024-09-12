@@ -1,0 +1,86 @@
+.news {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+		flex-wrap: wrap;
+	}
+
+	&__cell {
+		width: percent(400, $maxWidthContainer);
+		aspect-ratio: 400 / 327;
+		min-height: 100%;
+		overflow: hidden;
+		border-radius: var(--radius8);
+		border: 1px solid var(--border);
+
+		&:hover {
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	&__item {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+		overflow: hidden;
+		transition: 0.3s;
+		border-radius: var(--radius8);
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__img {
+		width: 100%;
+		height: 70%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+		padding: toRem(15) toRem(15) toRem(25);
+		width: 100%;
+		height: 30%;
+		position: relative;
+		color: var(--text);
+		background: var(--bg-primary);
+		overflow: hidden;
+	}
+
+	&__rubric {
+		font-weight: 500;
+		font-size: toRem(12);
+		text-transform: uppercase;
+		color: var(--primary);
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: toRem(16);
+		line-height: 1.37;
+		color: var(--text);
+		overflow: hidden;
+	}
+}

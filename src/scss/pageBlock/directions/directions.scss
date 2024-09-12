@@ -7,7 +7,7 @@
 	}
 
 	&__cell {
-		width: percent(400, 1680);
+		width: percent(400, $maxWidthContainer);
 		aspect-ratio: 400 / 477;
 		min-height: 100%;
 		overflow: hidden;

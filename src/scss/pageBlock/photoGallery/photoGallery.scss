@@ -1,0 +1,33 @@
+.photo {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+		flex-wrap: wrap;
+	}
+
+	&__cell {
+		display: flex;
+		justify-content: center;
+		width: percent(400, $maxWidthContainer);
+		aspect-ratio: 400 / 265;
+		min-height: 100%;
+		overflow: hidden;
+		border-radius: var(--radius8);
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+
+	&__img {
+		display: flex;
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+		transition: 0.3s;
+		border-radius: var(--radius8);
+	}
+}

@@ -17,7 +17,7 @@
 	}
 
 	&__cell {
-		width: percent(405, 1700);
+		width: percent(405, $maxWidthContainer);
 		min-width: 18%;
 		padding: toRem(60) 0;
 
@@ -89,6 +89,9 @@
 			&__ic {
 				align-items: center;
 				justify-content: center;
+				border-radius: 50%;
+				overflow: hidden;
+				border: 1px solid var(--primary);
 			}
 			&__text {
 				display: flex;

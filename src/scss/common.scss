@@ -3,6 +3,10 @@
 	margin: 0 auto;
 	// overflow: hidden;
 }
+.page {
+	display: flex;
+	flex-direction: column;
+}
 
 // Svg
 .icon-wrap {
@@ -13,7 +17,6 @@
 		height: 100%;
 	}
 }
-
 .viber {
 	color: var(--viber);
 }
@@ -35,6 +38,7 @@
 .vk {
 	color: var(--vk);
 }
+
 .svg-arrow-down {
 	width: toRem(8);
 	height: toRem(8);
@@ -50,6 +54,53 @@
 .svg-dotted {
 	width: 20px;
 	height: 5px;
+}
+
+.reference {
+	// .reference__text
+	&__text {
+		font-weight: 600;
+		font-size: toRem(20);
+		color: var(--text-accent);
+	}
+
+	// .reference__link
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: toRem(8);
+		@media (any-hover: hover) {
+			&:hover {
+				& .reference__text {
+					color: var(--primary);
+				}
+				& .reference__img {
+					background-color: var(--primary);
+				}
+				& .reference__svg {
+					color: var(--inverse);
+				}
+			}
+		}
+	}
+
+	&__img {
+		width: toRem(32);
+		height: toRem(32);
+		border-radius: 50%;
+		border: 1px solid var(--primary);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .reference__svg
+	&__svg {
+		width: toRem(8);
+		height: toRem(14);
+		transform: rotate(-90deg);
+	}
 }
 
 .messengers {
@@ -190,7 +241,7 @@
 	gap: toRem(4);
 	&__city {
 		font-weight: 600;
-		font-size: toRem(14);
+		font-size: toRem(16);
 		line-height: 1.4;
 		text-wrap: nowrap;
 	}

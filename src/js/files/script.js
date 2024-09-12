@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	const asideDropButtons = document.querySelectorAll('.aside-menu__svg');
 	const asideCloseButton = document.querySelector('.aside-menu__close');
 
+	// Validate the form
+	// const EMAIL_PATTERN = new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/);
+	// const PHONE_PATTERN = new RegExp(
+	// 	/^\+375[\s|-]?[0-9]{2}[\s|-]?[0-9]{3}[\s|-]?[0-9]{2}[\s|-]?[0-9]{2}$/
+	// );
+
 	function closeAsideMenu() {
 		asideCloseButton.addEventListener('click', () => {
 			bodyUnlock();
@@ -76,4 +82,42 @@ document.addEventListener('DOMContentLoaded', () => {
 			return;
 		}
 	});
+
+	// Enable button if form
+	function toggleBtnForm() {
+		const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
+		checkBoxes.forEach(item => {
+			item.addEventListener('change', e => {
+				const currTarget = e.currentTarget;
+				const parentElement = currTarget.closest('[data-form]');
+				const currBtn = parentElement.querySelector('[data-formBtn] button');
+				const currCheck = item.querySelector('input');
+				const isChecked = currCheck.checked;
+				toggleBtnAttr(isChecked, currBtn);
+			});
+		});
+	}
+
+	function setBtnState() {
+		const forms = document.querySelectorAll('[data-form]');
+		forms.forEach(form => {
+			const formCheckBox = form.querySelector('[data-formCheckbox] input');
+			const formBtn = form.querySelector('[data-formBtn] button');
+			const isChecked = formCheckBox.checked;
+			toggleBtnAttr(isChecked, formBtn);
+		});
+	}
+
+	function toggleBtnAttr(state, btn) {
+		if (state) {
+			btn.removeAttribute('disabled');
+		} else {
+			btn.setAttribute('disabled', '');
+		}
+	}
+
+	if (document.querySelector('[data-formCheckbox]')) {
+		setBtnState();
+		toggleBtnForm();
+	}
 });

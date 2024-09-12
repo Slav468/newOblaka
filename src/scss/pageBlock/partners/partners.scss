@@ -1,0 +1,25 @@
+.partners {
+	// .partners__list
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: toRem(20);
+	}
+
+	// .partners__link
+	&__img {
+		max-width: toRem(220);
+		width: 100%;
+		height: toRem(120);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid var(--border);
+		border-radius: var(--radius8);
+		& img {
+			padding: toRem(5);
+			display: flex;
+		}
+	}
+}

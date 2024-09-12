@@ -14,7 +14,7 @@
 			}
 		}
 		& .banner-second {
-			flex: 1 1 percent(540, 1700);
+			flex: 1 1 percent(540, $maxWidthContainer);
 			&__content {
 				display: flex;
 				flex-direction: column;
@@ -96,7 +96,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		max-width: percent(1460, 1700);
+		max-width: percent(1460, $maxWidthContainer);
 		gap: toRem(55);
 	}
 	&__description {

@@ -176,18 +176,8 @@
 			font-size: toRem(16);
 			text-align: center;
 			color: #fff;
-			// @media (max-width: toRem(1300)) {
-			// 	font-size: var(--font13);
-			// 	font-weight: 500;
-			// 	padding: 15px 25px;
-			// }
-
-			// @media (max-width: toRem(991)) {
-			// 	font-size: var(--font12);
-			// 	font-weight: 500;
-			// 	padding: 12px 23px;
-			// }
 		}
+
 		&__button {
 			padding: 12px 25px;
 		}
