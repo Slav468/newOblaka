@@ -1,4 +1,8 @@
 .form-block {
+	& .block__container {
+		padding-top: toRem(40);
+		padding-bottom: toRem(40);
+	}
 	.block__body {
 		flex-direction: row;
 		width: 100%;
@@ -145,45 +149,6 @@
 		pointer-events: none;
 		background-color: #c4c4c4;
 	}
-
-	// .file {
-	// 	padding: 9px 10px;
-
-	// 	box-sizing: border-box;
-	// 	border-radius: var(--radius5);
-	// 	border: 1px solid var(--color-border3);
-	// 	background: var(--c-white);
-
-	// 	.form__input_type_file {
-	// 		width: 0.1px;
-	// 		height: 0.1px;
-	// 		opacity: 0;
-	// 		overflow: hidden;
-	// 		position: absolute;
-	// 		z-index: -1;
-
-	// 		& + label {
-	// 			display: inline-flex;
-	// 			align-items: center;
-
-	// 			font-size: var(--font12);
-	// 			line-height: 1;
-	// 			cursor: pointer;
-	// 			vertical-align: top;
-	// 			color: var(--color-text);
-
-	// 			span {
-	// 				display: inline-block;
-	// 			}
-
-	// 			img {
-	// 				margin-right: 3px;
-	// 				width: 25px;
-	// 				height: 25px;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 .select {

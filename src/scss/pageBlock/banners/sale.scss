@@ -1,4 +1,8 @@
 .sale {
+	&__container {
+		padding-top: toRem(40);
+		padding-bottom: toRem(40);
+	}
 	// .question__content
 	&__content {
 		display: flex;

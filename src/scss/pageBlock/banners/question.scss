@@ -1,4 +1,8 @@
 .question {
+	&__container {
+		padding-top: toRem(40);
+		padding-bottom: toRem(40);
+	}
 	// .question__content
 	&__content {
 		display: flex;
@@ -41,7 +45,23 @@
 		color: var(--text-secondary);
 	}
 
-	// .question__buttons
-	// &__buttons {
-	// }
+	.form {
+		width: 100%;
+		align-items: flex-start;
+		// .form__list
+		&__list {
+			width: 100%;
+			max-width: none;
+			flex-direction: row;
+		}
+
+		&__cell {
+			flex: 1 1 50%;
+			max-width: toRem(490);
+		}
+
+		// .form__button
+		&__button {
+		}
+	}
 }

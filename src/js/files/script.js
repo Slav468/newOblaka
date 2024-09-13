@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
 	dropMenu(dropButton, '.menu__item');
 	dropMenu(asideDropButtons, '.aside-menu__item');
 	dropMenu(contactsPhoneButton, '.contacts-phone');
@@ -119,5 +120,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('[data-formCheckbox]')) {
 		setBtnState();
 		toggleBtnForm();
+	}
+
+	// Counter in card
+	if (document.querySelector('.count')) {
+		const countsBlocks = document.querySelectorAll('.count');
+		countsBlocks.forEach(block => {
+			block.addEventListener('click', e => {
+				const target = e.target;
+
+				if (target.closest('.count__minus')) {
+					const counter = target
+						.closest('.count')
+						.querySelector('.count__counter');
+					let num =
+						+counter.textContent > 1
+							? +counter.textContent--
+							: +counter.textContent;
+				}
+				if (target.closest('.count__plus')) {
+					let num = +target.closest('.count').querySelector('.count__counter')
+						.textContent++;
+				}
+			});
+		});
 	}
 });
