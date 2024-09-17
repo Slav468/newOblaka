@@ -3,6 +3,7 @@
 
 	&__container {
 		width: 100%;
+		overflow: hidden;
 	}
 
 	&__wrapper {
@@ -27,8 +28,8 @@
 
 	&__title {
 		position: relative;
-		font-weight: 700;
-		font-size: 26px;
+		font-weight: 600;
+		font-size: toRem(28);
 		color: var(--text-primary);
 		&::after {
 			content: ' ';
@@ -54,6 +55,9 @@
 
 	// .block__content
 	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
 	}
 
 	// .block__buttons

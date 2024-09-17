@@ -72,6 +72,7 @@
 	}
 	&__slider {
 		position: relative;
+		width: 100%;
 		height: toRem(552);
 		border-radius: toRem(8);
 	}
@@ -128,8 +129,8 @@
 			align-self: flex-start;
 		}
 		& .button:first-child {
-			width: 221px;
-			padding: 15px 20px;
+			max-width: toRem(221);
+			padding: toRem(13) toRem(20);
 		}
 	}
 

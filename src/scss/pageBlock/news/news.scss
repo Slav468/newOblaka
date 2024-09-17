@@ -2,6 +2,7 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 	}
@@ -12,7 +13,6 @@
 		min-height: 100%;
 		overflow: hidden;
 		border-radius: var(--radius8);
-		border: 1px solid var(--border);
 
 		&:hover {
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -29,6 +29,7 @@
 		overflow: hidden;
 		transition: 0.3s;
 		border-radius: var(--radius8);
+		border: 1px solid var(--border);
 	}
 
 	&__link {
@@ -59,8 +60,8 @@
 	&__bottom {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(5);
-		padding: toRem(15) toRem(15) toRem(25);
+		gap: toRem(7);
+		padding: toRem(17) toRem(15) toRem(20);
 		width: 100%;
 		height: 30%;
 		position: relative;

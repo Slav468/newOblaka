@@ -11,7 +11,6 @@
 		display: flex;
 		flex-direction: column;
 		height: auto;
-		padding: toRem(15);
 		background-color: var(--bg-primary);
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
@@ -53,7 +52,7 @@
 			}
 			& .price {
 				&__actual {
-					color: var(--product-orderHover);
+					color: var(--price-in-product);
 				}
 			}
 			& .stock {
@@ -152,7 +151,7 @@
 			}
 			& .price {
 				&__actual {
-					color: var(--product-orderHover);
+					color: var(--price-in-product);
 				}
 			}
 			& .stock {
@@ -237,7 +236,6 @@
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(10);
 		height: 100%;
 	}
 
@@ -251,6 +249,7 @@
 
 	&__data {
 		height: 100%;
+		padding: toRem(15);
 		max-height: toRem(322);
 		display: flex;
 		flex-direction: column;
@@ -314,8 +313,8 @@
 
 	&__price {
 		font-weight: 700;
-		font-size: 20px;
-		line-height: 105%;
+		font-size: toRem(20);
+		line-height: 1.05;
 	}
 
 	&__buttons {
@@ -537,12 +536,13 @@
 
 	// .options__item
 	&__item {
-		background-color: var(--primary);
-		color: var(--text-inverse);
+		color: var(--primary);
 		border-radius: 10px;
+		border: 1px solid var(--primary);
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: var(--accent);
+				background-color: var(--primary);
+				color: var(--text-inverse);
 			}
 		}
 	}
@@ -553,16 +553,13 @@
 	align-items: center;
 	gap: toRem(12);
 	&__actual {
-		font-weight: 700;
-		font-size: toRem(16);
-		line-height: 1.31;
 		color: var(--text-primary);
 	}
 
 	&__old {
 		font-weight: 500;
 		font-size: toRem(14);
-		line-height: 1.5;
+		line-height: 1.62;
 		text-decoration: line-through;
 		color: var(--text-secondary);
 	}

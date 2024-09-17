@@ -3,27 +3,33 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 	}
 
 	// .share__cell
 	&__cell {
+		position: relative;
 		width: percent(820, $maxWidthContainer);
 		aspect-ratio: 820 / 200;
 		min-height: 100%;
-		border: 1px solid var(--border);
 		border-radius: var(--radius8);
+		overflow: hidden;
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 0 toRem(10) rgba(0, 0, 0, 0.5);
 			}
 		}
 	}
 
 	// .share__item
 	&__item {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
 		padding: toRem(25) toRem(30);
 		display: flex;
 		align-items: center;
@@ -35,15 +41,33 @@
 
 	// .share__img
 	&__img {
-		width: toRem(140);
-		height: toRem(140);
-		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+
 		overflow: hidden;
 		display: flex;
 		& img {
 			object-fit: cover;
 			object-position: center;
 		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background: linear-gradient(
+			272deg,
+			rgba(51, 51, 51, 0.3) 0%,
+			#333 66%,
+			#333 100%
+		);
 	}
 
 	// .share__content
@@ -66,7 +90,7 @@
 		font-weight: 500;
 		font-size: toRem(18);
 		line-height: 1.56;
-		color: var(--text-primary);
+		color: var(--text-inverse);
 		overflow: hidden;
 	}
 
@@ -75,7 +99,7 @@
 		font-weight: 400;
 		font-size: toRem(16);
 		line-height: 1.5;
-		color: var(--text-secondary);
+		color: var(--text-inverse);
 		overflow: hidden;
 	}
 
@@ -84,6 +108,10 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(10);
+		width: fit-content;
+		border: 1px solid #fff;
+		border-radius: var(--radius8);
+		padding: toRem(5);
 	}
 
 	// .share__prc
@@ -94,6 +122,7 @@
 		line-height: 1.75;
 		color: var(--text-inverse);
 		padding: 0 toRem(13);
+		border-radius: toRem(4);
 	}
 
 	// .share__term
@@ -101,6 +130,6 @@
 		font-weight: 400;
 		font-size: toRem(14);
 		line-height: 2;
-		color: var(--text-secondary);
+		color: var(--text-inverse);
 	}
 }

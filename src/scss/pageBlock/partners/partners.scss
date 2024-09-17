@@ -3,15 +3,16 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		flex-wrap: wrap;
 		gap: toRem(20);
 	}
 
 	// .partners__link
 	&__img {
-		max-width: toRem(220);
+		max-width: toRem(210);
 		width: 100%;
-		height: toRem(120);
+		height: toRem(90);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -20,6 +21,12 @@
 		& img {
 			padding: toRem(5);
 			display: flex;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			}
 		}
 	}
 }

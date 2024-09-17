@@ -2,6 +2,7 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 	}
@@ -12,7 +13,6 @@
 		min-height: 100%;
 		overflow: hidden;
 		border-radius: var(--radius8);
-		border: 1px solid var(--border);
 
 		&:hover {
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -47,6 +47,7 @@
 		overflow: hidden;
 		transition: 0.3s;
 		border-radius: var(--radius8);
+		border: 1px solid var(--border);
 	}
 
 	&__img {
@@ -68,7 +69,7 @@
 	}
 
 	&__bottom {
-		padding: toRem(15) toRem(15) toRem(25);
+		padding: toRem(15) toRem(15) toRem(15);
 		width: 100%;
 		position: relative;
 		bottom: 0;
@@ -77,11 +78,11 @@
 		transition: 0.3s;
 		color: var(--text);
 		background: var(--bg-primary);
-		border-radius: 8px;
+		border-radius: var(--radius8);
 	}
 
 	&__pos {
-		margin-bottom: 15px;
+		margin-bottom: toRem(10);
 		font-size: toRem(12);
 		font-weight: 500;
 		color: var(--text-secondary);

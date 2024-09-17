@@ -2,12 +2,13 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 	}
 
 	&__cell {
-		width: percent(540, $maxWidthContainer);
+		max-width: percent(540, $maxWidthContainer);
 		aspect-ratio: 540 / 350;
 		min-height: 100%;
 		overflow: hidden;

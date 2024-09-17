@@ -7,26 +7,22 @@
 
 	&__row {
 		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		overflow: auto;
-
-		@media (max-width: 991px) {
-			gap: toRem(20);
-		}
+		align-items: center;
+		justify-content: center;
+		// gap: toRem(20);
+		flex-wrap: wrap;
 	}
 
 	&__cell {
-		width: percent(405, $maxWidthContainer);
-		min-width: 18%;
+		width: 25%;
 		padding: toRem(60) 0;
-
-		@media (max-width: $tablet) {
-			min-width: 255px;
-		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__item {
+		max-width: 80.5%;
 		display: flex;
 		gap: toRem(20);
 	}
@@ -52,16 +48,17 @@
 		font-weight: 600;
 		font-size: toRem(15);
 		line-height: 1.2;
-		color: var(--text);
-		max-height: toRem(44);
+		color: var(--text-primary);
+		height: toRem(44);
 		overflow: hidden;
 	}
 	&__descr {
 		font-weight: 400;
 		font-size: toRem(15);
 		line-height: 1.67;
-		max-height: toRem(50);
+		height: toRem(50);
 		overflow: hidden;
+		color: var(--text-secondary);
 	}
 
 	&_colored {
@@ -71,9 +68,9 @@
 	&_vertical {
 		& .teaser {
 			&__cell {
-				max-width: toRem(335);
-				width: 100%;
-				align-items: center;
+				// max-width: toRem(335);
+				// width: 100%;
+				// align-items: center;
 			}
 			&__item {
 				flex-direction: column;

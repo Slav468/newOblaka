@@ -2,6 +2,7 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 	}
@@ -12,7 +13,6 @@
 		min-height: 100%;
 		overflow: hidden;
 		border-radius: var(--radius8);
-		border: 1px solid var(--border);
 
 		&:hover {
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

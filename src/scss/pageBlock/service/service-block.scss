@@ -8,30 +8,21 @@
 	&__list {
 		width: 100%;
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
 		gap: toRem(20);
 	}
 
 	&__card {
-		width: calc((100% - toRem(60)) / 4);
-		height: toRem(391);
+		width: calc((100% - toRem(20) * 3) / 4);
+		aspect-ratio: 400 / 376;
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
 		overflow: hidden;
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: toRem(20);
-
-		@media (max-width: toRem(1440)) {
-			width: calc((100% - 40px) / 3);
-		}
-		@media (max-width: toRem(1000)) {
-			width: calc((100% - 20px) / 2);
-		}
-
-		@media (max-width: toRem(598)) {
-			width: 100%;
-		}
+		gap: toRem(16);
 
 		img {
 			display: flex;
@@ -45,18 +36,41 @@
 		}
 	}
 
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+	}
+
 	&__img {
 		&-wrap {
 			width: 100%;
-			height: percent(216, 391);
+			height: 55%;
 			overflow: hidden;
 			display: flex;
 		}
 	}
 
-	&__link {
+	&__text {
 		display: flex;
+		flex-direction: column;
+		gap: toRem(4);
 		width: 100%;
+		margin: 0;
+		font-weight: 600;
+		font-size: toRem(16);
+		line-height: 1.2;
+		overflow: hidden;
+		@media (max-width: toRem(1440)) {
+			font-size: toRem(14);
+		}
+		& h3 {
+			height: toRem(40);
+			overflow: hidden;
+		}
 	}
 
 	&__item {
@@ -67,7 +81,7 @@
 			height: auto;
 			display: flex;
 			flex-direction: column;
-			gap: toRem(10);
+			gap: toRem(20);
 			align-self: flex-start;
 			border-radius: var(--radius8);
 
@@ -75,18 +89,7 @@
 				padding: toRem(16) toRem(14) toRem(8);
 				gap: toRem(8);
 			}
-			& h3 {
-				margin: 0;
-				font-size: toRem(16);
-				font-weight: 600;
-				line-height: 19.5px;
-				display: inline-flex;
-				height: toRem(40);
-				overflow: hidden;
-				@media (max-width: toRem(1440)) {
-					font-size: toRem(14);
-				}
-			}
+
 			& .text_card {
 				max-height: toRem(100);
 				overflow: hidden;
@@ -105,6 +108,8 @@
 	}
 
 	&__buttons {
+		position: relative;
+		z-index: 2;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -112,10 +117,12 @@
 		padding: 0 toRem(14);
 		margin-bottom: toRem(20);
 	}
+
 	&__button {
 		padding: toRem(13) toRem(15);
-		min-height: toRem(40);
 		font-weight: 700;
 		font-size: toRem(16);
+		display: flex;
+		flex: 1 1 50%;
 	}
 }

@@ -150,27 +150,29 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: toRem(15) toRem(18);
+	padding: toRem(13) toRem(20);
+	min-height: toRem(46);
 	border-radius: toRem(8);
 	font-weight: 600;
 	font-size: toRem(15);
+	background-color: var(--text-inverse);
 	border: 1px solid var(--primary);
 	color: var(--primary);
 	width: 100%;
 	&:hover {
 		background-color: var(--primary);
-		color: var(--inverse);
+		color: var(--text-inverse);
 	}
 
 	&_colored {
 		background-color: var(--primary);
-		color: var(--inverse);
+		color: var(--text-inverse);
 		&:hover {
 			background-color: var(--secondary);
 		}
 	}
 	&_width {
-		width: toRem(270);
+		width: toRem(265);
 		font-weight: 700;
 		font-size: toRem(16);
 	}
@@ -180,13 +182,13 @@
 		text-align: center;
 		padding: toRem(14) toRem(38);
 		background-color: var(--primary);
-		color: var(--inverse);
+		color: var(--text-inverse);
 		&:hover {
 			background-color: var(--secondary);
 		}
 	}
 	&_width-inverse {
-		background-color: var(--inverse);
+		background-color: var(--text-inverse);
 	}
 }
 
@@ -265,13 +267,15 @@
 
 	&__time {
 		font-weight: 600;
-		font-size: toRem(14);
+		font-size: toRem(16);
 		line-height: 1.4;
+		text-wrap: nowrap;
 	}
 	&__regime {
 		font-weight: 500;
 		font-size: toRem(14);
 		line-height: 1.4;
+		text-wrap: nowrap;
 	}
 }
 

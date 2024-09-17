@@ -1,10 +1,16 @@
 .about {
 	&__description {
-		display: flex;
-		flex-direction: column;
+		display: grid;
 		gap: toRem(20);
 		flex: 1 0 41%;
+
 		align-items: flex-start;
+		& .block {
+			&__buttons {
+				align-self: flex-end;
+				justify-self: flex-start;
+			}
+		}
 	}
 	&:has(.about__img) {
 		.block {
@@ -43,5 +49,11 @@
 				z-index: 2;
 			}
 		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
 	}
 }

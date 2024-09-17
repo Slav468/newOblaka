@@ -95,5 +95,8 @@
 		width: 100%;
 		align-self: center;
 		@include adaptiveValue('margin-bottom', 40, 20);
+		& .button {
+			width: fit-content;
+		}
 	}
 }
