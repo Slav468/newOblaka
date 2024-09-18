@@ -36,6 +36,8 @@
 					left: 0;
 				}
 			}
+
+			display: none;
 		}
 	}
 	// .menu__list
@@ -96,6 +98,9 @@
 			width: 100%;
 			height: toRem(2);
 			background-color: #000;
+		}
+		span {
+			width: 70%;
 		}
 		&::before {
 			top: 0;

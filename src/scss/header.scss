@@ -218,6 +218,51 @@
 	}
 }
 
+.header-bottom {
+	& .menu {
+		max-width: none;
+		width: 100%;
+		& > .menu__body {
+			padding: 0 toRem(50);
+			border-radius: var(--radius8);
+			background-color: var(--primary);
+			& > .menu__list {
+				& > .menu__item {
+					& > .menu__link {
+						color: var(--text-inverse);
+					}
+					& > .menu__svg {
+						& .svg-arrow-down {
+							color: var(--inverse);
+						}
+					}
+					& .menu__dotted-svg {
+						color: var(--inverse);
+					}
+				}
+			}
+			@media (max-width: $mobile) {
+				background-color: var(--bg-primary);
+				& > .menu__list {
+					& > .menu__item {
+						& > .menu__link {
+							color: var(--text-primary);
+						}
+						& > .menu__svg {
+							& .svg-arrow-down {
+								color: var(--text-primary);
+							}
+						}
+						& .menu__dotted-svg {
+							color: var(--text-primary);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .logo {
 	max-width: toRem(192);
 	width: 100%;
@@ -225,7 +270,7 @@
 		width: 100%;
 		@media (max-width: $mobile) {
 			position: relative;
-			z-index: 7;
+			z-index: 5;
 		}
 	}
 }
@@ -505,6 +550,7 @@
 			color: var(--text-accent);
 		}
 	}
+
 	&__dotted {
 		align-self: flex-end;
 		justify-content: flex-end;
@@ -514,6 +560,7 @@
 			justify-content: flex-end;
 		}
 	}
+
 	&__svg {
 		display: flex;
 		align-items: center;
@@ -680,50 +727,5 @@
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-	}
-}
-
-.header-bottom {
-	& .menu {
-		max-width: none;
-		width: 100%;
-		& > .menu__body {
-			padding: 0 toRem(50);
-			border-radius: var(--radius8);
-			background-color: var(--primary);
-			& > .menu__list {
-				& > .menu__item {
-					& > .menu__link {
-						color: var(--text-inverse);
-					}
-					& > .menu__svg {
-						& .svg-arrow-down {
-							color: var(--inverse);
-						}
-					}
-					& .menu__dotted-svg {
-						color: var(--inverse);
-					}
-				}
-			}
-			@media (max-width: $mobile) {
-				background-color: var(--bg-primary);
-				& > .menu__list {
-					& > .menu__item {
-						& > .menu__link {
-							color: var(--text-primary);
-						}
-						& > .menu__svg {
-							& .svg-arrow-down {
-								color: var(--text-primary);
-							}
-						}
-						& .menu__dotted-svg {
-							color: var(--text-primary);
-						}
-					}
-				}
-			}
-		}
 	}
 }
