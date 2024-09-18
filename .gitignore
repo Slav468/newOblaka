@@ -1,0 +1,15 @@
+flsStartTemplate/
+package-lock.json
+node_modules/
+phpmailer/
+# .gitignore
+dist/
+Source/
+version.json
+undefined
+**/*.zip
+**/*.rar
+
+
+# git add dist && git commit -m "Update gh-pages version"
+# git subtree push --prefix dist origin gh-pages
