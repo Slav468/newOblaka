@@ -91,4 +91,31 @@
 			color: var(--primary);
 		}
 	}
+
+	&_dark {
+		& .categories__overlay {
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.8) 100%
+			);
+		}
+		& .decorate {
+			border: 1px solid var(--text-inverse);
+			&__svg {
+				color: var(--text-inverse);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				& .decorate {
+					border: 1px solid var(--primary);
+					background-color: var(--decorBg);
+					&__svg {
+						color: var(--primary);
+					}
+				}
+			}
+		}
+	}
 }

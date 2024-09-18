@@ -2,7 +2,7 @@ flsStartTemplate/
 package-lock.json
 node_modules/
 phpmailer/
-# .gitignore
+.gitignore
 dist/
 Source/
 version.json
