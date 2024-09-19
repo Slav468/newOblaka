@@ -61,6 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	removeDrop(mobileBackButtons);
 
 	window.addEventListener('resize', () => {
+		if (document.querySelector('.menu__list')) {
+			hideMenuItem();
+		}
+	});
+
+	function hideMenuItem() {
 		const subMenu = document.getElementById('dotted-menu');
 		const menu = document.querySelector('.menu');
 		const menuList = document.querySelector('.menu__list');
@@ -82,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			// menuList.append(element);
 			return;
 		}
-	});
+	}
 
 	// Enable button if form
 	function toggleBtnForm() {

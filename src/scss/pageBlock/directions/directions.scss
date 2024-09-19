@@ -8,7 +8,7 @@
 	}
 
 	&__cell {
-		width: percent(400, $maxWidthContainer);
+		width: calc((100% - toRem(20) * 3) / 4);
 		aspect-ratio: 400 / 477;
 		min-height: 100%;
 		overflow: hidden;
@@ -28,7 +28,6 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		position: relative;
-		overflow: hidden;
 		transition: 0.3s;
 		border-radius: var(--radius8);
 	}

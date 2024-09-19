@@ -34,6 +34,10 @@
 		&:hover {
 			box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
 		}
+
+		@media (max-width: toEm(1280)) {
+			gap: 0;
+		}
 	}
 
 	&__link {

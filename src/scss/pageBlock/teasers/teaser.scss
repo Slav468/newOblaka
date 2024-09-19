@@ -7,17 +7,14 @@
 
 	&__row {
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		// gap: toRem(20);
 		flex-wrap: wrap;
 	}
 
 	&__cell {
-		width: 25%;
-		padding: toRem(60) 0;
+		width: calc(100% / 4);
+		padding: toRem(40) 0;
 		display: flex;
-		align-items: center;
 		justify-content: center;
 	}
 
@@ -49,7 +46,7 @@
 		font-size: toRem(15);
 		line-height: 1.2;
 		color: var(--text-primary);
-		height: toRem(44);
+		height: toRem(52);
 		overflow: hidden;
 	}
 	&__descr {

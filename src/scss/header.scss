@@ -14,13 +14,12 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: toRem(14) 0;
+		gap: 1%;
 
 		&:has(.menu) {
 			padding: 0;
 
 			& .office {
-				width: 40%;
-				flex: 0 1 42%;
 				&__content {
 					justify-content: flex-start;
 				}
@@ -30,6 +29,21 @@
 	&:not(:has(.header-bottom)) {
 		.header__top {
 			border-bottom: 1px solid var(--inverse);
+		}
+	}
+	&:has(.header-bottom) {
+		.office {
+			flex: 0 1 38.5%;
+			&__content {
+				justify-content: flex-start;
+			}
+
+			@media (max-width: toEm(1270)) {
+				flex: 1 1 auto;
+			}
+			@media (max-width: toEm(1100)) {
+				display: none;
+			}
 		}
 	}
 
@@ -45,8 +59,7 @@
 
 	&__menu {
 		display: flex;
-		max-width: percent(983, 1700);
-		width: 100%;
+		flex: 1 1 auto;
 
 		@media (max-width: $mobile) {
 			order: 3;
@@ -55,12 +68,13 @@
 	}
 
 	&__contacts {
-		// max-width: percent(410, 1680);
-		width: 25%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: toRem(5);
+		@media (max-width: toEm(1200)) {
+			flex: 0 0 auto;
+		}
 	}
 
 	&.drop {
@@ -130,20 +144,18 @@
 			padding: toRem(13) 0;
 		}
 		& .menu {
-			max-width: toRem(182);
-			justify-self: flex-start;
-			border: 1px solid var(--primary);
-			border-radius: var(--radius8);
-			padding: toRem(13) toRem(30) toRem(13) toRem(50);
-			background-color: var(--primary);
-
+			flex: 0 1 11.2%;
 			& > .icon-menu {
 				display: flex;
 				color: var(--text-accent);
 				position: relative;
-				width: toRem(25);
-				height: toRem(18);
 				z-index: 5;
+				min-width: toRem(182);
+				justify-self: flex-start;
+				border: 1px solid var(--primary);
+				border-radius: var(--radius8);
+				padding: toRem(13) toRem(30) toRem(13) toRem(50);
+				background-color: var(--primary);
 
 				@media (any-hover: none) {
 					cursor: default;
@@ -153,20 +165,21 @@
 				&::after {
 					content: '';
 					transition: all 0.3s ease 0s;
-					right: 0;
+					left: 23%;
 					position: absolute;
-					width: 100%;
+					width: 25px;
 					height: toRem(2);
 					background-color: var(--text-inverse);
 				}
 				&::before {
-					top: 0;
+					top: 30%;
 				}
 				&::after {
-					bottom: 0;
+					bottom: 30%;
 				}
 				span {
 					top: calc(50% - toRem(1));
+					width: 18px;
 				}
 				p {
 					padding-left: toRem(35);
@@ -175,6 +188,7 @@
 					font-weight: 600;
 					font-size: toRem(15);
 				}
+
 				.menu-open & {
 					span {
 						width: 0;
@@ -212,6 +226,19 @@
 				}
 				.menu-open & {
 					left: 0;
+				}
+			}
+		}
+
+		@media (max-width: toEm(1380)) {
+			.header {
+				&__top {
+					& .office {
+						display: none;
+					}
+					& .menu {
+						flex: 0 2 38.5%;
+					}
 				}
 			}
 		}

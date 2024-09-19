@@ -53,4 +53,15 @@
 		flex-wrap: wrap;
 		gap: toRem(27);
 	}
+
+	@media (max-width: toEm(1500)) {
+		.sale {
+			&__content {
+				gap: 0;
+			}
+			&__descriptions {
+				width: 60%;
+			}
+		}
+	}
 }

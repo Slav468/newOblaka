@@ -7,7 +7,7 @@
 	}
 
 	&__cell {
-		width: percent(820, $maxWidthContainer);
+		width: calc((100% - toRem(20)) / 2);
 		aspect-ratio: 820 / 290;
 		height: auto;
 		overflow: hidden;
@@ -100,7 +100,7 @@
 	&__text {
 		display: flex;
 
-		height: toRem(96);
+		height: toRem(48);
 		font-style: italic;
 		font-weight: 400;
 		font-size: toRem(16);

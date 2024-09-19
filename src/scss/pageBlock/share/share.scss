@@ -11,8 +11,7 @@
 	// .share__cell
 	&__cell {
 		position: relative;
-		width: percent(820, $maxWidthContainer);
-		aspect-ratio: 820 / 200;
+		width: calc((100% - toRem(20)) / 2);
 		min-height: 100%;
 		border-radius: var(--radius8);
 		overflow: hidden;

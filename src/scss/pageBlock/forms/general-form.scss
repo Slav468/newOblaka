@@ -1,8 +1,8 @@
 .form-block {
-	& .block__container {
-		padding-top: toRem(40);
-		padding-bottom: toRem(40);
-	}
+	// & .block__container {
+	// 	padding-top: toRem(40);
+	// 	padding-bottom: toRem(40);
+	// }
 
 	.block__body {
 		flex-direction: row;
@@ -24,7 +24,7 @@
 
 			& .form {
 				width: 100%;
-				padding: toRem(80) toRem(60);
+				padding: toRem(30) toRem(65);
 				&__list {
 					max-width: none;
 					justify-content: center;
@@ -32,9 +32,11 @@
 					flex-wrap: wrap;
 				}
 				&__cell {
-					justify-content: center;
-					width: 32.333333%;
-					// min-width: toRem(400);
+					width: calc((100% - toRem(20) * 2) / 3);
+				}
+				.checkbox,
+				&__button {
+					align-self: flex-start;
 				}
 			}
 		}
@@ -51,6 +53,10 @@
 
 		& .form {
 			padding: toRem(165) toRem(60);
+
+			@media (max-width: toEm(1280)) {
+				padding: toRem(64) toRem(60);
+			}
 		}
 	}
 
@@ -287,6 +293,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: toRem(5);
+	max-width: toRem(540);
+	width: 100%;
 
 	&__wrap {
 		display: flex;

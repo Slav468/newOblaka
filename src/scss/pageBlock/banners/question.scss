@@ -6,7 +6,7 @@
 	// .question__content
 	&__content {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		gap: toRem(20);
 		border: 1px solid var(--primary);
 		border-radius: 16px;
@@ -15,8 +15,10 @@
 
 	// .question__img
 	&__img {
-		width: 200px;
-		height: 200px;
+		min-width: toRem(200);
+		max-width: toRem(200);
+		min-height: toRem(200);
+		max-height: toRem(200);
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;

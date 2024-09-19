@@ -41,6 +41,10 @@
 			height: 3px;
 			background-color: var(--primary);
 		}
+
+		@media (max-width: toEm(1280)) {
+			font-size: toRem(26);
+		}
 	}
 
 	&__reference {

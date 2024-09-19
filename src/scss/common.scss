@@ -214,6 +214,9 @@
 	font-size: toRem(38);
 	line-height: 1.2;
 	text-transform: uppercase;
+	@media (max-width: toEm(1280)) {
+		font-size: toRem(36);
+	}
 }
 
 .text {

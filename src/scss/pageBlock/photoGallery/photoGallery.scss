@@ -31,4 +31,7 @@
 		transition: 0.3s;
 		border-radius: var(--radius8);
 	}
+	& .swiper-wrapper {
+		align-items: center;
+	}
 }

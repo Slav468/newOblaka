@@ -665,10 +665,6 @@ button.swiper-pagination-bullet {
 	padding-top: toRem(55);
 	padding-bottom: toRem(10);
 
-	& .swiper-wrapper {
-		align-items: center;
-	}
-
 	&__navigation {
 		position: absolute;
 

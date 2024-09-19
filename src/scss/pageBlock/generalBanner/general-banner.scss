@@ -8,13 +8,13 @@
 			gap: toRem(20);
 		}
 		& .banner__general {
-			flex: 1 1 65.5%;
+			flex: 0 1 66.5%;
 			& .banner__img {
 				object-position: 55%;
 			}
 		}
 		& .banner-second {
-			flex: 1 1 percent(540, $maxWidthContainer);
+			flex: 0 1 percent(540, $maxWidthContainer);
 			&__content {
 				display: flex;
 				flex-direction: column;
@@ -61,11 +61,18 @@
 			width: toRem(10);
 			height: toRem(10);
 		}
+
+		@media (max-width: toEm(1280)) {
+			.banner__content {
+				max-width: 80%;
+			}
+		}
 	}
 
 	&__general {
 		display: flex;
 		flex: 1 1 70%;
+		overflow: hidden;
 	}
 	&__second {
 		display: flex;

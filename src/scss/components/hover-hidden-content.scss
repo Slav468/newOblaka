@@ -75,8 +75,7 @@
 		transition: height 0.3s;
 
 		&__text {
-			margin: 15px 0;
-
+			margin: toRem(15) 0;
 			font-weight: 400;
 			font-size: toRem(15);
 			line-height: 1.4;
@@ -123,7 +122,7 @@
 				content: ' ';
 				height: 1px;
 				width: 100%;
-				background-color: var(--text-primary);
+				background-color: var(--text-inverse);
 				position: absolute;
 				top: 0;
 				left: 50%;

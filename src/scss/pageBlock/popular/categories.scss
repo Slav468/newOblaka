@@ -8,7 +8,7 @@
 	}
 
 	&__cell {
-		width: percent(315, $maxWidthContainer);
+		width: calc((100% - toRem(20) * 4) / 5);
 		aspect-ratio: 315 / 200;
 		min-height: 100%;
 		overflow: hidden;
@@ -19,6 +19,10 @@
 			&:hover {
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 			}
+		}
+
+		@media (max-width: toEm(1280)) {
+			width: calc((100% - toRem(20) * 3) / 4);
 		}
 	}
 
