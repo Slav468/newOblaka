@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const contactsPhoneButton = document.querySelectorAll(
 		'.contacts-phone__arrow'
 	);
+	const asidePhonesArrow = document.querySelectorAll('.aside-phone__arrow');
 	const asideDropButtons = document.querySelectorAll('.aside-menu__svg');
 	const asideCloseButton = document.querySelector('.aside-menu__close');
 
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	dropMenu(dropButton, '.menu__item');
 	dropMenu(asideDropButtons, '.aside-menu__item');
 	dropMenu(contactsPhoneButton, '.contacts-phone');
+	dropMenu(asidePhonesArrow, '.aside-phone');
 
 	function removeDrop(array) {
 		array.forEach(item => {

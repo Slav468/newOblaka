@@ -4,12 +4,16 @@
 		gap: toRem(20);
 		flex: 1 0 48.8%;
 		align-items: flex-start;
-
-		& .block {
-			&__buttons {
-				align-self: flex-end;
-				justify-self: flex-start;
-			}
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+	}
+	& .block {
+		&__buttons {
+			align-self: flex-start;
+			justify-self: flex-start;
 		}
 	}
 	&:has(.about__img) {
@@ -50,11 +54,5 @@
 				display: none;
 			}
 		}
-	}
-
-	&__text {
-		display: flex;
-		flex-direction: column;
-		gap: toRem(20);
 	}
 }
