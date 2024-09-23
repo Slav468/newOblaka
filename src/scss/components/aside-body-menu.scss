@@ -181,6 +181,11 @@
 		&__link {
 			display: flex;
 			align-items: center;
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--primary);
+				}
+			}
 		}
 	}
 

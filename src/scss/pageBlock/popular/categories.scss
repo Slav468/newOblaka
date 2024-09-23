@@ -13,11 +13,11 @@
 		min-height: 100%;
 		overflow: hidden;
 		border-radius: var(--radius8);
-		border: 1px solid var(--border);
+		border: toRem(1) solid var(--border);
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 0 toRem(10) rgba(0, 0, 0, 0.5);
 			}
 		}
 
@@ -38,7 +38,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				& .decorate {
-					border: 1px solid var(--primary);
+					border: toRem(1) solid var(--primary);
 					background-color: var(--primary);
 					&__svg {
 						color: var(--text-inverse);
@@ -72,7 +72,7 @@
 		background-color: var(--light);
 		overflow: hidden;
 		border-radius: var(--radius8) var(--radius8) 0 0;
-		border-top: 1px solid var(--border);
+		border-top: toRem(1) solid var(--border);
 	}
 
 	&__overlay {
@@ -89,7 +89,7 @@
 		bottom: toRem(20);
 		right: toRem(20);
 		z-index: 2;
-		border: 1px solid var(--primary);
+		border: toRem(1) solid var(--primary);
 
 		&__svg {
 			color: var(--primary);
@@ -105,7 +105,7 @@
 			);
 		}
 		& .decorate {
-			border: 1px solid var(--text-inverse);
+			border: toRem(1) solid var(--text-inverse);
 			&__svg {
 				color: var(--text-inverse);
 			}
@@ -113,7 +113,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				& .decorate {
-					border: 1px solid var(--primary);
+					border: toRem(1) solid var(--primary);
 					background-color: var(--decorBg);
 					&__svg {
 						color: var(--primary);

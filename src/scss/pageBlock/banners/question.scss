@@ -8,8 +8,8 @@
 		display: flex;
 		align-items: flex-start;
 		gap: toRem(20);
-		border: 1px solid var(--primary);
-		border-radius: 16px;
+		border: toRem(1) solid var(--primary);
+		border-radius: toRem(16);
 		padding: toRem(30) toRem(50);
 	}
 
@@ -36,7 +36,7 @@
 	// .question__title
 	&__title {
 		font-weight: 600;
-		font-size: 30px;
+		font-size: toRem(30);
 	}
 
 	// .question__text
