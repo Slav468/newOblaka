@@ -1,14 +1,25 @@
 .reviews {
+	&:has(.reviews-slider) {
+		& .reviews-slider {
+			& .reviews__cell {
+				width: calc((100% - toRem(20)) / 2);
+			}
+		}
+	}
+
 	&__list {
-		display: flex;
-		align-items: center;
-		gap: toRem(20);
-		flex-wrap: wrap;
+		// display: flex;
+		// align-items: center;
+		// gap: toRem(20);
+		// flex-wrap: wrap;
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		grid-gap: toRem(20);
 	}
 
 	&__cell {
-		width: calc((100% - toRem(20)) / 2);
-		aspect-ratio: 820 / 290;
 		height: auto;
 		overflow: hidden;
 		border-radius: var(--radius8);
@@ -100,7 +111,7 @@
 	&__text {
 		display: flex;
 
-		height: toRem(48);
+		// height: toRem(48);
 		font-style: italic;
 		font-weight: 400;
 		font-size: toRem(16);

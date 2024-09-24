@@ -11,11 +11,14 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: toRem(20);
+		@media (max-width: $tablet) {
+			gap: toRem(16);
+		}
 	}
 
 	&__card {
 		width: calc((100% - toRem(20) * 3) / 4);
-		aspect-ratio: 400 / 376;
+		// aspect-ratio: 400 / 376;
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
 		overflow: hidden;
@@ -38,6 +41,9 @@
 		@media (max-width: toEm(1280)) {
 			gap: 0;
 		}
+		@media (max-width: $tablet) {
+			width: calc((100% - toRem(16) * 3) / 4);
+		}
 	}
 
 	&__link {
@@ -55,6 +61,9 @@
 			height: 55%;
 			overflow: hidden;
 			display: flex;
+			@media (max-width: toEm(1280)) {
+				height: 46%;
+			}
 		}
 	}
 
@@ -71,9 +80,18 @@
 		@media (max-width: toRem(1440)) {
 			font-size: toRem(14);
 		}
+		@media (max-width: toEm(1280)) {
+			gap: toRem(5);
+		}
 		& h3 {
 			height: toRem(40);
 			overflow: hidden;
+			@media (max-width: toEm(1280)) {
+				height: toRem(45);
+				font-weight: 600;
+				font-size: toRem(16);
+				line-height: 1.37;
+			}
 		}
 	}
 
@@ -93,12 +111,15 @@
 				padding: toRem(16) toRem(14) toRem(8);
 				gap: toRem(8);
 			}
+			@media (max-width: toEm(1280)) {
+				gap: toRem(20);
+			}
 
 			& .text_card {
 				max-height: toRem(100);
 				overflow: hidden;
 				text-overflow: ellipsis;
-				@media (max-width: toRem(991)) {
+				@media (max-width: $tablet) {
 					max-height: toRem(95);
 				}
 			}
@@ -120,6 +141,9 @@
 		gap: toRem(20);
 		padding: 0 toRem(14);
 		margin-bottom: toRem(20);
+		@media (max-width: toEm(1280)) {
+			margin-bottom: toRem(5);
+		}
 	}
 
 	&__button {

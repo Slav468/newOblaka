@@ -6,6 +6,9 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: toRem(20);
+		@media (max-width: $tablet) {
+			gap: toRem(16);
+		}
 	}
 
 	// .partners__link

@@ -21,7 +21,7 @@
 			&__body {
 				flex-direction: row;
 				@media (max-width: toRem(1200)) {
-					flex-direction: column-reverse;
+					flex-direction: column;
 				}
 			}
 		}
@@ -40,6 +40,9 @@
 					height: 100%;
 					object-fit: contain;
 					object-position: center;
+				}
+				@media (max-width: toRem(1200)) {
+					width: 100%;
 				}
 			}
 

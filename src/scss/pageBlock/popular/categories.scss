@@ -5,6 +5,9 @@
 		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
+		@media (max-width: $tablet) {
+			gap: toRem(16);
+		}
 	}
 
 	&__cell {
@@ -23,6 +26,9 @@
 
 		@media (max-width: toEm(1280)) {
 			width: calc((100% - toRem(20) * 3) / 4);
+		}
+		@media (max-width: $tablet) {
+			width: calc((100% - toRem(16) * 3) / 4);
 		}
 	}
 

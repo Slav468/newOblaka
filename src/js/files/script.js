@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			totalWidthItem += item.clientWidth + 983 * 0.035;
 		}
 
-		if (totalWidthItem >= width && menuItems.length > 2) {
+		if (totalWidthItem >= width && menuItems.length > 3) {
 			let element = menuList.removeChild(menuItems[menuItems.length - 2]);
 			subMenu.append(element);
 		} else {

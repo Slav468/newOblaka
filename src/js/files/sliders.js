@@ -137,28 +137,17 @@ function initSliders() {
 				prevEl: '.directions-button-prev',
 				nextEl: '.directions-button-next',
 			},
-			/*
-			Брейкпоінти
+
+			// Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				320: {
+					spaceBetween: 16,
 				},
 				992: {
-					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
+
 			// Події
 			on: {},
 		});
@@ -204,28 +193,14 @@ function initSliders() {
 				prevEl: '.service-button-prev',
 				nextEl: '.service-button-next',
 			},
-			/*
-			Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				320: {
+					spaceBetween: 16,
 				},
 				992: {
-					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
 			// Події
 			on: {},
 		});
@@ -271,28 +246,14 @@ function initSliders() {
 				prevEl: '.photo-button-prev',
 				nextEl: '.photo-button-next',
 			},
-			/*
-			Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				320: {
+					spaceBetween: 16,
 				},
 				992: {
-					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
 			// Події
 			on: {},
 		});
@@ -338,28 +299,14 @@ function initSliders() {
 				prevEl: '.reviews-button-prev',
 				nextEl: '.reviews-button-next',
 			},
-			/*
-			Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				320: {
+					spaceBetween: 16,
 				},
 				992: {
-					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
 			// Події
 			on: {},
 		});
@@ -407,28 +354,14 @@ function initSliders() {
 				prevEl: '.employees-button-prev',
 				nextEl: '.employees-button-next',
 			},
-			/*
-			Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				320: {
+					spaceBetween: 16,
 				},
 				992: {
-					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
 			},
-			*/
 			// Події
 			on: {},
 		});
@@ -476,28 +409,14 @@ function initSliders() {
 				prevEl: '.partners-button-prev',
 				nextEl: '.partners-button-next',
 			},
-			/*
-				Брейкпоінти
-				breakpoints: {
-					640: {
-						slidesPerView: 1,
-						spaceBetween: 0,
-						autoHeight: true,
-					},
-					768: {
-						slidesPerView: 2,
-						spaceBetween: 20,
-					},
-					992: {
-						slidesPerView: 3,
-						spaceBetween: 20,
-					},
-					1268: {
-						slidesPerView: 4,
-						spaceBetween: 30,
-					},
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
 				},
-				*/
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -545,28 +464,14 @@ function initSliders() {
 				prevEl: '.news-button-prev',
 				nextEl: '.news-button-next',
 			},
-			/*
-				Брейкпоінти
-				breakpoints: {
-					640: {
-						slidesPerView: 1,
-						spaceBetween: 0,
-						autoHeight: true,
-					},
-					768: {
-						slidesPerView: 2,
-						spaceBetween: 20,
-					},
-					992: {
-						slidesPerView: 3,
-						spaceBetween: 20,
-					},
-					1268: {
-						slidesPerView: 4,
-						spaceBetween: 30,
-					},
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
 				},
-				*/
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -612,28 +517,14 @@ function initSliders() {
 				prevEl: '.share-button-prev',
 				nextEl: '.share-button-next',
 			},
-			/*
-					Брейкпоінти
-					breakpoints: {
-						640: {
-							slidesPerView: 1,
-							spaceBetween: 0,
-							autoHeight: true,
-						},
-						768: {
-							slidesPerView: 2,
-							spaceBetween: 20,
-						},
-						992: {
-							slidesPerView: 3,
-							spaceBetween: 20,
-						},
-						1268: {
-							slidesPerView: 4,
-							spaceBetween: 30,
-						},
-					},
-					*/
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -680,28 +571,14 @@ function initSliders() {
 				prevEl: '.instagram-button-prev',
 				nextEl: '.instagram-button-next',
 			},
-			/*
-						Брейкпоінти
-						breakpoints: {
-							640: {
-								slidesPerView: 1,
-								spaceBetween: 0,
-								autoHeight: true,
-							},
-							768: {
-								slidesPerView: 2,
-								spaceBetween: 20,
-							},
-							992: {
-								slidesPerView: 3,
-								spaceBetween: 20,
-							},
-							1268: {
-								slidesPerView: 4,
-								spaceBetween: 30,
-							},
-						},
-						*/
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -747,28 +624,14 @@ function initSliders() {
 				prevEl: '.teaser-button-prev',
 				nextEl: '.teaser-button-next',
 			},
-			/*
-							Брейкпоінти
-							breakpoints: {
-								640: {
-									slidesPerView: 1,
-									spaceBetween: 0,
-									autoHeight: true,
-								},
-								768: {
-									slidesPerView: 2,
-									spaceBetween: 20,
-								},
-								992: {
-									slidesPerView: 3,
-									spaceBetween: 20,
-								},
-								1268: {
-									slidesPerView: 4,
-									spaceBetween: 30,
-								},
-							},
-							*/
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -816,28 +679,14 @@ function initSliders() {
 				prevEl: '.projects-button-prev',
 				nextEl: '.projects-button-next',
 			},
-			/*
-							Брейкпоінти
-							breakpoints: {
-								640: {
-									slidesPerView: 1,
-									spaceBetween: 0,
-									autoHeight: true,
-								},
-								768: {
-									slidesPerView: 2,
-									spaceBetween: 20,
-								},
-								992: {
-									slidesPerView: 3,
-									spaceBetween: 20,
-								},
-								1268: {
-									slidesPerView: 4,
-									spaceBetween: 30,
-								},
-							},
-							*/
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -885,28 +734,14 @@ function initSliders() {
 				prevEl: '.categories-button-prev',
 				nextEl: '.categories-button-next',
 			},
-			/*
-								Брейкпоінти
-								breakpoints: {
-									640: {
-										slidesPerView: 1,
-										spaceBetween: 0,
-										autoHeight: true,
-									},
-									768: {
-										slidesPerView: 2,
-										spaceBetween: 20,
-									},
-									992: {
-										slidesPerView: 3,
-										spaceBetween: 20,
-									},
-									1268: {
-										slidesPerView: 4,
-										spaceBetween: 30,
-									},
-								},
-								*/
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});
@@ -953,28 +788,14 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
-				Брейкпоінти
-				breakpoints: {
-					640: {
-						slidesPerView: 1,
-						spaceBetween: 0,
-						autoHeight: true,
-					},
-					768: {
-						slidesPerView: 2,
-						spaceBetween: 20,
-					},
-					992: {
-						slidesPerView: 3,
-						spaceBetween: 20,
-					},
-					1268: {
-						slidesPerView: 4,
-						spaceBetween: 30,
-					},
+			breakpoints: {
+				320: {
+					spaceBetween: 16,
 				},
-				*/
+				992: {
+					spaceBetween: 20,
+				},
+			},
 			// Події
 			on: {},
 		});

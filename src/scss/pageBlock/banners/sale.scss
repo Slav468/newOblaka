@@ -21,6 +21,9 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;
+		@media (max-width: $tablet) {
+			width: toRem(139);
+		}
 	}
 
 	// .question__descriptions
@@ -61,6 +64,17 @@
 			}
 			&__descriptions {
 				width: 60%;
+			}
+		}
+	}
+
+	@media (max-width: $tablet) {
+		.sale {
+			&__content {
+				padding: toRem(50) toRem(40);
+			}
+			&__descriptions {
+				width: 81%;
 			}
 		}
 	}

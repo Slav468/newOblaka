@@ -5,6 +5,9 @@
 		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
+		@media (max-width: $tablet) {
+			gap: toRem(16);
+		}
 	}
 
 	&__cell {
@@ -18,6 +21,13 @@
 			&:hover {
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 			}
+		}
+
+		@media (max-width: toEm(1280)) {
+			aspect-ratio: 540 / 360;
+		}
+		@media (max-width: $tablet) {
+			width: calc((100% - toRem(16) * 2) / 3);
 		}
 	}
 

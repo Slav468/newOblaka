@@ -13,6 +13,7 @@
 				object-position: 55%;
 			}
 		}
+
 		& .banner-second {
 			flex: 0 1 percent(540, $maxWidthContainer);
 			&__content {
@@ -63,8 +64,17 @@
 		}
 
 		@media (max-width: toEm(1280)) {
-			.banner__content {
+			& .banner__content {
 				max-width: 80%;
+				gap: toRem(20);
+			}
+			& .banner__slider {
+				height: toRem(420);
+			}
+		}
+		@media (max-width: $tablet) {
+			.banner__pagination {
+				display: none;
 			}
 		}
 	}
@@ -106,6 +116,10 @@
 		width: 100%;
 		max-width: percent(1460, $maxWidthContainer);
 		gap: toRem(55);
+		@media (max-width: toEm(1280)) {
+			max-width: 82.951807%;
+			gap: toRem(50);
+		}
 	}
 	&__description {
 		display: flex;
@@ -158,6 +172,10 @@
 			height: 100%;
 			justify-content: flex-end;
 			padding-bottom: 7%;
+			@media (max-width: toEm(1280)) {
+				padding-bottom: 10.5%;
+				max-width: 85.951807%;
+			}
 		}
 	}
 }

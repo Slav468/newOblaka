@@ -5,6 +5,9 @@
 		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
+		@media (max-width: $tablet) {
+			gap: toRem(16);
+		}
 	}
 
 	&__cell {

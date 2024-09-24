@@ -36,6 +36,7 @@
 				}
 				.checkbox,
 				&__button {
+					width: 100%;
 					align-self: flex-start;
 				}
 			}
@@ -56,6 +57,9 @@
 
 			@media (max-width: toEm(1280)) {
 				padding: toRem(64) toRem(60);
+			}
+			@media (max-width: $tablet) {
+				padding: toRem(20);
 			}
 		}
 	}
@@ -87,12 +91,18 @@
 		font-weight: 600;
 		font-size: toRem(28);
 		color: var(--text-primary);
+		@media (max-width: $tablet) {
+			font-size: toRem(21);
+		}
 	}
 
 	&__text {
 		font-weight: 400;
 		font-size: toRem(16);
 		color: var(--text-secondary);
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
 	}
 
 	&__list {
