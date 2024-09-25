@@ -217,13 +217,22 @@
 	@media (max-width: toEm(1280)) {
 		font-size: toRem(36);
 	}
+	@media (max-width: $tablet) {
+		font-size: toRem(30);
+	}
+	@media (max-width: $mobile) {
+		font-size: toRem(26);
+	}
 }
 
 .text {
 	&_banner {
 		font-weight: 500;
-		font-size: toRem(16);
-		line-height: 1.5;
+		font-size: toRem(18);
+		line-height: 1.33;
+		@media (max-width: $mobile) {
+			font-size: toRem(16);
+		}
 	}
 	&_subtitle {
 		font-weight: 500;

@@ -156,6 +156,10 @@
 		flex-wrap: wrap;
 		width: 100%;
 		gap: 2.27%;
+		@media (max-width: $tablet) {
+			column-gap: toRem(20);
+			row-gap: toRem(16);
+		}
 	}
 
 	// .navigation__link

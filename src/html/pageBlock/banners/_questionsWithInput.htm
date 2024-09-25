@@ -403,73 +403,65 @@
 					/>
 				</svg>
 			</div>
-			<div class="question__descriptions">
-				<div class="question__title">
+			<div class="question__title">Есть идеи, но не знаете, с чего начать?</div>
+			<div class="question__text">
+				Перезвоним в течение 10 минут.<br />Обсудим задачи, найдем оптимальное
+				решение и запланируем работы. Ответим на вопросы и расскажем подробнее о
+				действующих акциях. Будем на связи!
+			</div>
+			<form class="form" data-form>
+				<!-- Заголовок -->
+				<div class="form__title" data-formTitle hidden>
 					Есть идеи, но не знаете, с чего начать?
 				</div>
-				<div class="question__text">
-					Перезвоним в течение 10 минут.<br />Обсудим задачи, найдем оптимальное
-					решение и запланируем работы. Ответим на вопросы и расскажем подробнее
-					о действующих акциях. Будем на связи!
+				<!-- Список полей -->
+				<div class="form__list">
+					<!-- Имя -->
+					<div class="form__cell" data-formData>
+						<label class="form__label">Ваше имя*</label>
+						<input
+							class="form__input"
+							type="text"
+							required
+							placeholder="Ваше имя"
+						/>
+					</div>
+					<!-- Телефон -->
+					<div class="form__cell" data-formData>
+						<label class="form__label">Телефон*</label>
+						<input
+							type="text"
+							class="form__input js-tel"
+							required
+							placeholder="+375 (00) 000-00-00"
+						/>
+					</div>
 				</div>
-				<form class="form" data-form>
-					<!-- Заголовок -->
-					<div class="form__title" data-formTitle hidden>
-						Есть идеи, но не знаете, с чего начать?
-					</div>
-					<!-- Список полей -->
-					<div class="form__list">
-						<!-- Имя -->
-						<div class="form__cell" data-formData>
-							<label class="form__label">Ваше имя*</label>
-							<input
-								class="form__input"
-								type="text"
-								required
-								placeholder="Ваше имя"
-							/>
-						</div>
-						<!-- Телефон -->
-						<div class="form__cell" data-formData>
-							<label class="form__label">Телефон*</label>
-							<input
-								type="text"
-								class="form__input js-tel"
-								required
-								placeholder="+375 (00) 000-00-00"
-							/>
-						</div>
-					</div>
 
-					<!-- Checkbox -->
-					<div class="checkbox" data-formCheckbox>
-						<label for="check-banner" class="checkbox__label">
-							<span class="checkbox__svg">
-								<svg class="checked-svg">
-									<use xlink:href="img/icons/icons.svg#checked"></use>
-								</svg>
-							</span>
-							<input
-								type="checkbox"
-								id="check-banner"
-								class="checkbox__input"
-							/>
-						</label>
-						<span>я согласен(а) на</span>
-						<a href="#" class="checkbox__link">обработку персональных данных</a>
-					</div>
-					<!-- Button -->
-					<div class="form__button" data-formBtn>
-						<button
-							disabled
-							type="submit"
-							class="button button_colored button_width"
-						>
-							Отправить
-						</button>
-					</div>
-				</form>
-			</div>
+				<!-- Checkbox -->
+				<div class="checkbox" data-formCheckbox>
+					<label for="check-banner" class="checkbox__label">
+						<span class="checkbox__svg">
+							<svg class="checked-svg">
+								<use xlink:href="img/icons/icons.svg#checked"></use>
+							</svg>
+						</span>
+						<input type="checkbox" id="check-banner" class="checkbox__input" />
+					</label>
+					<span>я согласен(а) на</span>
+					<a href="#" class="checkbox__link">обработку персональных данных</a>
+				</div>
+				<!-- Button -->
+				<div class="form__button" data-formBtn>
+					<button
+						disabled
+						type="submit"
+						class="button button_colored button_width"
+					>
+						Отправить
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </section>

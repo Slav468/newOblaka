@@ -19,14 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	// const PHONE_PATTERN = new RegExp(
 	// 	/^\+375[\s|-]?[0-9]{2}[\s|-]?[0-9]{3}[\s|-]?[0-9]{2}[\s|-]?[0-9]{2}$/
 	// );
-
+	// Close aside menu
+	function closeMenu() {
+		bodyUnlock();
+		document.documentElement.classList.remove('menu-open');
+	}
 	function closeAsideMenu() {
 		asideCloseButton.addEventListener('click', () => {
-			bodyUnlock();
-			document.documentElement.classList.remove('menu-open');
+			closeMenu();
 		});
 	}
 	closeAsideMenu();
+
+	const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
+	asideMenuOverlay.addEventListener('click', () => {
+		closeMenu();
+	});
+
+	document.addEventListener('keydown', e => {
+		if (e.key === 'Escape') {
+			closeMenu();
+		}
+	});
 
 	function dropMenu(array, selector) {
 		array.forEach(item => {
