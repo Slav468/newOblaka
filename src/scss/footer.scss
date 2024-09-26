@@ -17,10 +17,6 @@
 
 	// .footer__bottom
 	&__bottom {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 		border-top: 1px solid #ddd;
 	}
 
@@ -129,6 +125,13 @@
 		gap: toRem(15);
 		max-width: toRem(400);
 		width: 100%;
+
+		// @media (max-width: toEm(1280)) {
+		// 	max-width: toRem(272);
+		// }
+		@media (max-width: $tablet) {
+			max-width: 17rem;
+		}
 	}
 }
 .footer-left {
@@ -249,16 +252,41 @@
 	}
 }
 .footer-bottom {
+	&__content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: toRem(18) 0;
+		@media (max-width: $tablet) {
+			align-items: flex-start;
+		}
+		@media (max-width: toEm(576)) {
+			flex-direction: column;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			gap: toRem(14);
+		}
+	}
 	// .footer-bottom__copyright
 
 	&__copyright {
 		display: flex;
 		width: percent(400, 1700);
-		padding: toRem(22) 0;
+
 		font-family: var(--font-family);
 		font-weight: 500;
 		font-size: 14px;
 		color: #ddd;
+		@media (max-width: $mobile) {
+			width: 30%;
+		}
+		@media (max-width: toEm(576)) {
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 
 	// .footer-bottom__payment
@@ -266,10 +294,16 @@
 	&__payment {
 		max-width: percent(830, 1700);
 		width: 100%;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			gap: toRem(5);
+		}
+		@media (max-width: $mobile) {
+			max-width: 30%;
+		}
 	}
 
 	// .footer-bottom__made
-
 	&__made {
 	}
 }
@@ -278,24 +312,27 @@
 	align-items: center;
 	justify-content: center;
 	gap: toRem(20);
+	@media (max-width: toEm(576)) {
+		width: 100%;
+		max-width: none;
+		gap: toRem(4);
+	}
 
 	// .payment__text
 	&__text {
 		font-family: var(--font-family);
 		font-weight: 500;
-		font-size: 14px;
+		font-size: toRem(14);
 		letter-spacing: 0.05em;
 		color: #ddd;
 	}
 
 	// .payment__list
-
 	&__list {
 		display: flex;
 	}
 
 	// .payment__item
-
 	&__item {
 		display: flex;
 		align-items: center;
@@ -305,10 +342,15 @@
 }
 .made {
 	display: flex;
-	width: percent(400, 1700);
-
+	width: percent(410, 1700);
 	align-items: center;
 	gap: toRem(15);
+	@media (max-width: toEm(1280)) {
+		width: 37%;
+	}
+	@media (max-width: $tablet) {
+		width: auto;
+	}
 	// .made__text
 	&__text {
 		font-family: var(--font-family);
@@ -322,5 +364,8 @@
 	&__logo {
 		max-width: toRem(120);
 		width: 100%;
+		& img {
+			width: 100%;
+		}
 	}
 }

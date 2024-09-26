@@ -38,6 +38,14 @@
 				height: auto;
 			}
 		}
+
+		@media (max-width: $tablet) {
+			width: calc((100% - toRem(16) * 3) / 4);
+		}
+
+		@media (max-width: $mobile) {
+			width: calc((100% - toRem(16) * 2) / 3);
+		}
 	}
 
 	&__item {
@@ -89,6 +97,10 @@
 		font-size: toRem(12);
 		font-weight: 500;
 		color: var(--text-secondary);
+		@media (max-width: toEm(576)) {
+			font-size: toRem(11);
+			margin-bottom: toRem(2);
+		}
 	}
 
 	&__name {
@@ -97,6 +109,9 @@
 		display: flex;
 		font-weight: 400;
 		font-size: toRem(18);
+		@media (max-width: toEm(576)) {
+			font-size: toRem(14);
+		}
 	}
 
 	&__title {

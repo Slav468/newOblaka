@@ -21,9 +21,6 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;
-		@media (max-width: $tablet) {
-			width: toRem(139);
-		}
 	}
 
 	// .question__descriptions
@@ -75,6 +72,68 @@
 			}
 			&__descriptions {
 				width: 81%;
+			}
+			&__img {
+				width: toRem(139);
+			}
+		}
+	}
+
+	@media (max-width: $mobile) {
+		.sale {
+			&__content {
+				padding: toRem(30) toRem(35);
+			}
+			&__descriptions {
+				width: auto;
+			}
+			&__title {
+				font-size: toRem(26);
+			}
+			&__text {
+				font-size: toRem(16);
+			}
+			&__img {
+				width: toRem(110);
+			}
+		}
+	}
+	@media (max-width: toEm(576)) {
+		.sale {
+			&__content {
+				position: relative;
+				padding: toRem(20);
+			}
+			&__descriptions {
+				gap: toRem(15);
+			}
+			&__title {
+				max-width: 80%;
+				font-size: toRem(22);
+			}
+			&__text {
+				max-width: 80%;
+				font-size: toRem(14);
+			}
+			&__buttons {
+				width: 100%;
+				flex-direction: row;
+				gap: toRem(16);
+				& .button {
+					width: calc((100% - toRem(16)) / 2);
+				}
+			}
+			&__img {
+				width: toRem(77);
+				height: toRem(77);
+				position: absolute;
+				top: 12%;
+				right: 6%;
+				z-index: 1;
+				& svg {
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}

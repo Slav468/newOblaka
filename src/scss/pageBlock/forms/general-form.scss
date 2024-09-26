@@ -61,13 +61,24 @@
 			@media (max-width: $tablet) {
 				padding: toRem(20);
 			}
+			@media (max-width: $mobile) {
+				width: 60%;
+				padding: toRem(30) 0;
+				gap: toRem(20);
+			}
+			@media (max-width: toEm(576)) {
+				width: 90%;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
 	&__img {
 		flex: 1 1 percent(820, $maxWidthContainer);
-		// align-self: center;
-
 		height: auto;
 		border-radius: var(--radius8);
 		overflow: hidden;
@@ -77,6 +88,10 @@
 			width: 100%;
 			object-fit: cover;
 			object-position: center;
+		}
+
+		@media (max-width: $mobile) {
+			display: none;
 		}
 	}
 }

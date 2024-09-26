@@ -30,6 +30,9 @@
 		@media (max-width: $tablet) {
 			width: calc((100% - toRem(16) * 3) / 4);
 		}
+		@media (max-width: $mobile) {
+			width: calc((100% - toRem(16) * 2) / 3);
+		}
 	}
 
 	&__item {
@@ -79,6 +82,12 @@
 		overflow: hidden;
 		border-radius: var(--radius8) var(--radius8) 0 0;
 		border-top: toRem(1) solid var(--border);
+		& img {
+			padding: toRem(10);
+			@media (max-width: $tablet) {
+				height: 100%;
+			}
+		}
 	}
 
 	&__overlay {
@@ -99,6 +108,12 @@
 
 		&__svg {
 			color: var(--primary);
+		}
+	}
+	@media (max-width: toEm(576)) {
+		.decorate {
+			bottom: 10%;
+			right: 5%;
 		}
 	}
 

@@ -29,6 +29,9 @@
 				@media (max-width: $mobile) {
 					gap: toRem(16);
 				}
+				@media (max-width: toEm(576)) {
+					flex-direction: row;
+				}
 			}
 
 			&__item {
@@ -41,6 +44,9 @@
 				border-radius: var(--radius8);
 				overflow: hidden;
 				@include imageOverlay();
+				@media (max-width: toEm(576)) {
+					aspect-ratio: 268 / 132;
+				}
 			}
 
 			&__img {
@@ -117,6 +123,18 @@
 				line-height: 1.33;
 			}
 		}
+		@media (max-width: toEm(576)) {
+			& .banner__container {
+				flex-direction: column;
+			}
+			& .banner__content {
+				max-width: 90%;
+			}
+			.banner__pagination {
+				display: flex;
+				bottom: toRem(6);
+			}
+		}
 	}
 
 	&__general {
@@ -158,6 +176,7 @@
 			}
 		}
 	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -172,7 +191,11 @@
 			max-width: 83.6%;
 			gap: toRem(15);
 		}
+		@media (max-width: toEm(576)) {
+			max-width: 95%;
+		}
 	}
+
 	&__description {
 		display: flex;
 		flex-direction: column;
@@ -181,6 +204,7 @@
 			gap: toRem(15);
 		}
 	}
+
 	&__img {
 		position: absolute;
 		display: flex;
@@ -190,9 +214,11 @@
 		object-position: right;
 		z-index: -2;
 	}
+
 	&__title {
 		color: var(--text-inverse);
 	}
+
 	&__text {
 		color: var(--text-inverse);
 		@media (max-width: $mobile) {
@@ -225,6 +251,9 @@
 			@media (max-width: $mobile) {
 				height: toRem(483);
 			}
+			@media (max-width: toEm(576)) {
+				height: toRem(363);
+			}
 		}
 		& .banner__slide {
 			max-width: none;
@@ -237,6 +266,9 @@
 			@media (max-width: toEm(1280)) {
 				padding-bottom: 10.5%;
 				max-width: 85.951807%;
+			}
+			@media (max-width: toEm(576)) {
+				max-width: 95%;
 			}
 		}
 

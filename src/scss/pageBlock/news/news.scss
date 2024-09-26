@@ -25,6 +25,12 @@
 		@media (max-width: toEm(1280)) {
 			height: toRem(292);
 		}
+		@media (max-width: $mobile) {
+			width: calc((100% - toRem(16) * 2) / 3);
+		}
+		@media (max-width: toEm(576)) {
+			height: toRem(182);
+		}
 	}
 
 	&__item {
@@ -83,6 +89,10 @@
 		@media (max-width: toEm(1280)) {
 			height: 41%;
 		}
+		@media (max-width: toEm(576)) {
+			padding: toRem(6);
+			height: auto;
+		}
 	}
 
 	&__rubric {
@@ -101,6 +111,9 @@
 		height: toRem(40);
 		@media (max-width: toEm(1280)) {
 			height: toRem(67);
+		}
+		@media (max-width: toEm(576)) {
+			height: toRem(40);
 		}
 	}
 }

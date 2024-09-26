@@ -14,11 +14,14 @@
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
+		@media (max-width: toEm(576)) {
+			gap: toRem(14);
+		}
 	}
 
 	&__card {
 		width: calc((100% - toRem(20) * 3) / 4);
-		// aspect-ratio: 400 / 376;
+		height: 100%;
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
 		overflow: hidden;
@@ -46,6 +49,9 @@
 		}
 		@media (max-width: $mobile) {
 			width: calc((100% - toRem(16) * 2) / 3);
+		}
+		@media (max-width: toEm(576)) {
+			width: calc((100% - toRem(14) * 2) / 3);
 		}
 	}
 
@@ -95,6 +101,9 @@
 				font-size: toRem(16);
 				line-height: 1.37;
 			}
+			@media (max-width: toEm(576)) {
+				height: toRem(65);
+			}
 		}
 	}
 
@@ -117,6 +126,9 @@
 			@media (max-width: toEm(1280)) {
 				gap: toRem(20);
 			}
+			@media (max-width: toEm(576)) {
+				gap: toRem(4);
+			}
 
 			& .text_card {
 				max-height: toRem(100);
@@ -130,6 +142,8 @@
 			& .price {
 				@media (max-width: toRem(598)) {
 					align-self: center;
+					flex-wrap: wrap;
+					gap: toRem(2);
 				}
 			}
 		}
@@ -147,6 +161,9 @@
 		@media (max-width: toEm(1280)) {
 			margin-bottom: toRem(5);
 		}
+		@media (max-width: toEm(576)) {
+			padding: 0 toRem(10);
+		}
 	}
 
 	&__button {
@@ -155,5 +172,9 @@
 		font-size: toRem(16);
 		display: flex;
 		flex: 1 1 50%;
+		@media (max-width: toEm(576)) {
+			padding: toRem(13) toRem(0);
+			font-size: toRem(14);
+		}
 	}
 }

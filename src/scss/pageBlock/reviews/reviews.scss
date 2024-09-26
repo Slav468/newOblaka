@@ -34,7 +34,7 @@
 	&__item {
 		width: 100%;
 		height: 100%;
-		padding: toRem(28) toRem(56);
+		padding: toRem(30);
 
 		display: flex;
 		flex-direction: column;
@@ -45,6 +45,13 @@
 		border-radius: var(--radius8);
 		overflow: hidden;
 		transition: 0.3s;
+
+		& .button {
+			@media (max-width: toEm(576)) {
+				width: 100%;
+				padding: toRem(13) 0;
+			}
+		}
 	}
 
 	&__top {
@@ -89,9 +96,11 @@
 		font-size: toRem(14);
 		color: var(--text-secondary);
 	}
+
 	&__wrap {
 		display: flex;
 		gap: toRem(6);
+		flex: 1 1 auto;
 	}
 
 	&__svg {
@@ -103,19 +112,21 @@
 		justify-self: flex-start;
 		color: var(--primary);
 
-		& svg {
-			width: 100%;
-		}
+		// & svg {
+		// 	width: 100%;
+		// }
 	}
 
 	&__text {
 		display: flex;
-
-		// height: toRem(48);
 		font-style: italic;
 		font-weight: 400;
 		font-size: toRem(16);
 		color: var(--text-primary);
 		overflow: hidden;
+		@media (max-width: toEm(576)) {
+			height: toRem(193);
+			overflow: hidden;
+		}
 	}
 }

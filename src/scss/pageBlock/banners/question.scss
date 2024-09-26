@@ -11,6 +11,9 @@
 		border: toRem(1) solid var(--primary);
 		border-radius: toRem(16);
 		padding: toRem(30) toRem(50);
+		@media (max-width: toRem(576)) {
+			padding: toRem(20);
+		}
 	}
 
 	// .question__img
@@ -23,6 +26,17 @@
 		align-items: flex-end;
 		justify-content: center;
 		background: url('@img/banners/questionBannerBG.png') center/cover no-repeat;
+		@media (max-width: toRem(576)) {
+			align-self: center;
+			min-width: toRem(144);
+			max-width: toRem(144);
+			min-height: toRem(144);
+			max-height: toRem(144);
+			& svg {
+				width: 75%;
+				height: 75%;
+			}
+		}
 	}
 
 	// .question__descriptions
@@ -37,6 +51,9 @@
 	&__title {
 		font-weight: 600;
 		font-size: toRem(30);
+		@media (max-width: toRem(576)) {
+			font-size: toRem(20);
+		}
 	}
 
 	// .question__text
@@ -45,6 +62,9 @@
 		font-size: toRem(16);
 		line-height: 1.5;
 		color: var(--text-secondary);
+		@media (max-width: toRem(576)) {
+			font-size: toRem(15);
+		}
 	}
 
 	&:has(.question__container > .question__content > .form) {

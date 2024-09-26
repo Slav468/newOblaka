@@ -214,6 +214,10 @@
 			background-color: var(--swiper-theme-color);
 		}
 	}
+
+	@media (max-width: toEm(576)) {
+		display: none;
+	}
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {

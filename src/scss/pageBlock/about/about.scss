@@ -14,8 +14,13 @@
 		&__buttons {
 			align-self: flex-start;
 			justify-self: flex-start;
+			@media (max-width: toEm(576)) {
+				width: 100%;
+				justify-content: center;
+			}
 		}
 	}
+
 	&:has(.about__img) {
 		.block {
 			&__body {

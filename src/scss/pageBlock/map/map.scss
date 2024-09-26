@@ -11,6 +11,9 @@
 		@media (max-width: $tablet) {
 			aspect-ratio: 972 / 468;
 		}
+		@media (max-width: toEm(576)) {
+			aspect-ratio: 1 / 0.8;
+		}
 	}
 
 	// .map__content
@@ -31,6 +34,9 @@
 		bottom: percent(80, 600);
 		left: percent(40, $maxWidth);
 		z-index: 2;
+		@media (max-width: toEm(576)) {
+			bottom: 20%;
+		}
 	}
 }
 
@@ -43,6 +49,9 @@
 	border-radius: var(--radius8);
 	overflow: hidden;
 	background-color: var(--bg-primary);
+	@media (max-width: $mobile) {
+		max-width: toRem(323);
+	}
 
 	// .map-address_svg
 	&_svg {

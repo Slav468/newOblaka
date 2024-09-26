@@ -159,6 +159,7 @@
 	border: 1px solid var(--primary);
 	color: var(--primary);
 	width: 100%;
+
 	&:hover {
 		background-color: var(--primary);
 		color: var(--text-inverse);
@@ -189,6 +190,12 @@
 	}
 	&_width-inverse {
 		background-color: var(--text-inverse);
+	}
+	@media (max-width: $mobile) {
+		font-size: toRem(15);
+	}
+	@media (max-width: toEm(576)) {
+		font-size: toRem(14);
 	}
 }
 
@@ -223,6 +230,9 @@
 	@media (max-width: $mobile) {
 		font-size: toRem(26);
 	}
+	@media (max-width: toEm(576)) {
+		font-size: toRem(20);
+	}
 }
 
 .text {
@@ -232,6 +242,9 @@
 		line-height: 1.33;
 		@media (max-width: $mobile) {
 			font-size: toRem(16);
+		}
+		@media (max-width: toEm(576)) {
+			font-size: toRem(15);
 		}
 	}
 	&_subtitle {

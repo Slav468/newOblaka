@@ -39,9 +39,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
 		overflow: hidden;
 		border-radius: var(--radius8);
+
+		@media (max-width: toEm(576)) {
+			padding: toRem(12) toRem(10);
+		}
 	}
 
 	// .share__img
@@ -51,10 +54,12 @@
 		left: 0;
 		z-index: -1;
 		width: 100%;
+		height: 100%;
 
 		overflow: hidden;
 		display: flex;
 		& img {
+			width: 100%;
 			object-fit: cover;
 			object-position: center;
 		}
@@ -100,6 +105,10 @@
 		line-height: 1.56;
 		color: var(--text-inverse);
 		overflow: hidden;
+		@media (max-width: toEm(576)) {
+			font-size: toRem(13);
+			line-height: 1.38;
+		}
 	}
 
 	// .share__text
@@ -109,6 +118,10 @@
 		line-height: 1.5;
 		color: var(--text-inverse);
 		overflow: hidden;
+		@media (max-width: toEm(576)) {
+			font-size: toRem(11);
+			line-height: 1.36;
+		}
 	}
 
 	// .share__sale
@@ -131,6 +144,11 @@
 		color: var(--text-inverse);
 		padding: 0 toRem(13);
 		border-radius: toRem(4);
+		@media (max-width: toEm(576)) {
+			font-size: toRem(13);
+			line-height: 1.54;
+			padding: toRem(5) toRem(10);
+		}
 	}
 
 	// .share__term
@@ -139,5 +157,9 @@
 		font-size: toRem(14);
 		line-height: 2;
 		color: var(--text-inverse);
+		@media (max-width: toEm(576)) {
+			font-size: toRem(11);
+			line-height: 2.55;
+		}
 	}
 }

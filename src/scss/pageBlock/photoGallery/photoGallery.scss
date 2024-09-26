@@ -9,6 +9,9 @@
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
+		@media (max-width: toRem(576)) {
+			gap: toRem(14);
+		}
 	}
 
 	&__cell {

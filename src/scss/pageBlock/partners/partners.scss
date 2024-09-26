@@ -21,6 +21,7 @@
 		justify-content: center;
 		border: 1px solid var(--border);
 		border-radius: var(--radius8);
+
 		& img {
 			padding: toRem(5);
 			display: flex;
@@ -30,6 +31,12 @@
 			&:hover {
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 			}
+		}
+	}
+
+	@media (max-width: toEm(576)) {
+		.partners__img {
+			width: calc((100% - toRem(16) * 2) / 3);
 		}
 	}
 }
