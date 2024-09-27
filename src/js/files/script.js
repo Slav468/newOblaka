@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// const PHONE_PATTERN = new RegExp(
 	// 	/^\+375[\s|-]?[0-9]{2}[\s|-]?[0-9]{3}[\s|-]?[0-9]{2}[\s|-]?[0-9]{2}$/
 	// );
+
 	// Close aside menu
 	function closeMenu() {
 		bodyUnlock();
@@ -32,15 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	closeAsideMenu();
 
 	const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
-	asideMenuOverlay.addEventListener('click', () => {
-		closeMenu();
-	});
-
-	document.addEventListener('keydown', e => {
-		if (e.key === 'Escape') {
-			closeMenu();
-		}
-	});
 
 	function dropMenu(array, selector) {
 		array.forEach(item => {
@@ -74,39 +66,59 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
 	removeDrop(mobileBackButtons);
 
-	window.addEventListener('resize', () => {
-		if (document.querySelector('.menu__list')) {
-			hideMenuItem();
+	function removeSomeDrop(selector) {
+		const allDrop = document.querySelectorAll(selector);
+		allDrop.forEach(item => {
+			item.classList.remove('drop');
+		});
+	}
+	removeSomeDrop('.aside-phone');
+
+	asideMenuOverlay.addEventListener('click', () => {
+		closeMenu();
+		removeSomeDrop('.aside-phone');
+	});
+
+	document.addEventListener('keydown', e => {
+		if (e.key === 'Escape') {
+			closeMenu();
+			removeSomeDrop('.aside-phone');
 		}
 	});
 
-	function hideMenuItem() {
-		const subMenu = document.getElementById('dotted-menu');
-		const menu = document.querySelector('.menu');
-		const menuList = document.querySelector('.menu__list');
-		const menuItems = menuList.children;
-		const subMenuItems = subMenu.children;
+	// function hideMenuItem() {
+	// 	const subMenu = document.getElementById('dotted-menu');
+	// 	const menu = document.querySelector('.menu');
+	// 	const menuList = document.querySelector('.menu__list');
+	// 	const menuItems = menuList.children;
+	// 	// const subMenuItems = subMenu.children;
 
-		let width = menu.offsetWidth;
-		let totalWidthItem = 0;
+	// 	let width = menu.offsetWidth;
+	// 	let totalWidthItem = 0;
 
-		for (let item of menuItems) {
-			totalWidthItem += item.clientWidth + 983 * 0.035;
-		}
+	// 	for (let item of menuItems) {
+	// 		totalWidthItem += item.clientWidth + 983 * 0.035;
+	// 	}
 
-		if (totalWidthItem >= width && menuItems.length > 3) {
-			let element = menuList.removeChild(menuItems[menuItems.length - 2]);
-			subMenu.append(element);
-		} else {
-			// let element = subMenu.removeChild(subMenuItems[subMenuItems.length - 2]);
-			// menuList.append(element);
-			return;
-		}
-	}
+	// 	if (totalWidthItem >= width && menuItems.length > 3) {
+	// 		let element = menuList.removeChild(menuItems[menuItems.length - 2]);
+	// 		subMenu.append(element);
+	// 	} else {
+	// 		// let element = subMenu.removeChild(subMenuItems[subMenuItems.length - 2]);
+	// 		// menuList.append(element);
+	// 		return;
+	// 	}
+	// }
+	// if (document.querySelector('.menu__list')) {
+	// 	window.addEventListener('resize', () => {
+	// 		hideMenuItem();
+	// 	});
+	// }
 
-	// Enable button if form
+	//! Enable button if form
 	function toggleBtnForm() {
 		const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
 		checkBoxes.forEach(item => {
@@ -144,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		toggleBtnForm();
 	}
 
-	// Counter in card
+	// !Counter in card
 	if (document.querySelector('.count')) {
 		const countsBlocks = document.querySelectorAll('.count');
 		countsBlocks.forEach(block => {

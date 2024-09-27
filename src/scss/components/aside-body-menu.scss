@@ -72,6 +72,13 @@
 		font-weight: 600;
 		font-size: toRem(14);
 		padding: toRem(10) 0;
+		& .aside-menu__link {
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--primary);
+				}
+			}
+		}
 
 		&.drop {
 			& > .aside-menu__drop {
@@ -84,7 +91,7 @@
 				height: 100vh;
 				background-color: var(--bg-primary);
 
-				& > .aside-menu__list {
+				& > .aside-menu__body {
 					display: flex;
 					max-width: none;
 					overflow: auto;
@@ -93,42 +100,30 @@
 					& > .mobile-back {
 						display: flex;
 					}
-				}
-			}
-		}
-
-		// вторая вложенность
-		& > .aside-menu__list {
-			width: 100vw;
-			max-width: 435px;
-			display: none;
-			flex-direction: column;
-			padding: toRem(12) 0;
-			border-radius: toRem(8);
-			font-size: toRem(14);
-			font-weight: 500;
-			line-height: 17.07px;
-		}
-
-		& .aside-menu__item {
-			text-overflow: ellipsis;
-			display: flex;
-			justify-content: space-between;
-			padding: toRem(4) 0;
-			text-transform: capitalize;
-		}
-
-		& > .aside-menu__link {
-			display: block;
-			overflow: hidden;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			font-weight: 600;
-			font-size: toRem(14);
-			color: var(--text-accent);
-			@media (any-hover: hover) {
-				&:hover {
-					color: var(--primary);
+					& > .aside-menu__title {
+						font-weight: 700;
+						font-size: toRem(18);
+						text-transform: uppercase;
+						color: var(--text-primary);
+						padding: toRem(10) 0;
+						border-top: 1px solid var(--border);
+						border-bottom: 1px solid var(--border);
+						@media (any-hover: hover) {
+							&:hover {
+								color: var(--primary);
+							}
+						}
+					}
+					& > .aside-menu__list {
+						display: flex;
+						flex-direction: column;
+						gap: toRem(15);
+						& > .aside-menu__item {
+							& > .aside-menu__link {
+								text-transform: none;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -289,6 +284,14 @@
 				padding-top: toRem(40);
 				padding-left: toRem(35);
 			}
+		}
+	}
+
+	& .phone-dropdown {
+		// .phone-dropdown__item
+		&__item {
+			flex-direction: row;
+			gap: toRem(10);
 		}
 	}
 }
