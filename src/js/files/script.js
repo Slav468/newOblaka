@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
 
-	function dropMenu(array, selector) {
+	function dropMenu(array, selector, event = 'click') {
 		array.forEach(item => {
-			item.addEventListener('click', e => {
+			item.addEventListener(`${event}`, e => {
 				e.preventDefault();
 				const target = e.currentTarget;
 				const parentDrop = target.closest(selector);
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	dropMenu(dropButton, '.menu__item');
+	dropMenu(dropButton, '.menu__item', 'touch');
 	dropMenu(asideDropButtons, '.aside-menu__item');
 	dropMenu(contactsPhoneButton, '.contacts-phone');
 	dropMenu(asidePhonesArrow, '.aside-phone');

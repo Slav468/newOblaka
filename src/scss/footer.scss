@@ -227,7 +227,6 @@
 		// .messengers__item
 		&__item {
 			& .svg-item {
-				color: var(--text-inverse);
 				@media (any-hover: hover) {
 					&:hover {
 						color: var(--primary);
@@ -241,7 +240,6 @@
 		// .social__item
 		&__item {
 			& .svg-item {
-				color: var(--text-inverse);
 				@media (any-hover: hover) {
 					&:hover {
 						color: var(--primary);
