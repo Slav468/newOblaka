@@ -14,6 +14,9 @@
 		@media (max-width: toRem(576)) {
 			padding: toRem(20);
 		}
+		@media (max-width: toEm(520)) {
+			flex-direction: column;
+		}
 	}
 
 	// .question__img
@@ -126,6 +129,45 @@
 			// .question__text
 			&__text {
 				grid-area: text;
+			}
+		}
+		@media (max-width: toEm(450)) {
+			.question {
+				// .question__content
+				&__content {
+					display: grid;
+					grid-template-areas:
+						'img img '
+						'title title'
+						'text text'
+						'form form';
+					& .form {
+						grid-area: form;
+						width: 100%;
+						align-items: flex-start;
+
+						// .form__list
+						&__list {
+							flex-direction: column;
+						}
+
+						&__cell {
+							flex: 1 1 50%;
+							max-width: toRem(490);
+						}
+
+						// .form__button
+						&__button {
+							width: 100%;
+							& .button {
+								width: 100%;
+							}
+						}
+					}
+				}
+				&__img {
+					justify-self: center;
+				}
 			}
 		}
 	}

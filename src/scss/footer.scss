@@ -13,6 +13,10 @@
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		@media (max-width: toEm(550)) {
+			flex-direction: column;
+			gap: toRem(14);
+		}
 	}
 
 	// .footer__bottom
@@ -116,6 +120,9 @@
 		gap: toRem(30);
 		max-width: percent(965, 1700);
 		width: 100%;
+		@media (max-width: toEm(550)) {
+			max-width: none;
+		}
 	}
 
 	// .footer-top__right
@@ -126,11 +133,11 @@
 		max-width: toRem(400);
 		width: 100%;
 
-		// @media (max-width: toEm(1280)) {
-		// 	max-width: toRem(272);
-		// }
 		@media (max-width: $tablet) {
 			max-width: 17rem;
+		}
+		@media (max-width: toEm(550)) {
+			max-width: none;
 		}
 	}
 }

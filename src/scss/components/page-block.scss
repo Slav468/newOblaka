@@ -49,6 +49,9 @@
 
 	&__reference {
 		align-self: flex-end;
+		@media (max-width: toEm(400)) {
+			display: none;
+		}
 	}
 
 	&__body {

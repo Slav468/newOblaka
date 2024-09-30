@@ -29,8 +29,11 @@
 				@media (max-width: $mobile) {
 					gap: toRem(16);
 				}
-				@media (max-width: toEm(576)) {
+				@media (max-width: toEm(698)) {
 					flex-direction: row;
+				}
+				@media (max-width: toEm(457)) {
+					flex-direction: column;
 				}
 			}
 
@@ -44,8 +47,11 @@
 				border-radius: var(--radius8);
 				overflow: hidden;
 				@include imageOverlay();
-				@media (max-width: toEm(576)) {
+				@media (max-width: toEm(698)) {
 					aspect-ratio: 268 / 132;
+				}
+				@media (max-width: toEm(457)) {
+					height: toRem(265);
 				}
 			}
 
@@ -123,7 +129,7 @@
 				line-height: 1.33;
 			}
 		}
-		@media (max-width: toEm(576)) {
+		@media (max-width: toEm(698)) {
 			& .banner__container {
 				flex-direction: column;
 			}
@@ -133,6 +139,11 @@
 			.banner__pagination {
 				display: flex;
 				bottom: toRem(6);
+			}
+		}
+		@media (max-width: toEm(457)) {
+			.banner__slider {
+				height: toRem(491);
 			}
 		}
 	}
@@ -152,6 +163,9 @@
 		border-radius: toRem(8);
 		@media (max-width: $mobile) {
 			height: toRem(323);
+		}
+		@media (max-width: toEm(457)) {
+			height: toRem(491);
 		}
 	}
 	&__slide {
@@ -191,7 +205,7 @@
 			max-width: 83.6%;
 			gap: toRem(15);
 		}
-		@media (max-width: toEm(576)) {
+		@media (max-width: toEm(698)) {
 			max-width: 95%;
 		}
 	}
@@ -234,9 +248,15 @@
 		& .button {
 			align-self: flex-start;
 		}
+
 		& .button:first-child {
+			display: flex;
 			max-width: toRem(221);
 			padding: toRem(13) toRem(20);
+		}
+
+		@media (max-width: toEm(550)) {
+			gap: toRem(10);
 		}
 	}
 
@@ -251,8 +271,11 @@
 			@media (max-width: $mobile) {
 				height: toRem(483);
 			}
-			@media (max-width: toEm(576)) {
+			@media (max-width: toEm(698)) {
 				height: toRem(363);
+			}
+			@media (max-width: toEm(457)) {
+				height: toRem(567);
 			}
 		}
 		& .banner__slide {
@@ -267,8 +290,12 @@
 				padding-bottom: 10.5%;
 				max-width: 85.951807%;
 			}
-			@media (max-width: toEm(576)) {
+			@media (max-width: toEm(698)) {
 				max-width: 95%;
+			}
+			@media (max-width: toEm(457)) {
+				padding: 0;
+				justify-content: center;
 			}
 		}
 

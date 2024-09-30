@@ -4,7 +4,7 @@
 	left: -100%;
 	z-index: 8;
 	width: 100vw;
-	height: 100svh;
+	height: 100%;
 	transition: left 0.3s ease;
 
 	&__overlay {
@@ -19,8 +19,8 @@
 	}
 
 	&__content {
-		width: 50%;
-		height: 100%;
+		width: 35vw;
+		height: 100vh;
 		position: relative;
 		padding: toRem(40);
 		display: flex;
@@ -28,6 +28,18 @@
 		gap: toRem(40);
 		background-color: var(--bg-primary);
 		overflow: auto;
+		@media (max-width: toEm(1280)) {
+			width: 45vw;
+		}
+		@media (max-width: $tablet) {
+			width: 55vw;
+		}
+		@media (max-width: $mobile) {
+			width: 75vw;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100vw;
+		}
 	}
 
 	&__close {
@@ -46,6 +58,7 @@
 
 	&__body {
 		width: 100%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: toRem(20);
@@ -82,14 +95,26 @@
 
 		&.drop {
 			& > .aside-menu__drop {
-				position: absolute;
+				position: fixed;
 				top: 0;
 				left: 0;
 				z-index: 6;
 				display: flex;
-				width: 100%;
+				width: 35vw;
 				height: 100vh;
 				background-color: var(--bg-primary);
+				@media (max-width: toEm(1280)) {
+					width: 45vw;
+				}
+				@media (max-width: $tablet) {
+					width: 55vw;
+				}
+				@media (max-width: $mobile) {
+					width: 75vw;
+				}
+				@media (max-width: $mobileSmall) {
+					width: 100vw;
+				}
 
 				& > .aside-menu__body {
 					display: flex;
@@ -97,6 +122,7 @@
 					overflow: auto;
 					gap: toRem(15);
 					padding: toRem(40);
+					overflow: auto;
 					& > .mobile-back {
 						display: flex;
 					}
@@ -108,16 +134,18 @@
 						padding: toRem(10) 0;
 						border-top: 1px solid var(--border);
 						border-bottom: 1px solid var(--border);
-						@media (any-hover: hover) {
-							&:hover {
-								color: var(--primary);
+						& > a {
+							@media (any-hover: hover) {
+								&:hover {
+									color: var(--primary);
+								}
 							}
 						}
 					}
 					& > .aside-menu__list {
 						display: flex;
 						flex-direction: column;
-						gap: toRem(15);
+
 						& > .aside-menu__item {
 							& > .aside-menu__link {
 								text-transform: none;
@@ -147,7 +175,15 @@
 	}
 
 	&__drop {
-		display: none;
+		position: absolute;
+		left: -100%;
+		top: 0;
+		z-index: 7;
+		width: 100%;
+		height: 100%;
+		transition: left 0.2s ease;
+		background-color: var(--bg-primary);
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
 	}
 
 	&__buttons {
@@ -218,13 +254,11 @@
 			align-items: center;
 			gap: toRem(15);
 		}
-
 		&__item {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 		}
-
 		&__svg {
 			width: toRem(27);
 			height: toRem(27);
@@ -252,32 +286,42 @@
 			transform: rotate(-90deg);
 		}
 		&__dropdown {
-			position: absolute;
-			top: -12px;
-			left: -5px;
-			z-index: 5;
+			position: fixed;
+			left: -100%;
+			top: 0;
+			z-index: 7;
+			height: 100vh;
+			width: 35vw;
+			transition: left 0.4s ease;
 			background-color: var(--bg-primary);
-			width: 50vw;
-			max-width: 220px;
-			display: none;
-			border-radius: 8px;
-			box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.4);
+			box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
 		}
-
 		&.drop {
 			& .phone-dropdown {
 				display: flex;
 				align-self: flex-start;
 				flex-direction: column;
 				height: 100vh;
-				width: 50vw;
+				width: 35vw;
 				max-width: none;
 				position: fixed;
 				left: 0;
 				top: 0;
 				z-index: 7;
-				background-color: #fff;
+				background-color: var(--bg-primary);
 				border-radius: 0;
+				@media (max-width: toEm(1280)) {
+					width: 45vw;
+				}
+				@media (max-width: $tablet) {
+					width: 55vw;
+				}
+				@media (max-width: $mobile) {
+					width: 75vw;
+				}
+				@media (max-width: $mobileSmall) {
+					width: 100vw;
+				}
 			}
 			& .mobile-back {
 				display: flex;
@@ -288,7 +332,7 @@
 	}
 
 	& .phone-dropdown {
-		// .phone-dropdown__item
+		overflow: auto;
 		&__item {
 			flex-direction: row;
 			gap: toRem(10);

@@ -8,6 +8,12 @@
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
+		@media (max-width: toEm(520)) {
+			gap: toRem(14);
+		}
+		@media (max-width: toEm(360)) {
+			gap: toRem(10);
+		}
 	}
 
 	&__cell {
@@ -30,6 +36,13 @@
 		}
 		@media (max-width: toEm(576)) {
 			height: toRem(182);
+		}
+		@media (max-width: toEm(520)) {
+			width: calc((100% - toRem(14) * 1) / 2);
+		}
+		@media (max-width: toEm(360)) {
+			height: toRem(195);
+			width: calc((100% - toRem(10) * 1) / 2);
 		}
 	}
 
@@ -109,6 +122,7 @@
 		line-height: 1.37;
 		color: var(--text-primary);
 		overflow: hidden;
+		text-overflow: ellipsis;
 		height: toRem(40);
 		@media (max-width: toEm(1280)) {
 			height: toRem(67);

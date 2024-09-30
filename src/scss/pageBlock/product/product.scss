@@ -31,6 +31,9 @@
 		@media (max-width: toEm(576)) {
 			width: calc((100% - toRem(14) * 2) / 3);
 		}
+		@media (max-width: toEm(520)) {
+			width: calc((100% - toRem(14) * 1) / 2);
+		}
 
 		&_normal {
 			& .buttons-basket {
@@ -254,7 +257,6 @@
 
 	&__slider {
 		width: 100%;
-		height: 50%;
 		max-height: toRem(268);
 		display: flex;
 		position: relative;

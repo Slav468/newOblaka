@@ -13,12 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const asidePhonesArrow = document.querySelectorAll('.aside-phone__arrow');
 	const asideDropButtons = document.querySelectorAll('.aside-menu__svg');
 	const asideCloseButton = document.querySelector('.aside-menu__close');
-
-	// Validate the form
-	// const EMAIL_PATTERN = new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/);
-	// const PHONE_PATTERN = new RegExp(
-	// 	/^\+375[\s|-]?[0-9]{2}[\s|-]?[0-9]{3}[\s|-]?[0-9]{2}[\s|-]?[0-9]{2}$/
-	// );
+	const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
 
 	// Close aside menu
 	function closeMenu() {
@@ -32,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	closeAsideMenu();
 
-	const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
-
 	function dropMenu(array, selector, event = 'click') {
 		array.forEach(item => {
 			item.addEventListener(`${event}`, e => {
@@ -46,18 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	dropMenu(dropButton, '.menu__item', 'touch');
+	dropMenu(dropButton, '.menu__item', 'touchstart');
 	dropMenu(asideDropButtons, '.aside-menu__item');
 	dropMenu(contactsPhoneButton, '.contacts-phone');
 	dropMenu(asidePhonesArrow, '.aside-phone');
 
-	function removeDrop(array) {
+	function removeDrop(array, selector) {
 		array.forEach(item => {
 			item.addEventListener('click', e => {
 				e.preventDefault();
 				const target = e.currentTarget;
 				const parentDrop = target.closest('.drop');
-				if (parentDrop.matches('.menu__item .drop')) {
+				if (parentDrop.matches(`${selector} .drop`)) {
 					parentDrop.classList.remove('drop');
 				} else {
 					header.classList.remove('drop');
@@ -67,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	removeDrop(mobileBackButtons);
+	removeDrop(mobileBackButtons, '.menu__item');
 
 	function removeSomeDrop(selector) {
 		const allDrop = document.querySelectorAll(selector);
@@ -75,17 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			item.classList.remove('drop');
 		});
 	}
-	removeSomeDrop('.aside-phone');
 
 	asideMenuOverlay.addEventListener('click', () => {
 		closeMenu();
 		removeSomeDrop('.aside-phone');
+		removeSomeDrop('.aside-menu__item');
 	});
 
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape') {
 			closeMenu();
 			removeSomeDrop('.aside-phone');
+			removeSomeDrop('.aside-menu__item');
 		}
 	});
 

@@ -11,15 +11,24 @@
 	<div class="form__list">
 		<!-- Имя -->
 		<div class="form__cell" data-formData>
-			<label class="form__label">Ваше имя*</label>
-			<input class="form__input" type="text" required placeholder="Ваше имя" />
+			<label class="form__label" for="name">Ваше имя*</label>
+			<input
+				class="form__input"
+				type="text"
+				name="name"
+				id="name"
+				required
+				placeholder="Ваше имя"
+			/>
 		</div>
 		<!-- Телефон -->
 		<div class="form__cell" data-formData>
-			<label class="form__label">Ваш телефон*</label>
+			<label class="form__label" for="phone">Ваш телефон*</label>
 			<input
-				type="text"
-				class="form__input js-tel"
+				name="phone"
+				id="phone"
+				type="tel"
+				class="form__input"
 				required
 				placeholder="+375 (00) 000-00-00"
 			/>
@@ -54,11 +63,19 @@
 	</div>
 	<!-- Captcha -->
 	<!-- <div class="form__cell captcha">
-		<label class="captcha__label">Введите символы на картинке*</label>
+		<label class="captcha__label" for="input-captcha"
+			>Введите символы на картинке*</label
+		>
 		<div class="captcha__wrap">
 			<div class="captcha__inputs">
 				<input id="" name="" value="" type="hidden" class="captcha__input" />
-				<input class="captcha__input" id="" name="" type="text" required />
+				<input
+					class="captcha__input"
+					id="input-captcha"
+					name="input-captcha"
+					type="text"
+					required
+				/>
 			</div>
 			<div class="captcha__img">
 				<img src="@img/form/captcha.jpg" alt="captcha" />

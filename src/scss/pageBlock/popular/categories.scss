@@ -8,6 +8,12 @@
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
+		@media (max-width: toEm(520)) {
+			gap: toRem(14);
+		}
+		@media (max-width: toEm(360)) {
+			gap: toRem(10);
+		}
 	}
 
 	&__cell {
@@ -32,6 +38,12 @@
 		}
 		@media (max-width: $mobile) {
 			width: calc((100% - toRem(16) * 2) / 3);
+		}
+		@media (max-width: toEm(520)) {
+			width: calc((100% - toRem(14) * 1) / 2);
+		}
+		@media (max-width: toEm(360)) {
+			width: calc((100% - toRem(10) * 1) / 2);
 		}
 	}
 
@@ -70,6 +82,10 @@
 		padding-left: toRem(20);
 		font-weight: 500;
 		font-size: toRem(16);
+		@media (max-width: toEm(520)) {
+			font-size: toRem(12);
+			padding-left: toRem(7);
+		}
 	}
 
 	&__img {

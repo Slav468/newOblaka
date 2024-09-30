@@ -17,6 +17,9 @@
 		@media (max-width: toEm(576)) {
 			gap: toRem(14);
 		}
+		@media (max-width: toEm(360)) {
+			gap: toRem(10);
+		}
 	}
 
 	&__card {
@@ -53,6 +56,12 @@
 		@media (max-width: toEm(576)) {
 			width: calc((100% - toRem(14) * 2) / 3);
 		}
+		@media (max-width: toEm(520)) {
+			width: calc((100% - toRem(14) * 1) / 2);
+		}
+		@media (max-width: toEm(360)) {
+			width: calc((100% - toRem(10) * 1) / 2);
+		}
 	}
 
 	&__link {
@@ -86,24 +95,23 @@
 		font-weight: 600;
 		font-size: toRem(16);
 		line-height: 1.2;
+		height: toRem(40);
 		overflow: hidden;
 		@media (max-width: toRem(1440)) {
 			font-size: toRem(14);
 		}
 		@media (max-width: toEm(1280)) {
 			gap: toRem(5);
+			height: toRem(45);
+		}
+		@media (max-width: toEm(576)) {
+			height: toRem(75);
 		}
 		& h3 {
-			height: toRem(40);
-			overflow: hidden;
 			@media (max-width: toEm(1280)) {
-				height: toRem(45);
 				font-weight: 600;
 				font-size: toRem(16);
 				line-height: 1.37;
-			}
-			@media (max-width: toEm(576)) {
-				height: toRem(65);
 			}
 		}
 	}
@@ -142,7 +150,7 @@
 
 			& .price {
 				@media (max-width: toRem(598)) {
-					align-self: center;
+					align-self: flex-start;
 					flex-wrap: wrap;
 					gap: toRem(2);
 				}

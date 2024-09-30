@@ -9,6 +9,12 @@
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
+		@media (max-width: toEm(520)) {
+			gap: toRem(14);
+		}
+		@media (max-width: toEm(360)) {
+			gap: toRem(10);
+		}
 	}
 
 	// .share__cell
@@ -26,6 +32,12 @@
 		}
 		@media (max-width: $tablet) {
 			width: calc((100% - toRem(16)) / 2);
+		}
+		@media (max-width: toEm(520)) {
+			width: calc((100% - toRem(14)) / 2);
+		}
+		@media (max-width: toEm(450)) {
+			width: calc((100% - toRem(14)) / 1);
 		}
 	}
 

@@ -3,6 +3,9 @@
 		& .reviews-slider {
 			& .reviews__cell {
 				width: calc((100% - toRem(20)) / 2);
+				@media (max-width: toEm(520)) {
+					width: calc((100% - toRem(14)) / 1);
+				}
 			}
 		}
 	}
@@ -17,6 +20,13 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
 		grid-gap: toRem(20);
+		@media (max-width: toEm(520)) {
+			grid-template-columns: 1fr;
+			grid-gap: toRem(14);
+		}
+		@media (max-width: toEm(360)) {
+			grid-gap: toRem(10);
+		}
 	}
 
 	&__cell {

@@ -56,6 +56,9 @@
 		font-weight: 600;
 		font-size: toRem(16);
 		color: var(--text-inverse);
+		@media (max-width: toEm(520)) {
+			font-size: toRem(14);
+		}
 	}
 
 	&__bottom {
@@ -132,6 +135,10 @@
 				transform: translateX(-50%);
 			}
 
+			@media (max-width: toRem(1440)) {
+				gap: toRem(20);
+			}
+
 			@media (max-width: toEm(1280)) {
 				padding: toRem(15) toRem(10) toRem(15) toRem(20);
 			}
@@ -159,17 +166,9 @@
 			@media (max-width: toRem(1440)) {
 				flex-direction: row;
 				width: 100%;
-				justify-content: center;
+				justify-content: space-around;
 				align-items: center;
-				gap: toRem(30);
-			}
-			@media (max-width: toRem(1440)) {
-				flex-direction: column;
-				gap: toRem(0);
-			}
-
-			@media (max-width: toRem(449)) {
-				flex-direction: row;
+				flex-wrap: wrap;
 			}
 		}
 
@@ -182,7 +181,10 @@
 			font-weight: 700;
 			font-size: toRem(16);
 			text-align: center;
-			color: #fff;
+			color: var(--bg-primary);
+			@media (max-width: toRem(1440)) {
+				width: 100%;
+			}
 		}
 
 		&__button {

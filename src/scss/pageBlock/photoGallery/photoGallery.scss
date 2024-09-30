@@ -12,6 +12,10 @@
 		@media (max-width: toRem(576)) {
 			gap: toRem(14);
 		}
+		@media (max-width: toEm(360)) {
+			gap: toRem(10);
+		}
+
 	}
 
 	&__cell {
@@ -30,6 +34,10 @@
 		}
 		@media (max-width: toEm(1280)) {
 			width: percent(300, $maxWidthContainer);
+		}
+		@media (max-width: toEm(520)) {
+			width: calc((100% - toRem(14) * 2) / 3);
+			max-width: none;
 		}
 	}
 

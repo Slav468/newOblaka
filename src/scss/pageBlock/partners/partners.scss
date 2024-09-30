@@ -9,6 +9,12 @@
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
+		@media (max-width: toEm(520)) {
+			gap: toRem(14);
+		}
+		@media (max-width: toEm(360)) {
+			gap: toRem(10);
+		}
 	}
 
 	// .partners__link
@@ -26,6 +32,9 @@
 		& img {
 			padding: toRem(5);
 			display: flex;
+			@media (max-width: $mobileSmall) {
+				width: 100%;
+			}
 		}
 
 		@media (any-hover: hover) {
@@ -37,7 +46,7 @@
 
 	@media (max-width: toEm(576)) {
 		.partners__img {
-			width: calc((100% - toRem(16) * 2) / 3);
+			width: calc((100% - toRem(14) * 1) / 2);
 		}
 	}
 }
