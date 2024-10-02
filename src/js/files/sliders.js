@@ -32,7 +32,7 @@ function initSliders() {
 		// Створюємо слайдер
 		new Swiper('.banner__slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -44,7 +44,7 @@ function initSliders() {
 			// simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
-			lazy: true,
+			// lazy: true,
 			/*
 			Ефекти
 			effect: 'fade',
@@ -773,7 +773,7 @@ function initSliders() {
 				*/
 			// Пагінація
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.product-slider__pagination',
 				clickable: true,
 			},
 			// Скроллбар
@@ -783,11 +783,7 @@ function initSliders() {
 					draggable: true,
 				},
 				*/
-			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+
 			breakpoints: {
 				320: {
 					spaceBetween: 16,
