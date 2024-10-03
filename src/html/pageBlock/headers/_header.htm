@@ -7,7 +7,7 @@
 				</a>
 				<div class="logo__slogan"></div>
 			</div>
-			<div class="header__menu menu">
+			<div class="header__menu menu" data-menu>
 				<button type="button" class="menu__icon icon-menu">
 					<span></span>
 				</button>
@@ -247,8 +247,8 @@
 							<a href="#" class="menu__link">Контакты</a>
 						</li>
 						<!-- 9 -->
-						<li class="menu__item">
-							<a href="#" class="menu__link">Ещё</a>
+						<li class="menu__item" data-menu-group>
+							<span class="menu__link">Ещё</span>
 							<div class="menu__svg">
 								<svg class="svg-arrow-down">
 									<use xlink:href="@img/icons/icons.svg#menuArrow"></use>
@@ -318,70 +318,7 @@
 							</div>
 						</li>
 					</ul>
-					<div class="mobile-view">
-						<div class="contacts-phone">
-							<div class="contacts-phone__wrapper">
-								<div class="contacts-phone__svg">
-									<svg class="svg-phone">
-										<use xlink:href="@img/icons/icons.svg#phone"></use>
-									</svg>
-								</div>
-								<div class="contacts-phone__item">
-									<a href="tel:+375292333301" class="contacts-phone__link">
-										+375 (29) 233-33-01
-									</a>
-									<p class="phone-dropdown__text">отдел продаж</p>
-								</div>
-								<div class="contacts-phone__arrow">
-									<svg class="svg-arrow-down">
-										<use xlink:href="@img/icons/icons.svg#menuArrow"></use>
-									</svg>
-								</div>
-							</div>
-							<!-- dropdown -->
-							<div class="contacts-phone__dropdown phone-dropdown">
-								<button class="mobile-back" type="button">
-									<svg class="svg-arrow-back">
-										<use xlink:href="@img/icons/icons.svg#arrow"></use>
-									</svg>
-									<span>Назад</span>
-								</button>
-								<div class="phone-dropdown__list">
-									<div class="phone-dropdown__item">
-										<a href="tel:+375292333301" class="phone-dropdown__link">
-											+375 (29) 233-33-01
-										</a>
-										<p class="phone-dropdown__text">отдел продаж</p>
-									</div>
-									<div class="phone-dropdown__item">
-										<a href="tel:+375292333301" class="phone-dropdown__link">
-											+375 (29) 233-33-01
-										</a>
-										<p class="phone-dropdown__text">
-											отдел обслуживания текст не вмещается
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="contacts-email">
-							<div class="contacts-email__svg">
-								<svg class="svg-email">
-									<use xlink:href="@img/icons/icons.svg#email"></use>
-								</svg>
-							</div>
-							<a href="mailto:crm@itoblaka.by" class="contacts-email__link">
-								crm@itoblaka.by
-							</a>
-						</div>
-						<div class="contacts-block__social">
-							<!-- messengers -->
-							@@include('../../elements/_messengers.htm',{})
-							<div class="divider"></div>
-							<!-- social nets -->
-							@@include('../../elements/_social.htm',{})
-						</div>
-					</div>
+
 				</nav>
 			</div>
 			<div class="header__contacts contacts">

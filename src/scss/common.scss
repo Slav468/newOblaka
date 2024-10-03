@@ -163,6 +163,7 @@
 	border: 1px solid var(--primary);
 	color: var(--primary);
 	width: 100%;
+	text-wrap: nowrap;
 
 	&:hover {
 		background-color: var(--primary);

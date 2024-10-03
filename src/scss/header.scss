@@ -399,8 +399,7 @@
 }
 
 .logo {
-	max-width: toRem(192);
-	width: 100%;
+	flex: 0 0 toRem(192);
 	&__logo {
 		width: 100%;
 
@@ -428,7 +427,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: flex-start;
-		gap: 4.04%;
+		gap: toRem(35);
 	}
 
 	// первая вложенность
@@ -615,6 +614,10 @@
 		}
 	}
 
+	&__content {
+		width: 100%;
+	}
+
 	&__title {
 		display: none;
 	}
@@ -643,6 +646,9 @@
 
 	&__drop {
 		display: none;
+	}
+	& > &__link {
+		text-wrap: nowrap;
 	}
 }
 

@@ -83,35 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	// function hideMenuItem() {
-	// 	const subMenu = document.getElementById('dotted-menu');
-	// 	const menu = document.querySelector('.menu');
-	// 	const menuList = document.querySelector('.menu__list');
-	// 	const menuItems = menuList.children;
-	// 	// const subMenuItems = subMenu.children;
-
-	// 	let width = menu.offsetWidth;
-	// 	let totalWidthItem = 0;
-
-	// 	for (let item of menuItems) {
-	// 		totalWidthItem += item.clientWidth + 983 * 0.035;
-	// 	}
-
-	// 	if (totalWidthItem >= width && menuItems.length > 3) {
-	// 		let element = menuList.removeChild(menuItems[menuItems.length - 2]);
-	// 		subMenu.append(element);
-	// 	} else {
-	// 		// let element = subMenu.removeChild(subMenuItems[subMenuItems.length - 2]);
-	// 		// menuList.append(element);
-	// 		return;
-	// 	}
-	// }
-	// if (document.querySelector('.menu__list')) {
-	// 	window.addEventListener('resize', () => {
-	// 		hideMenuItem();
-	// 	});
-	// }
-
 	//! Enable button if form
 	function toggleBtnForm() {
 		const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
@@ -173,4 +144,65 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
+	if (document.querySelector('.menu__list')) {
+		hideMenuItem();
+		window.addEventListener('resize', () => {
+			hideMenuItem();
+		});
+	}
+
+	// Remove and Add menu item on resize
+
+	function hideMenuItem() {
+		const menus = document.querySelectorAll('[data-menu]');
+
+		for (let menu of menus) {
+			const menuBody = menu.querySelector('.menu__body');
+			const menuList = menu.querySelector('.menu__list');
+			const menuListChildren = menuList.children; // List items
+			const menuLastItem = menuList.querySelector('[data-menu-group]'); // Item Includes menu items
+			const menuLastItemList = menuLastItem.querySelector('.menu__list'); // list of item whose includes
+			const menuLastItemListChildren = menuLastItemList.children;
+			const styles = window.getComputedStyle(menuList, null);
+			const gap = +styles.rowGap.slice(0, -2);
+
+			let width = menuList.offsetWidth;
+			let totalWidthItem = 0;
+			for (let item of menuListChildren) {
+				totalWidthItem += item.clientWidth;
+			}
+
+			totalWidthItem += gap * menuListChildren.length - 1;
+
+			if (totalWidthItem > width && menuListChildren.length > 2) {
+				menuRemoveChild(menuList, menuListChildren, menuLastItemList);
+				hideMenuItem();
+			}
+			if (
+				totalWidthItem + 120 < width &&
+				menuListChildren.length < 8 &&
+				menuLastItemListChildren.length > 1
+			) {
+				console.log(' if 2');
+				menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
+			}
+		}
+	}
+
+	function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
+		let element = menuList.removeChild(
+			menuListChildren[menuListChildren.length - 2]
+		);
+		menuLastItemList.appendChild(element);
+	}
+	function menuBackItem(menuList, menuLastItemList, menuLastItemListChildren) {
+		let element = menuLastItemList.removeChild(
+			menuLastItemListChildren[menuLastItemListChildren.length - 1]
+		);
+
+		menuList.insertBefore(element, menuList.lastElementChild);
+	}
 });
+
+
