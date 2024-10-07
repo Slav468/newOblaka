@@ -58,6 +58,7 @@
 		}
 		@media (max-width: toEm(520)) {
 			width: calc((100% - toRem(14) * 1) / 2);
+			gap: toRem(5);
 		}
 		@media (max-width: toEm(360)) {
 			width: calc((100% - toRem(10) * 1) / 2);
@@ -87,39 +88,30 @@
 	}
 
 	&__text {
-		display: flex;
-		flex-direction: column;
-		gap: toRem(4);
-		width: 100%;
-		margin: 0;
-		font-weight: 600;
-		font-size: toRem(16);
-		line-height: 1.2;
-		height: toRem(40);
+		display: -webkit-box;
+		line-clamp: 2;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
 		overflow: hidden;
-		@media (max-width: toRem(1440)) {
+		text-overflow: ellipsis;
+
+		font-weight: 600;
+		font-size: toRem(15);
+		line-height: 1.37;
+
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(13);
+		}
+		@media (max-width: $mobile) {
+			line-clamp: 3;
+			-webkit-line-clamp: 3;
 			font-size: toRem(14);
-		}
-		@media (max-width: toEm(1280)) {
-			gap: toRem(5);
-			height: toRem(45);
-		}
-		@media (max-width: toEm(576)) {
-			height: toRem(75);
-		}
-		& h3 {
-			@media (max-width: toEm(1280)) {
-				font-weight: 600;
-				font-size: toRem(16);
-				line-height: 1.37;
-			}
 		}
 	}
 
 	&__item {
 		&-wrap {
 			padding: 0 toRem(14);
-			overflow: hidden;
 			width: 100%;
 			height: auto;
 			display: flex;
@@ -136,7 +128,8 @@
 				gap: toRem(20);
 			}
 			@media (max-width: toEm(576)) {
-				gap: toRem(4);
+				gap: toRem(7);
+				padding: 0 toRem(6);
 			}
 
 			& .text_card {
@@ -149,9 +142,13 @@
 			}
 
 			& .price {
-				@media (max-width: toRem(598)) {
+				flex-wrap: wrap;
+				@media (max-width: toRem(820)) {
 					align-self: flex-start;
 					flex-wrap: wrap;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
 					gap: toRem(2);
 				}
 			}
@@ -171,7 +168,7 @@
 			margin-bottom: toRem(5);
 		}
 		@media (max-width: toEm(576)) {
-			padding: 0 toRem(10);
+			padding: 0 toRem(6);
 		}
 	}
 

@@ -145,6 +145,14 @@
 				}
 			}
 		}
+
+		& .contacts__block {
+			& .contacts-block__social {
+				@media (max-width: toRem(398)) {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&.drop {
@@ -400,6 +408,7 @@
 
 .logo {
 	flex: 0 0 toRem(192);
+	max-height: toRem(37);
 	&__logo {
 		width: 100%;
 
@@ -414,6 +423,7 @@
 	}
 	@media (max-width: toEm(489)) {
 		max-width: toRem(167);
+		flex: 0 1 toRem(167);
 	}
 }
 

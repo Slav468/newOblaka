@@ -25,24 +25,24 @@
 
 		&:hover {
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			& .employees__content {
-				margin-top: 20px;
-				height: auto;
-				@media (max-width: toRem(1300)) {
-					margin-top: 5px;
-				}
-			}
+			// & .employees__content {
+			// 	margin-top: 20px;
+			// 	height: auto;
+			// 	@media (max-width: toRem(1300)) {
+			// 		margin-top: 5px;
+			// 	}
+			// }
 
-			& .employees__pos {
-				@media (max-width: toRem(1300)) {
-					margin-top: 0;
-					margin-bottom: toRem(10);
-				}
-			}
+			// & .employees__pos {
+			// 	@media (max-width: toRem(1300)) {
+			// 		margin-top: 0;
+			// 		margin-bottom: toRem(10);
+			// 	}
+			// }
 
-			& .employees__bottom {
-				height: auto;
-			}
+			// & .employees__bottom {
+			// 	height: auto;
+			// }
 		}
 
 		@media (max-width: $tablet) {
@@ -107,6 +107,9 @@
 		background: var(--bg-primary);
 		border-radius: var(--radius8) var(--radius8) 0 0;
 		overflow: auto;
+		@media (max-width: $mobileSmall) {
+			padding: toRem(6);
+		}
 	}
 
 	&__pos {

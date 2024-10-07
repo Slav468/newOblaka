@@ -121,14 +121,14 @@
 		font-size: toRem(16);
 		line-height: 1.37;
 		color: var(--text-primary);
-		overflow: hidden;
-		text-overflow: ellipsis;
-		height: toRem(40);
+
+		@include textOverflow(2);
+
 		@media (max-width: toEm(1280)) {
-			height: toRem(67);
+			@include textOverflow(3);
 		}
-		@media (max-width: toEm(576)) {
-			height: toRem(40);
+		@media (max-width: $mobile) {
+			@include textOverflow(2);
 		}
 	}
 }

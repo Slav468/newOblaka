@@ -59,9 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
-
 	removeDrop(mobileBackButtons, '.menu__item');
-
 	function removeSomeDrop(selector) {
 		const allDrop = document.querySelectorAll(selector);
 		allDrop.forEach(item => {
@@ -69,21 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	function removeOnClickOUtsideEl(event, selector) {}
+
+	// Close Element on click an press Esc
 	asideMenuOverlay.addEventListener('click', () => {
 		closeMenu();
 		removeSomeDrop('.aside-phone');
 		removeSomeDrop('.aside-menu__item');
 	});
-
+	document.addEventListener('click', (e, selector) => {
+		if (e.target.closest(`${selector}`)) {
+			removeSomeDrop(`${selector}`);
+		}
+	});
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape') {
 			closeMenu();
 			removeSomeDrop('.aside-phone');
-			removeSomeDrop('.aside-menu__item');
+			removeSomeDrop('.contacts-phone');
 		}
 	});
 
-	//! Enable button if form
+	// Enable button in form
 	function toggleBtnForm() {
 		const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
 		checkBoxes.forEach(item => {
@@ -121,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		toggleBtnForm();
 	}
 
-	// !Counter in card
+	// Counter in card
 	if (document.querySelector('.count')) {
 		const countsBlocks = document.querySelectorAll('.count');
 		countsBlocks.forEach(block => {
@@ -152,13 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	// TODO активировать при количестве элементов  > 5
 	// Remove and Add menu item on resize
-
 	function hideMenuItem() {
 		const menus = document.querySelectorAll('[data-menu]');
 
 		for (let menu of menus) {
-			const menuBody = menu.querySelector('.menu__body');
 			const menuList = menu.querySelector('.menu__list');
 			const menuListChildren = menuList.children; // List items
 			const menuLastItem = menuList.querySelector('[data-menu-group]'); // Item Includes menu items
@@ -180,16 +184,14 @@ document.addEventListener('DOMContentLoaded', () => {
 				hideMenuItem();
 			}
 			if (
-				totalWidthItem + 120 < width &&
-				menuListChildren.length < 8 &&
+				totalWidthItem + 110 < width &&
+				menuListChildren.length < 9 &&
 				menuLastItemListChildren.length > 1
 			) {
-				console.log(' if 2');
 				menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
 			}
 		}
 	}
-
 	function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
 		let element = menuList.removeChild(
 			menuListChildren[menuListChildren.length - 2]
@@ -203,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		menuList.insertBefore(element, menuList.lastElementChild);
 	}
+
+	//  TODO
+	// Translate menu drop on hover
 });
-
-

@@ -141,7 +141,7 @@ function initSliders() {
 			// Брейкпоінти
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -195,7 +195,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -356,7 +356,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -411,7 +411,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -466,7 +466,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -519,7 +519,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -573,7 +573,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -626,7 +626,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -681,7 +681,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -736,7 +736,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -786,7 +786,7 @@ function initSliders() {
 
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,

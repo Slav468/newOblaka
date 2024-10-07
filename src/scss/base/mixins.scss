@@ -181,3 +181,12 @@
 		background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, #000 100%);
 	}
 }
+
+@mixin textOverflow($num) {
+	display: -webkit-box;
+	line-clamp: $num;
+	-webkit-line-clamp: $num;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
