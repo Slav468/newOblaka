@@ -19,7 +19,6 @@
 	&__cell {
 		width: calc((100% - toRem(20) * 2) / 3);
 		aspect-ratio: 540 / 350;
-		min-height: 100%;
 		overflow: hidden;
 		border-radius: var(--radius8);
 

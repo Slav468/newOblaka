@@ -1,8 +1,4 @@
 .like {
-	&__container {
-		padding-top: toRem(40);
-		padding-bottom: toRem(40);
-	}
 	// .question__content
 	&__content {
 		display: flex;
@@ -44,6 +40,7 @@
 
 	// .question__descriptions
 	&__descriptions {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -70,105 +67,8 @@
 		}
 	}
 
-	&:has(.question__container > .question__content > .form) {
-		.question {
-			&__container {
-				padding-top: toRem(40);
-				padding-bottom: toRem(40);
-			}
-			// .question__content
-			&__content {
-				display: grid;
-				grid-template-areas:
-					'img img . . . .'
-					'img img title title title title'
-					'img img text text text text'
-					'. . form form form form';
-				& .form {
-					grid-area: form;
-					width: 100%;
-					align-items: flex-start;
-
-					// .form__list
-					&__list {
-						width: 100%;
-						max-width: none;
-						flex-direction: row;
-					}
-
-					&__cell {
-						flex: 1 1 50%;
-						max-width: toRem(490);
-					}
-
-					// .form__button
-					&__button {
-						align-self: flex-start;
-					}
-				}
-
-				@media (max-width: $mobile) {
-					grid-template-areas:
-						'img img . . . .'
-						'img img title title title title'
-						'img img text text text text'
-						'form form form form form form';
-				}
-			}
-
-			// .question__img
-			&__img {
-				grid-area: img;
-			}
-
-			// .question__title
-			&__title {
-				grid-area: title;
-			}
-
-			// .question__text
-			&__text {
-				grid-area: text;
-			}
-		}
-		@media (max-width: toEm(450)) {
-			.question {
-				// .question__content
-				&__content {
-					display: grid;
-					grid-template-areas:
-						'img img '
-						'title title'
-						'text text'
-						'form form';
-					& .form {
-						grid-area: form;
-						width: 100%;
-						align-items: flex-start;
-
-						// .form__list
-						&__list {
-							flex-direction: column;
-						}
-
-						&__cell {
-							flex: 1 1 50%;
-							max-width: toRem(490);
-						}
-
-						// .form__button
-						&__button {
-							width: 100%;
-							& .button {
-								width: 100%;
-							}
-						}
-					}
-				}
-				&__img {
-					justify-self: center;
-				}
-			}
-		}
+	&__buttons {
+		width: 100%;
+		display: flex;
 	}
 }

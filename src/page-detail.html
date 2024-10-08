@@ -3,44 +3,19 @@
 @@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
 
 <body>
-	<div class="wrapper inside-page">
+	<div class="wrapper detail-page">
 		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
 
-		<div class="inside-page__wrapper">
-			<div class="inside-page__container">
-				@@include('html/baseHtml/_breads.htm',{})
+		<div class="detail-page__wrapper">
+			<div class="detail-page__container">
+				@@include('html/baseHtml/_breads-absolute.htm',{})
 			</div>
 
-			<section class="inside-page__preview preview">
-				<div class="preview__bg">
-					<img class='preview__img' src="@img/generalBanner/generalBanner.jpg" alt="page banner">
-				</div>
-				<div class="preview__container">
-					<div class="preview__description">
-						<div class="preview__title">
-							<h1>Заголовок детальной</h1>
-						</div>
-						<div class="preview__text">
-							Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Великий, прямо грамматики? Lorem
-							даль
-							бросил всемогущая ведущими предупредила дал великий? Жизни эта родного вопроса она путь, свою злых знаках.
-						</div>
-					</div>
-					<div class="preview__buttons">
+			@@include('html/pageBlock/promo/_promo.htm',{})
 
-						<a href="#" data-popup="#service" class="button button_colored button_width  preview__button">
-							Заказать услугу
-						</a>
-						<a href="#" data-popup="#message" class="button button_width  preview__button">
-							Задать вопрос
-						</a>
-
-					</div>
-				</div>
-			</section>
 		</div>
 
-		<main class="inside-page__main main">
+		<main class="detail-page__main main">
 			<div class="main__container">
 				<div class="main__inner">
 					<!-- menu -->

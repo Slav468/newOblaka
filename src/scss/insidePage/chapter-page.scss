@@ -1,0 +1,30 @@
+.chapter-page {
+	// .chapter-page__wrapper
+	&__wrapper {
+		display: flex;
+	}
+	// .chapter-page__container
+	&__container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: toRem(40) 0 0 0;
+	}
+	// .chapter-page__main
+	&__main {
+		& .main__inner {
+			padding: toRem(40) 0;
+		}
+		& .main__content {
+			border: none;
+			box-shadow: none;
+			display: flex;
+			flex-direction: column;
+			gap: toRem(20);
+		}
+	}
+
+	& .block__head {
+		padding: toRem(30) 0 0 0;
+	}
+}

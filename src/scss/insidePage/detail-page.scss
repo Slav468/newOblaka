@@ -1,4 +1,4 @@
-.inside-page {
+.detail-page {
 	display: flex;
 	flex-direction: column;
 
@@ -17,53 +17,78 @@
 
 	&__content {
 		padding: toRem(30);
+
+		@media (max-width: $mobile) {
+			padding: toRem(15) 0;
+		}
 	}
 }
-.bread {
-	position: absolute;
-	top: toRem(30);
-	z-index: 5;
-	// .bread__list
 
+.bread {
+	position: relative;
+	width: 100%;
+	display: flex;
+	// .bread__list
 	&__list {
 		display: flex;
 		align-items: center;
 		gap: toRem(5);
 		flex-wrap: wrap;
+		padding: toRem(30) 0 0 0;
 	}
 
 	&__divider {
-		color: var(--text-inverse);
+		color: var(--text-primary);
 	}
 
 	// .bread__item
-
 	&__item {
 		color: var(--primary);
 	}
 
 	// .bread__link
-
 	&__link {
 		font-weight: 400;
 		font-size: toRem(15);
 		line-height: 1.67;
-		color: var(--text-inverse);
+		color: var(--text-primary);
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--primary);
 			}
 		}
 	}
-	&_black {
+
+	&_absolute {
+		& .bread__list {
+			position: absolute;
+			z-index: 5;
+			top: toRem(30);
+			left: 0;
+			padding: 0;
+		}
+
 		& .bread__divider {
-			color: var(--text-primary);
+			color: var(--text-inverse);
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--primary);
+				}
+			}
 		}
-		& .bread__item {
-		}
+
 		& .bread__link {
-			color: var(--text-primary);
+			color: var(--text-inverse);
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--primary);
+				}
+			}
 		}
+	}
+
+	@media (max-width: $tablet) {
+		display: none;
 	}
 }
 
@@ -162,6 +187,9 @@
 	// .main__menu
 	&__menu {
 		flex: 0 1 percent(400, $maxWidthContainer);
+		@media (max-width: $tablet) {
+			display: none;
+		}
 	}
 
 	// .main__content
@@ -171,5 +199,20 @@
 		overflow: hidden;
 		box-shadow: 0 toRem(10) toRem(24) 0 rgba(196, 196, 196, 0.2);
 		flex: 1 1 percent(1240, $maxWidthContainer);
+		&:has(.like) {
+			& .like__container {
+				padding: toRem(40) toRem(30);
+			}
+		}
+
+		@media (max-width: $mobile) {
+			border: none;
+			box-shadow: none;
+			&:has(.like) {
+				& .like__container {
+					padding: 0;
+				}
+			}
+		}
 	}
 }

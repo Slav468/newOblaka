@@ -44,7 +44,7 @@ function initSliders() {
 			// simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
-			// lazy: true,
+			lazy: true,
 			/*
 			Ефекти
 			effect: 'fade',
@@ -248,7 +248,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -301,7 +301,7 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 16,
+					spaceBetween: 10,
 				},
 				992: {
 					spaceBetween: 20,
@@ -529,7 +529,6 @@ function initSliders() {
 			on: {},
 		});
 	}
-
 	// Instagram slider
 	if (document.querySelector('.instagram-slider')) {
 		new Swiper('.instagram-slider', {
@@ -746,7 +745,6 @@ function initSliders() {
 			on: {},
 		});
 	}
-
 	// Product slider in card
 	if (document.querySelector('.product-slider')) {
 		new Swiper('.product-slider', {

@@ -24,6 +24,9 @@
 				}
 			}
 		}
+		@media (max-width: $mobileSmall) {
+			padding: 0 toRem(15);
+		}
 	}
 
 	&__head {

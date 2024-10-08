@@ -44,6 +44,7 @@
 
 		&.drop {
 			background: var(--primary);
+			border: 1px solid var(--primary);
 			& > .page-menu__control {
 				& .page-menu__link {
 					color: var(--text-inverse);
@@ -58,6 +59,9 @@
 				width: 100%;
 				height: auto;
 				background-color: var(--bg-primary);
+				& .page-menu__item {
+					border: none;
+				}
 			}
 		}
 	}
