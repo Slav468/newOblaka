@@ -1,3 +1,4 @@
+// For Bitrix Block
 [id*='bx_incl_area'] {
 	flex: 1 1 auto;
 }
@@ -5,7 +6,6 @@
 .wrapper {
 	max-width: toRem(1920);
 	margin: 0 auto;
-	// overflow: hidden;
 }
 .page {
 	display: flex;
@@ -60,6 +60,8 @@
 	height: 5px;
 }
 
+// Block link
+
 .reference {
 	// .reference__text
 	&__text {
@@ -107,6 +109,7 @@
 	}
 }
 
+// Messengers & Social
 .messengers {
 	display: flex;
 	&__item {
@@ -146,10 +149,7 @@
 	background-color: var(--inverse);
 }
 
-.section {
-	margin: toRem(32) 0;
-}
-
+// Button
 .button {
 	display: flex;
 	align-items: center;
@@ -204,6 +204,7 @@
 	}
 }
 
+// Back button
 .mobile-back {
 	display: none;
 	align-items: center;
@@ -221,6 +222,7 @@
 	}
 }
 
+// Title
 .title_h1 {
 	font-weight: 700;
 	font-size: toRem(38);
@@ -240,6 +242,7 @@
 	}
 }
 
+// Text
 .text {
 	&_banner {
 		font-weight: 500;

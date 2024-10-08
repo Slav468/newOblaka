@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const asideCloseButton = document.querySelector('.aside-menu__close');
 	const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
 
+	const pageMenuButtons = document.querySelectorAll('.page-menu__svg');
+
 	// Close aside menu
 	function closeMenu() {
 		bodyUnlock();
@@ -66,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			item.classList.remove('drop');
 		});
 	}
-
-	function removeOnClickOUtsideEl(event, selector) {}
 
 	// Close Element on click an press Esc
 	asideMenuOverlay.addEventListener('click', () => {
@@ -208,4 +208,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//  TODO
 	// Translate menu drop on hover
+
+	//! page menu drop
+	function dropPageMenu(array, selector, event = 'click') {
+		array.forEach(item => {
+			item.addEventListener(`${event}`, e => {
+				e.preventDefault();
+				const target = e.currentTarget;
+				const parentDrop = target.closest(selector);
+				parentDrop.classList.toggle('drop');
+			});
+		});
+	}
+
+	if (document.querySelector('.page-menu')) {
+		dropPageMenu(pageMenuButtons, '.page-menu__item');
+	}
+
+	// Accordion toggle
+	function eventAccord() {
+		const accordingAll = document.querySelectorAll('.accordion');
+		accordingAll.forEach(accordion => {
+			const accordionItems = accordion.children;
+			for (let item of accordionItems) {
+				item.addEventListener('click', e => {
+					const targetChild = e.currentTarget;
+
+					if (targetChild.matches('.drop')) {
+						targetChild.classList.toggle('drop');
+					} else {
+						for (let item of accordionItems) {
+							item.classList.remove('drop');
+						}
+						targetChild.classList.toggle('drop');
+					}
+				});
+			}
+		});
+	}
+
+	if (document.querySelector('.accordion')) {
+		eventAccord();
+	}
 });

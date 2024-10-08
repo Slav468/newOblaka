@@ -15,13 +15,12 @@
 		@media (max-width: toEm(360)) {
 			gap: toRem(10);
 		}
-
 	}
 
 	&__cell {
 		display: flex;
 		justify-content: center;
-		max-width: percent(400, $maxWidthContainer);
+		width: percent(400, $maxWidthContainer);
 		max-height: toRem(265);
 		min-height: 100%;
 		overflow: hidden;
@@ -49,7 +48,10 @@
 		transition: 0.3s;
 		border-radius: var(--radius8);
 	}
-	& .swiper-wrapper {
-		align-items: center;
+
+	&-slider {
+		& .swiper-wrapper {
+			align-items: center;
+		}
 	}
 }

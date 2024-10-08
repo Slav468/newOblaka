@@ -1,28 +1,47 @@
 <!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{})
-	<body>
-		<div class="wrapper">
-			<div class="bread">
-				<div class="bread__container"></div>
-				<ul>
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Общая внутренняя</a></li>
-					<li>Детальная</li>
+@@include('html/_head.htm',{})
+
+<body>
+	<div class="wrapper inside-page">
+		<!-- Add Header -->
+		<div class="bread">
+			<div class="bread__container">
+				<ul class='bread__list'>
+					<li class='bread__item'><a class='bread__link' href="#">Главная</a></li>
+					<li class='bread__item'><a class='bread__link' href="#">Общий Раздел</a></li>
+					<li class='bread__item'><a class='bread__link' href="#">Детальный Раздел</a></li>
+					<li class='bread__item'>Страница Детальная</li>
 				</ul>
-
-				<h1>Заголовок детальной</h1>
 			</div>
+		</div>
 
-			<section class="main">
-				<div class="main__container">
-					<div class="main__inner">
-						<div class="main__content">
-							<div class="section-wrap"></div>
-						</div>
+		<section class="inside-page__banner">
+			<div class="inside-page__description">
+				<div class="inside-page__title">
+					<h1>Заголовок детальной</h1>
+				</div>
+				<div class="inside-page__text">
+					Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Великий, прямо грамматики? Lorem даль
+					бросил всемогущая ведущими предупредила дал великий? Жизни эта родного вопроса она путь, свою злых знаках.
+				</div>
+			</div>
+		</section>
+
+		<main class="main">
+			<div class="main__container">
+				<div class="main__inner">
+					<div class="main__menu">
+
+					</div>
+					<div class="main__content">
 					</div>
 				</div>
-			</section>
-		</div>
-	</body>
+			</div>
+		</main>
+
+		<!-- Add Footer -->
+	</div>
+</body>
+
 </html>

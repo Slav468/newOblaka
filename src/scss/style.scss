@@ -174,4 +174,7 @@ body {
 @import 'footer';
 
 // Підключення стилів окремих сторінок
-@import 'home';
+@import './insidePage/detail-page';
+
+// Динамические стили
+@import 'cardWidthAdaptive';

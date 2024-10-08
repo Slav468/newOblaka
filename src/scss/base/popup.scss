@@ -88,4 +88,11 @@ body::after {
 			}
 		}
 	}
+
+	&#thank {
+		& .popup__title {
+			font-size: toRem(34);
+			padding: toRem(40) 0;
+		}
+	}
 }

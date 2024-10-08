@@ -27,6 +27,15 @@
 	&__content {
 	}
 	// .tabs__body
-	&__body {
+	&__body:not([hidden]) {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+	}
+
+	&__include {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(40);
 	}
 }
