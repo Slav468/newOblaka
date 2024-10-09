@@ -182,11 +182,12 @@
 	}
 }
 
-@mixin textOverflow($num) {
+@mixin textOverflow($num, $lh) {
 	display: -webkit-box;
 	line-clamp: $num;
 	-webkit-line-clamp: $num;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	height: calc($num * $lh * 1rem);
 }

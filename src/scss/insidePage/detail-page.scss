@@ -6,11 +6,6 @@
 		position: relative;
 	}
 
-	// .inside-page__preview
-	&__preview {
-		position: relative;
-	}
-
 	&__main {
 		padding: toRem(40) 0;
 	}
@@ -93,6 +88,7 @@
 }
 
 .preview {
+	position: relative;
 	min-height: toRem(450);
 	display: flex;
 	flex-direction: column;
@@ -133,6 +129,7 @@
 		height: 100%;
 		display: flex;
 		object-fit: cover;
+		object-position: 65%;
 	}
 
 	// .preview__container

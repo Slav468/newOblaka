@@ -88,16 +88,10 @@
 	}
 
 	&__text {
-		display: -webkit-box;
-		line-clamp: 2;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-
 		font-weight: 600;
 		font-size: toRem(15);
 		line-height: 1.37;
+		@include textOverflow(2, 1.37);
 
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(13);

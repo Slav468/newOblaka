@@ -122,13 +122,13 @@
 		line-height: 1.37;
 		color: var(--text-primary);
 
-		@include textOverflow(2);
+		@include textOverflow(2, 1.37);
 
 		@media (max-width: toEm(1280)) {
-			@include textOverflow(3);
+			@include textOverflow(3, 1.37);
 		}
 		@media (max-width: $mobile) {
-			@include textOverflow(2);
+			@include textOverflow(2, 1.37);
 		}
 	}
 }

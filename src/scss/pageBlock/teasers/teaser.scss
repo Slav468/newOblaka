@@ -1,6 +1,10 @@
 .teaser {
 	width: 100%;
 
+	&__container {
+		overflow: hidden;
+	}
+
 	&__inner {
 		width: 100%;
 	}
@@ -39,6 +43,7 @@
 	&__item {
 		display: flex;
 		gap: toRem(20);
+		padding: 0 toRem(20);
 	}
 
 	&__ic {
@@ -63,8 +68,9 @@
 		font-size: toRem(15);
 		line-height: 1.2;
 		color: var(--text-primary);
-		height: toRem(52);
+		height: calc(1rem + 1.2 * 1rem);
 		overflow: hidden;
+		@include textOverflow(2, 1.2);
 	}
 	&__descr {
 		font-weight: 400;

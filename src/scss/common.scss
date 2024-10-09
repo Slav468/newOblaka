@@ -266,6 +266,10 @@
 		font-size: toRem(16);
 		line-height: 1.5;
 		color: var(--text-primary);
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+			text-align: justify;
+		}
 	}
 	&_light {
 	}

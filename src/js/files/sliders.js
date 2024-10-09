@@ -100,7 +100,7 @@ function initSliders() {
 	if (document.querySelector('.directions-slider')) {
 		new Swiper('.directions-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -156,7 +156,7 @@ function initSliders() {
 	if (document.querySelector('.service-slider')) {
 		new Swiper('.service-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -209,7 +209,7 @@ function initSliders() {
 	if (document.querySelector('.photo-slider')) {
 		new Swiper('.photo-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -262,7 +262,7 @@ function initSliders() {
 	if (document.querySelector('.reviews-slider')) {
 		new Swiper('.reviews-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -317,7 +317,7 @@ function initSliders() {
 		// Створюємо слайдер
 		new Swiper('.employees-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -373,8 +373,8 @@ function initSliders() {
 		new Swiper('.partners-slider', {
 			modules: [Navigation, Pagination],
 			// loop: true,
-			// observer: true,
-			// observeParents: true,
+			observer: true,
+			observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
@@ -427,7 +427,7 @@ function initSliders() {
 		// Створюємо слайдер
 		new Swiper('.news-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -480,7 +480,7 @@ function initSliders() {
 	if (document.querySelector('.share-slider')) {
 		new Swiper('.share-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -533,7 +533,7 @@ function initSliders() {
 	if (document.querySelector('.instagram-slider')) {
 		new Swiper('.instagram-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -749,7 +749,7 @@ function initSliders() {
 	if (document.querySelector('.product-slider')) {
 		new Swiper('.product-slider', {
 			modules: [Navigation, Pagination],
-			loop: true,
+			// loop: true,
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
@@ -790,6 +790,76 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 			},
+			// Події
+			on: {},
+		});
+	}
+
+	if (document.querySelector('.page-slider')) {
+		// Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.page-slider', {
+			modules: [Navigation, Pagination],
+			// loop: true,
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 130,
+			// autoHeight: true,
+			speed: 300,
+			grabCursor: true,
+			//touchRatio: 0,
+			// simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			lazy: true,
+			/*
+			Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			// Пагінація
+			pagination: {
+				el: '.page-slider__pagination',
+				clickable: true,
+			},
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.page-slider-prev',
+				nextEl: '.page-slider-next',
+			},
+			/*
+			// Брейкпоінти
+			breakpoints: {
+				640: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
 			// Події
 			on: {},
 		});
