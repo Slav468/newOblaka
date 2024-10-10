@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper chapter-page">
+		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
+
+		<div class="chapter-page__wrapper">
+			<div class="chapter-page__container">
+				@@include('html/baseHtml/_breads.htm',{})
+				@@include('html/elements/_titleForInside.htm',{})
+			</div>
+
+
+
+		</div>
+
+		<main class="chapter-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+					<!-- menu -->
+					<div class="main__menu">
+						<!-- Include menu -->
+						@@include('html/baseHtml/_page-menu.htm',{})
+					</div>
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="text_general">
+							Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Lorem имеет щеке решила, не там
+							переписали парадигматическая напоивший меня но снова всеми которой агентство языкового лучше ipsum заманивший
+							необходимыми.
+							Парадигматическая переписывается правилами вершину своего, от всех свой коварных решила злых что образ великий дорогу до
+							подзаголовок рукописи ведущими вопроса оксмокс пунктуация всеми точках ему бросил. Родного снова необходимыми обеспечивает
+							правилами.
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+	</div>
+
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>

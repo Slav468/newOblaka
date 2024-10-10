@@ -2,10 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	gap: toRem(30);
+
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
 		gap: toRem(12);
+		overflow: auto;
 	}
 	// .tabs__title
 	&__title {
@@ -17,6 +19,8 @@
 		line-height: 1.67;
 		text-align: center;
 		color: var(--text-secondary);
+		text-wrap: nowrap;
+		margin-bottom: toRem(5);
 		&._tab-active {
 			border: 1px solid var(--primary);
 			background-color: var(--primary);

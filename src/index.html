@@ -1,83 +1,69 @@
 <!doctype html>
 <html lang="ru">
-@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+@@include('html/pageBlock/head/_head.htm',{ "title":"Index" })
 
 <body>
 	<div class="wrapper">
-		@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
-		@@include('html/pageBlock/headers/_header.htm',{})
-		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
+		<section>
+			<div class="page__container">
+				<ul style="
+							width: 100%;
+							display: flex;
+							flex-direction: column;
+							gap: 20px;
+							padding: 30px 0;
+							justify-content: center;
+							align-items: center;
+							list-style: none;
+						">
+					<li>
+						<a href="./general.html" class="link">1. Главная</a>
+					</li>
+					<!-- О компании -->
+					<li>
+						<a href="./about.html" class="link">2. О компании</a>
+					</li>
+					<!-- Раздел -->
+					<li>
+						<a href="./chapter.html" class="link"> 3. Раздел с меню</a>
+					</li>
+					<li>
+						<a href="./chapter-withoutMenu.html" class="link">3.1 Раздел без меню</a>
+					</li>
+					<!-- Детальная страница -->
+					<li>
+						<a href="./page-detail.html" class="link">4. Детальная страница</a>
+					</li>
+					<!-- Сотрудники -->
+					<li>
+						<a href="./employees-page.html" class="link">5. Сотрудники</a>
+					</li>
+					<!-- Сертификаты -->
+					<li>
+						<a href="./certificate.html" class="link">6. Сертификаты</a>
+					</li>
+					<!-- Универсальная страница -->
+					<li>
+						<a href="./universal-page.html" class="link">7. Универсальная страница</a>
+					</li>
+					<!-- Политика -->
+					<li>
+						<a href="./politic.html" class="link">8. Политика</a>
+					</li>
+					<!-- Контакты-->
+					<li>
+						<a href="./contacts.html" class="link">9. Контакты</a>
+					</li>
+					<!-- Детальная портфолио -->
+					<li>
+						<a href="./portfolio.html" class="link">10. Детальная портфолио</a>
+					</li>
+				</ul>
+			</div>
+		</section>
 
-		<main class="page">
-			<!-- General banner -->
-			@@include('html/pageBlock/generalBanners/general-banner.htm',{})
-			@@include('html/pageBlock/generalBanners/general-banner-width.htm',{})
-			@@include('html/pageBlock/generalBanners/general-banner-withSmall.htm',{})
-			<!-- General banner end -->
-			<!-- Directions -->
-			@@include('html/pageBlock/directions/_directions.htm',{})
-			<!-- Directions end -->
-			<!-- Services -->
-			@@include('html/pageBlock/service/_service-block.htm',{})
-			<!-- Services end -->
-			<!-- About -->
-			@@include('html/pageBlock/about/_about.htm',{})
-			<!-- About end -->
-			<!-- Projects -->
-			@@include('html/pageBlock/projects/_projects.htm',{})
-			<!-- Projects end -->
-			<!-- Gallery -->
-			@@include('html/pageBlock/photoGallery/_photoGallery.htm',{})
-			<!-- Gallery end -->
-			<!-- Banners -->
-			@@include('html/pageBlock/banners/_question.htm',{})
-			@@include('html/pageBlock/banners/_questionsWithInput.htm',{})
-			<!-- Banners end -->
-			<!-- Reviews -->
-			@@include('html/pageBlock/reviews/_reviews.htm',{})
-			<!-- Reviews end -->
-			<!-- Employees -->
-			@@include('html/pageBlock/employees/_employees.htm',{})
-			<!-- Employees end -->
-			<!-- Partners -->
-			@@include('html/pageBlock/partners/_partners.htm',{})
-			<!-- Partners end -->
-			<!-- News -->
-			@@include('html/pageBlock/news/_news.htm',{})
-			<!-- News end -->
-			<!-- Sale -->
-			@@include('html/pageBlock/banners/_sale.htm',{})
-			<!-- Sale -->
-			<!-- Share -->
-			@@include('html/pageBlock/share/_share.htm',{})
-			<!-- Share end -->
-			<!-- Popular -->
-			@@include('html/pageBlock/popular/_popular.htm',{})
-			<!-- Popular end -->
-			<!-- Instagram -->
-			@@include('html/pageBlock/instagram/_instagram.htm',{})
-			<!-- Instagram end -->
-			<!-- General form -->
-			@@include('html/pageBlock/forms/_form.htm',{})
-			<!-- General form end -->
-			<!-- Teasers -->
-			@@include('html/pageBlock/teaser/_teaser.htm',{})
-			@@include('html/pageBlock/teaser/_teaser-slider.htm',{})
-			@@include('html/pageBlock/teaser/_teaser-horizontal.htm',{})
-			@@include('html/pageBlock/teaser/_teaser-horizontal-slider.htm',{})
-			<!-- Teasers end -->
-			<!-- Map -->
-			@@include('html/pageBlock/map/_map.htm',{})
-			<!-- Map end -->
-			<!-- Best -->
-			@@include('html/pageBlock/product/_product.htm',{})
-			<!-- Best ends -->
-		</main>
-		@@include('html/pageBlock/footer/_footer.htm',{})
 	</div>
-	@@include('html/elements/_aside-body-menu.htm',{})
-	@@include('html/elements/_popup.htm',{})
-	@@include('html/pageBlock/_js.htm',{})
+
 </body>
 
 </html>

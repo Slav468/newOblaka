@@ -34,6 +34,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: toRem(10);
 		padding: toRem(30) 0;
 		cursor: pointer;
 	}
@@ -42,6 +43,8 @@
 		display: flex;
 		width: toRem(25);
 		height: toRem(25);
+		min-width: toRem(25);
+		min-height: toRem(25);
 		cursor: pointer;
 	}
 

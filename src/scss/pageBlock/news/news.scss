@@ -19,8 +19,6 @@
 	&__cell {
 		width: calc((100% - toRem(20) * 3) / 4);
 		aspect-ratio: 400 / 327;
-		height: toRem(327);
-		min-height: 100%;
 		overflow: hidden;
 		border-radius: var(--radius8);
 
@@ -122,13 +120,14 @@
 		line-height: 1.37;
 		color: var(--text-primary);
 
-		@include textOverflow(2, 1.37);
+		@include textOverflow(2, 16, 1.37);
 
 		@media (max-width: toEm(1280)) {
-			@include textOverflow(3, 1.37);
+			@include textOverflow(3, 16, 1.37);
 		}
 		@media (max-width: $mobile) {
-			@include textOverflow(2, 1.37);
+			@include textOverflow(2, 14, 1.37);
+			font-size: toRem(14);
 		}
 	}
 }

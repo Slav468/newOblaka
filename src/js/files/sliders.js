@@ -804,7 +804,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
-			spaceBetween: 130,
+			spaceBetween: 170,
 			// autoHeight: true,
 			speed: 300,
 			grabCursor: true,

@@ -23,6 +23,10 @@
 	&__pagination {
 		bottom: toRem(20) !important;
 	}
+
+	@media (max-width: toEm(698)) {
+		width: 100%;
+	}
 }
 
 .page-slider-prev {

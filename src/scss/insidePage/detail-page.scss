@@ -211,5 +211,9 @@
 				}
 			}
 		}
+
+		& .photo__cell {
+			width: calc((100% - toRem(20) * 2) / 3);
+		}
 	}
 }

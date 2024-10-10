@@ -70,7 +70,7 @@
 		color: var(--text-primary);
 		height: calc(1rem + 1.2 * 1rem);
 		overflow: hidden;
-		@include textOverflow(2, 1.2);
+		@include textOverflow(2, 15, 1.2);
 	}
 	&__descr {
 		font-weight: 400;
@@ -79,6 +79,7 @@
 		height: toRem(50);
 		overflow: hidden;
 		color: var(--text-secondary);
+		@include textOverflow(2, 15, 1.67);
 	}
 
 	&_colored {

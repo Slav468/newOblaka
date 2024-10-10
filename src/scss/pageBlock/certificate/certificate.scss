@@ -1,0 +1,44 @@
+.certificate {
+	// .certificate__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(20);
+		@media (max-width: $mobile) {
+			gap: toRem(10);
+		}
+	}
+
+	// .certificate__link
+	&__link {
+		width: calc((100% - toRem(20) * 3) / 4);
+		aspect-ratio: 220 / 315;
+		min-width: toRem(145);
+		display: flex;
+		border-radius: var(--radius8);
+		border: 1px solid var(--border);
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			}
+		}
+		@media (max-width: $mobile) {
+			width: calc((100% - toRem(10) * 3) / 4);
+		}
+		@media (max-width: toEm(630)) {
+			width: calc((100% - toRem(10) * 2) / 3);
+		}
+
+		@media (max-width: $mobileSmall) {
+			width: calc((100% - toRem(10) * 1) / 2);
+		}
+	}
+
+	// .certificate__img
+	&__img {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+}
