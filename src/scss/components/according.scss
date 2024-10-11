@@ -39,6 +39,17 @@
 		cursor: pointer;
 	}
 
+	&__wrap {
+		display: flex;
+		gap: toRem(80);
+		width: 90%;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: toRem(20);
+			align-items: flex-start;
+		}
+	}
+
 	&__img {
 		display: flex;
 		width: toRem(25);
@@ -46,6 +57,9 @@
 		min-width: toRem(25);
 		min-height: toRem(25);
 		cursor: pointer;
+		@media (max-width: $mobile) {
+			align-self: flex-start;
+		}
 	}
 
 	&__svg {
@@ -70,9 +84,6 @@
 		@media (max-width: toEm(1280)) {
 			font-size: toRem(16);
 		}
-		@media (max-width: $mobile) {
-			font-size: toRem(15);
-		}
 	}
 
 	&__subtitle {
@@ -87,7 +98,49 @@
 	// .accordion__content
 	&__content {
 		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: toRem(20);
 		height: 0;
 		overflow: hidden;
+		& .button {
+			width: fit-content;
+		}
+	}
+}
+
+.money {
+	// .money__sum
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: toRem(5);
+	font-weight: 600;
+	font-size: toRem(18);
+
+	color: #333;
+
+	&__sum {
+		display: flex;
+	}
+
+	// .money__value
+
+	&__value {
+	}
+
+	// .money__currency
+
+	&__currency {
+	}
+
+	// .money__plus
+
+	&__plus {
+	}
+
+	// .money__percent
+
+	&__percent {
 	}
 }

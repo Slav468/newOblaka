@@ -2,6 +2,7 @@
 	& .block__inner {
 		width: 100%;
 	}
+
 	// .map__wrapper
 	&__wrapper {
 		position: relative;
@@ -11,7 +12,7 @@
 		@media (max-width: $tablet) {
 			aspect-ratio: 972 / 468;
 		}
-		@media (max-width: toEm(576)) {
+		@media (max-width: $mobile) {
 			aspect-ratio: 1 / 0.8;
 		}
 	}

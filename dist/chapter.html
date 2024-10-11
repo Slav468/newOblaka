@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241010181643">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241011174655">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="description" content="">
     <meta name="keywords" content="">
@@ -1665,233 +1665,413 @@
 		</div>
 	</div>
 
-	<!-- call popup -->
-	<div id="call" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
+	<div class="dialogs">
+		<!-- call popup -->
+		<div id="call" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
 
-			<div class="popup__content">
-				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
-				<!-- title -->
-				<div class="popup__title">Заказать звонок</div>
-				<!-- body -->
-				<div class="popup__body">
-					<form class="form" data-form>
-						<!-- Заголовок -->
-						<div class="form__title" data-formTitle hidden>
-							Заказать звонок
-						</div>
-						<!-- Список полей -->
-						<div class="form__list">
-							<!-- Имя -->
-							<div class="form__cell" data-formData>
-								<label class="form__label" for='name-call'>Ваше имя*</label>
-								<input class="form__input" id='name-call' type="text" required placeholder="Ваше имя">
+				<div class="popup__content">
+					<!-- button -->
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<!-- title -->
+					<div class="popup__title">Заказать звонок</div>
+					<!-- body -->
+					<div class="popup__body">
+						<form class="form" data-form>
+							<!-- Заголовок -->
+							<div class="form__title" data-formTitle hidden>
+								Заказать звонок
 							</div>
-							<!-- Телефон -->
-							<div class="form__cell" data-formData>
-								<label class="form__label" for='phone-call'>Телефон*</label>
-								<input type="text" class="form__input" id='phone-call' required placeholder="+375 (00) 000-00-00">
-							</div>
-						</div>
-
-						<!-- Checkbox -->
-						<div class="checkbox" data-formCheckbox>
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<span>я согласен(а) на</span>
-							<a href="#" class="checkbox__link">обработку персональных данных</a>
-						</div>
-						<!-- Button -->
-						<div class="form__button" data-formBtn>
-							<button disabled type="submit" class="button button_colored button_width">
-								Отправить
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- service popup -->
-	<div id="service" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
-				<!-- title -->
-				<div class="popup__title">Выбрать услугу</div>
-				<!-- body -->
-				<div class="popup__body">
-					<form class="form" data-form>
-						<!-- Заголовок -->
-						<div class="form__title" data-formTitle hidden>
-							Выбрать услугу
-						</div>
-						<!-- Подзаголовок -->
-						<div class="form__text">
-							Отправьте заявку и через 10 минут мы свяжемся с вами
-						</div>
-						<!-- Список полей -->
-						<div class="form__list">
-							<!-- Имя -->
-							<div class="form__cell" data-formData>
-								<label class="form__label" for="name-service">Ваше имя*</label>
-								<input class="form__input" type="text" name="name" id="name-service" required placeholder="Ваше имя">
-							</div>
-							<!-- Телефон -->
-							<div class="form__cell" data-formData>
-								<label class="form__label" for="phone-service">Ваш телефон*</label>
-								<input name="phone" id="phone-service" type="tel" class="form__input" required placeholder="+375 (00) 000-00-00">
-							</div>
-							<!-- Select -->
-							<div class="form__cell" data-formSelect>
-								<label class="form__label" for="select-service">Выбрать услугу*</label>
-								<div class="select">
-									<div class="select__svg">
-										<svg class="svg-arrow-down">
-											<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-										</svg>
-									</div>
-									<select class="select__form" name="form-select" id="select-service" required>
-										<option value="" hidden>Выберите нужную услугу</option>
-										<option value="1">Услуга 1</option>
-										<option value="2">Услуга 2</option>
-										<option value="3">Услуга 3</option>
-									</select>
+							<!-- Список полей -->
+							<div class="form__list">
+								<!-- Имя -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for='name-call'>Ваше имя*</label>
+									<input class="form__input" id='name-call' type="text" required placeholder="Ваше имя">
+								</div>
+								<!-- Телефон -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for='phone-call'>Телефон*</label>
+									<input type="text" class="form__input" id='phone-call' required placeholder="+375 (00) 000-00-00">
 								</div>
 							</div>
-						</div>
 
-						<!-- Checkbox -->
-						<div class="form__cell checkbox" data-formCheckbox>
-							<label for="check-service" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-service" class="checkbox__input">
-							</label>
-							<span>я согласен(а) на</span>
-							<a href="#" class="checkbox__link">обработку персональных данных</a>
-						</div>
-						<!-- Button -->
-						<div class="form__button" data-formBtn>
-							<button disabled="" type="submit" class="button button_colored button_width">
-								Выбрать
-							</button>
-						</div>
-					</form>
+							<!-- Checkbox -->
+							<div class="checkbox" data-formCheckbox>
+								<label for="check-call" class="checkbox__label">
+									<span class="checkbox__svg">
+										<svg class="checked-svg">
+											<use xlink:href="img/icons/icons.svg#checked"></use>
+										</svg>
+									</span>
+									<input type="checkbox" id="check-call" class="checkbox__input">
+								</label>
+								<span>я согласен(а) на</span>
+								<a href="#" class="checkbox__link">обработку персональных данных</a>
+							</div>
+							<!-- Button -->
+							<div class="form__button" data-formBtn>
+								<button disabled type="submit" class="button button_colored button_width">
+									Отправить
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- service popup -->
+		<div id="service" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<!-- button -->
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<!-- title -->
+					<div class="popup__title">Выбрать услугу</div>
+					<!-- body -->
+					<div class="popup__body">
+						<form class="form" data-form>
+							<!-- Заголовок -->
+							<div class="form__title" data-formTitle hidden>
+								Выбрать услугу
+							</div>
+							<!-- Подзаголовок -->
+							<div class="form__text">
+								Отправьте заявку и через 10 минут мы свяжемся с вами
+							</div>
+							<!-- Список полей -->
+							<div class="form__list">
+								<!-- Имя -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="name-service">Ваше имя*</label>
+									<input class="form__input" type="text" name="name" id="name-service" required placeholder="Ваше имя">
+								</div>
+								<!-- Телефон -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="phone-service">Ваш телефон*</label>
+									<input name="phone" id="phone-service" type="tel" class="form__input" required placeholder="+375 (00) 000-00-00">
+								</div>
+								<!-- Select -->
+								<div class="form__cell" data-formSelect>
+									<label class="form__label" for="select-service">Выбрать услугу*</label>
+									<div class="select">
+										<div class="select__svg">
+											<svg class="svg-arrow-down">
+												<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+											</svg>
+										</div>
+										<select class="select__form" name="form-select" id="select-service" required>
+											<option value="" hidden>Выберите нужную услугу</option>
+											<option value="1">Услуга 1</option>
+											<option value="2">Услуга 2</option>
+											<option value="3">Услуга 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<!-- Checkbox -->
+							<div class="form__cell checkbox" data-formCheckbox>
+								<label for="check-service" class="checkbox__label">
+									<span class="checkbox__svg">
+										<svg class="checked-svg">
+											<use xlink:href="img/icons/icons.svg#checked"></use>
+										</svg>
+									</span>
+									<input type="checkbox" id="check-service" class="checkbox__input">
+								</label>
+								<span>я согласен(а) на</span>
+								<a href="#" class="checkbox__link">обработку персональных данных</a>
+							</div>
+							<!-- Button -->
+							<div class="form__button" data-formBtn>
+								<button disabled="" type="submit" class="button button_colored button_width">
+									Выбрать
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- message popup -->
+		<div id="message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<!-- button -->
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<!-- title -->
+					<div class="popup__title">Задать вопрос</div>
+					<!-- body -->
+					<div class="popup__body">
+						<form class="form" data-form>
+							<!-- Заголовок -->
+							<div class="form__title" data-formTitle hidden>
+								Задать вопрос
+							</div>
+							<!-- Подзаголовок -->
+							<div class="form__text">
+								Отправьте нам свой вопрос и мы ответим Вам, в кратчайшие сроки.
+							</div>
+							<!-- Список полей -->
+							<div class="form__list">
+								<!-- Имя -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="name-message">Ваше имя*</label>
+									<input class="form__input" type="text" name="name" id="name-message" required="" placeholder="Ваше имя">
+								</div>
+								<!-- Телефон -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="phone-message">Ваш телефон*</label>
+									<input name="phone" id="phone-message" type="tel" class="form__input" required="" placeholder="+375 (00) 000-00-00">
+								</div>
+								<!-- Email -->
+								<div class="form__cell" data-formData>
+									<label for="emeil-message">Ваш e-mail*</label>
+									<input name="phone" id="emeil-message" type="email" class="form__input" required placeholder="example@mail.org">
+								</div>
+								<!-- textarea -->
+								<div class="form__cell" data-textArea>
+									<label for='textarea-message'>Текст сообщения</label>
+									<textarea rows="5" spellcheck="true" id="textarea-message" required></textarea>
+								</div>
+							</div>
+
+							<!-- Checkbox -->
+							<div class="form__cell checkbox" data-formCheckbox>
+								<label for="check-message" class="checkbox__label">
+									<span class="checkbox__svg">
+										<svg class="checked-svg">
+											<use xlink:href="img/icons/icons.svg#checked"></use>
+										</svg>
+									</span>
+									<input type="checkbox" id="check-message" class="checkbox__input">
+								</label>
+								<span>я согласен(а) на</span>
+								<a href="#" class="checkbox__link">обработку персональных данных</a>
+							</div>
+							<!-- Button -->
+							<div class="form__button" data-formBtn>
+								<button disabled type="submit" class="button button_colored button_width">
+									Отправить
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- resume popup -->
+		<div id="resume" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<!-- button -->
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<!-- title -->
+					<div class="popup__title">Отправить резюме</div>
+					<!-- body -->
+					<div class="popup__body">
+						<form class="form" data-form>
+							<!-- Заголовок -->
+							<div class="form__title" data-formTitle hidden>
+								Отправить резюме
+							</div>
+
+							<!-- Список полей -->
+							<div class="form__list">
+								<!-- Имя -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="name-resume">Ваше имя и фамилия*</label>
+									<input class="form__input" type="text" name="name" id="name-resume" required placeholder="Ваше имя">
+								</div>
+								<!-- Должность  -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="position-resume">Желаемая должность*</label>
+									<input class="form__input" type="text" name="name" id="position-resume" required placeholder="Frontend Developer">
+								</div>
+								<!-- Резюме -->
+								<div class="form__cell" data-formFile>
+									<label for='file-resume'>Ваше резюме</label>
+									<input type="file" name="file" id="file-resume" class="upload" files required />
+									<div class="upload__wrapper">
+										<button type="button" class="upload__button">
+											<svg class='upload__svg'>
+												<use xlink:href="img/icons/icons.svg#clip"></use>
+											</svg>
+											<p>Прикрепить файл</p>
+											<span class="upload__name"></span>
+										</button>
+									</div>
+								</div>
+								<!-- Email -->
+								<div class="form__cell" data-formData>
+									<label for="emeil-resume">Ваш e-mail*</label>
+									<input name="phone" id="emeil-resume" type="email" class="form__input" required placeholder="example@mail.org">
+								</div>
+								<!-- Телефон -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="phone-resume">Ваш телефон*</label>
+									<input name="phone" id="phone-resume" type="tel" class="form__input" required="" placeholder="+375 (00) 000-00-00">
+								</div>
+
+								<!-- textarea -->
+								<div class="form__cell" data-textArea>
+									<label for='textarea-resume'>Сопроводительное письмо</label>
+									<textarea rows="5" spellcheck="true" id="textarea-resume" required></textarea>
+								</div>
+							</div>
+
+							<!-- Checkbox -->
+							<div class="form__cell checkbox" data-formCheckbox>
+								<label for="check-resume" class="checkbox__label">
+									<span class="checkbox__svg">
+										<svg class="checked-svg">
+											<use xlink:href="img/icons/icons.svg#checked"></use>
+										</svg>
+									</span>
+									<input type="checkbox" id="check-resume" class="checkbox__input">
+								</label>
+								<span>я согласен(а) на</span>
+								<a href="#" class="checkbox__link">обработку персональных данных</a>
+							</div>
+							<!-- Button -->
+							<div class="form__button" data-formBtn>
+								<button disabled type="submit" class="button button_colored button_width">
+									Отправить
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- current resume popup -->
+		<div id="current-resume" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<!-- button -->
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<!-- title -->
+					<div class="popup__title">Отправить резюме</div>
+					<!-- body -->
+					<div class="popup__body">
+						<form class="form" data-form>
+							<!-- Заголовок -->
+							<div class="form__title" data-formTitle hidden>
+								Отправить резюме
+							</div>
+
+							<!-- Список полей -->
+							<div class="form__list">
+								<!-- Имя -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="name-current-resume">Ваше имя и фамилия*</label>
+									<input class="form__input" type="text" name="name" id="name-current-resume" required placeholder="Ваше имя">
+								</div>
+								<!-- Должность  -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="position-current-resume">Должность</label>
+									<input class="form__input" type="text" name="position" id="position-current-resume" required placeholder="Frontend Developer">
+								</div>
+								<!-- Резюме -->
+								<div class="form__cell" data-formFile>
+									<label for='file-current-resume'>Ваше резюме</label>
+									<input type="file" name="file" id="file-current-resume" class="upload" files required />
+									<div class="upload__wrapper">
+										<button type="button" class="upload__button">
+											<svg class='upload__svg'>
+												<use xlink:href="img/icons/icons.svg#clip"></use>
+											</svg>
+											<p>Прикрепить файл</p>
+											<span class="upload__name"></span>
+										</button>
+									</div>
+								</div>
+								<!-- Email -->
+								<div class="form__cell" data-formData>
+									<label for="emeil-current-resume">Ваш e-mail*</label>
+									<input name="phone" id="emeil-current-resume" type="email" class="form__input" required placeholder="example@mail.org">
+								</div>
+								<!-- Телефон -->
+								<div class="form__cell" data-formData>
+									<label class="form__label" for="phone-current-resume">Ваш телефон*</label>
+									<input name="phone" id="phone-current-resume" type="tel" class="form__input" required="" placeholder="+375 (00) 000-00-00">
+								</div>
+
+								<!-- textarea -->
+								<div class="form__cell" data-textArea>
+									<label for='textarea-current-resume'>Сопроводительное письмо</label>
+									<textarea rows="5" spellcheck="true" id="textarea-current-resume" required></textarea>
+								</div>
+							</div>
+
+							<!-- Checkbox -->
+							<div class="form__cell checkbox" data-formCheckbox>
+								<label for="check-current-resume" class="checkbox__label">
+									<span class="checkbox__svg">
+										<svg class="checked-svg">
+											<use xlink:href="img/icons/icons.svg#checked"></use>
+										</svg>
+									</span>
+									<input type="checkbox" id="check-current-resume" class="checkbox__input">
+								</label>
+								<span>я согласен(а) на</span>
+								<a href="#" class="checkbox__link">обработку персональных данных</a>
+							</div>
+							<!-- Button -->
+							<div class="form__button" data-formBtn>
+								<button disabled type="submit" class="button button_colored button_width">
+									Отправить
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Thank -->
+		<div id="thank" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<!-- button -->
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<!-- title -->
+					<div class="popup__title">Спасибо, данные отправлены!!!</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- message popup -->
-	<div id="message" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
-				<!-- title -->
-				<div class="popup__title">Задать вопрос</div>
-				<!-- body -->
-				<div class="popup__body">
-					<form class="form" data-form>
-						<!-- Заголовок -->
-						<div class="form__title" data-formTitle hidden>
-							Задать вопрос
-						</div>
-						<!-- Подзаголовок -->
-						<div class="form__text">
-							Отправьте нам свой вопрос и мы ответим Вам, в кратчайшие сроки.
-						</div>
-						<!-- Список полей -->
-						<div class="form__list">
-							<!-- Имя -->
-							<div class="form__cell" data-formData>
-								<label class="form__label" for="name-message">Ваше имя*</label>
-								<input class="form__input" type="text" name="name" id="name-message" required="" placeholder="Ваше имя">
-							</div>
-							<!-- Телефон -->
-							<div class="form__cell" data-formData>
-								<label class="form__label" for="phone-message">Ваш телефон*</label>
-								<input name="phone" id="phone-message" type="tel" class="form__input" required="" placeholder="+375 (00) 000-00-00">
-							</div>
-							<!-- Email -->
-							<div class="form__cell" data-formData>
-								<label for="emeil-message">Ваш e-mail*</label>
-								<input name="phone" id="emeil-message" type="email" class="form__input" required placeholder="example@mail.org">
-							</div>
-							<!-- textarea -->
-							<div class="form__cell" data-textArea>
-								<label for='textarea-message'>Текст сообщения</label>
-								<textarea rows="5" spellcheck="true" id="textarea-message" required></textarea>
-							</div>
-						</div>
-
-						<!-- Checkbox -->
-						<div class="form__cell checkbox" data-formCheckbox>
-							<label for="check-message" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-message" class="checkbox__input">
-							</label>
-							<span>я согласен(а) на</span>
-							<a href="#" class="checkbox__link">обработку персональных данных</a>
-						</div>
-						<!-- Button -->
-						<div class="form__button" data-formBtn>
-							<button disabled type="submit" class="button button_colored button_width">
-								Отправить
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Thank -->
-	<div id="thank" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
-				<!-- title -->
-				<div class="popup__title">Спасибо, данные отправлены!!!</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="js/app.min.js?_v=20241010181643"></script>
+	<script src="js/app.min.js?_v=20241011174655"></script>
 </body>
 
 </html>

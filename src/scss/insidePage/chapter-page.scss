@@ -23,6 +23,7 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			border-radius: 0;
+			overflow: visible;
 			&:has(.preview) {
 				& .preview {
 					&__container {
@@ -99,6 +100,11 @@ $gap: toRem(20);
 	& .map__wrapper {
 		& > .map-address {
 			display: none;
+		}
+	}
+	& .vacancies {
+		&__container {
+			padding: 0;
 		}
 	}
 }

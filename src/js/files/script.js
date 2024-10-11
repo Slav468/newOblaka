@@ -250,4 +250,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('.accordion')) {
 		eventAccord();
 	}
+
+	// Form file upload
+	if (document.querySelector('.upload__button')) {
+		uploadFileInForm();
+	}
+
+	function uploadFileInForm() {
+		const popupUploadButtons = document.querySelectorAll('.upload__button');
+		popupUploadButtons.forEach(button => {
+			button.addEventListener('click', e => {
+				e.preventDefault();
+
+				const target = e.currentTarget;
+				const inputTarget = target.parentElement.previousElementSibling;
+				inputTarget.click();
+				inputTarget.addEventListener('change', e => {
+					let currentFileName = '';
+					const spanText =
+						e.currentTarget.nextElementSibling.querySelector('span');
+
+					if (e.currentTarget.files.length > 0) {
+						const fileName = e.currentTarget.files[0].name;
+						currentFileName = fileName.split('.')[0];
+
+						spanText.textContent = '';
+						spanText.textContent = `${currentFileName.slice(0, 22)}...`;
+					} else {
+						spanText.textContent = '';
+						currentFileName = 'Файл не выбран';
+						spanText.textContent = `${currentFileName}`;
+					}
+				});
+			});
+		});
+	}
 });

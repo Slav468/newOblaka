@@ -132,6 +132,16 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(4);
+		& #file-resume,
+		#file-current-resume {
+			display: none;
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
 
 		@media (max-width: totoRem(1440)) {
 			margin: totoRem(0);
@@ -162,12 +172,12 @@
 
 		&[valid] {
 			& input {
-				outline: 1px solid var(--buttonBlock);
+				outline: 1px solid var(--primary);
 			}
 		}
 		&[inValid] {
 			& input {
-				outline: 1px solid var(--color-btn);
+				outline: 1px solid var(--for-false);
 			}
 		}
 	}
@@ -371,5 +381,33 @@
 		@media (max-width: toRem(698)) {
 			align-self: center;
 		}
+	}
+}
+.upload {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		padding: toRem(5) toRem(10);
+		height: toRem(44);
+		width: 100%;
+		box-sizing: border-box;
+		border-radius: var(--radius8);
+		border: 1px solid var(--border);
+		background: transparent;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		height: 100%;
+		font-weight: 400;
+		font-size: 12px;
+		color: #333;
+	}
+	&__svg {
+		display: flex;
+		height: 100%;
+		width: toRem(24);
 	}
 }

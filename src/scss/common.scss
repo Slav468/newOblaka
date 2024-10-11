@@ -12,6 +12,64 @@
 	flex-direction: column;
 }
 
+.main {
+	// .main__inner
+	&__inner {
+		display: flex;
+		@include adaptiveValue('gap', 20, 10);
+	}
+
+	// .main__menu
+	&__menu {
+		flex: 0 1 percent(400, $maxWidthContainer);
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	// .main__content
+	&__content {
+		border: 1px solid var(--border);
+		border-radius: var(--radius8);
+		overflow: hidden;
+		box-shadow: 0 toRem(10) toRem(24) 0 rgba(196, 196, 196, 0.2);
+		flex: 1 1 percent(1240, $maxWidthContainer);
+		&:has(.like) {
+			& .like__container {
+				padding: toRem(40) toRem(30);
+			}
+		}
+
+		@media (max-width: $mobile) {
+			border: none;
+			box-shadow: none;
+			&:has(.like) {
+				& .like__container {
+					padding: 0;
+				}
+			}
+		}
+
+		& .photo__cell {
+			width: calc((100% - toRem(20) * 2) / 3);
+		}
+	}
+
+	&:has(.blog-menu) {
+		.main__inner {
+			flex-direction: row-reverse;
+		}
+		@media (max-width: $tablet) {
+			.main__inner {
+				flex-direction: column;
+			}
+			.main__menu {
+				display: flex;
+			}
+		}
+	}
+}
+
 // Svg
 .icon-wrap {
 	width: toRem(27);

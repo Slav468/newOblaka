@@ -147,7 +147,7 @@
 	"Text overflow": {
 		"scope": "scss",
 		"prefix": "to",
-		"body": ["@include textOverflow($num, $lh);"],
+		"body": ["@include textOverflow($num, $fs, $lh);"],
 		"description": "Максимальное количество строк в текстовом контейнере",
 	},
 	"EM": {

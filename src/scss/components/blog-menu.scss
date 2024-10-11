@@ -1,0 +1,133 @@
+.blog-menu {
+	display: flex;
+	width: 100%;
+
+	& .accordion {
+		width: 100%;
+		background-color: var(--iverse);
+		border: 1px solid var(--border);
+		border-radius: var(--radius8);
+
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+
+		&__head {
+			padding: toRem(15) 0;
+		}
+
+		&__title {
+			font-size: toRem(14);
+			color: var(--text-primary);
+		}
+		&__img {
+			width: toRem(24);
+			height: toRem(24);
+		}
+		&__svg {
+			width: toRem(15);
+			transform: rotate(0deg);
+		}
+
+		&__item {
+			border: none;
+			&.drop {
+				& .accordion__svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(15);
+			width: 100%;
+			@media (max-width: $tablet) {
+				flex-direction: row;
+				column-gap: 0;
+				row-gap: toRem(15);
+				flex-wrap: wrap;
+			}
+		}
+	}
+
+	&__item {
+		background: transparent;
+		padding: toRem(0) toRem(20);
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		position: relative;
+		font-size: toRem(14);
+		color: var(--text-primary);
+		font-weight: 500;
+
+		span {
+			min-width: toRem(22);
+			display: block;
+			border-radius: var(--radius3);
+			font-weight: 400;
+			border: 1px solid var(--border);
+			background: var(--bg-secondary);
+			color: var(--text-secondary);
+			text-align: center;
+		}
+
+		&:before {
+			content: '';
+			width: toRem(3);
+			height: toRem(14);
+			display: block;
+			background-color: var(--primary);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			left: 0;
+			z-index: 2;
+			opacity: 0;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+
+		&.active {
+			color: var(--primary);
+			font-weight: 600;
+
+			&:before {
+				opacity: 1;
+			}
+			& span {
+				color: var(--text-inverse);
+				background-color: var(--primary);
+			}
+		}
+		@media (max-width: toRem(991)) {
+			font-size: toRem(14);
+		}
+	}
+}
+
+.blog-date {
+	display: flex;
+	gap: toRem(20);
+	align-items: center;
+	// .blog-date__link
+	&__link {
+		font-weight: 500;
+		font-size: toRem(12);
+		text-transform: uppercase;
+		color: var(--primary);
+	}
+
+	// .blog-date__date
+	&__date {
+		font-weight: 500;
+		font-size: toRem(16);
+		color: var(--text-secondary);
+	}
+}
