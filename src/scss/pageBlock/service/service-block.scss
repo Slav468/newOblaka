@@ -97,8 +97,7 @@
 			font-size: toRem(13);
 		}
 		@media (max-width: $mobile) {
-			line-clamp: 3;
-			-webkit-line-clamp: 3;
+			@include textOverflow(3, 14, 1.37);
 			font-size: toRem(14);
 		}
 	}
