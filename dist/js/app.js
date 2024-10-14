@@ -3047,7 +3047,7 @@
         classes
     };
     const extendedDefaults = {};
-    class Swiper {
+    class swiper_core_Swiper {
         constructor() {
             let el;
             let params;
@@ -3063,7 +3063,7 @@
                     const newParams = utils_extend({}, params, {
                         el: containerEl
                     });
-                    swipers.push(new Swiper(newParams));
+                    swipers.push(new swiper_core_Swiper(newParams));
                 }));
                 return swipers;
             }
@@ -3435,25 +3435,25 @@
             return defaults;
         }
         static installModule(mod) {
-            if (!Swiper.prototype.__modules__) Swiper.prototype.__modules__ = [];
-            const modules = Swiper.prototype.__modules__;
+            if (!swiper_core_Swiper.prototype.__modules__) swiper_core_Swiper.prototype.__modules__ = [];
+            const modules = swiper_core_Swiper.prototype.__modules__;
             if (typeof mod === "function" && modules.indexOf(mod) < 0) modules.push(mod);
         }
         static use(module) {
             if (Array.isArray(module)) {
-                module.forEach((m => Swiper.installModule(m)));
-                return Swiper;
+                module.forEach((m => swiper_core_Swiper.installModule(m)));
+                return swiper_core_Swiper;
             }
-            Swiper.installModule(module);
-            return Swiper;
+            swiper_core_Swiper.installModule(module);
+            return swiper_core_Swiper;
         }
     }
     Object.keys(prototypes).forEach((prototypeGroup => {
         Object.keys(prototypes[prototypeGroup]).forEach((protoMethod => {
-            Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+            swiper_core_Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
         }));
     }));
-    Swiper.use([ Resize, Observer ]);
+    swiper_core_Swiper.use([ Resize, Observer ]);
     function create_element_if_not_defined_createElementIfNotDefined(swiper, originalParams, params, checkProps) {
         if (swiper.params.createElements) Object.keys(checkProps).forEach((key => {
             if (!params[key] && params.auto === true) {
@@ -3956,15 +3956,12 @@
         });
     }
     function initSliders() {
-        if (document.querySelector(".banner__slider")) new Swiper(".banner__slider", {
+        if (document.querySelector(".banner__slider")) new swiper_core_Swiper(".banner__slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 0,
             speed: 300,
             grabCursor: true,
-            lazy: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
@@ -3975,14 +3972,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".directions-slider")) new Swiper(".directions-slider", {
+        if (document.querySelector(".directions-slider")) new swiper_core_Swiper(".directions-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".directions-button-prev",
                 nextEl: ".directions-button-next"
@@ -3997,14 +3991,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".service-slider")) new Swiper(".service-slider", {
+        if (document.querySelector(".service-slider")) new swiper_core_Swiper(".service-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".service-button-prev",
                 nextEl: ".service-button-next"
@@ -4019,14 +4010,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".photo-slider")) new Swiper(".photo-slider", {
+        if (document.querySelector(".photo-slider")) new swiper_core_Swiper(".photo-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".photo-button-prev",
                 nextEl: ".photo-button-next"
@@ -4041,14 +4029,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".reviews-slider")) new Swiper(".reviews-slider", {
+        if (document.querySelector(".reviews-slider")) new swiper_core_Swiper(".reviews-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".reviews-button-prev",
                 nextEl: ".reviews-button-next"
@@ -4063,14 +4048,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".employees-slider")) new Swiper(".employees-slider", {
+        if (document.querySelector(".employees-slider")) new swiper_core_Swiper(".employees-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".employees-button-prev",
                 nextEl: ".employees-button-next"
@@ -4085,14 +4067,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".partners-slider")) new Swiper(".partners-slider", {
+        if (document.querySelector(".partners-slider")) new swiper_core_Swiper(".partners-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".partners-button-prev",
                 nextEl: ".partners-button-next"
@@ -4107,14 +4086,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".news-slider")) new Swiper(".news-slider", {
+        if (document.querySelector(".news-slider")) new swiper_core_Swiper(".news-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".news-button-prev",
                 nextEl: ".news-button-next"
@@ -4129,14 +4105,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".share-slider")) new Swiper(".share-slider", {
+        if (document.querySelector(".share-slider")) new swiper_core_Swiper(".share-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".share-button-prev",
                 nextEl: ".share-button-next"
@@ -4151,14 +4124,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".instagram-slider")) new Swiper(".instagram-slider", {
+        if (document.querySelector(".instagram-slider")) new swiper_core_Swiper(".instagram-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".instagram-button-prev",
                 nextEl: ".instagram-button-next"
@@ -4173,14 +4143,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".teaser-slider")) new Swiper(".teaser-slider", {
+        if (document.querySelector(".teaser-slider")) new swiper_core_Swiper(".teaser-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".teaser-button-prev",
                 nextEl: ".teaser-button-next"
@@ -4195,15 +4162,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".projects-slider")) new Swiper(".projects-slider", {
+        if (document.querySelector(".projects-slider")) new swiper_core_Swiper(".projects-slider", {
             modules: [ Navigation, Pagination ],
-            loopAddBlankSlides: true,
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".projects-button-prev",
                 nextEl: ".projects-button-next"
@@ -4218,15 +4181,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".categories-slider")) new Swiper(".categories-slider", {
+        if (document.querySelector(".categories-slider")) new swiper_core_Swiper(".categories-slider", {
             modules: [ Navigation, Pagination ],
-            loopAddBlankSlides: true,
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
-            lazy: true,
             navigation: {
                 prevEl: ".categories-button-prev",
                 nextEl: ".categories-button-next"
@@ -4241,14 +4200,11 @@
             },
             on: {}
         });
-        if (document.querySelector(".product-slider")) new Swiper(".product-slider", {
+        if (document.querySelector(".product-slider")) new swiper_core_Swiper(".product-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 5,
             speed: 300,
-            lazy: true,
             pagination: {
                 el: ".product-slider__pagination",
                 clickable: true
@@ -4263,7 +4219,7 @@
             },
             on: {}
         });
-        if (document.querySelector(".page-slider")) new Swiper(".page-slider", {
+        if (document.querySelector(".page-slider")) new swiper_core_Swiper(".page-slider", {
             modules: [ Navigation, Pagination ],
             observer: true,
             observeParents: true,
@@ -4283,34 +4239,8 @@
             on: {}
         });
     }
-    function initSlidersScroll() {
-        let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
-        if (sliderScrollItems.length > 0) for (let index = 0; index < sliderScrollItems.length; index++) {
-            const sliderScrollItem = sliderScrollItems[index];
-            const sliderScrollBar = sliderScrollItem.querySelector(".swiper-scrollbar");
-            const sliderScroll = new Swiper(sliderScrollItem, {
-                observer: true,
-                observeParents: true,
-                direction: "vertical",
-                slidesPerView: "auto",
-                freeMode: {
-                    enabled: true
-                },
-                scrollbar: {
-                    el: sliderScrollBar,
-                    draggable: true,
-                    snapOnRelease: false
-                },
-                mousewheel: {
-                    releaseOnEdges: true
-                }
-            });
-            sliderScroll.scrollbar.updateSize();
-        }
-    }
     window.addEventListener("load", (function(e) {
         initSliders();
-        initSlidersScroll();
     }));
     let addWindowScrollEvent = false;
     setTimeout((() => {
