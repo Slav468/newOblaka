@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Grid, Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -33,8 +33,8 @@ function initSliders() {
 		new Swiper('.banner__slider', {
 			modules: [Navigation, Pagination],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 0,
 			//autoHeight: true,
@@ -44,7 +44,7 @@ function initSliders() {
 			// simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
-			lazy: true,
+			// lazy: true,
 			/*
 			Ефекти
 			effect: 'fade',
@@ -93,21 +93,21 @@ function initSliders() {
 			},
 			*/
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Directions slider
 	if (document.querySelector('.directions-slider')) {
 		new Swiper('.directions-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -149,21 +149,21 @@ function initSliders() {
 			},
 
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Service slider
 	if (document.querySelector('.service-slider')) {
 		new Swiper('.service-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -202,21 +202,21 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Photo slider
 	if (document.querySelector('.photo-slider')) {
 		new Swiper('.photo-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -255,21 +255,21 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Reviews slider
 	if (document.querySelector('.reviews-slider')) {
 		new Swiper('.reviews-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -308,7 +308,7 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Employees slider
@@ -316,15 +316,15 @@ function initSliders() {
 		// Вказуємо клас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.employees-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -363,7 +363,7 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Partners slider
@@ -371,15 +371,15 @@ function initSliders() {
 		// Вказуємо клас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.partners-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -418,7 +418,7 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// News slider
@@ -426,15 +426,15 @@ function initSliders() {
 		// Вказуємо клас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.news-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -473,21 +473,21 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Share slider
 	if (document.querySelector('.share-slider')) {
 		new Swiper('.share-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -526,21 +526,21 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Instagram slider
 	if (document.querySelector('.instagram-slider')) {
 		new Swiper('.instagram-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -579,21 +579,21 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Teaser slider
 	if (document.querySelector('.teaser-slider')) {
 		new Swiper('.teaser-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -632,22 +632,22 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Projects slider
 	if (document.querySelector('.projects-slider')) {
 		new Swiper('.projects-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			loopAddBlankSlides: true,
-			observer: true,
-			observeParents: true,
+			// loopAddBlankSlides: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -687,22 +687,22 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Categories slider
 	if (document.querySelector('.categories-slider')) {
 		new Swiper('.categories-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			loopAddBlankSlides: true,
-			observer: true,
-			observeParents: true,
+			// loopAddBlankSlides: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
-			lazy: true,
+			// lazy: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -742,16 +742,16 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 	// Product slider in card
 	if (document.querySelector('.product-slider')) {
 		new Swiper('.product-slider', {
-			modules: [Navigation, Pagination],
+			modules: [Navigation],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 5,
 			//autoHeight: true,
@@ -760,7 +760,7 @@ function initSliders() {
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
-			lazy: true,
+			// lazy: true,
 			/*
 				Ефекти
 				effect: 'fade',
@@ -791,7 +791,7 @@ function initSliders() {
 				},
 			},
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 
@@ -857,8 +857,8 @@ function initSliders() {
 		new Swiper('.page-slider', {
 			modules: [Navigation, Pagination],
 			// loop: true,
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 170,
 			// autoHeight: true,
@@ -868,7 +868,7 @@ function initSliders() {
 			// simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
-			lazy: true,
+			// lazy: true,
 			/*
 			Ефекти
 			effect: 'fade',
@@ -917,7 +917,7 @@ function initSliders() {
 			},
 			*/
 			// Події
-			on: {},
+			// on: {},
 		});
 	}
 }
@@ -955,5 +955,5 @@ window.addEventListener('load', function (e) {
 	// Запуск ініціалізації слайдерів
 	initSliders();
 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-	initSlidersScroll();
+	// initSlidersScroll();
 });

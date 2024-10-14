@@ -1,25 +1,20 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 import { bodyLock, bodyUnlock, menuClose } from './functions.js';
 // Підключення списку активних модулів
-import { flsModules } from './modules.js';
+// import { flsModules } from './modules.js';
 
-// const header = document.querySelector('header');
-// const dropButton = document.querySelectorAll('.menu__svg');
-// const mobileBackButtons = document.querySelectorAll('.mobile-back');
-// const contactsPhoneButton = document.querySelectorAll('.contacts-phone__arrow');
-// const asidePhonesArrow = document.querySelectorAll('.aside-phone__arrow');
-// const asideDropButtons = document.querySelectorAll('.aside-menu__svg');
+const header = document.querySelector('header');
+const dropButton = document.querySelectorAll('.menu__svg');
+const mobileBackButtons = document.querySelectorAll('.mobile-back');
+const contactsPhoneButton = document.querySelectorAll('.contacts-phone__arrow');
+const asidePhonesArrow = document.querySelectorAll('.aside-phone__arrow');
+const asideDropButtons = document.querySelectorAll('.aside-menu__svg');
 const asideCloseButton = document.querySelector('.aside-menu__close');
-// const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
+const asideMenuOverlay = document.querySelector('.aside-menu__overlay');
 
-// const pageMenuButtons = document.querySelectorAll('.page-menu__svg');
+const pageMenuButtons = document.querySelectorAll('.page-menu__svg');
 
-// // Close aside menu
-// function closeMenu() {
-// 	bodyUnlock();
-// 	document.documentElement.classList.remove('menu-open');
-// }
-
+// Close aside menu
 function closeAsideMenu() {
 	asideCloseButton.addEventListener('click', () => {
 		menuClose();
@@ -27,259 +22,259 @@ function closeAsideMenu() {
 }
 closeAsideMenu();
 
-// function dropMenu(array, selector, event = 'click') {
-// 	array.forEach(item => {
-// 		item.addEventListener(`${event}`, e => {
-// 			e.preventDefault();
-// 			const target = e.currentTarget;
-// 			const parentDrop = target.closest(selector);
-// 			parentDrop.classList.add('drop');
-// 			header.classList.add('drop');
-// 		});
-// 	});
-// }
+function dropMenu(array, selector, event = 'click') {
+	array.forEach(item => {
+		item.addEventListener(`${event}`, e => {
+			e.preventDefault();
+			const target = e.currentTarget;
+			const parentDrop = target.closest(selector);
+			parentDrop.classList.add('drop');
+			header.classList.add('drop');
+		});
+	});
+}
 
-// dropMenu(dropButton, '.menu__item', 'touchstart');
-// dropMenu(asideDropButtons, '.aside-menu__item');
-// dropMenu(contactsPhoneButton, '.contacts-phone');
-// dropMenu(asidePhonesArrow, '.aside-phone');
+dropMenu(dropButton, '.menu__item', 'touchstart');
+dropMenu(asideDropButtons, '.aside-menu__item');
+dropMenu(contactsPhoneButton, '.contacts-phone');
+dropMenu(asidePhonesArrow, '.aside-phone');
 
-// function removeDrop(array, selector) {
-// 	array.forEach(item => {
-// 		item.addEventListener('click', e => {
-// 			e.preventDefault();
-// 			const target = e.currentTarget;
-// 			const parentDrop = target.closest('.drop');
-// 			if (parentDrop.matches(`${selector} .drop`)) {
-// 				parentDrop.classList.remove('drop');
-// 			} else {
-// 				header.classList.remove('drop');
-// 				parentDrop.classList.remove('drop');
-// 			}
-// 		});
-// 	});
-// }
-// removeDrop(mobileBackButtons, '.menu__item');
-// function removeSomeDrop(selector) {
-// 	const allDrop = document.querySelectorAll(selector);
-// 	allDrop.forEach(item => {
-// 		item.classList.remove('drop');
-// 	});
-// }
+function removeDrop(array, selector) {
+	array.forEach(item => {
+		item.addEventListener('click', e => {
+			e.preventDefault();
+			const target = e.currentTarget;
+			const parentDrop = target.closest('.drop');
+			if (parentDrop.matches(`${selector} .drop`)) {
+				parentDrop.classList.remove('drop');
+			} else {
+				header.classList.remove('drop');
+				parentDrop.classList.remove('drop');
+			}
+		});
+	});
+}
+removeDrop(mobileBackButtons, '.menu__item');
+function removeSomeDrop(selector) {
+	const allDrop = document.querySelectorAll(selector);
+	allDrop.forEach(item => {
+		item.classList.remove('drop');
+	});
+}
 
-// // Close Element on click an press Esc
-// asideMenuOverlay.addEventListener('click', () => {
-// 	closeMenu();
-// 	removeSomeDrop('.aside-phone');
-// 	removeSomeDrop('.aside-menu__item');
-// });
-// document.addEventListener('click', (e, selector) => {
-// 	if (e.target.closest(`${selector}`)) {
-// 		removeSomeDrop(`${selector}`);
-// 	}
-// });
-// document.addEventListener('keydown', e => {
-// 	if (e.key === 'Escape') {
-// 		closeMenu();
-// 		removeSomeDrop('.aside-phone');
-// 		removeSomeDrop('.contacts-phone');
-// 	}
-// });
+// Close Element on click an press Esc
+asideMenuOverlay.addEventListener('click', () => {
+	menuClose();
+	removeSomeDrop('.aside-phone');
+	removeSomeDrop('.aside-menu__item');
+});
+document.addEventListener('click', (e, selector) => {
+	if (e.target.closest(`${selector}`)) {
+		removeSomeDrop(`${selector}`);
+	}
+});
+document.addEventListener('keydown', e => {
+	if (e.key === 'Escape') {
+		menuClose();
+		removeSomeDrop('.aside-phone');
+		removeSomeDrop('.contacts-phone');
+	}
+});
 
-// // Enable button in form
-// function toggleBtnForm() {
-// 	const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
-// 	checkBoxes.forEach(item => {
-// 		item.addEventListener('change', e => {
-// 			const currTarget = e.currentTarget;
-// 			const parentElement = currTarget.closest('[data-form]');
-// 			const currBtn = parentElement.querySelector('[data-formBtn] button');
-// 			const currCheck = item.querySelector('input');
-// 			const isChecked = currCheck.checked;
-// 			toggleBtnAttr(isChecked, currBtn);
-// 		});
-// 	});
-// }
+// Enable button in form
+function toggleBtnForm() {
+	const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
+	checkBoxes.forEach(item => {
+		item.addEventListener('change', e => {
+			const currTarget = e.currentTarget;
+			const parentElement = currTarget.closest('[data-form]');
+			const currBtn = parentElement.querySelector('[data-formBtn] button');
+			const currCheck = item.querySelector('input');
+			const isChecked = currCheck.checked;
+			toggleBtnAttr(isChecked, currBtn);
+		});
+	});
+}
 
-// function setBtnState() {
-// 	const forms = document.querySelectorAll('[data-form]');
-// 	forms.forEach(form => {
-// 		const formCheckBox = form.querySelector('[data-formCheckbox] input');
-// 		const formBtn = form.querySelector('[data-formBtn] button');
-// 		const isChecked = formCheckBox.checked;
-// 		toggleBtnAttr(isChecked, formBtn);
-// 	});
-// }
+function setBtnState() {
+	const forms = document.querySelectorAll('[data-form]');
+	forms.forEach(form => {
+		const formCheckBox = form.querySelector('[data-formCheckbox] input');
+		const formBtn = form.querySelector('[data-formBtn] button');
+		const isChecked = formCheckBox.checked;
+		toggleBtnAttr(isChecked, formBtn);
+	});
+}
 
-// function toggleBtnAttr(state, btn) {
-// 	if (state) {
-// 		btn.removeAttribute('disabled');
-// 	} else {
-// 		btn.setAttribute('disabled', '');
-// 	}
-// }
+function toggleBtnAttr(state, btn) {
+	if (state) {
+		btn.removeAttribute('disabled');
+	} else {
+		btn.setAttribute('disabled', '');
+	}
+}
 
-// if (document.querySelector('[data-formCheckbox]')) {
-// 	setBtnState();
-// 	toggleBtnForm();
-// }
+if (document.querySelector('[data-formCheckbox]')) {
+	setBtnState();
+	toggleBtnForm();
+}
 
-// // Counter in card
-// if (document.querySelector('.count')) {
-// 	const countsBlocks = document.querySelectorAll('.count');
-// 	countsBlocks.forEach(block => {
-// 		block.addEventListener('click', e => {
-// 			const target = e.target;
+// Counter in card
+if (document.querySelector('.count')) {
+	const countsBlocks = document.querySelectorAll('.count');
+	countsBlocks.forEach(block => {
+		block.addEventListener('click', e => {
+			const target = e.target;
 
-// 			if (target.closest('.count__minus')) {
-// 				const counter = target
-// 					.closest('.count')
-// 					.querySelector('.count__counter');
-// 				let num =
-// 					+counter.textContent > 1
-// 						? +counter.textContent--
-// 						: +counter.textContent;
-// 			}
-// 			if (target.closest('.count__plus')) {
-// 				let num = +target.closest('.count').querySelector('.count__counter')
-// 					.textContent++;
-// 			}
-// 		});
-// 	});
-// }
+			if (target.closest('.count__minus')) {
+				const counter = target
+					.closest('.count')
+					.querySelector('.count__counter');
+				let num =
+					+counter.textContent > 1
+						? +counter.textContent--
+						: +counter.textContent;
+			}
+			if (target.closest('.count__plus')) {
+				let num = +target.closest('.count').querySelector('.count__counter')
+					.textContent++;
+			}
+		});
+	});
+}
 
-// if (document.querySelector('.menu__list')) {
-// 	hideMenuItem();
-// 	window.addEventListener('resize', () => {
-// 		hideMenuItem();
-// 	});
-// }
+if (document.querySelector('.menu__list')) {
+	hideMenuItem();
+	window.addEventListener('resize', () => {
+		hideMenuItem();
+	});
+}
 
-// // TODO активировать при количестве элементов  > 5
-// // Remove and Add menu item on resize
-// function hideMenuItem() {
-// 	const menus = document.querySelectorAll('[data-menu]');
+// TODO активировать при количестве элементов  > 5
+// Remove and Add menu item on resize
+function hideMenuItem() {
+	const menus = document.querySelectorAll('[data-menu]');
 
-// 	for (let menu of menus) {
-// 		const menuList = menu.querySelector('.menu__list');
-// 		const menuListChildren = menuList.children; // List items
-// 		const menuLastItem = menuList.querySelector('[data-menu-group]'); // Item Includes menu items
-// 		const menuLastItemList = menuLastItem.querySelector('.menu__list'); // list of item whose includes
-// 		const menuLastItemListChildren = menuLastItemList.children;
-// 		const styles = window.getComputedStyle(menuList, null);
-// 		const gap = +styles.rowGap.slice(0, -2);
+	for (let menu of menus) {
+		const menuList = menu.querySelector('.menu__list');
+		const menuListChildren = menuList.children; // List items
+		const menuLastItem = menuList.querySelector('[data-menu-group]'); // Item Includes menu items
+		const menuLastItemList = menuLastItem.querySelector('.menu__list'); // list of item whose includes
+		const menuLastItemListChildren = menuLastItemList.children;
+		const styles = window.getComputedStyle(menuList, null);
+		const gap = +styles.rowGap.slice(0, -2);
 
-// 		let width = menuList.offsetWidth;
-// 		let totalWidthItem = 0;
-// 		for (let item of menuListChildren) {
-// 			totalWidthItem += item.clientWidth;
-// 		}
+		let width = menuList.offsetWidth;
+		let totalWidthItem = 0;
+		for (let item of menuListChildren) {
+			totalWidthItem += item.clientWidth;
+		}
 
-// 		totalWidthItem += gap * menuListChildren.length - 1;
+		totalWidthItem += gap * menuListChildren.length - 1;
 
-// 		if (totalWidthItem > width && menuListChildren.length > 2) {
-// 			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
-// 			hideMenuItem();
-// 		}
-// 		if (
-// 			totalWidthItem + 110 < width &&
-// 			menuListChildren.length < 9 &&
-// 			menuLastItemListChildren.length > 1
-// 		) {
-// 			menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
-// 		}
-// 	}
-// }
-// function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
-// 	let element = menuList.removeChild(
-// 		menuListChildren[menuListChildren.length - 2]
-// 	);
-// 	menuLastItemList.appendChild(element);
-// }
-// function menuBackItem(menuList, menuLastItemList, menuLastItemListChildren) {
-// 	let element = menuLastItemList.removeChild(
-// 		menuLastItemListChildren[menuLastItemListChildren.length - 1]
-// 	);
+		if (totalWidthItem > width && menuListChildren.length > 2) {
+			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
+			hideMenuItem();
+		}
+		if (
+			totalWidthItem + 110 < width &&
+			menuListChildren.length < 9 &&
+			menuLastItemListChildren.length > 1
+		) {
+			menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
+		}
+	}
+}
+function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
+	let element = menuList.removeChild(
+		menuListChildren[menuListChildren.length - 2]
+	);
+	menuLastItemList.appendChild(element);
+}
+function menuBackItem(menuList, menuLastItemList, menuLastItemListChildren) {
+	let element = menuLastItemList.removeChild(
+		menuLastItemListChildren[menuLastItemListChildren.length - 1]
+	);
 
-// 	menuList.insertBefore(element, menuList.lastElementChild);
-// }
+	menuList.insertBefore(element, menuList.lastElementChild);
+}
 
-// //  TODO
-// // Translate menu drop on hover
+//  TODO
+// Translate menu drop on hover
 
-// //! page menu drop
-// function dropPageMenu(array, selector, event = 'click') {
-// 	array.forEach(item => {
-// 		item.addEventListener(`${event}`, e => {
-// 			e.preventDefault();
-// 			const target = e.currentTarget;
-// 			const parentDrop = target.closest(selector);
-// 			parentDrop.classList.toggle('drop');
-// 		});
-// 	});
-// }
+//! page menu drop
+function dropPageMenu(array, selector, event = 'click') {
+	array.forEach(item => {
+		item.addEventListener(`${event}`, e => {
+			e.preventDefault();
+			const target = e.currentTarget;
+			const parentDrop = target.closest(selector);
+			parentDrop.classList.toggle('drop');
+		});
+	});
+}
 
-// if (document.querySelector('.page-menu')) {
-// 	dropPageMenu(pageMenuButtons, '.page-menu__item');
-// }
+if (document.querySelector('.page-menu')) {
+	dropPageMenu(pageMenuButtons, '.page-menu__item');
+}
 
-// // Accordion toggle
-// function eventAccord() {
-// 	const accordingAll = document.querySelectorAll('.accordion');
-// 	accordingAll.forEach(accordion => {
-// 		const accordionItems = accordion.children;
-// 		for (let item of accordionItems) {
-// 			item.addEventListener('click', e => {
-// 				const targetChild = e.currentTarget;
+// Accordion toggle
+function eventAccord() {
+	const accordingAll = document.querySelectorAll('.accordion');
+	accordingAll.forEach(accordion => {
+		const accordionItems = accordion.children;
+		for (let item of accordionItems) {
+			item.addEventListener('click', e => {
+				const targetChild = e.currentTarget;
 
-// 				if (targetChild.matches('.drop')) {
-// 					targetChild.classList.toggle('drop');
-// 				} else {
-// 					for (let item of accordionItems) {
-// 						item.classList.remove('drop');
-// 					}
-// 					targetChild.classList.toggle('drop');
-// 				}
-// 			});
-// 		}
-// 	});
-// }
+				if (targetChild.matches('.drop')) {
+					targetChild.classList.toggle('drop');
+				} else {
+					for (let item of accordionItems) {
+						item.classList.remove('drop');
+					}
+					targetChild.classList.toggle('drop');
+				}
+			});
+		}
+	});
+}
 
-// if (document.querySelector('.accordion')) {
-// 	eventAccord();
-// }
+if (document.querySelector('.accordion')) {
+	eventAccord();
+}
 
-// // Form file upload
-// if (document.querySelector('.upload__button')) {
-// 	uploadFileInForm();
-// }
+function uploadFileInForm() {
+	const popupUploadButtons = document.querySelectorAll('.upload__button');
+	popupUploadButtons.forEach(button => {
+		button.addEventListener('click', e => {
+			e.preventDefault();
 
-// function uploadFileInForm() {
-// 	const popupUploadButtons = document.querySelectorAll('.upload__button');
-// 	popupUploadButtons.forEach(button => {
-// 		button.addEventListener('click', e => {
-// 			e.preventDefault();
+			const target = e.currentTarget;
+			const inputTarget = target.parentElement.previousElementSibling;
+			inputTarget.click();
+			inputTarget.addEventListener('change', e => {
+				let currentFileName = '';
+				const spanText =
+					e.currentTarget.nextElementSibling.querySelector('span');
 
-// 			const target = e.currentTarget;
-// 			const inputTarget = target.parentElement.previousElementSibling;
-// 			inputTarget.click();
-// 			inputTarget.addEventListener('change', e => {
-// 				let currentFileName = '';
-// 				const spanText =
-// 					e.currentTarget.nextElementSibling.querySelector('span');
+				if (e.currentTarget.files.length > 0) {
+					const fileName = e.currentTarget.files[0].name;
+					currentFileName = fileName.split('.')[0];
 
-// 				if (e.currentTarget.files.length > 0) {
-// 					const fileName = e.currentTarget.files[0].name;
-// 					currentFileName = fileName.split('.')[0];
+					spanText.textContent = '';
+					spanText.textContent = `${currentFileName.slice(0, 22)}...`;
+				} else {
+					spanText.textContent = '';
+					currentFileName = 'Файл не выбран';
+					spanText.textContent = `${currentFileName}`;
+				}
+			});
+		});
+	});
+}
 
-// 					spanText.textContent = '';
-// 					spanText.textContent = `${currentFileName.slice(0, 22)}...`;
-// 				} else {
-// 					spanText.textContent = '';
-// 					currentFileName = 'Файл не выбран';
-// 					spanText.textContent = `${currentFileName}`;
-// 				}
-// 			});
-// 		});
-// 	});
-// }
+// Form file upload
+if (document.querySelector('.upload__button')) {
+	uploadFileInForm();
+}
