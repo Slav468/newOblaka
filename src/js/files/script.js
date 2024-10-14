@@ -1,5 +1,5 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { bodyLock, bodyUnlock } from './functions.js';
+import { bodyLock, bodyUnlock, menuClose } from './functions.js';
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
 
@@ -15,14 +15,14 @@ const asideCloseButton = document.querySelector('.aside-menu__close');
 // const pageMenuButtons = document.querySelectorAll('.page-menu__svg');
 
 // // Close aside menu
-function closeMenu() {
-	bodyUnlock();
-	document.documentElement.classList.remove('menu-open');
-}
+// function closeMenu() {
+// 	bodyUnlock();
+// 	document.documentElement.classList.remove('menu-open');
+// }
 
 function closeAsideMenu() {
 	asideCloseButton.addEventListener('click', () => {
-		closeMenu();
+		menuClose();
 	});
 }
 closeAsideMenu();
