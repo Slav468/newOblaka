@@ -75,6 +75,9 @@
         }
     };
     let bodyLockStatus = true;
+    let bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+    };
     let bodyUnlock = (delay = 500) => {
         if (bodyLockStatus) {
             const lockPaddingElements = document.querySelectorAll("[data-lp]");
@@ -198,6 +201,23 @@
                 e.preventDefault();
             }
         }
+    }
+    function menuInit() {
+        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                bodyLockToggle();
+                document.documentElement.classList.toggle("menu-open");
+                document.querySelector(".header").classList.remove("drop");
+                removeDrop();
+            }
+        }));
+    }
+    function removeDrop() {
+        const menu = document.querySelector(".menu");
+        const dropElements = menu.querySelectorAll(".drop");
+        dropElements.forEach((element => {
+            element.classList.remove("drop");
+        }));
     }
     function functions_menuClose() {
         bodyUnlock();
@@ -7010,10 +7030,6 @@ PERFORMANCE OF THIS SOFTWARE.
     const asideCloseButton = document.querySelector(".aside-menu__close");
     const asideMenuOverlay = document.querySelector(".aside-menu__overlay");
     const pageMenuButtons = document.querySelectorAll(".page-menu__svg");
-    function closeMenu() {
-        bodyUnlock();
-        document.documentElement.classList.remove("menu-open");
-    }
     function closeAsideMenu() {
         asideCloseButton.addEventListener("click", (() => {
             functions_menuClose();
@@ -7056,7 +7072,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
     }
     asideMenuOverlay.addEventListener("click", (() => {
-        closeMenu();
+        functions_menuClose();
         removeSomeDrop(".aside-phone");
         removeSomeDrop(".aside-menu__item");
     }));
@@ -7065,7 +7081,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }));
     document.addEventListener("keydown", (e => {
         if (e.key === "Escape") {
-            closeMenu();
+            functions_menuClose();
             removeSomeDrop(".aside-phone");
             removeSomeDrop(".contacts-phone");
         }
@@ -7175,7 +7191,6 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
     }
     if (document.querySelector(".accordion")) eventAccord();
-    if (document.querySelector(".upload__button")) uploadFileInForm();
     function uploadFileInForm() {
         const popupUploadButtons = document.querySelectorAll(".upload__button");
         popupUploadButtons.forEach((button => {
@@ -7201,6 +7216,8 @@ PERFORMANCE OF THIS SOFTWARE.
             }));
         }));
     }
+    if (document.querySelector(".upload__button")) uploadFileInForm();
     window["FLS"] = true;
+    menuInit();
     tabs();
 })();
