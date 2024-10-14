@@ -313,7 +313,7 @@ body::after {
 .tabs__title {
   border: 1px solid var(--text-secondary);
   border-radius: var(--radius8);
-  padding: .9375rem .625rem;
+  padding: .75rem .625rem;
   font-weight: 400;
   font-size: .9375rem;
   line-height: 1.67;
@@ -3866,8 +3866,13 @@ button.swiper-pagination-bullet {
 }
 @media(max-width:47.99875em) {
   .service__text {
+    display: -webkit-box;
     line-clamp: 3;
     -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calc(4.11*.875rem);
     font-size: .875rem
   }
 }
@@ -6058,10 +6063,10 @@ button.swiper-pagination-bullet {
   }
 }
 .form__cell[valid] input {
-  outline: 1px solid var(--buttonBlock)
+  outline: 1px solid var(--primary)
 }
 .form__cell[inValid] input {
-  outline: 1px solid var(--color-btn)
+  outline: 1px solid var(--for-false)
 }
 .form__label {
   font-weight: 400;
@@ -6663,7 +6668,7 @@ button.swiper-pagination-bullet {
   height: 38px;
   width: 38px;
   border-radius: 50%;
-  background: rgba(255,255,255,.6);
+  background: hsla(0,0%,100%,.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6950,6 +6955,7 @@ button.swiper-pagination-bullet {
 }
 .buttons-basket .basket-svg {
   height: 100%;
+  width: 100%;
   max-width: 1.5rem;
   max-height: 1.5rem
 }
