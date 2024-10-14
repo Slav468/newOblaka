@@ -3996,7 +3996,7 @@
             }
         });
         if (document.querySelector(".directions-slider")) new swiper_core_Swiper(".directions-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4014,7 +4014,7 @@
             }
         });
         if (document.querySelector(".service-slider")) new swiper_core_Swiper(".service-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4032,7 +4032,7 @@
             }
         });
         if (document.querySelector(".photo-slider")) new swiper_core_Swiper(".photo-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4050,7 +4050,7 @@
             }
         });
         if (document.querySelector(".reviews-slider")) new swiper_core_Swiper(".reviews-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4068,7 +4068,7 @@
             }
         });
         if (document.querySelector(".employees-slider")) new swiper_core_Swiper(".employees-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4086,7 +4086,7 @@
             }
         });
         if (document.querySelector(".partners-slider")) new swiper_core_Swiper(".partners-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4104,7 +4104,7 @@
             }
         });
         if (document.querySelector(".news-slider")) new swiper_core_Swiper(".news-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4122,7 +4122,7 @@
             }
         });
         if (document.querySelector(".share-slider")) new swiper_core_Swiper(".share-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4140,7 +4140,7 @@
             }
         });
         if (document.querySelector(".instagram-slider")) new swiper_core_Swiper(".instagram-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4158,7 +4158,7 @@
             }
         });
         if (document.querySelector(".teaser-slider")) new swiper_core_Swiper(".teaser-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4176,7 +4176,7 @@
             }
         });
         if (document.querySelector(".projects-slider")) new swiper_core_Swiper(".projects-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4194,7 +4194,7 @@
             }
         });
         if (document.querySelector(".categories-slider")) new swiper_core_Swiper(".categories-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 300,
@@ -4212,7 +4212,7 @@
             }
         });
         if (document.querySelector(".product-slider")) new swiper_core_Swiper(".product-slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation ],
             slidesPerView: "auto",
             spaceBetween: 5,
             speed: 300,
@@ -4231,13 +4231,10 @@
         });
         if (document.querySelector(".page-slider")) new swiper_core_Swiper(".page-slider", {
             modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 170,
             speed: 300,
             grabCursor: true,
-            lazy: true,
             pagination: {
                 el: ".page-slider__pagination",
                 clickable: true
@@ -4245,8 +4242,7 @@
             navigation: {
                 prevEl: ".page-slider-prev",
                 nextEl: ".page-slider-next"
-            },
-            on: {}
+            }
         });
     }
     window.addEventListener("load", (function(e) {
