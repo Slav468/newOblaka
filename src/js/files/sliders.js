@@ -748,7 +748,7 @@ function initSliders() {
 	// Product slider in card
 	if (document.querySelector('.product-slider')) {
 		new Swiper('.product-slider', {
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			// loop: true,
 			// observer: true,
 			// observeParents: true,
@@ -795,61 +795,61 @@ function initSliders() {
 		});
 	}
 
-	// if (document.querySelector('.card-slider')) {
-	// 	new Swiper('.card-slider', {
-	// 		modules: [Navigation, Pagination],
-	// 		// loop: true,
-	// 		observer: true,
-	// 		observeParents: true,
-	// 		slidesPerView: 'auto',
-	// 		spaceBetween: 20,
-	// 		// autoHeight: true,
-	// 		speed: 300,
-	// 		lazy: true,
-	// 		//touchRatio: 0,
-	// 		//simulateTouch: false,
-	// 		//loop: true,
-	// 		//preloadImages: false,
-	// 		/*
-	// 		Ефекти
-	// 		effect: 'fade',
-	// 		autoplay: {
-	// 			delay: 3000,
-	// 			disableOnInteraction: false,
-	// 		},
-	// 		*/
-	// 		// Пагінація
-	// 		// pagination: {
-	// 		// 	el: '.swiper-pagination',
-	// 		// 	clickable: true,
-	// 		// },
-	// 		// Скроллбар
-	// 		/*
-	// 		scrollbar: {
-	// 			el: '.swiper-scrollbar',
-	// 			draggable: true,
-	// 		},
-	// 		*/
-	// 		// Кнопки "вліво/вправо"
-	// 		navigation: {
-	// 			prevEl: '.card-button-prev',
-	// 			nextEl: '.card-button-next',
-	// 		},
+	if (document.querySelector('.card-slider')) {
+		new Swiper('.card-slider', {
+			modules: [Navigation],
+			// loop: true,
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 300,
+			lazy: true,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			/*
+			Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			// Пагінація
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	clickable: true,
+			// },
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.card-button-prev',
+				nextEl: '.card-button-next',
+			},
 
-	// 		// Брейкпоінти
-	// 		breakpoints: {
-	// 			320: {
-	// 				spaceBetween: 10,
-	// 			},
-	// 			992: {
-	// 				spaceBetween: 20,
-	// 			},
-	// 		},
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					spaceBetween: 10,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
 
-	// 		// Події
-	// 		on: {},
-	// 	});
-	// }
+			// Події
+			// on: {},
+		});
+	}
 
 	if (document.querySelector('.page-slider')) {
 		// Вказуємо склас потрібного слайдера
@@ -951,7 +951,7 @@ function initSlidersScroll() {
 	}
 }
 
-window.addEventListener('load', function (e) {
+window.addEventListener('DOMContentLoaded', function (e) {
 	// Запуск ініціалізації слайдерів
 	initSliders();
 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)

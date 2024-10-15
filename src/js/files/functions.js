@@ -1,5 +1,6 @@
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
+import { overlayShow } from './script.js';
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 export function isWebp() {
@@ -508,6 +509,7 @@ export function menuInit() {
 		document.addEventListener('click', function (e) {
 			if (bodyLockStatus && e.target.closest('.icon-menu')) {
 				bodyLockToggle();
+				overlayShow();
 				document.documentElement.classList.toggle('menu-open');
 				document.querySelector('.header').classList.remove('drop');
 				removeDrop();
@@ -531,6 +533,15 @@ export function menuOpen() {
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove('menu-open');
+}
+
+// Overlay show / hide
+export function overlayShow() {
+	overlay.classList.add('show');
+}
+
+export function overlayHide() {
+	overlay.classList.remove('show');
 }
 
 // Модуль "показати ще" =======================================================================================================================================================================================================================

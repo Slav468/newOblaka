@@ -32,7 +32,7 @@
 		border: 1px solid var(--border);
 		border-radius: var(--radius8);
 		overflow: hidden;
-		box-shadow: 0 toRem(10) toRem(24) 0 rgba(196, 196, 196, 0.2);
+		appearance: none;
 		flex: 1 1 percent(1240, $maxWidthContainer);
 		&:has(.like) {
 			& .like__container {

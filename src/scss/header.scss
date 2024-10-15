@@ -1,9 +1,10 @@
 .header {
 	display: flex;
 	width: 100%;
-	@media (max-width: $mobile) {
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	}
+	// @media (max-width: $mobile) {
+	// 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	// 	appearance: none;
+	// }
 
 	&__container {
 		position: relative;
@@ -171,31 +172,29 @@
 		top: 0;
 		left: 0;
 		z-index: 5;
-		& .header__bottom {
-			& .menu {
-				width: 100%;
-				& > .menu__body {
-					padding: 0 toRem(50);
-					border-radius: var(--radius8);
-					background-color: var(--text-inverse);
-					& > .menu__list {
-						& > .menu__item {
-							& > .menu__link {
+		& .menu {
+			width: 100%;
+			& > .menu__body {
+				padding: 0 toRem(50);
+				border-radius: var(--radius8);
+				background-color: var(--text-inverse);
+				& > .menu__list {
+					& > .menu__item {
+						& > .menu__link {
+							color: var(--text-accent);
+						}
+						& > .menu__svg {
+							& .svg-arrow-down {
 								color: var(--text-accent);
 							}
-							& > .menu__svg {
-								& .svg-arrow-down {
-									color: var(--text-accent);
-								}
-							}
+						}
 
-							@media (any-hover: hover) and (min-width: $mobile) {
-								&:hover {
-									& > .menu__link,
-									& > .menu__svg .svg-arrow-down,
-									& > .svg-dotted {
-										color: var(--primary);
-									}
+						@media (any-hover: hover) and (min-width: $mobile) {
+							&:hover {
+								& > .menu__link,
+								& > .menu__svg .svg-arrow-down,
+								& > .svg-dotted {
+									color: var(--primary);
 								}
 							}
 						}
@@ -283,47 +282,47 @@
 				}
 			}
 
-			& > .menu__body {
-				position: absolute;
-				top: 0;
-				left: -100%;
-				z-index: 4;
-				width: 30vw;
-				height: 100svh;
-				flex-direction: column;
-				padding: 0 toRem(50);
-				border-radius: var(--radius8);
-				background-color: var(--bg-primary);
-				transition: left 0.3s ease 0s;
-				& > .menu__list {
-					display: flex;
-					flex-direction: column;
+			// & > .menu__body {
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: -100%;
+			// 	z-index: 4;
+			// 	width: 30vw;
+			// 	height: 100svh;
+			// 	flex-direction: column;
+			// 	padding: 0 toRem(50);
+			// 	border-radius: var(--radius8);
+			// 	background-color: var(--bg-primary);
+			// 	transition: left 0.3s ease 0s;
+			// 	& > .menu__list {
+			// 		display: flex;
+			// 		flex-direction: column;
 
-					& > .mobile-view {
-						display: flex;
-					}
-				}
-				.menu-open & {
-					left: 0;
-				}
-			}
+			// 		& > .mobile-view {
+			// 			display: flex;
+			// 		}
+			// 	}
+			// 	.menu-open & {
+			// 		left: 0;
+			// 	}
+			// }
 
-			@media (max-width: toEm(640)) {
-				& > .icon-menu {
-					background-color: transparent;
-					border: none;
-					min-width: 0;
-					padding: toRem(13) toRem(10);
-					span,
-					&::before,
-					&::after {
-						background-color: var(--text-accent);
+			// @media (max-width: toEm(640)) {
+			// 	& > .icon-menu {
+			// 		background-color: transparent;
+			// 		border: none;
+			// 		min-width: 0;
+			// 		padding: toRem(13) toRem(10);
+			// 		span,
+			// 		&::before,
+			// 		&::after {
+			// 			background-color: var(--text-accent);
 
-						right: 0;
-						left: auto;
-					}
-				}
-			}
+			// 			right: 0;
+			// 			left: auto;
+			// 		}
+			// 	}
+			// }
 		}
 
 		@media (max-width: toEm(1380)) {
@@ -473,10 +472,12 @@
 					left: 0;
 					z-index: 6;
 					border-radius: toRem(8);
-					box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.4);
+					appearance: none;
 					max-width: toRem(435);
 					width: 100vw;
 					padding: toRem(10);
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 					& > .menu__content {
 						display: flex;
 						flex-direction: column;
@@ -513,7 +514,7 @@
 											left: 106%;
 											z-index: 6;
 											border-radius: toRem(8);
-											box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.4);
+											appearance: none;
 											max-width: toRem(220);
 											width: 100vw;
 											padding: toRem(10);
@@ -757,7 +758,8 @@
 		max-width: toRem(220);
 		display: none;
 		border-radius: 8px;
-		box-shadow: 0 toRem(5) toRem(30) 0 rgba(0, 0, 0, 0.4);
+		appearance: none;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	}
 
 	&.drop {

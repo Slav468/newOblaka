@@ -28,7 +28,6 @@
 			height: 100%;
 			z-index: 0;
 			opacity: 1;
-			transition: 0.3s;
 			background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, #000 100%);
 		}
 		&::before {
@@ -41,7 +40,6 @@
 			left: 0;
 			z-index: 0;
 			opacity: 0;
-			transition: 0.3s;
 			background: rgba(0, 0, 0, 0.7);
 		}
 
@@ -85,8 +83,6 @@
 		flex-direction: column;
 		height: 0;
 		overflow: hidden;
-		transition: height 0.3s;
-
 		&__text {
 			margin: toRem(15) 0;
 			font-weight: 400;

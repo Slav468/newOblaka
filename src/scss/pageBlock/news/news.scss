@@ -23,9 +23,12 @@
 		height: auto;
 		overflow: hidden;
 		border-radius: var(--radius8);
+		appearance: none;
 
-		&:hover {
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			}
 		}
 
 		@media (max-width: $mobile) {

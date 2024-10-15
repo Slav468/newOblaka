@@ -21,6 +21,7 @@
 		aspect-ratio: 540 / 350;
 		overflow: hidden;
 		border-radius: var(--radius8);
+		appearance: none;
 
 		@media (any-hover: hover) {
 			&:hover {

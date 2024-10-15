@@ -33,6 +33,7 @@
 		height: auto;
 		overflow: hidden;
 		border-radius: var(--radius8);
+		appearance: none;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -54,7 +55,6 @@
 		border: 1px solid var(--border);
 		border-radius: var(--radius8);
 		overflow: hidden;
-		transition: 0.3s;
 
 		& .button {
 			@media (max-width: toEm(576)) {

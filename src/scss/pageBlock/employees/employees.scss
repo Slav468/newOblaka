@@ -19,29 +19,32 @@
 	&__cell {
 		width: calc((100% - toRem(20) * 3) / 4);
 		aspect-ratio: 400 / 350;
-		overflow: hidden;
 		border-radius: var(--radius8);
+		appearance: none;
 
-		&:hover {
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			// & .employees__content {
-			// 	margin-top: 20px;
-			// 	height: auto;
-			// 	@media (max-width: toRem(1300)) {
-			// 		margin-top: 5px;
-			// 	}
-			// }
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-			// & .employees__pos {
-			// 	@media (max-width: toRem(1300)) {
-			// 		margin-top: 0;
-			// 		margin-bottom: toRem(10);
-			// 	}
-			// }
+				// & .employees__content {
+				// 	margin-top: 20px;
+				// 	height: auto;
+				// 	@media (max-width: toRem(1300)) {
+				// 		margin-top: 5px;
+				// 	}
+				// }
 
-			// & .employees__bottom {
-			// 	height: auto;
-			// }
+				// & .employees__pos {
+				// 	@media (max-width: toRem(1300)) {
+				// 		margin-top: 0;
+				// 		margin-bottom: toRem(10);
+				// 	}
+				// }
+
+				// & .employees__bottom {
+				// 	height: auto;
+				// }
+			}
 		}
 
 		@media (max-width: $tablet) {
