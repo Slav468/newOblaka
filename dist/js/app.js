@@ -4418,13 +4418,32 @@
             }
         });
         if (document.querySelector(".product-slider")) new swiper_core_Swiper(".product-slider", {
-            modules: [ Navigation ],
+            modules: [ Navigation, Pagination ],
             slidesPerView: "auto",
             spaceBetween: 5,
             speed: 300,
             pagination: {
                 el: ".product-slider__pagination",
                 clickable: true
+            },
+            breakpoints: {
+                320: {
+                    spaceBetween: 10
+                },
+                992: {
+                    spaceBetween: 20
+                }
+            }
+        });
+        if (document.querySelector(".card-slider")) new swiper_core_Swiper(".card-slider", {
+            modules: [ Navigation ],
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            speed: 300,
+            lazy: true,
+            navigation: {
+                prevEl: ".card-button-prev",
+                nextEl: ".card-button-next"
             },
             breakpoints: {
                 320: {
