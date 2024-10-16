@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241016151116">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241016154226">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="description" content="">
     <meta name="keywords" content="">
@@ -563,59 +563,78 @@
 						</div>
 
 						<div class="main__item">
-							<section class="block form-block">
-								<div class="block__container">
-									<div class="block__wrapper">
-										<div class="block__inner">
-											<div class="block__body">
-												<div class="form-block__body">
-													<!-- Непосредственно форма -->
-													<form class="form" data-form>
-														<!-- Заголовок -->
-														<div class="form__title" data-formTitle>
-															СТРАНИЦА ЗАКОНЧИЛАСЬ, ВРЕМЯ ПРИНИМАТЬ РЕШЕНИЕ!
-														</div>
-														<!-- Подзаголовок -->
-														<div class="form__text">
-															Отправьте заявку и через 10 минут мы свяжемся с вами
-														</div>
-														<!-- Список полей -->
-														<div class="form__list">
-															<!-- Имя -->
-															<div class="form__cell" data-formData>
-																<label class="form__label" for="name">Ваше имя*</label>
-																<input class="form__input" type="text" name="name" id="name" required placeholder="Ваше имя" />
-															</div>
-															<!-- Телефон -->
-															<div class="form__cell" data-formData>
-																<label class="form__label" for="phone">Ваш телефон*</label>
-																<input name="phone" id="phone" type="tel" class="form__input" required placeholder="+375 (00) 000-00-00" />
-															</div>
-															<!-- Select -->
-															<div class="form__cell" data-formSelect>
-																<label class="form__label" for="form-select">Выбрать услугу*</label>
-																<div class="select">
-																	<div class="select__svg">
-																		<svg class="svg-arrow-down">
-																			<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-																		</svg>
-																	</div>
-																	<select class="select__form" name="form-select" id="form-select" required>
-																		<option value="" hidden>Выберите нужную услугу</option>
-																		<option value="1">Услуга 1</option>
-																		<option value="2">Услуга 2</option>
-																		<option value="3">Услуга 3</option>
-																	</select>
-																</div>
-															</div>
-															<!-- Date -->
-															<!-- <div class="form__cell">
+							<!-- <section class="block form-block">
+	<div class="block__container">
+		<div class="block__wrapper">
+			<div class="block__inner">
+				<div class="block__body">
+					<div class="form-block__body"> -->
+							<!-- Непосредственно форма -->
+							<!-- <form class="form" data-form> -->
+							<!-- Заголовок -->
+							<!-- <div class="form__title" data-formTitle> -->
+							<!-- СТРАНИЦА ЗАКОНЧИЛАСЬ, ВРЕМЯ ПРИНИМАТЬ РЕШЕНИЕ! -->
+							<!-- </div> -->
+							<!-- Подзаголовок -->
+							<!-- <div class="form__text"> -->
+							<!-- Отправьте заявку и через 10 минут мы свяжемся с вами -->
+							<!-- </div> -->
+							<!-- Список полей -->
+							<!-- <div class="form__list"> -->
+							<!-- Имя -->
+							<!-- <div class="form__cell" data-formData>
+			<label class="form__label" for="name">Ваше имя*</label>
+			<input
+				class="form__input"
+				type="text"
+				name="name"
+				id="name"
+				required
+				placeholder="Ваше имя"
+			/>
+		</div> -->
+							<!-- Телефон -->
+							<!-- <div class="form__cell" data-formData>
+			<label class="form__label" for="phone">Ваш телефон*</label>
+			<input
+				name="phone"
+				id="phone"
+				type="tel"
+				class="form__input"
+				required
+				placeholder="+375 (00) 000-00-00"
+			/>
+		</div> -->
+							<!-- Select -->
+							<!-- <div class="form__cell" data-formSelect>
+			<label class="form__label" for="form-select">Выбрать услугу*</label>
+			<div class="select">
+				<div class="select__svg">
+					<svg class="svg-arrow-down">
+						<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+					</svg>
+				</div>
+				<select
+					class="select__form"
+					name="form-select"
+					id="form-select"
+					required
+				>
+					<option value="" hidden>Выберите нужную услугу</option>
+					<option value="1">Услуга 1</option>
+					<option value="2">Услуга 2</option>
+					<option value="3">Услуга 3</option>
+				</select>
+			</div>
+		</div> -->
+							<!-- Date -->
+							<!-- <div class="form__cell">
 			<label class='form__label' for="date">Дата рождения*</label>
 			<input class="form__input" type="date" name="date" required />
 		</div> -->
-														</div>
-														<!-- Captcha -->
-														<!-- <div class="form__cell captcha">
+							<!-- </div> -->
+							<!-- Captcha -->
+							<!-- <div class="form__cell captcha">
 		<label class="captcha__label" for="input-captcha"
 			>Введите символы на картинке*</label
 		>
@@ -638,38 +657,38 @@
 			<a href="/" rel="nofollow"> Поменять картинку </a>
 		</span>
 	</div> -->
-														<!-- Checkbox -->
-														<div class="form__cell checkbox" data-formCheckbox>
-															<label for="check" class="checkbox__label">
-																<span class="checkbox__svg">
-																	<svg class="checked-svg">
-																		<use xlink:href="img/icons/icons.svg#checked"></use>
-																	</svg>
-																</span>
-																<input type="checkbox" id="check" class="checkbox__input" />
-															</label>
-															<span>я согласен(а) на</span>
-															<a href="#" class="checkbox__link">обработку персональных данных</a>
-														</div>
-														<!-- Button -->
-														<div class="form__button" data-formBtn>
-															<button disabled type="submit" class="button button_colored button_width">
-																Выбрать
-															</button>
-														</div>
-													</form>
+							<!-- Checkbox -->
+							<!-- <div class="form__cell checkbox" data-formCheckbox>
+		<label for="check" class="checkbox__label">
+			<span class="checkbox__svg">
+				<svg class="checked-svg">
+					<use xlink:href="img/icons/icons.svg#checked"></use>
+				</svg>
+			</span>
+			<input type="checkbox" id="check" class="checkbox__input" />
+		</label>
+		<span>я согласен(а) на</span>
+		<a href="#" class="checkbox__link">обработку персональных данных</a>
+	</div> -->
+							<!-- Button -->
+							<!-- <div class="form__button" data-formBtn>
+		<button disabled type="submit" class="button button_colored button_width">
+			Выбрать
+		</button>
+	</div>
+</form> -->
 
-												</div>
-												<!-- картинка к форме -->
-												<div class="form-block__img">
-													<div class="form-block__overlay"></div>
-													<img src="img/form/aside-image.webp" alt="form image" />
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</section>
+							<!-- </div> -->
+							<!-- картинка к форме -->
+							<!-- <div class="form-block__img">
+						<div class="form-block__overlay"></div>
+						<img src="img/form/aside-image.webp" alt="form image" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
 
 						</div>
 
@@ -2016,7 +2035,7 @@
 
 	</div>
 
-	<script src="js/app.min.js?_v=20241016151116" defer></script>
+	<script src="js/app.min.js?_v=20241016154226" defer></script>
 
 </body>
 
