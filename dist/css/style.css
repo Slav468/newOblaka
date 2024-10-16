@@ -1433,6 +1433,19 @@ button.swiper-pagination-bullet {
   width: 2px;
   background-color: var(--scrollThumb)
 }
+.directions,
+.form-block,
+.instagram,
+.map,
+.news,
+.product,
+.request .categories,
+.sale,
+.share,
+.teaser,
+.teaser_vertical {
+  display: none!important
+}
 .header {
   display: flex;
   width: 100%
@@ -1681,6 +1694,21 @@ button.swiper-pagination-bullet {
 .menu-open .header_menu-left .menu>.icon-menu::after {
   bottom: calc(50% - .0625rem);
   transform: rotate(45deg)
+}
+@media(max-width:40em) {
+  .header_menu-left .menu>.icon-menu {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    min-width: 0;
+    padding: .8125rem .625rem
+  }
+  .header_menu-left .menu>.icon-menu span,
+  .header_menu-left .menu>.icon-menu::after,
+  .header_menu-left .menu>.icon-menu::before {
+    background-color: var(--text-accent);
+    right: 0;
+    left: auto
+  }
 }
 @media(max-width:86.25em) {
   .header_menu-left .header__top .office {
@@ -2307,6 +2335,11 @@ button.swiper-pagination-bullet {
   background-color: var(--bg-primary);
   overflow: auto
 }
+@media(max-width:29.99875em) {
+  .aside-menu__content {
+    padding: 1.25rem
+  }
+}
 .aside-menu__close {
   display: flex;
   align-items: center;
@@ -2325,6 +2358,11 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   gap: 1.25rem;
   padding: 2.5rem
+}
+@media(max-width:29.99875em) {
+  .aside-menu__body {
+    padding: 1.25rem
+  }
 }
 .aside-menu__list {
   width: 100%;
@@ -3384,16 +3422,18 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -3;
+  z-index: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   background-color: rgba(0,0,0,.5);
-  transition: opacity .2s ease
+  transition: opacity .2s ease;
+  pointer-events: none
 }
 .overlay.show {
   opacity: 1;
-  z-index: 6
+  z-index: 6;
+  pointer-events: initial
 }
 .about__description {
   display: grid;
@@ -3526,7 +3566,6 @@ button.swiper-pagination-bullet {
   font-size: .9375rem;
   line-height: 1.2;
   color: var(--text-primary);
-  height: 2.2rem;
   display: -webkit-box;
   line-clamp: 2;
   -webkit-line-clamp: 2;
@@ -3539,7 +3578,6 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-size: .9375rem;
   line-height: 1.67;
-  height: 3.125rem;
   color: var(--text-secondary);
   display: -webkit-box;
   line-clamp: 2;
@@ -3557,7 +3595,6 @@ button.swiper-pagination-bullet {
   align-items: center
 }
 .teaser_vertical .teaser__tx {
-  height: 2.75rem;
   text-align: center
 }
 .teaser_vertical .teaser__descr {
@@ -3671,11 +3708,6 @@ button.swiper-pagination-bullet {
   max-height: 13.5rem;
   overflow: hidden;
   display: flex
-}
-@media(max-width:80em) {
-  .service__img-wrap {
-    height: 46%
-  }
 }
 .service__text {
   font-weight: 600;
