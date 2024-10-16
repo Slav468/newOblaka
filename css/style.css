@@ -7594,15 +7594,13 @@ button.swiper-pagination-bullet {
 .chapter-page .vacancies__container {
   padding: 0
 }
+.categories,
 .directions,
 .form-block,
 .instagram,
 .map,
-.news,
 .product,
-.request .categories,
-.sale,
-.share,
+.request,
 .teaser,
 .teaser_vertical {
   display: none
