@@ -7158,7 +7158,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }));
         }
-        if (document.querySelector(".menu__list")) {
+        if (document.querySelector(".menu__list") && document.querySelector("[data-menu-group]")) {
             hideMenuItem();
             let timeout = null;
             window.addEventListener("resize", (function() {
