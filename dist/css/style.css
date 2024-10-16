@@ -7594,9 +7594,9 @@ button.swiper-pagination-bullet {
 .chapter-page .vacancies__container {
   padding: 0
 }
-.map,
-.product {
-  display: none
+.hidden {
+  display: none;
+  visibility: hidden
 }
 @font-face {
   font-family: lg;
