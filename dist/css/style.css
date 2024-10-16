@@ -7594,7 +7594,8 @@ button.swiper-pagination-bullet {
 .chapter-page .vacancies__container {
   padding: 0
 }
-.map {
+.map,
+.product {
   display: none
 }
 @font-face {
