@@ -1,10 +1,6 @@
 .header {
 	display: flex;
 	width: 100%;
-	// @media (max-width: $mobile) {
-	// 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	// 	appearance: none;
-	// }
 
 	&__container {
 		position: relative;
@@ -252,19 +248,19 @@
 					transition: all 0.3s ease 0s;
 					left: 23%;
 					position: absolute;
-					width: 25px;
+					width: toRem(25);
 					height: toRem(2);
 					background-color: var(--text-inverse);
 				}
 				&::before {
-					top: 30%;
+					top: 29%;
 				}
 				&::after {
 					bottom: 30%;
 				}
 				span {
 					top: calc(50% - toRem(1));
-					width: 18px;
+					width: toRem(18);
 				}
 
 				.menu-open & {
@@ -307,22 +303,22 @@
 			// 	}
 			// }
 
-			// @media (max-width: toEm(640)) {
-			// 	& > .icon-menu {
-			// 		background-color: transparent;
-			// 		border: none;
-			// 		min-width: 0;
-			// 		padding: toRem(13) toRem(10);
-			// 		span,
-			// 		&::before,
-			// 		&::after {
-			// 			background-color: var(--text-accent);
+			@media (max-width: toEm(640)) {
+				& > .icon-menu {
+					background-color: transparent;
+					border: none;
+					min-width: 0;
+					padding: toRem(13) toRem(10);
+					span,
+					&::before,
+					&::after {
+						background-color: var(--text-accent);
 
-			// 			right: 0;
-			// 			left: auto;
-			// 		}
-			// 	}
-			// }
+						right: 0;
+						left: auto;
+					}
+				}
+			}
 		}
 
 		@media (max-width: toEm(1380)) {
@@ -468,7 +464,7 @@
 					display: flex;
 					position: absolute;
 					background-color: var(--bg-primary);
-					top: 75px;
+					top: toRem(75);
 					left: 0;
 					z-index: 6;
 					border-radius: toRem(8);
@@ -532,7 +528,7 @@
 						position: absolute;
 						top: 0;
 						left: 100%;
-						width: 35px;
+						width: toRem(35);
 						height: 100%;
 						z-index: 5;
 					}
@@ -591,7 +587,7 @@
 						border-radius: toRem(8);
 						font-size: toRem(14);
 						font-weight: 500;
-						line-height: 17.07px;
+						line-height: toRem(17);
 
 						& > .menu__item {
 							width: 100%;
@@ -750,14 +746,14 @@
 	}
 	&__dropdown {
 		position: absolute;
-		top: -12px;
-		left: -5px;
+		top: toRem(-12);
+		left: toRem(-5);
 		z-index: 5;
 		background-color: var(--bg-primary);
 		width: 100vw;
 		max-width: toRem(220);
 		display: none;
-		border-radius: 8px;
+		border-radius: var(--radius8);
 		appearance: none;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	}

@@ -81,9 +81,6 @@
 			max-height: toRem(216);
 			overflow: hidden;
 			display: flex;
-			@media (max-width: toEm(1280)) {
-				height: 46%;
-			}
 		}
 	}
 

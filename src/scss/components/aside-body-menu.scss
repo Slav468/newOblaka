@@ -28,6 +28,9 @@
 		flex-direction: column;
 		background-color: var(--bg-primary);
 		overflow: auto;
+		@media (max-width: $mobileSmall) {
+			padding: toRem(20);
+		}
 	}
 
 	&__close {
@@ -51,6 +54,9 @@
 		flex-direction: column;
 		gap: toRem(20);
 		padding: toRem(40);
+		@media (max-width: $mobileSmall) {
+			padding: toRem(20);
+		}
 	}
 
 	&__list {

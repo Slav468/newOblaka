@@ -1,4 +1,3 @@
-// Підключення функціоналу "Чертоги Фрілансера"
 import {
 	bodyLock,
 	bodyUnlock,
@@ -6,8 +5,6 @@ import {
 	overlayHide,
 	overlayShow,
 } from './functions.js';
-// Підключення списку активних модулів
-// import { flsModules } from './modules.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const header = document.querySelector('header');
@@ -155,10 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	if (document.querySelector('.menu__list')) {
+	if (
+		document.querySelector('.menu__list') &&
+		document.querySelector('[data-menu-group]')
+	) {
 		hideMenuItem();
-		window.addEventListener('resize', () => {
-			hideMenuItem();
+		let timeout = null;
+		window.addEventListener('resize', function () {
+			clearTimeout(timeout);
+			timeout = setTimeout(hideMenuItem, 100);
 		});
 	}
 
@@ -213,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//  TODO
 	// Translate menu drop on hover
-
 	//! page menu drop
 	function dropPageMenu(array, selector, event = 'click') {
 		array.forEach(item => {
@@ -290,4 +291,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('.upload__button')) {
 		uploadFileInForm();
 	}
+
+	//? Load content for page scroll
+
+	if (document.querySelector('.hidden')) {
+		document.addEventListener('scroll', () => {});
+	}
+
+	function removeHiddenClass() {
+		const hidden = document.querySelectorAll('.hidden');
+		const allItemsNotHidden = document.querySelectorAll(
+			'main > *:not(.hidden)'
+		);
+		const mainContent = document.querySelector('main');
+
+		// console.log(hidden);
+		// console.log(allItemsNotHidden);
+
+		const itemCoord =
+			allItemsNotHidden[allItemsNotHidden.length - 1].getBoundingClientRect();
+		console.log(itemCoord);
+
+		const documentHeight = document.documentElement.scrollHeight;
+		console.log(documentHeight);
+	}
+	removeHiddenClass();
 });

@@ -1,6 +1,5 @@
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
-import { overlayShow } from './script.js';
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 export function isWebp() {
@@ -537,10 +536,12 @@ export function menuClose() {
 
 // Overlay show / hide
 export function overlayShow() {
+	const overlay = document.querySelector('.overlay');
 	overlay.classList.add('show');
 }
 
 export function overlayHide() {
+	const overlay = document.querySelector('.overlay');
 	overlay.classList.remove('show');
 }
 

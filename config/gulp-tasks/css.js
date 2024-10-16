@@ -21,7 +21,7 @@ export const css = () => {
 					app.isBuild,
 					autoprefixer({
 						grid: false,
-						overrideBrowserslist: ['last 3 versions', 'not dead'],
+						overrideBrowserslist: ['last 2 versions', 'not dead'],
 						cascade: true,
 					})
 				)

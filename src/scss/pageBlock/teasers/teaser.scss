@@ -68,16 +68,12 @@
 		font-size: toRem(15);
 		line-height: 1.2;
 		color: var(--text-primary);
-		height: calc(1rem + 1.2 * 1rem);
-		overflow: hidden;
 		@include textOverflow(2, 15, 1.2);
 	}
 	&__descr {
 		font-weight: 400;
 		font-size: toRem(15);
 		line-height: 1.67;
-		height: toRem(50);
-		overflow: hidden;
 		color: var(--text-secondary);
 		@include textOverflow(2, 15, 1.67);
 	}
@@ -98,7 +94,6 @@
 				align-items: center;
 			}
 			&__tx {
-				height: toRem(44);
 				text-align: center;
 			}
 			&__descr {
