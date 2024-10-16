@@ -1657,19 +1657,19 @@ button.swiper-pagination-bullet {
   transition: all .3s ease 0s;
   left: 23%;
   position: absolute;
-  width: 25px;
+  width: 1.5625rem;
   height: .125rem;
   background-color: var(--text-inverse)
 }
 .header_menu-left .menu>.icon-menu::before {
-  top: 30%
+  top: 29%
 }
 .header_menu-left .menu>.icon-menu::after {
   bottom: 30%
 }
 .header_menu-left .menu>.icon-menu span {
   top: calc(50% - .0625rem);
-  width: 18px
+  width: 1.125rem
 }
 .menu-open .header_menu-left .menu>.icon-menu span {
   width: 0
@@ -1811,7 +1811,7 @@ button.swiper-pagination-bullet {
     display: flex;
     position: absolute;
     background-color: var(--bg-primary);
-    top: 75px;
+    top: 4.6875rem;
     left: 0;
     z-index: 6;
     border-radius: .5rem;
@@ -1874,7 +1874,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 0;
     left: 100%;
-    width: 35px;
+    width: 2.1875rem;
     height: 100%;
     z-index: 5
   }
@@ -1926,7 +1926,7 @@ button.swiper-pagination-bullet {
   border-radius: .5rem;
   font-size: .875rem;
   font-weight: 500;
-  line-height: 17.07px
+  line-height: 1.0625rem
 }
 .menu__item.drop>.menu__drop>.menu__content>.menu__list>.menu__item {
   width: 100%;
@@ -2059,14 +2059,14 @@ button.swiper-pagination-bullet {
 }
 .contacts-phone__dropdown {
   position: absolute;
-  top: -12px;
-  left: -5px;
+  top: -.75rem;
+  left: -.3125rem;
   z-index: 5;
   background-color: var(--bg-primary);
   width: 100vw;
   max-width: 13.75rem;
   display: none;
-  border-radius: 8px;
+  border-radius: var(--radius8);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
