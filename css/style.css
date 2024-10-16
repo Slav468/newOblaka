@@ -1433,19 +1433,6 @@ button.swiper-pagination-bullet {
   width: 2px;
   background-color: var(--scrollThumb)
 }
-.directions,
-.form-block,
-.instagram,
-.map,
-.news,
-.product,
-.request .categories,
-.sale,
-.share,
-.teaser,
-.teaser_vertical {
-  display: none!important
-}
 .header {
   display: flex;
   width: 100%
@@ -7607,8 +7594,21 @@ button.swiper-pagination-bullet {
 .chapter-page .vacancies__container {
   padding: 0
 }
-.column-3 {
-  width: 33.3333333333%
+.directions,
+.employees,
+.form-block,
+.instagram,
+.map,
+.news,
+.partners,
+.product,
+.request .categories,
+.reviews,
+.sale,
+.share,
+.teaser,
+.teaser_vertical {
+  display: none
 }
 @font-face {
   font-family: lg;
