@@ -29,7 +29,6 @@
 		align-items: center;
 		gap: toRem(5);
 		flex-wrap: wrap;
-		padding: toRem(30) 0 0 0;
 	}
 
 	&__divider {
@@ -122,6 +121,9 @@
 		align-items: flex-start;
 		flex-direction: column;
 		gap: toRem(40);
+		width: 100%;
+		position: relative;
+		z-index: 1;
 	}
 
 	// .preview__img
@@ -131,12 +133,6 @@
 		display: flex;
 		object-fit: cover;
 		object-position: 65%;
-	}
-
-	// .preview__container
-	&__container {
-		position: relative;
-		z-index: 1;
 	}
 
 	// .preview__description

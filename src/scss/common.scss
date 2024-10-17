@@ -13,6 +13,11 @@
 }
 
 .main {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(50);
+	}
 	// .main__inner
 	&__inner {
 		display: flex;

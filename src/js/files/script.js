@@ -292,28 +292,52 @@ document.addEventListener('DOMContentLoaded', () => {
 		uploadFileInForm();
 	}
 
-	//? Load content for page scroll
-
+	// Load content for page scroll
 	if (document.querySelector('.hidden')) {
-		document.addEventListener('scroll', () => {});
+		document.addEventListener('scroll', () => {
+			const hidden = document.querySelectorAll('.hidden');
+			if (hidden.length > 0) {
+				removeHiddenClass(hidden);
+			}
+		});
 	}
-
-	function removeHiddenClass() {
-		const hidden = document.querySelectorAll('.hidden');
+	function removeHiddenClass(hidden) {
+		const parent = hidden[0].parentElement;
 		const allItemsNotHidden = document.querySelectorAll(
-			'main > *:not(.hidden)'
+			`${parent.tagName} > *:not(.hidden)`
 		);
-		const mainContent = document.querySelector('main');
-
-		// console.log(hidden);
-		// console.log(allItemsNotHidden);
 
 		const itemCoord =
 			allItemsNotHidden[allItemsNotHidden.length - 1].getBoundingClientRect();
-		console.log(itemCoord);
+		const itemHeight = itemCoord.height;
 
-		const documentHeight = document.documentElement.scrollHeight;
-		console.log(documentHeight);
+		if (itemCoord.top <= itemHeight + itemHeight / 3) {
+			hidden[0].classList.remove('hidden');
+		} else {
+			return;
+		}
 	}
-	removeHiddenClass();
+
+	// Show block on timeout
+	function setTimeOutPopup(cb, selector, delay) {
+		setTimeout(() => {
+			cb(selector);
+		}, delay);
+	}
+
+	if (document.querySelector('.cookie-plank')) {
+		setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
+
+		const cookieBtn = document.querySelector('[data-cookieBtn]');
+		cookieBtn.addEventListener('click', e => {
+			e.preventDefault();
+			const item = document.querySelector(`.cookie-plank`);
+			item.classList.remove('active');
+		});
+	}
+
+	function cookieActive(selector) {
+		const item = document.querySelector(`${selector}`);
+		item.classList.add('active');
+	}
 });

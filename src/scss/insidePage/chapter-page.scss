@@ -1,5 +1,8 @@
 $gap: toRem(20);
 .chapter-page {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(40);
 	// .chapter-page__wrapper
 	&__wrapper {
 		display: flex;
@@ -9,13 +12,10 @@ $gap: toRem(20);
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		padding-bottom: toRem(40) 0 0 0;
+		gap: toRem(40);
 	}
 	// .chapter-page__main
 	&__main {
-		& .main__inner {
-			padding: toRem(40) 0;
-		}
 		& .main__content {
 			border: none;
 			box-shadow: none;
@@ -23,7 +23,7 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			border-radius: 0;
-			overflow: visible;
+
 			&:has(.preview) {
 				& .preview {
 					&__container {
@@ -37,6 +37,14 @@ $gap: toRem(20);
 					}
 				}
 			}
+		}
+
+		& .main__block {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(20);
+			margin-bottom: toRem(45);
+			overflow: hidden;
 		}
 
 		& .main__item {
@@ -62,10 +70,6 @@ $gap: toRem(20);
 				}
 			}
 		}
-	}
-
-	& .block__head {
-		padding: toRem(30) 0 0 0;
 	}
 
 	& .employees {
