@@ -3,7 +3,7 @@ package-lock.json
 node_modules/
 phpmailer/
 .gitignore
-# dist/
+dist/
 Source/
 version.json
 undefined
