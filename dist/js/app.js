@@ -1582,7 +1582,7 @@
                     allSlidesSize += slideSizeValue + (spaceBetween || 0);
                 }));
                 allSlidesSize -= spaceBetween;
-                const maxSnap = allSlidesSize - swiperSize;
+                const maxSnap = allSlidesSize > swiperSize ? allSlidesSize - swiperSize : 0;
                 snapGrid = snapGrid.map((snap => {
                     if (snap <= 0) return -offsetBefore;
                     if (snap > maxSnap) return maxSnap + offsetAfter;
@@ -2122,7 +2122,9 @@
             swiper.updateProgress(translate);
             let direction;
             if (slideIndex > activeIndex) direction = "next"; else if (slideIndex < activeIndex) direction = "prev"; else direction = "reset";
-            if (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate) {
+            const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+            const isInitialVirtual = isVirtual && initial;
+            if (!isInitialVirtual && (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate)) {
                 swiper.updateActiveIndex(slideIndex);
                 if (params.autoHeight) swiper.updateAutoHeight();
                 swiper.updateSlidesClasses();
@@ -2137,7 +2139,6 @@
                 const isH = swiper.isHorizontal();
                 const t = rtl ? translate : -translate;
                 if (speed === 0) {
-                    const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
                     if (isVirtual) {
                         swiper.wrapperEl.style.scrollSnapType = "none";
                         swiper._immediateVirtual = true;
@@ -2678,7 +2679,7 @@
                 preventDefault = false;
                 if (targetEl.nodeName === "SELECT") data.isTouched = false;
             }
-            if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== targetEl) document.activeElement.blur();
+            if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== targetEl && (e.pointerType === "mouse" || e.pointerType !== "mouse" && !targetEl.matches(data.focusableElements))) document.activeElement.blur();
             const shouldPreventDefault = preventDefault && swiper.allowTouchMove && params.touchStartPreventDefault;
             if ((params.touchStartForcePreventDefault || shouldPreventDefault) && !targetEl.isContentEditable) e.preventDefault();
             if (params.freeMode && params.freeMode.enabled && swiper.freeMode && swiper.animating && !params.cssMode) swiper.freeMode.onTouchStart();
@@ -2734,6 +2735,7 @@
                     return;
                 }
             } else if (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate()) return;
+            if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== e.target && e.pointerType !== "mouse") document.activeElement.blur();
             if (document.activeElement) if (e.target === document.activeElement && e.target.matches(data.focusableElements)) {
                 data.isMoved = true;
                 swiper.allowClick = false;
@@ -3831,7 +3833,7 @@
             function getEl(el) {
                 let res;
                 if (el && typeof el === "string" && swiper.isElement) {
-                    res = swiper.el.querySelector(el);
+                    res = swiper.el.querySelector(el) || swiper.hostEl.querySelector(el);
                     if (res) return res;
                 }
                 if (el) {
@@ -4021,6 +4023,12 @@
                     if (bulletEl) bulletEl.classList.add(`${bulletActiveClass}-${position}-${position}`);
                 }
             }
+            function getMoveDirection(prevIndex, nextIndex, length) {
+                prevIndex %= length;
+                nextIndex %= length;
+                if (nextIndex === prevIndex + 1) return "next"; else if (nextIndex === prevIndex - 1) return "previous";
+                return;
+            }
             function onBulletClick(e) {
                 const bulletEl = e.target.closest(classes_to_selector_classesToSelector(swiper.params.pagination.bulletClass));
                 if (!bulletEl) return;
@@ -4028,7 +4036,8 @@
                 const index = utils_elementIndex(bulletEl) * swiper.params.slidesPerGroup;
                 if (swiper.params.loop) {
                     if (swiper.realIndex === index) return;
-                    swiper.slideToLoop(index);
+                    const moveDirection = getMoveDirection(swiper.realIndex, index, swiper.slides.length);
+                    if (moveDirection === "next") swiper.slideNext(); else if (moveDirection === "previous") swiper.slidePrev(); else swiper.slideToLoop(index);
                 } else swiper.slideTo(index);
             }
             function update() {
@@ -7564,7 +7573,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 const allItemsNotHidden = document.querySelectorAll(`${parent.tagName} > *:not(.hidden)`);
                 const itemCoord = allItemsNotHidden[allItemsNotHidden.length - 1].getBoundingClientRect();
                 const itemHeight = itemCoord.height;
-                if (itemCoord.top <= itemHeight + itemHeight / 3) hidden[0].classList.remove("hidden"); else return;
+                if (itemCoord.top <= itemHeight + itemHeight / 2) hidden[0].classList.remove("hidden"); else return;
             }
             function setTimeOutPopup(cb, selector, delay) {
                 setTimeout((() => {
