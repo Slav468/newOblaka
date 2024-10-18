@@ -240,6 +240,7 @@
 	}
 
 	select {
+		font-family: 'Montserrat';
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -264,6 +265,12 @@
 		}
 		@media (max-width: totoRem(798)) {
 			font-size: totoRem(11);
+		}
+		& > option {
+			font-weight: 400;
+			font-size: toRem(14);
+			line-height: 1.71;
+			color: var(--text-secondary);
 		}
 	}
 }

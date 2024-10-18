@@ -426,10 +426,7 @@
 		font-weight: 500;
 		font-size: toRem(15);
 		padding: toRem(30.5) 0;
-
-		& > .menu__link {
-			text-wrap: nowrap;
-		}
+		text-wrap: nowrap;
 
 		@media (any-hover: hover) and (min-width: $mobile) {
 			&:hover {
@@ -469,6 +466,7 @@
 
 								& > .menu__link {
 									text-transform: none;
+									text-wrap: wrap;
 								}
 								& > .menu__svg {
 									transform: rotate(-90deg);

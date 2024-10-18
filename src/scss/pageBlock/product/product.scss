@@ -2,9 +2,12 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: toRem(16);
+		gap: toRem(20);
+		@media (max-width: toEm(991)) {
+			gap: toRem(16);
+		}
 		@media (max-width: $mobile) {
-			gap: toRem(20);
+			gap: toRem(14);
 		}
 	}
 
@@ -560,14 +563,9 @@
 .options {
 	// .options__list
 	&__list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(40px, toRem(50)));
-		grid-auto-rows: toRem(40);
+		display: flex;
+		flex-wrap: wrap;
 		gap: toRem(10);
-		@media (max-width: toEm(576)) {
-			grid-template-columns: repeat(auto-fit, minmax(32px, toRem(32)));
-			grid-auto-rows: toRem(32);
-		}
 	}
 
 	// .options__item
@@ -575,6 +573,8 @@
 		color: var(--primary);
 		border-radius: 10px;
 		border: 1px solid var(--primary);
+		padding: toRem(12);
+		min-width: toRem(40);
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--primary);
@@ -583,6 +583,11 @@
 		}
 		@media (max-width: toEm(576)) {
 			font-size: toRem(11);
+		}
+
+		&.active {
+			background-color: var(--primary);
+			color: var(--text-inverse);
 		}
 	}
 }

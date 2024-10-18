@@ -589,8 +589,8 @@ function initSliders() {
 			// loop: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 'auto',
-			spaceBetween: 20,
+			// slidesPerView: 4,
+			// spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -625,10 +625,20 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 10,
+					spaceBetween: 14,
+					slidesPerView: 1,
 				},
-				992: {
-					spaceBetween: 20,
+				598: {
+					spaceBetween: 14,
+					slidesPerView: 2,
+				},
+				1100: {
+					spaceBetween: 100,
+					slidesPerView: 3,
+				},
+				1680: {
+					spaceBetween: 100,
+					slidesPerView: 4,
 				},
 			},
 			// Події
