@@ -1854,7 +1854,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   gap: .375rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-size: .875rem;
   padding: 1.90625rem 0
 }
