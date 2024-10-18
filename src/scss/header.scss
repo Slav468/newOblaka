@@ -19,6 +19,7 @@
 
 		&:has(.menu) {
 			padding: 0;
+			gap: toRem(45);
 
 			& .office {
 				&__content {
@@ -34,15 +35,15 @@
 	&:not(:has(.header-bottom)) {
 		.header__top {
 			border-bottom: 1px solid var(--inverse);
+			@media (max-width: $mobile) {
+				gap: 1%;
+			}
 		}
 	}
 
 	&:has(.header-bottom) {
 		.office {
-			flex: 0 1 38.5%;
-			&__content {
-				justify-content: flex-start;
-			}
+			flex: 1 1 38.5%;
 
 			@media (max-width: toEm(1270)) {
 				flex: 1 1 auto;
@@ -216,27 +217,29 @@
 	&_menu-left {
 		position: relative;
 		& .header__top {
-			gap: toRem(15);
+			gap: toRem(60);
 			padding: toRem(13) 0;
 		}
 
 		& .menu {
 			flex: 0 1 11.2%;
 			align-self: center;
-			font-weight: 600;
-			font-size: toRem(15);
+
 			& > .icon-menu {
 				display: flex;
 				justify-content: center;
 				color: var(--text-inverse);
 				position: relative;
 				z-index: 5;
-				min-width: toRem(182);
+				max-width: toRem(182);
+				width: 100%;
 				justify-self: flex-start;
 				border: 1px solid var(--primary);
 				border-radius: var(--radius8);
-				padding: toRem(13) toRem(30) toRem(13) toRem(50);
+				padding: toRem(14) toRem(30) toRem(15) toRem(95);
 				background-color: var(--primary);
+				font-weight: 600;
+				font-size: toRem(15);
 
 				@media (any-hover: none) {
 					cursor: default;
@@ -277,31 +280,6 @@
 					}
 				}
 			}
-
-			// & > .menu__body {
-			// 	position: absolute;
-			// 	top: 0;
-			// 	left: -100%;
-			// 	z-index: 4;
-			// 	width: 30vw;
-			// 	height: 100svh;
-			// 	flex-direction: column;
-			// 	padding: 0 toRem(50);
-			// 	border-radius: var(--radius8);
-			// 	background-color: var(--bg-primary);
-			// 	transition: left 0.3s ease 0s;
-			// 	& > .menu__list {
-			// 		display: flex;
-			// 		flex-direction: column;
-
-			// 		& > .mobile-view {
-			// 			display: flex;
-			// 		}
-			// 	}
-			// 	.menu-open & {
-			// 		left: 0;
-			// 	}
-			// }
 
 			@media (max-width: toEm(640)) {
 				& > .icon-menu {
@@ -445,9 +423,13 @@
 		align-items: center;
 		gap: toRem(6);
 		text-transform: uppercase;
-		font-weight: 600;
-		font-size: toRem(14);
+		font-weight: 500;
+		font-size: toRem(15);
 		padding: toRem(30.5) 0;
+
+		& > .menu__link {
+			text-wrap: nowrap;
+		}
 
 		@media (any-hover: hover) and (min-width: $mobile) {
 			&:hover {

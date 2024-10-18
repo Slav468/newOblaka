@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			allItemsNotHidden[allItemsNotHidden.length - 1].getBoundingClientRect();
 		const itemHeight = itemCoord.height;
 
-		if (itemCoord.top <= itemHeight + itemHeight / 3) {
+		if (itemCoord.top <= itemHeight + itemHeight) {
 			hidden[0].classList.remove('hidden');
 		} else {
 			return;
