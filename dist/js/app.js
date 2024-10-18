@@ -7573,7 +7573,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 const allItemsNotHidden = document.querySelectorAll(`${parent.tagName} > *:not(.hidden)`);
                 const itemCoord = allItemsNotHidden[allItemsNotHidden.length - 1].getBoundingClientRect();
                 const itemHeight = itemCoord.height;
-                if (itemCoord.top <= itemHeight + itemHeight / 2) hidden[0].classList.remove("hidden"); else return;
+                if (itemCoord.top <= itemHeight + itemHeight) hidden[0].classList.remove("hidden"); else return;
             }
             function setTimeOutPopup(cb, selector, delay) {
                 setTimeout((() => {
