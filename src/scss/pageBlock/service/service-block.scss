@@ -35,7 +35,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 			}
 		}
 
@@ -114,21 +114,9 @@
 				padding: toRem(16) toRem(14) toRem(8);
 				gap: toRem(8);
 			}
-			@media (max-width: toEm(1280)) {
-				gap: toRem(20);
-			}
 			@media (max-width: toEm(576)) {
 				gap: toRem(7);
 				padding: 0 toRem(6);
-			}
-
-			& .text_card {
-				max-height: toRem(100);
-				overflow: hidden;
-				text-overflow: ellipsis;
-				@media (max-width: $tablet) {
-					max-height: toRem(95);
-				}
 			}
 
 			& .price {

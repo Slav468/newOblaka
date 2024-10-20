@@ -56,5 +56,12 @@
 		overflow: hidden;
 		transition: 0.3s;
 		border-radius: var(--radius8);
+		& .hover__bottom {
+			display: none;
+		}
+		& .hover__wrapper {
+			display: flex !important;
+			padding: toRem(20) toRem(20) toRem(23) !important;
+		}
 	}
 }

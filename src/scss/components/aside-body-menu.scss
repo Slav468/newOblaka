@@ -7,6 +7,7 @@
 	width: 35vw;
 	height: 100%;
 	transition: transform 0.3s ease;
+
 	@media (max-width: toEm(1280)) {
 		width: 45vw;
 	}
@@ -137,8 +138,8 @@
 	&__drop {
 		position: absolute;
 		left: 0;
-		transform: translate3d(-100%, 0, 0);
 		top: 0;
+		transform: translate3d(-100%, 0, 0);
 		z-index: 7;
 		display: flex;
 		width: 100%;
@@ -203,13 +204,6 @@
 	& .svg-arrow-down {
 		height: toRem(15);
 		width: toRem(15);
-	}
-
-	.menu-open & {
-		transform: translate3d(0, 0, 0);
-		// &__overlay {
-		// 	opacity: 1;
-		// }
 	}
 
 	& .aside-phone {
@@ -307,5 +301,9 @@
 			font-size: 0.875rem;
 			padding: 0.625rem 0;
 		}
+	}
+	.menu-open & {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
 	}
 }
