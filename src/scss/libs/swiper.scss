@@ -225,6 +225,9 @@
 	cursor: auto;
 	pointer-events: none;
 }
+.swiper-button-lock {
+	display: none !important;
+}
 .swiper-button-next:after,
 .swiper-button-prev:after {
 	font-family: swiper-icons;
@@ -272,9 +275,7 @@
 // .swiper-rtl .swiper-button-prev:after {
 // 	content: 'next';
 // }
-.swiper-button-lock {
-	display: none !important;
-}
+
 .swiper-pagination {
 	display: flex;
 	align-items: center;

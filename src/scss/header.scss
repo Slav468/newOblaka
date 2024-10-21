@@ -15,11 +15,10 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: toRem(14) 0;
-		gap: 1%;
+		gap: toRem(60);
 
 		&:has(.menu) {
 			padding: 0;
-			gap: toRem(45);
 
 			& .office {
 				&__content {
@@ -29,6 +28,10 @@
 			@media (max-width: toEm(767)) {
 				padding: toRem(14) 0;
 			}
+		}
+
+		@media (max-width: $pc) {
+			gap: toRem(20);
 		}
 	}
 
@@ -217,7 +220,6 @@
 	&_menu-left {
 		position: relative;
 		& .header__top {
-			gap: toRem(60);
 			padding: toRem(13) 0;
 		}
 
@@ -292,7 +294,7 @@
 					&::after {
 						background-color: var(--text-accent);
 
-						right: 0;
+						right: toRem(10);
 						left: auto;
 					}
 				}
@@ -627,7 +629,7 @@
 		align-items: center;
 		justify-content: center;
 		& .svg-arrow-down {
-			transition: all 0.3s ease;
+			transition: transform 0.3s ease;
 		}
 		@media (max-width: $mobile) {
 			cursor: pointer;

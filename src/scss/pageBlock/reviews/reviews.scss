@@ -3,19 +3,11 @@
 		& .reviews-slider {
 			& .reviews__cell {
 				width: calc((100% - toRem(20)) / 2);
-				@media (max-width: toEm(520)) {
-					width: calc((100% - toRem(14)) / 1);
-				}
 			}
 		}
 	}
 
 	&__list {
-		// display: flex;
-		// align-items: center;
-		// gap: toRem(20);
-		// flex-wrap: wrap;
-
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
@@ -141,5 +133,13 @@
 	}
 	&__img {
 		display: none;
+	}
+
+	&__wrapper {
+		& .button {
+			@media (max-width: $mobile) {
+				width: 100%;
+			}
+		}
 	}
 }

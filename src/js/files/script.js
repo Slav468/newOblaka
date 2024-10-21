@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 			if (
 				totalWidthItem + 110 < width &&
-				menuListChildren.length < 9 &&
+				menuListChildren.length < 8 &&
 				menuLastItemListChildren.length > 1
 			) {
 				menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
@@ -219,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	function dropPageMenu(array, selector, event = 'click') {
 		array.forEach(item => {
 			item.addEventListener(`${event}`, e => {
-				e.preventDefault();
 				const target = e.currentTarget;
 				const parentDrop = target.closest(selector);
 				parentDrop.classList.toggle('drop');

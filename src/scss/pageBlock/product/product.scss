@@ -314,7 +314,7 @@
 			color: var(--primary);
 		}
 
-		@media (max-width: 360px) {
+		@media (max-width: $mobileSmall) {
 			max-height: toRem(75);
 		}
 	}
@@ -412,8 +412,8 @@
 	display: flex;
 
 	&__item {
-		height: 38px;
-		width: 38px;
+		height: toRem(38);
+		width: toRem(38);
 		border-radius: 50%;
 		background: rgba(255, 255, 255, 0.6);
 		display: flex;
@@ -421,6 +421,8 @@
 		justify-content: center;
 		cursor: pointer;
 		& svg {
+			width: percent(24, 38);
+			height: percent(24, 38);
 			& path {
 				fill: var(--text-accent);
 			}
@@ -433,20 +435,14 @@
 			}
 		}
 
-		@media (max-width: 1200px) {
-			height: 30px;
-			width: 30px;
+		@media (max-width: toEm(1200)) {
+			height: toRem(30);
+			width: toRem(30);
 		}
-		@media (max-width: 360px) {
-			height: 24px;
-			width: 24px;
+		@media (max-width: toEm(360)) {
+			height: toRem(24);
+			width: toRem(24);
 		}
-	}
-	&__text {
-		font-weight: 400;
-		font-size: var(--font14);
-		line-height: 129%;
-		color: var(--product-bar-text);
 	}
 }
 
@@ -571,7 +567,8 @@
 	// .options__item
 	&__item {
 		color: var(--primary);
-		border-radius: 10px;
+		border-radius: toRem(10);
+		overflow: hidden;
 		border: 1px solid var(--primary);
 		padding: toRem(12);
 		min-width: toRem(40);
@@ -654,10 +651,6 @@
 		color: var(--text-inverse);
 		will-change: color;
 		transition: 0.3s;
-
-		// @media (max-width: 360px) {
-		// 	flex: 1 0 calc(50% - 10px);
-		// }
 
 		&:hover {
 			background-color: var(--accent);

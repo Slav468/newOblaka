@@ -144,6 +144,8 @@
 		margin-bottom: toRem(15);
 		@media (max-width: toEm(1280)) {
 			margin-bottom: toRem(5);
+			flex-wrap: wrap;
+			gap: toRem(5);
 		}
 		@media (max-width: toEm(576)) {
 			padding: 0 toRem(6);
