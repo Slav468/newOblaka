@@ -4370,8 +4370,6 @@
             });
             if (document.querySelector(".reviews-slider")) new swiper_core_Swiper(".reviews-slider", {
                 modules: [ Navigation ],
-                slidesPerView: "auto",
-                spaceBetween: 20,
                 speed: 300,
                 navigation: {
                     prevEl: ".reviews-button-prev",
@@ -4379,10 +4377,12 @@
                 },
                 breakpoints: {
                     320: {
-                        spaceBetween: 10
+                        spaceBetween: 10,
+                        slidesPerView: 1
                     },
-                    992: {
-                        spaceBetween: 20
+                    520: {
+                        spaceBetween: 20,
+                        slidesPerView: 2
                     }
                 }
             });
@@ -4407,7 +4407,6 @@
             if (document.querySelector(".partners-slider")) new swiper_core_Swiper(".partners-slider", {
                 modules: [ Navigation ],
                 slidesPerView: "auto",
-                spaceBetween: 20,
                 speed: 300,
                 navigation: {
                     prevEl: ".partners-button-prev",
@@ -4417,7 +4416,13 @@
                     320: {
                         spaceBetween: 10
                     },
-                    992: {
+                    479: {
+                        spaceBetween: 14
+                    },
+                    698: {
+                        spaceBetween: 16
+                    },
+                    991: {
                         spaceBetween: 20
                     }
                 }
@@ -7523,7 +7528,6 @@ PERFORMANCE OF THIS SOFTWARE.
                         function dropPageMenu(array, selector, event = "click") {
                 array.forEach((item => {
                     item.addEventListener(`${event}`, (e => {
-                        e.preventDefault();
                         const target = e.currentTarget;
                         const parentDrop = target.closest(selector);
                         parentDrop.classList.toggle("drop");
