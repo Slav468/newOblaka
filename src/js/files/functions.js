@@ -160,7 +160,7 @@ export let bodyLockToggle = (delay = 500) => {
 		bodyLock(delay);
 	}
 };
-export let bodyUnlock = (delay = 500) => {
+export let bodyUnlock = (delay = 0) => {
 	if (bodyLockStatus) {
 		const lockPaddingElements = document.querySelectorAll('[data-lp]');
 		setTimeout(() => {
@@ -176,11 +176,11 @@ export let bodyUnlock = (delay = 500) => {
 		}, delay);
 	}
 };
-export let bodyLock = (delay = 500) => {
+export let bodyLock = (delay = 0) => {
 	if (bodyLockStatus) {
 		const lockPaddingElements = document.querySelectorAll('[data-lp]');
 		const lockPaddingValue =
-			window.innerWidth - document.body.offsetWidth + 'px';
+			window.innerWidth - document.body.clientWidth + 'px';
 		lockPaddingElements.forEach(lockPaddingElement => {
 			lockPaddingElement.style.paddingRight = lockPaddingValue;
 		});

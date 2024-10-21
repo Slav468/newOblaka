@@ -1,10 +1,4 @@
-import {
-	bodyLock,
-	bodyUnlock,
-	menuClose,
-	overlayHide,
-	overlayShow,
-} from './functions.js';
+import { menuClose, overlayHide } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const header = document.querySelector('header');
@@ -31,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	function dropMenu(array, selector, event = 'click') {
 		array.forEach(item => {
 			item.addEventListener(`${event}`, e => {
-				e.preventDefault();
 				const target = e.currentTarget;
 				const parentDrop = target.closest(selector);
 				parentDrop.classList.add('drop');
@@ -48,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	function removeDrop(array, selector) {
 		array.forEach(item => {
 			item.addEventListener('click', e => {
-				e.preventDefault();
 				const target = e.currentTarget;
 				const parentDrop = target.closest('.drop');
 				if (parentDrop.matches(`${selector} .drop`)) {
