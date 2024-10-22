@@ -156,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// TODO активировать при количестве элементов  > 5
 	// Remove and Add menu item on resize
 	function hideMenuItem() {
 		const menus = document.querySelectorAll('[data-menu]');
@@ -205,9 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		menuList.insertBefore(element, menuList.lastElementChild);
 	}
 
-	//  TODO
-	// Translate menu drop on hover
-	//! page menu drop
+	// page menu drop
 	function dropPageMenu(array, selector, event = 'click') {
 		array.forEach(item => {
 			item.addEventListener(`${event}`, e => {

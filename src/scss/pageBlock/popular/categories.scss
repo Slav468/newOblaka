@@ -17,8 +17,9 @@
 	}
 
 	&__cell {
+		display: flex;
 		width: calc((100% - toRem(20) * 4) / 5);
-		overflow: hidden;
+		max-height: toRem(200);
 		border-radius: var(--radius8);
 		border: toRem(1) solid var(--border);
 		appearance: none;
@@ -48,6 +49,7 @@
 
 	&__item {
 		width: 100%;
+		height: auto;
 		display: flex;
 		flex-direction: column;
 		position: relative;
@@ -71,6 +73,8 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
+		height: 100%;
+		width: 100%;
 		& .decorate {
 			position: absolute;
 			bottom: toRem(20);
@@ -97,7 +101,6 @@
 
 	&__title {
 		display: flex;
-		height: 30%;
 		align-items: center;
 		font-weight: 500;
 		font-size: toRem(16);
@@ -110,7 +113,6 @@
 
 	&__img {
 		position: relative;
-		height: 70%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -119,7 +121,7 @@
 		border-radius: var(--radius8) var(--radius8) 0 0;
 		border-top: toRem(1) solid var(--border);
 		& img {
-			padding: toRem(15) 0;
+			padding: toRem(13) 0;
 			height: 100%;
 			@media (max-width: $tablet) {
 			}
@@ -183,7 +185,9 @@
 			}
 		}
 		& .categories__img {
+			width: 100%;
 			& img {
+				width: 100%;
 				padding: 0;
 			}
 		}
