@@ -46,6 +46,12 @@ $gap: toRem(20);
 			gap: toRem(20);
 			margin-bottom: toRem(45);
 			overflow: hidden;
+
+			& .block__title {
+				&:after {
+					content: none;
+				}
+			}
 		}
 
 		& .main__item {

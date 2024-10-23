@@ -104,7 +104,7 @@
 		align-items: center;
 		font-weight: 500;
 		font-size: toRem(16);
-		padding: toRem(25) 0 toRem(25) toRem(20);
+		padding: toRem(25) toRem(57) toRem(25) toRem(20);
 		@media (max-width: toEm(520)) {
 			font-size: toRem(12);
 			padding-left: toRem(7);
@@ -150,11 +150,7 @@
 
 	&_dark {
 		& .categories__overlay {
-			background: linear-gradient(
-				180deg,
-				rgba(0, 0, 0, 0) 0%,
-				rgba(0, 0, 0, 0.8) 100%
-			);
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 		}
 		& .decorate {
 			border: toRem(1) solid var(--text-inverse);
