@@ -27,6 +27,7 @@
 	// .main__menu
 	&__menu {
 		flex: 0 1 percent(400, $maxWidthContainer);
+		margin-bottom: toRem(40);
 		@media (max-width: $tablet) {
 			display: none;
 		}

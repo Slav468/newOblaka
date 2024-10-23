@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -932,6 +932,28 @@ function initSliders() {
 			*/
 			// Події
 			// on: {},
+		});
+	}
+
+	if (document.querySelector('.card-general')) {
+		const swiper = new Swiper('.card-thumbs', {
+			modules: [Navigation, Thumbs],
+			spaceBetween: 10,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesProgress: true,
+		});
+
+		const swiper2 = new Swiper('.card-general', {
+			modules: [Navigation, Thumbs],
+			spaceBetween: 10,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			thumbs: {
+				swiper: swiper,
+			},
 		});
 	}
 }

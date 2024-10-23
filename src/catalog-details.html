@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper chapter-page">
+		@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
+
+		<div class="chapter-page__wrapper">
+			<div class="chapter-page__container">
+				@@include('html/baseHtml/_breads.htm',{})
+				@@include('html/elements/_titleForInside.htm',{})
+			</div>
+		</div>
+
+		<main class="chapter-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="catalog-card card">
+							@@include('html/pageBlock/catalog/_catalog-card-header.htm',{})
+
+							<div class="card-body">
+								@@include('html/pageBlock/catalog/_catalog-sliders.htm',{})
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="main__block">
+					@@include('html/elements/_titleForInside.htm',{})
+					@@include('html/pageBlock/product/product-variables/_product-slider.htm',{})
+				</div>
+				<div class="main__block">
+					@@include('html/elements/_titleForInside.htm',{})
+					@@include('html/pageBlock/product/product-variables/_product-slider.htm',{})
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+	</div>
+
+	@@include('html/elements/_cookie-plank.htm',{})
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_overlay.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>
+
+
+<div class="catalog-details__basic details-basic">
+
+
+	<!-- card body -->
+	<div class="details-basic__characteristic basic-characteristic">
+		<div class="basic-characteristic__item grid-slider">
+			<!-- slider -->
+			<!-- <div class="swiper characteristic-slider-thumb slider-thumb">
+				<div class="swiper-wrapper slider-thumb__wrapper">
+					<div class="swiper-slide slider-thumb__slide">
+						<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+					</div>
+
+				</div>
+			</div> -->
+
+			<!-- thumb slider -->
+			<!-- <div thumbsSlider class="swiper slider-general">
+				<div class="swiper-wrapper" data-gallery>
+					<a href='https://swiperjs.com/demos/images/nature-1.jpg' class="swiper-slide slider-general__slide">
+						<div class="product__bar-top bar-top">
+							<div class="bar-top__text bar-top_new">новинка</div>
+							<div class="bar-top__text bar-top_sale">ХИТ</div>
+							<div class="bar-top__text bar-top_hit">ХИТ</div>
+							<div class="bar-top__text bar-top_promotion">Акция</div>
+							<div class="bar-top__text bar-top_advise">советуем</div>
+						</div>
+						<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+					</a>
+
+				</div>
+				<div class="swiper-pagination slider-general__pagination"></div>
+			</div> -->
+		</div>
+
+		<!-- <div class="basic-characteristic__item grid-char">
+			<div class="options-block">
+				<div class="options__item options__color">
+					<div class="options__wrapper">
+						<h5 class="options__title">Цвет:</h5>
+						<p class="options__text">Красный</p>
+					</div>
+
+					<div class="options__wrapper">
+						<button type="button" class="options__variable choose" data-oneValue="#ED0006"
+							data-title="Красный"></button>
+						<button type="button" class="options__variable" data-oneValue="#F9A000"
+							data-title="Оранжевый"></button>
+						<button type="button" class="options__variable" data-oneValue="#FFD02E"
+							data-title="Желтый"></button>
+					</div>
+				</div>
+
+				<div class="options__item options__weight">
+					<div class="options__wrapper">
+						<h5 class="options__title">Вес:</h5>
+						<p class="options__text">110 <span>г</span></p>
+					</div>
+					<div class="options__wrapper">
+						<button type="button" class="options__variable" data-onevalue="110" data-title="110 г">
+							110
+						</button>
+						<button type="button" class="options__variable choose" data-onevalue="120" data-title="120г">
+							12000
+						</button>
+						<button type="button" class="options__variable" data-onevalue="130" data-title="130г">
+							130
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div> -->
+
+		<!-- <div class="basic-characteristic__item grid-basket">
+			<div class="basket-block">
+
+				<div class="price">
+					<div class="price__actual">
+						41.58 <span>BYN</span>
+					</div>
+					<div class="price__old">51.58 <span>BYN</span></div>
+				</div>
+
+				<div class="basket-block__available">
+					<div class="stock__wrapper">
+						<div class="stock__circle_available">
+							<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="4" cy="4" r="4" fill="#21C746" />
+							</svg>
+						</div>
+						<div class="stock stock_available">В наличии</div>
+					</div>
+					<div class="characteristic-block__item">
+						<h5 class="characteristic-block__title">
+							Артикул:
+						</h5>
+						<p class="characteristic-block__text">12345687</p>
+					</div>
+				</div>
+
+				<div class="basket-block__basket">
+					<div class="count">
+						<div class="count__minus">
+							<button type="button">-</button>
+						</div>
+						<div class="count__counter">1</div>
+						<div class="count__plus">
+							<button type="button">+</button>
+						</div>
+					</div>
+					<button type="button" class="button button_colored">
+						<span>В корзину</span>
+					</button>
+					<button type="button" class="button">
+						<span>Купить в 1 клик</span>
+					</button>
+				</div>
+
+				<div class="basket-block__conditions conditions">
+					<a href="#" class="conditions__link">Доставка и оплата</a>
+					<a href="#" class="conditions__link">Наличие в магазинах</a>
+				</div>
+
+				<div class="basket-block__category category">
+					<div class="category__item">
+						<a href="#" class="category__img-link">
+							<img src="@img/content/brand.png" alt="category image" />
+						</a>
+						<div class="category__text">
+							Все товары
+							<a href="#" class="category__link">illy</a>
+						</div>
+					</div>
+					<div class="category__item">
+						<a href="#" class="category__img-link">
+							<img src="@img/content/brand.png" alt="category image" />
+						</a>
+						<div class="category__text">
+							Все
+							<a href="#" class="category__link">товары категории</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+</div>

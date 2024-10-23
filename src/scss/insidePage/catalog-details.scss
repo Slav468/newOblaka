@@ -1,0 +1,46 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(30);
+}
+
+.card-head {
+	display: flex;
+	width: 100%;
+	// .card-head__content
+	&__content {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 60, 20);
+	}
+}
+
+.card-controls {
+	// .card-controls__list
+	&__list {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 40, 20);
+	}
+
+	// .card-controls__wrapper
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		color: var(--text-primary);
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+
+	// .card-controls__text
+	&__text {
+		font-size: toRem(14);
+		font-weight: 400;
+		line-height: toRem(18);
+	}
+}

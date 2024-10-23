@@ -99,16 +99,13 @@
 }
 
 .tab-video {
-	// .tab-video__video
-	&__video {
-	}
-
 	// .tab-video__list
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-evenly;
+		gap: toRem(20);
 		@media (max-width: $mobile) {
 			flex-direction: column;
 			gap: toRem(20);

@@ -249,7 +249,7 @@
 				span,
 				&::before,
 				&::after {
-					content: '';
+					content: "";
 					transition: all 0.3s ease 0s;
 					left: 23%;
 					position: absolute;
@@ -367,12 +367,9 @@
 									& > .menu__content {
 										& > .menu__list {
 											& > .menu__item {
-												& {
-													&::after {
-														top: 0;
-														left: auto;
-														right: 100%;
-													}
+												&::after {
+													left: 100%;
+													right: auto;
 												}
 												@media (any-hover: hover) and (min-width: $mobile) {
 													&:hover {
@@ -381,12 +378,20 @@
 																right: 107%;
 																left: auto;
 															}
+															&::after {
+																right: 100%;
+																left: auto;
+															}
 														}
 													}
 												}
 											}
 										}
 									}
+								}
+								&::after {
+									left: auto;
+									right: 100%;
 								}
 							}
 						}
@@ -539,7 +544,7 @@
 
 				& {
 					&::after {
-						content: ' ';
+						content: " ";
 						position: absolute;
 						top: 0;
 						left: 100%;

@@ -328,4 +328,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		const item = document.querySelector(`${selector}`);
 		item.classList.add('active');
 	}
+
+	// Set options in product card
+	if (document.querySelector('.options')) {
+		setOptions();
+	}
+
+	function setOptions() {
+		const lists = document.querySelectorAll('.options .options__list');
+
+		lists.forEach(list => {
+			list.addEventListener('click', e => {
+				const target = e.target;
+				if (target.matches('.options__item')) {
+					target.classList.toggle('active');
+				}
+			});
+		});
+	}
 });
