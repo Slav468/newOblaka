@@ -1,6 +1,7 @@
 .header {
 	display: flex;
 	width: 100%;
+	margin-bottom: toRem(20);
 
 	&__container {
 		position: relative;
@@ -167,6 +168,85 @@
 		}
 	}
 
+	&-bottom {
+		& > .menu {
+			max-width: none;
+			width: 100%;
+			& > .menu__body {
+				padding: 0 toRem(50);
+				border-radius: var(--radius8);
+				background-color: var(--primary);
+				& > .menu__list {
+					& > .menu__item {
+						& > .menu__link {
+							color: var(--text-inverse);
+						}
+						& > .menu__svg {
+							& .svg-arrow-down {
+								color: var(--text-inverse);
+							}
+						}
+						&[data-menu-group] {
+							@media (any-hover: hover) and (min-width: $mobile) {
+								&:hover {
+									& > .menu__drop {
+										left: auto;
+										right: 0%;
+
+										& > .menu__content {
+											& > .menu__list {
+												& > .menu__item {
+													&::after {
+														left: 100%;
+														right: auto;
+													}
+													@media (any-hover: hover) and (min-width: $mobile) {
+														&:hover {
+															@media (max-width: toEm(1280)) {
+																& > .menu__drop {
+																	right: 107%;
+																	left: auto;
+																}
+																&::after {
+																	right: 100%;
+																	left: auto;
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+									&::after {
+										left: auto;
+										right: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				@media (max-width: $mobile) {
+					background-color: var(--bg-primary);
+					& > .menu__list {
+						& > .menu__item {
+							& > .menu__link {
+								color: var(--text-primary);
+							}
+							& > .menu__svg {
+								& .svg-arrow-down {
+									color: var(--text-primary);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	&_absolute {
 		position: absolute;
 		top: 0;
@@ -176,7 +256,6 @@
 			width: 100%;
 			& > .menu__body {
 				padding: 0 toRem(50);
-				border-radius: var(--radius8);
 				background-color: var(--text-inverse);
 				& > .menu__list {
 					& > .menu__item {
@@ -215,6 +294,14 @@
 		.contacts-phone__svg {
 			color: var(--text-inverse);
 		}
+	}
+
+	&_fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 50;
+		background-color: var(--bg-primary);
 	}
 
 	&_menu-left {
@@ -332,85 +419,6 @@
 						flex: 0 0 toRem(50);
 						order: 3;
 						overflow: hidden;
-					}
-				}
-			}
-		}
-	}
-}
-
-.header-bottom {
-	& .menu {
-		max-width: none;
-		width: 100%;
-		& > .menu__body {
-			padding: 0 toRem(50);
-			border-radius: var(--radius8);
-			background-color: var(--primary);
-			& > .menu__list {
-				& > .menu__item {
-					& > .menu__link {
-						color: var(--text-inverse);
-					}
-					& > .menu__svg {
-						& .svg-arrow-down {
-							color: var(--inverse);
-						}
-					}
-					&[data-menu-group] {
-						@media (any-hover: hover) and (min-width: $mobile) {
-							&:hover {
-								& > .menu__drop {
-									left: auto;
-									right: 0%;
-
-									& > .menu__content {
-										& > .menu__list {
-											& > .menu__item {
-												&::after {
-													left: 100%;
-													right: auto;
-												}
-												@media (any-hover: hover) and (min-width: $mobile) {
-													&:hover {
-														@media (max-width: toEm(1280)) {
-															& > .menu__drop {
-																right: 107%;
-																left: auto;
-															}
-															&::after {
-																right: 100%;
-																left: auto;
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-								&::after {
-									left: auto;
-									right: 100%;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			@media (max-width: $mobile) {
-				background-color: var(--bg-primary);
-				& > .menu__list {
-					& > .menu__item {
-						& > .menu__link {
-							color: var(--text-primary);
-						}
-						& > .menu__svg {
-							& .svg-arrow-down {
-								color: var(--text-primary);
-							}
-						}
 					}
 				}
 			}

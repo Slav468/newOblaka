@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	closeAsideMenu();
 
+	// Add drop
 	function dropMenu(array, selector, event = 'click') {
 		array.forEach(item => {
 			item.addEventListener(`${event}`, e => {
@@ -37,6 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	dropMenu(asideDropButtons, '.aside-menu__item');
 	dropMenu(contactsPhoneButton, '.contacts-phone');
 	dropMenu(asidePhonesArrow, '.aside-phone');
+
+	if (document.querySelector('.options')) {
+		const optionsTitle = document.querySelectorAll('.options__title');
+		dropAny(optionsTitle, '.options');
+	}
+	function dropAny(array, selector, event = 'click') {
+		array.forEach(item => {
+			item.addEventListener(`${event}`, e => {
+				const target = e.currentTarget;
+				console.log(target);
+				const parentDrop = target.closest(selector);
+				console.log(parentDrop);
+				parentDrop.classList.add('drop');
+			});
+		});
+	}
 
 	function removeDrop(array, selector) {
 		array.forEach(item => {
@@ -68,17 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		removeSomeDrop('.aside-phone');
 		removeSomeDrop('.aside-menu__item');
 	});
-	document.addEventListener('click', (e, selector) => {
-		if (e.target.closest(`${selector}`)) {
-			removeSomeDrop(`${selector}`);
-		}
-	});
+
+	// function documentRemoveActions(parent) {
+	// 	document.addEventListener('click', (e, parent) => {
+	// 		const cTarget = e.target;
+	// 		if (!parent.contains(cTarget)) {
+	// 			console.log('No');
+	// 		}
+	// 	});
+	// }
+
+	// documentRemoveActions('.options');
+
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape') {
 			menuClose();
 			overlayHide();
 			removeSomeDrop('.aside-phone');
 			removeSomeDrop('.contacts-phone');
+			removeSomeDrop('.options');
 		}
 	});
 

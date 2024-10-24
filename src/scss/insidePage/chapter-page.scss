@@ -6,7 +6,7 @@ $gap: toRem(20);
 	// .chapter-page__wrapper
 	&__wrapper {
 		display: flex;
-		margin: toRem(40) 0;
+		margin: toRem(20) 0 toRem(40) 0;
 	}
 	// .chapter-page__container
 	&__container {
@@ -45,7 +45,6 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			margin-bottom: toRem(30);
-			overflow: hidden;
 
 			& .block__title {
 				&:after {
