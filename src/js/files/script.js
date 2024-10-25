@@ -1,7 +1,8 @@
-import { menuClose, overlayHide } from './functions.js';
+import { bodyLock, bodyUnlock, menuClose, overlayHide } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const header = document.querySelector('header');
+	const asideMenu = document.querySelector('.aside-menu');
 	const dropButton = document.querySelectorAll('.menu__svg');
 	const mobileBackButtons = document.querySelectorAll('.mobile-back');
 	const contactsPhoneButton = document.querySelectorAll(
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	dropMenu(dropButton, '.menu__item', 'touchstart');
 	dropMenu(asideDropButtons, '.aside-menu__item');
-	dropMenu(contactsPhoneButton, '.contacts-phone');
+	dropMenu(contactsPhoneButton, '.contacts-phone', 'click');
 	dropMenu(asidePhonesArrow, '.aside-phone');
 
 	if (document.querySelector('.options')) {
@@ -47,16 +48,39 @@ document.addEventListener('DOMContentLoaded', () => {
 		array.forEach(item => {
 			item.addEventListener(`${event}`, e => {
 				const target = e.currentTarget;
-				console.log(target);
 				const parentDrop = target.closest(selector);
-				console.log(parentDrop);
 				parentDrop.classList.add('drop');
 			});
 		});
 	}
 
-	function removeDrop(array, selector) {
+	function removeDrop(array, selector, parent) {
 		array.forEach(item => {
+			item.addEventListener('click', e => {
+				const target = e.currentTarget;
+				const parentDrop = target.closest(`${selector}.drop`);
+				const parentEl = target.closest(`${parent}`);
+
+				if (parentEl) {
+					header.classList.remove('drop');
+					parentEl.classList.remove('drop');
+				} else {
+					parentDrop.classList.remove('drop');
+				}
+			});
+		});
+	}
+
+	const contactsPhones = document.querySelectorAll(
+		'.contacts .contacts-phone .mobile-back'
+	);
+	removeDrop(contactsPhones, '.contacts-phone', '.contacts-phone');
+	const menuItemsBack = document.querySelectorAll('.menu__item .mobile-back');
+	removeDrop(menuItemsBack, '.menu__item', '.menu__item');
+
+	function removeDropAside(asideMenu, selector) {
+		const removeButtons = asideMenu.querySelectorAll('.mobile-back');
+		removeButtons.forEach(item => {
 			item.addEventListener('click', e => {
 				const target = e.currentTarget;
 				const parentDrop = target.closest('.drop');
@@ -69,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
-	removeDrop(mobileBackButtons, '.menu__item');
+	removeDropAside(asideMenu, '.aside-menu__item');
 
 	function removeSomeDrop(selector) {
 		const allDrop = document.querySelectorAll(selector);
@@ -85,17 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		removeSomeDrop('.aside-phone');
 		removeSomeDrop('.aside-menu__item');
 	});
-
-	// function documentRemoveActions(parent) {
-	// 	document.addEventListener('click', (e, parent) => {
-	// 		const cTarget = e.target;
-	// 		if (!parent.contains(cTarget)) {
-	// 			console.log('No');
-	// 		}
-	// 	});
-	// }
-
-	// documentRemoveActions('.options');
 
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape') {
@@ -169,10 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	if (
-		document.querySelector('.menu__list') &&
-		document.querySelector('[data-menu-group]')
-	) {
+	if (document.querySelector('.menu__list')) {
 		hideMenuItem();
 		let timeout = null;
 		window.addEventListener('resize', function () {
@@ -180,6 +190,38 @@ document.addEventListener('DOMContentLoaded', () => {
 			timeout = setTimeout(hideMenuItem, 100);
 		});
 	}
+
+	function addMenuEl(menuList) {
+		const li = `
+		<li class="menu__item" data-menu-group>
+			<span class="menu__link">Ещё</span>
+			<div class="menu__svg">
+				<svg class="svg-arrow-down">
+					<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+				</svg>
+			</div>
+			<div class="menu__drop">
+				<div class="menu__content">
+					<button class="mobile-back" type="button">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow"></use>
+						</svg>
+						<span>Назад</span>
+					</button>
+					<div class="menu__title">
+						<a href="#">О компании</a>
+					</div>
+					<ul class="menu__list">
+
+					</ul>
+				</div>
+			</div>
+		</li>`;
+
+		menuList.insertAdjacentHTML('beforeend', li);
+	}
+
+	function removeMenuEl() {}
 
 	// Remove and Add menu item on resize
 	function hideMenuItem() {
@@ -189,9 +231,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			const menuList = menu.querySelector('.menu__list');
 			const menuListChildren = menuList.children; // List items
 			const menuLastItem = menuList.querySelector('[data-menu-group]'); // Item Includes menu items
-			const menuLastItemList = menuLastItem.querySelector('.menu__list'); // list of item whose includes
-			const menuLastItemListChildren = menuLastItemList.children;
+			const menuLastItemList = menuLastItem
+				? menuLastItem.querySelector('.menu__list')
+				: null; // list of item whose includes
+			const menuLastItemListChildren =
+				menuLastItemList !== null ? menuLastItemList.children : null;
 			const styles = window.getComputedStyle(menuList, null);
+
 			const gap = +styles.rowGap.slice(0, -2);
 
 			let width = menuList.offsetWidth;
@@ -202,14 +248,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			totalWidthItem += gap * menuListChildren.length - 1;
 
-			if (totalWidthItem > width && menuListChildren.length > 2) {
+			if (menuLastItem === null && totalWidthItem > width) {
+				addMenuEl(menuList);
+				hideMenuItem();
+
+				// const dropButton = document.querySelectorAll('.menu__svg');
+				// dropMenu(dropButton, '.menu__item', 'touchstart', true);
+				// const mobileBackButtons = document.querySelectorAll('.mobile-back');
+				// removeDrop(mobileBackButtons, '.menu__item', true);
+			}
+
+			if (
+				totalWidthItem > width &&
+				menuListChildren.length > 2 &&
+				menuLastItem
+			) {
 				menuRemoveChild(menuList, menuListChildren, menuLastItemList);
 				hideMenuItem();
 			}
+
 			if (
 				totalWidthItem + 110 < width &&
 				menuListChildren.length < 8 &&
-				menuLastItemListChildren.length > 1
+				menuLastItemListChildren.length > 1 &&
+				menuLastItem
 			) {
 				menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
 			}
