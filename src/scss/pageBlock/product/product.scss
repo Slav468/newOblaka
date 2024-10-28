@@ -1,4 +1,8 @@
 .product {
+	& .block__container {
+		overflow: visible;
+	}
+
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
@@ -26,7 +30,10 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				box-shadow: 0px 10px 10px 0px rgba(34, 60, 80, 0.5);
+				& .options__content {
+					box-shadow: 0px 10px 10px 0px rgba(34, 60, 80, 0.5);
+				}
 			}
 		}
 
@@ -639,6 +646,11 @@
 		}
 		& .options__content {
 			display: flex;
+		}
+		& .options__svg {
+			& > svg {
+				transform: rotate(180deg);
+			}
 		}
 	}
 }

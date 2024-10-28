@@ -50,10 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			item.addEventListener(`${event}`, e => {
 				const target = e.currentTarget;
 				const parentDrop = target.closest(selector);
-				parentDrop.classList.add('drop');
+				parentDrop.classList.toggle('drop');
 			});
 		});
 	}
+	function removeAny(array, selector) {}
 
 	function removeDrop(array, selector, parentNode) {
 		array.forEach(item => {

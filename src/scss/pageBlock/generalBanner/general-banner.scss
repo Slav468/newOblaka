@@ -231,13 +231,32 @@
 
 	&__title {
 		color: var(--text-inverse);
+		@include textOverflow(3, 38, 1.2);
+		@media (max-width: toEm(1280)) {
+			@include textOverflow(3, 36, 1.2);
+		}
+		@media (max-width: $tablet) {
+			font-size: toRem(30);
+			@include textOverflow(3, 30, 1.2);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(26);
+			@include textOverflow(3, 26, 1.2);
+		}
+		@media (max-width: toEm(576)) {
+			font-size: toRem(20);
+			@include textOverflow(3, 20, 1.2);
+		}
 	}
 
 	&__text {
 		color: var(--text-inverse);
+		@include textOverflow(3, 18, 1.33);
 		@media (max-width: $mobile) {
-			height: toRem(45);
-			overflow: hidden;
+			@include textOverflow(3, 16, 1.33);
+		}
+		@media (max-width: toEm(576)) {
+			@include textOverflow(3, 15, 1.33);
 		}
 	}
 

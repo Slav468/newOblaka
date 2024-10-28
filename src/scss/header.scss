@@ -427,10 +427,14 @@
 }
 
 .logo {
-	flex: 0 0 toRem(192);
-	max-height: toRem(37);
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 20, 10);
 	&__logo {
 		width: 100%;
+		display: flex;
+		flex: 0 0 toRem(192);
+		max-height: toRem(37);
 
 		& img {
 			width: 100%;
@@ -495,7 +499,7 @@
 					max-width: toRem(435);
 					width: 100vw;
 					padding: toRem(10);
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+					box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 
 					@media (max-width: $tablet) {
 						left: toRem(-150);
@@ -814,7 +818,7 @@
 		display: none;
 		border-radius: var(--radius8);
 		appearance: none;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 	}
 
 	&.drop {
