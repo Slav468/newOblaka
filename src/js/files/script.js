@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				const parentDrop = target.closest(selector);
 				parentDrop.classList.add('drop');
 				header.classList.add('drop');
+				bodyLock();
 			});
 		});
 	}
@@ -54,18 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	function removeDrop(array, selector, parent) {
+	function removeDrop(array, selector, parentNode) {
 		array.forEach(item => {
 			item.addEventListener('click', e => {
 				const target = e.currentTarget;
-				const parentDrop = target.closest(`${selector}.drop`);
-				const parentEl = target.closest(`${parent}`);
+				const dropEl = target.closest(`${selector}.drop`);
+				const parent = target.closest(`${parentNode}`);
+				const childFirstCircle = parent.children;
+				let isParent = false;
 
-				if (parentEl) {
+				for (let child of childFirstCircle) {
+					child === dropEl ? (isParent = true) : false;
+				}
+
+				if (isParent) {
 					header.classList.remove('drop');
-					parentEl.classList.remove('drop');
+					dropEl.classList.remove('drop');
+					bodyUnlock();
 				} else {
-					parentDrop.classList.remove('drop');
+					dropEl.classList.remove('drop');
 				}
 			});
 		});
@@ -74,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const contactsPhones = document.querySelectorAll(
 		'.contacts .contacts-phone .mobile-back'
 	);
-	removeDrop(contactsPhones, '.contacts-phone', '.contacts-phone');
+	removeDrop(contactsPhones, '.contacts-phone', '.contacts__block');
 	const menuItemsBack = document.querySelectorAll('.menu__item .mobile-back');
-	removeDrop(menuItemsBack, '.menu__item', '.menu__item');
+	removeDrop(menuItemsBack, '.menu__item', '[data-menulist]');
 
 	function removeDropAside(asideMenu, selector) {
 		const removeButtons = asideMenu.querySelectorAll('.mobile-back');
@@ -221,8 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		menuList.insertAdjacentHTML('beforeend', li);
 	}
 
-	function removeMenuEl() {}
-
 	// Remove and Add menu item on resize
 	function hideMenuItem() {
 		const menus = document.querySelectorAll('[data-menu]');
@@ -251,11 +257,20 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (menuLastItem === null && totalWidthItem > width) {
 				addMenuEl(menuList);
 				hideMenuItem();
+				const dropButton = document.querySelectorAll(
+					'[data-menu-group] > .menu__svg'
+				);
+				dropMenu(dropButton, '.menu__item', 'touchstart');
 
-				// const dropButton = document.querySelectorAll('.menu__svg');
-				// dropMenu(dropButton, '.menu__item', 'touchstart', true);
-				// const mobileBackButtons = document.querySelectorAll('.mobile-back');
-				// removeDrop(mobileBackButtons, '.menu__item', true);
+				const menuGroup = document.querySelectorAll('[data-menu-group]');
+				for (let menu of menuGroup) {
+					const back = menu.querySelector('.mobile-back');
+					back.addEventListener('click', () => {
+						header.classList.remove('drop');
+						menu.classList.remove('drop');
+						bodyUnlock();
+					});
+				}
 			}
 
 			if (
