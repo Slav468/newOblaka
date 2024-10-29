@@ -20,7 +20,7 @@
 		display: flex;
 		width: calc((100% - toRem(20) * 4) / 5);
 		max-height: toRem(200);
-		aspect-ratio: 316 / 200;
+		height: 100%;
 		border-radius: var(--radius8);
 		border: toRem(1) solid var(--border);
 		appearance: none;
@@ -105,7 +105,7 @@
 		align-items: center;
 		font-weight: 500;
 		font-size: toRem(16);
-		padding: 10%;
+		padding: 5%;
 		@media (max-width: toEm(520)) {
 			font-size: toRem(12);
 			padding: 7%;
@@ -117,13 +117,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex: 1 1 auto;
 		background-color: var(--light);
 		overflow: hidden;
 		border-radius: var(--radius8) var(--radius8) 0 0;
 		border-top: toRem(1) solid var(--border);
 		& img {
 			padding: toRem(13) 0;
-			height: 100%;
+			display: flex;
+
+			object-position: center;
 			@media (max-width: toEm(576)) {
 				padding: toRem(5) 0;
 			}
@@ -186,6 +189,7 @@
 			width: 100%;
 			& img {
 				width: 100%;
+				height: 100%;
 				padding: 0;
 			}
 		}

@@ -425,15 +425,15 @@
 		box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 	}
 
-	// @media (max-width: $mobile) {
-	// 	margin-bottom: 0;
-	// 	position: fixed;
-	// 	top: 0;
-	// 	left: 0;
-	// 	z-index: 15;
-	// 	background-color: var(--bg-primary);
-	// 	box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-	// }
+	@media (max-width: $mobile) {
+		margin-bottom: 0;
+		// position: fixed;
+		// top: 0;
+		// left: 0;
+		// z-index: 15;
+		// background-color: var(--bg-primary);
+		// box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+	}
 }
 
 .logo {
