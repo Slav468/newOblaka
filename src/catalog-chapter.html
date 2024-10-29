@@ -4,7 +4,7 @@
 
 <body>
 	<div class="wrapper chapter-page">
-		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
+		@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
 
 		<div class="chapter-page__wrapper">
 			<div class="chapter-page__container">
@@ -29,7 +29,7 @@
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
-
+							@@include('html/elements/_filter-buttons.htm',{})
 						</div>
 						<div class="main__item">
 							<div class="text_general">
@@ -72,6 +72,7 @@
 
 	@@include('html/elements/_cookie-plank.htm',{})
 	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_aside-filter-menu.htm',{})
 	@@include('html/elements/_overlay.htm',{})
 	@@include('html/elements/_popup.htm',{})
 	@@include('html/pageBlock/_js.htm',{})

@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const header = document.querySelector('.header');
 		const headerHeight = header.getBoundingClientRect().height;
 		const scrollY = window.scrollY;
-		const main = document.querySelector('main.page');
+		const main = document.querySelector('main');
 
 		if (scrollY >= headerHeight * 5) {
 			header.classList.add('header_fixed');

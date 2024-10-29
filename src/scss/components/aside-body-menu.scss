@@ -33,7 +33,7 @@
 		background-color: var(--bg-primary);
 		overflow: auto;
 		@media (max-width: $mobileSmall) {
-			padding: toRem(20);
+			padding: toRem(0);
 		}
 	}
 
@@ -306,6 +306,7 @@
 			font-size: 0.875rem;
 			padding: 0.625rem 0;
 		}
+
 	}
 	.menu-open & {
 		transform: translateX(100%);
