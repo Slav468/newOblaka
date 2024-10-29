@@ -1,6 +1,6 @@
 .overlay {
 	display: flex;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 0;
@@ -13,7 +13,7 @@
 	&.show {
 		transition: opacity 0.2s ease;
 		opacity: 1;
-		z-index: 6;
+		z-index: 16;
 		pointer-events: initial;
 	}
 }

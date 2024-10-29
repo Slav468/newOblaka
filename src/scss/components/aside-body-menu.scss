@@ -4,7 +4,7 @@
 	position: fixed;
 	top: 0;
 	left: -35vw;
-	z-index: 8;
+	z-index: 17;
 	transition: transform 0.3s ease-in;
 
 	@media (max-width: toEm(1280)) {
@@ -155,6 +155,11 @@
 		padding: toRem(20) 0;
 		margin: 0 toRem(20);
 		border-bottom: 1px solid var(--border);
+
+		& .logo {
+			gap: toRem(10);
+			flex: 0 1 50%;
+		}
 	}
 
 	&__title {
@@ -283,7 +288,7 @@
 	}
 
 	& .phone-dropdown {
-		padding: toRem(40);
+		padding: toRem(20);
 		overflow: auto;
 		&__item {
 			flex-direction: row;
