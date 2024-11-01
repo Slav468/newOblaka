@@ -2,7 +2,6 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 		@media (max-width: $tablet) {
@@ -18,7 +17,6 @@
 
 	&__cell {
 		display: flex;
-
 		width: calc((100% - toRem(20) * 3) / 4);
 		height: auto;
 		overflow: hidden;
@@ -64,13 +62,11 @@
 	}
 
 	&__img {
+		position: relative;
 		width: 100%;
 		aspect-ratio: 400 / 230;
-		// position: absolute;
-		// top: 0;
-		// left: 0;
-		// z-index: 2;
 		overflow: hidden;
+		@include linerGradient();
 
 		img {
 			display: block;

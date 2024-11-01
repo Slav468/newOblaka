@@ -172,7 +172,7 @@ body {
 @import "./insidePage/404";
 
 // Динамические стили
-// @import 'cardWidthAdaptive';
+@import "cardWidthAdaptive";
 
 // Отключение блоков для подгрузки при скролле
 @import "./hidden";

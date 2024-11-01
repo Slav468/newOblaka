@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Close aside menu
 	function closeAsideMenu() {
 		asideCloseButton.addEventListener('click', () => {
+			console.log('click');
 			menuClose();
 			overlayHide();
 		});
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'.contacts .contacts-phone .mobile-back'
 	);
 	removeDrop(contactsPhones, '.contacts-phone', '.contacts__block');
+
 	const menuItemsBack = document.querySelectorAll('.menu__item .mobile-back');
 	removeDrop(menuItemsBack, '.menu__item', '[data-menulist]');
 
@@ -286,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (
 				totalWidthItem + 110 < width &&
 				menuListChildren.length < 8 &&
-				menuLastItemListChildren.length > 1 &&
 				menuLastItem
 			) {
 				menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
@@ -470,5 +471,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			});
 		});
+	}
+
+	// Change color
+	function changeColor(variable, color) {
+		document.documentElement.style.setProperty(`--${variable}`, `${color}`);
 	}
 });

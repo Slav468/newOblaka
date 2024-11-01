@@ -2,7 +2,6 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 		@media (max-width: $tablet) {
@@ -17,10 +16,14 @@
 	}
 
 	&__cell {
+		position: relative;
 		width: calc((100% - toRem(20) * 3) / 4);
 		aspect-ratio: 400 / 350;
 		border-radius: var(--radius8);
+		border: 1px solid var(--border);
+		overflow: hidden;
 		appearance: none;
+		@include linerGradient();
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -75,8 +78,6 @@
 		position: relative;
 		overflow: hidden;
 		transition: 0.3s;
-		border-radius: var(--radius8);
-		border: 1px solid var(--border);
 	}
 
 	&__img {
@@ -85,7 +86,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 2;
+		z-index: 1;
 		border-radius: var(--radius8);
 		overflow: hidden;
 

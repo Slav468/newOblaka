@@ -17,7 +17,7 @@
 // 	font-style: normal;
 // }
 :root {
-	--swiper-theme-color: #46b4de;
+	--swiper-theme-color: var(--primary);
 }
 .swiper {
 	margin-left: auto;

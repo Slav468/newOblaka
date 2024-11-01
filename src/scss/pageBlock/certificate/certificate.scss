@@ -11,13 +11,16 @@
 
 	// .certificate__link
 	&__link {
+		position: relative;
 		width: calc((100% - toRem(20) * 3) / 4);
-		aspect-ratio: 220 / 315;
+		aspect-ratio: 315 / 445;
 		min-width: toRem(145);
 		display: flex;
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
+		overflow: hidden;
 		appearance: none;
+		@include linerGradient();
 
 		@media (any-hover: hover) {
 			&:hover {

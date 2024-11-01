@@ -53,7 +53,7 @@
 		display: flex;
 
 		& .form {
-			padding: toRem(165) toRem(60);
+			padding: toRem(160) toRem(60);
 
 			@media (max-width: toEm(1280)) {
 				padding: toRem(64) toRem(60);
@@ -78,11 +78,13 @@
 	}
 
 	&__img {
+		position: relative;
 		flex: 1 1 percent(820, $maxWidthContainer);
 		height: auto;
 		border-radius: var(--radius8);
 		overflow: hidden;
 		display: flex;
+		@include linerGradient();
 		& img {
 			display: flex;
 			width: 100%;
@@ -389,6 +391,7 @@
 		}
 	}
 }
+
 .upload {
 	&__wrapper {
 		display: flex;

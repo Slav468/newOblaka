@@ -32,9 +32,9 @@ $gap: toRem(20);
 					}
 					&__bg {
 						border-radius: var(--radius8);
-						&:after {
-							content: none;
-						}
+						// &:after {
+						// 	content: none;
+						// }
 					}
 				}
 			}
@@ -79,12 +79,6 @@ $gap: toRem(20);
 
 			[class*="__container"] {
 				padding: 0;
-			}
-			&:last-child:not(:has(.map__wrapper)) {
-				margin-bottom: toRem(40);
-				@media (max-width: $mobile) {
-					margin-bottom: toRem(20);
-				}
 			}
 		}
 	}

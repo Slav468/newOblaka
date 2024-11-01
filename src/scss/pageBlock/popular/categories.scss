@@ -1,7 +1,6 @@
 .categories {
 	&__list {
 		display: flex;
-		justify-content: center;
 		gap: toRem(20);
 		flex-wrap: wrap;
 		@media (max-width: $tablet) {
