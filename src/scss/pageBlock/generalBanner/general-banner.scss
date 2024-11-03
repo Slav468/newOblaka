@@ -290,11 +290,8 @@
 			@media (max-width: $mobile) {
 				height: toRem(483);
 			}
-			@media (max-width: toEm(698)) {
-				height: toRem(363);
-			}
 			@media (max-width: toEm(457)) {
-				height: toRem(567);
+				height: toRem(485);
 			}
 		}
 		& .banner__slide {
@@ -303,17 +300,15 @@
 
 		& .banner__content {
 			height: 100%;
-			justify-content: flex-end;
-			padding-bottom: 7%;
+			justify-content: center;
+
 			@media (max-width: toEm(1280)) {
-				padding-bottom: 10.5%;
 				max-width: 85.951807%;
 			}
 			@media (max-width: toEm(698)) {
 				max-width: 95%;
 			}
 			@media (max-width: toEm(457)) {
-				padding: 0;
 				justify-content: center;
 			}
 		}

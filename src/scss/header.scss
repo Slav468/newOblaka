@@ -494,6 +494,11 @@
 			.contacts-phone__svg {
 				color: var(--text-primary);
 			}
+			@media (max-width: $mobileSmall) {
+				.contacts-phone__link {
+					opacity: 0;
+				}
+			}
 
 			& .menu {
 				& .menu__body {
@@ -544,6 +549,7 @@
 					color: var(--text-primary);
 				}
 			}
+
 			& .header-bottom {
 				& .menu {
 					& .menu__body {
@@ -562,12 +568,10 @@
 						}
 					}
 				}
-
-				& .icon-menu span,
-				.icon-menu::before,
-				.icon-menu::after {
-					background-color: var(--text-inverse);
-					@media (max-width: toEm(640)) {
+				@media (max-width: $mobile) {
+					& .icon-menu span,
+					.icon-menu::before,
+					.icon-menu::after {
 						background-color: var(--text-primary);
 					}
 				}
