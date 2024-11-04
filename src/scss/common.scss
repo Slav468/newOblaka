@@ -124,8 +124,12 @@
 	height: 5px;
 }
 
-// Block link
+// For change svg color on color scheme
+.svg-color_primary {
+	fill: var(--primary);
+}
 
+// Block link
 .reference {
 	// .reference__text
 	&__text {

@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Close aside menu
 	function closeAsideMenu() {
-		asideCloseButton.addEventListener('click', () => {
-			console.log('click');
+		asideCloseButton.addEventListener('click', e => {
 			menuClose();
 			overlayHide();
 		});

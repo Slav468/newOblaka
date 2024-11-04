@@ -21,7 +21,7 @@ $fontFamily: "Montserrat";
 $fontSize: toRem(15); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори
-$mainColor: #000; // Колір шрифту за замовчуванням
+$mainColor: var(--text-primary); // Колір шрифту за замовчуванням
 
 // Палітра кольорів
 @import "base/colors-palette";

@@ -7,7 +7,7 @@
 				flex-direction: column;
 				align-items: center;
 				gap: toRem(40);
-				@include adaptiveValue('padding-bottom', 60, 20);
+				@include adaptiveValue("padding-bottom", 60, 20);
 			}
 
 			&__item {
@@ -23,7 +23,7 @@
 	&__img {
 		display: flex;
 		aspect-ratio: 890 / 600;
-		@include adaptiveValue('width', 890, 300);
+		@include adaptiveValue("width", 890, 300);
 
 		& svg {
 			padding: toRem(40);
@@ -38,14 +38,14 @@
 		line-height: 1.2;
 		color: var(--text-primary);
 		text-align: center;
-		@include adaptiveValue('font-size', 38, 24);
+		@include adaptiveValue("font-size", 38, 24);
 	}
 
 	&_colored {
 		background-color: var(--primary);
 
 		& .header {
-			& [class*='__container'] {
+			& [class*="__container"] {
 				background-color: var(--bg-primary);
 			}
 
@@ -65,6 +65,4 @@
 	}
 }
 
-.svg-color_primary {
-	fill: #46b4de;
-}
+

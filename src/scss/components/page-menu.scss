@@ -63,13 +63,18 @@
 				& .page-menu__item {
 					border: none;
 					& > .page-menu__control {
-						padding: toRem(20) toRem(15) toRem(20) toRem(30);
+						padding: toRem(10) toRem(0) toRem(10) toRem(10);
+						& .page-menu__link {
+							padding: toRem(10) toRem(15) toRem(10) toRem(20);
+						}
 					}
 					& .page-menu__drop {
 						& .page-menu__item {
 							border: none;
 							& > .page-menu__control {
-								padding: toRem(20) toRem(15) toRem(20) toRem(40);
+								& .page-menu__link {
+									padding: toRem(10) toRem(15) toRem(10) toRem(40);
+								}
 							}
 						}
 					}
@@ -83,7 +88,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(20) toRem(16);
+		padding: toRem(20) toRem(0) toRem(20) toRem(16);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -98,12 +103,16 @@
 		}
 	}
 
+	&__link {
+		width: 100%;
+	}
+
 	&__svg {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: toRem(24);
-		height: toRem(24);
+		width: toRem(55);
+		height: toRem(27);
 		cursor: pointer;
 		transform: rotate(-90deg);
 		& .svg-arrow-down {
