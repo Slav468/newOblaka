@@ -30,6 +30,7 @@
 		font-size: toRem(14);
 		line-height: 1.29;
 		color: var(--text-primary);
+
 		&:not(:last-child) {
 			border-bottom: 1px solid var(--border);
 		}
@@ -81,6 +82,11 @@
 				}
 			}
 		}
+
+		&:last-child.active.drop {
+			border-radius: 0 0 var(--radius8) var(--radius8);
+			overflow: hidden;
+		}
 	}
 
 	&__control {
@@ -112,7 +118,7 @@
 		align-items: center;
 		justify-content: center;
 		width: toRem(55);
-		height: toRem(27);
+		height: toRem(20);
 		cursor: pointer;
 		transform: rotate(-90deg);
 		& .svg-arrow-down {

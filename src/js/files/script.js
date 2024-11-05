@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const scrollY = window.scrollY;
 		const main = document.querySelector('main');
 
-		if (scrollY >= headerHeight * 5) {
+		if (scrollY >= headerHeight * 2) {
 			header.classList.add('header_fixed');
 			main.style.paddingTop = `${headerHeight + 20}px`;
 		} else {

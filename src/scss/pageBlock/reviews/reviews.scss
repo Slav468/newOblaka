@@ -124,12 +124,9 @@
 		font-style: italic;
 		font-weight: 400;
 		font-size: toRem(16);
+		line-height: 1.2;
 		color: var(--text-primary);
-		overflow: hidden;
-		@media (max-width: toEm(576)) {
-			height: toRem(193);
-			overflow: hidden;
-		}
+		@include textOverflow(5, 16, 1.2);
 	}
 	&__img {
 		display: none;

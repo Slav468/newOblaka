@@ -77,6 +77,10 @@
 		}
 	}
 
+	&__overlay {
+		@include linerGradient();
+	}
+
 	&__img {
 		position: relative;
 		flex: 1 1 percent(820, $maxWidthContainer);
@@ -84,7 +88,7 @@
 		border-radius: var(--radius8);
 		overflow: hidden;
 		display: flex;
-		@include linerGradient();
+
 		& img {
 			display: flex;
 			width: 100%;

@@ -390,6 +390,10 @@
 	}
 }
 
+[class*="___overlay"] {
+	pointer-events: none;
+}
+
 [class*="_desktopView"] {
 	display: flex;
 
