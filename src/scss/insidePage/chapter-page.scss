@@ -30,14 +30,17 @@ $gap: toRem(20);
 
 			&:has(.preview) {
 				& .preview {
+					min-height: fit-content;
 					&__container {
 						display: none;
 					}
 					&__bg {
+						position: relative;
 						border-radius: var(--radius8);
-						// &:after {
-						// 	content: none;
-						// }
+						width: fit-content;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
 				}
 			}
@@ -85,6 +88,22 @@ $gap: toRem(20);
 
 			[class*="__container"] {
 				padding: 0;
+			}
+
+			&:has(.tabs) {
+				border: 1px solid var(--border);
+				border-radius: var(--radius8);
+				overflow: hidden;
+				@media (max-width: $mobile) {
+					padding: 0;
+					border: none;
+				}
+				& .tabs {
+					padding: toRem(30);
+					@media (max-width: $mobile) {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}

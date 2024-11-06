@@ -39,8 +39,9 @@
 		}
 		&__content {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			gap: toRem(15);
+			flex-wrap: wrap;
 			width: 100%;
 			@media (max-width: $tablet) {
 				flex-direction: row;
@@ -74,7 +75,7 @@
 		}
 
 		&:before {
-			content: '';
+			content: "";
 			width: toRem(3);
 			height: toRem(14);
 			display: block;

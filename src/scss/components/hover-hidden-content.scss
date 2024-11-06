@@ -65,6 +65,9 @@
 		font-weight: 600;
 		font-size: toRem(16);
 		color: var(--text-inverse);
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
 		@media (max-width: toEm(520)) {
 			font-size: toRem(14);
 		}
@@ -77,6 +80,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		pointer-events: none;
 	}
 
 	&-content {
@@ -84,6 +88,7 @@
 		flex-direction: column;
 		height: 0;
 		overflow: hidden;
+		pointer-events: auto;
 		&__text {
 			margin: toRem(15) 0;
 			font-weight: 400;
@@ -97,6 +102,10 @@
 			flex-direction: column;
 			margin-bottom: toRem(30);
 			padding: 0 toRem(10) 0 toRem(30);
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+			text-align: justify;
 			@media (max-width: toEm(1280)) {
 				padding-left: toRem(20);
 			}
@@ -107,6 +116,9 @@
 			font-weight: 600;
 			font-size: toRem(16);
 			color: var(--text-inverse);
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
 			@media (max-width: toEm(1280)) {
 				padding: toRem(15) toRem(10) toRem(15) toRem(20);
 			}
@@ -230,7 +242,6 @@
 			.hover__bottom {
 				min-height: 100%;
 				height: auto;
-				pointer-events: none;
 			}
 		}
 	}

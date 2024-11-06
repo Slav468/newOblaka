@@ -831,7 +831,7 @@
 				&:hover {
 					& > .menu__drop {
 						left: auto;
-						right: 0%;
+						right: toRem(-50);
 						& > .menu__content {
 							& > .menu__list {
 								& > .menu__item {

@@ -1,19 +1,10 @@
-<section class="block categories hidden">
+<section class="block request hidden">
 	<div class="block__container">
 		<div class="block__wrapper">
 			<div class="block__inner">
 				<div class="block__head">
 					<h2 class="block__title">Заголовок</h2>
-					<div class="block__reference reference">
-						<a href="#" class="reference__link">
-							<p class="reference__text">Смотреть все</p>
-							<div class="reference__img">
-								<svg class="reference__svg">
-									<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-								</svg>
-							</div>
-						</a>
-					</div>
+
 				</div>
 				<div class="block__body">
 					<div class="block__text text_subtitle">
@@ -27,15 +18,12 @@
 					</div>
 					<div class="block__content">
 						<!-- Изменяющийся контент -->
-						@@include('./popular-variable/_categories.htm',{})
-						@@include('./popular-variable/_categories-catalog.htm',{})
-						@@include('./popular-variable/_categories-slider.htm',{})
+						@@include('./popular-variable/_request.htm',{})
+						@@include('./popular-variable/_request-slider.htm',{})
 					</div>
 				</div>
 			</div>
-			<div class="block__buttons">
-				<a href="#" class="block__button">Все содержимое</a>
-			</div>
+
 		</div>
 	</div>
 </section>
