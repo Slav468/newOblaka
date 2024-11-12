@@ -170,6 +170,8 @@
 		width: 100%;
 		gap: 2.27%;
 		row-gap: toRem(17);
+		padding: 0;
+		margin: 0;
 		@media (max-width: $tablet) {
 			column-gap: toRem(20);
 			row-gap: toRem(16);
@@ -309,6 +311,13 @@
 	&__payment {
 		max-width: percent(830, 1700);
 		width: 100%;
+
+		& img {
+			display: flex;
+			object-fit: contain;
+			height: 100%;
+			width: 100%;
+		}
 		@media (max-width: $tablet) {
 			flex-direction: column;
 			gap: toRem(5);
@@ -345,6 +354,9 @@
 	// .payment__list
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 
 	// .payment__item

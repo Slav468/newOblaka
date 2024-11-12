@@ -297,13 +297,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		let element = menuList.removeChild(
 			menuListChildren[menuListChildren.length - 2]
 		);
-		menuLastItemList.appendChild(element);
+
+		menuLastItemList.insertBefore(element, menuLastItemList.firstElementChild);
 	}
 	function menuBackItem(menuList, menuLastItemList, menuLastItemListChildren) {
-		let element = menuLastItemList.removeChild(
-			menuLastItemListChildren[menuLastItemListChildren.length - 1]
-		);
-
+		let element = menuLastItemList.removeChild(menuLastItemListChildren[0]);
 		menuList.insertBefore(element, menuList.lastElementChild);
 	}
 

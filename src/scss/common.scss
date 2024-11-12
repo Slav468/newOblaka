@@ -3,6 +3,19 @@
 	flex: 1 1 auto;
 }
 
+// h1 {
+// 	font-size: toRem(42);
+// 	line-height: calc(1rem + 10px);
+// 	margin: 0 0 18px 0;
+// 	font-weight: 700;
+// }
+// h2 {
+// 	font-size: toRem(30);
+// 	line-height: calc(1rem + 14px);
+// 	margin: 30px 0 25px 0;
+// 	font-weight: 700;
+// }
+
 .wrapper {
 	max-width: toRem(1920);
 	margin: 0 auto;
@@ -315,6 +328,16 @@
 		font-size: toRem(16);
 		line-height: 1.5;
 		color: var(--text-primary);
+		ul {
+			padding: revert;
+			margin: revert;
+			li {
+				padding: revert;
+				margin: revert;
+				list-style: revert;
+			}
+		}
+
 		@media (max-width: $mobile) {
 			font-size: toRem(14);
 			text-align: justify;
@@ -324,6 +347,7 @@
 		font-weight: 400;
 		font-size: toRem(13);
 		color: var(--text-secondary);
+
 		@media (max-width: $mobile) {
 			font-size: toRem(11);
 		}
