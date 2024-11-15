@@ -4,15 +4,12 @@
 }
 
 // h1 {
-// 	font-size: toRem(42);
-// 	line-height: calc(1rem + 10px);
-// 	margin: 0 0 18px 0;
-// 	font-weight: 700;
+// 	font-size: 2.8em;
+// 	line-height: calc(1em + 10px);
 // }
 // h2 {
 // 	font-size: toRem(30);
 // 	line-height: calc(1rem + 14px);
-// 	margin: 30px 0 25px 0;
 // 	font-weight: 700;
 // }
 
@@ -43,6 +40,12 @@
 		flex: 0 1 percent(400, $maxWidthContainer);
 		@media (max-width: $tablet) {
 			display: none;
+		}
+
+		&:has(.blog-menu) {
+			@media (max-width: $tablet) {
+				display: flex;
+			}
 		}
 	}
 
@@ -310,6 +313,7 @@
 		font-weight: 500;
 		font-size: toRem(18);
 		line-height: 1.33;
+
 		@media (max-width: $mobile) {
 			font-size: toRem(16);
 		}
@@ -322,19 +326,44 @@
 		font-size: toRem(18);
 		line-height: 1.56;
 		color: var(--text-primary);
-	}
-	&_general {
-		font-weight: 400;
-		font-size: toRem(16);
-		line-height: 1.5;
-		color: var(--text-primary);
-		ul {
+		& a {
+			color: var(--primary);
+		}
+		ul,
+		ol {
 			padding: revert;
 			margin: revert;
 			li {
 				padding: revert;
 				margin: revert;
 				list-style: revert;
+				margin: 0 0 20px 0;
+				&::marker {
+					color: var(--primary);
+				}
+			}
+		}
+	}
+	&_general {
+		font-weight: 400;
+		font-size: toRem(16);
+		line-height: 1.5;
+		color: var(--text-primary);
+		& a {
+			color: var(--primary);
+		}
+		ul,
+		ol {
+			padding: revert;
+			margin: revert;
+			li {
+				padding: revert;
+				margin: revert;
+				list-style: revert;
+				margin: 0 0 20px 0;
+				&::marker {
+					color: var(--primary);
+				}
 			}
 		}
 
@@ -347,6 +376,22 @@
 		font-weight: 400;
 		font-size: toRem(13);
 		color: var(--text-secondary);
+		& a {
+			color: var(--primary);
+		}
+		ul,
+		ol {
+			padding: revert;
+			margin: revert;
+			li {
+				padding: revert;
+				margin: revert;
+				list-style: revert;
+				&::marker {
+					color: var(--primary);
+				}
+			}
+		}
 
 		@media (max-width: $mobile) {
 			font-size: toRem(11);
@@ -428,4 +473,11 @@
 		width: 2px;
 		background-color: var(--scrollThumb);
 	}
+}
+.hidden-img {
+	display: none !important;
+}
+
+._form-error input {
+	border: 1px solid var(--for-false);
 }

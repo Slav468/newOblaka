@@ -82,7 +82,7 @@
 
 	&__img {
 		width: 100%;
-		height: auto;
+		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -101,6 +101,7 @@
 	&__bottom {
 		padding: toRem(15) toRem(15) toRem(15);
 		width: 100%;
+		min-height: toRem(73);
 		position: relative;
 		bottom: 0;
 		left: 0;
@@ -110,6 +111,10 @@
 		background: var(--bg-primary);
 		border-radius: var(--radius8) var(--radius8) 0 0;
 		overflow: auto;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		@media (max-width: $mobileSmall) {
 			padding: toRem(6);
 		}
@@ -167,6 +172,7 @@
 		height: 0;
 		overflow: hidden;
 		transition: 0.3s;
+		display: none;
 	}
 
 	&__button {

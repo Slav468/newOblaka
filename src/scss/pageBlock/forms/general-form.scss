@@ -11,54 +11,6 @@
 		gap: toRem(20);
 	}
 
-	&:not(:has(.form-block__img)) {
-		.form-block__body {
-			justify-content: center;
-			flex: 1 1 percent(820, $maxWidthContainer);
-			width: 100%;
-			height: auto;
-			border: 1px solid #eee;
-			border-radius: var(--radius8);
-			overflow: hidden;
-			display: flex;
-
-			& .form {
-				width: 100%;
-				padding: toRem(30) toRem(65);
-				@media (max-width: toEm(991)) {
-					padding: toRem(30) toRem(20);
-				}
-				&__list {
-					max-width: none;
-					justify-content: center;
-					flex-direction: row;
-					flex-wrap: wrap;
-					@media (max-width: toEm(550)) {
-						flex-direction: column;
-					}
-				}
-				&__cell {
-					width: calc((100% - toEm(20) * 2) / 3);
-					@media (max-width: toEm(991)) {
-						width: calc((100% - toRem(20) * 1) / 2);
-					}
-					@media (max-width: toEm(550)) {
-						width: 100%;
-					}
-				}
-				.checkbox,
-				&__button {
-					width: 100%;
-					align-self: flex-start;
-					@media (max-width: toEm(991)) {
-						display: flex;
-						justify-content: center;
-					}
-				}
-			}
-		}
-	}
-
 	&__body {
 		flex: 1 1 percent(820, $maxWidthContainer);
 		width: 100%;
@@ -114,6 +66,55 @@
 
 		@media (max-width: $mobile) {
 			display: none;
+		}
+	}
+
+	&:not(:has(.form-block__img)) {
+		.form-block__body {
+			justify-content: center;
+			flex: 1 1 percent(820, $maxWidthContainer);
+			width: 100%;
+			height: auto;
+			border: 1px solid #eee;
+			border-radius: var(--radius8);
+			overflow: hidden;
+			display: flex;
+
+			& .form {
+				width: 100%;
+				padding: toRem(30) toRem(65);
+				@media (max-width: toEm(991)) {
+					padding: toRem(30) toRem(20);
+				}
+				&__list {
+					max-width: none;
+					justify-content: center;
+					flex-direction: row;
+					flex-wrap: wrap;
+					width: 100%;
+					@media (max-width: toEm(550)) {
+						flex-direction: column;
+					}
+				}
+				&__cell {
+					width: calc((100% - toRem(20) * 2) / 3);
+					@media (max-width: toEm(991)) {
+						width: calc((100% - toRem(20) * 1) / 2);
+					}
+					@media (max-width: toEm(550)) {
+						width: 100%;
+					}
+				}
+				.checkbox,
+				&__button {
+					width: 100%;
+					align-self: flex-start;
+					@media (max-width: toEm(991)) {
+						display: flex;
+						justify-content: center;
+					}
+				}
+			}
 		}
 	}
 }

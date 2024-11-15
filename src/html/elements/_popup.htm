@@ -24,12 +24,13 @@
 							<!-- Имя -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for='name-call'>Ваше имя*</label>
-								<input class="form__input" id='name-call' type="text" required placeholder="Ваше имя">
+								<input class="form__input" id='name-call' type="text" required data-required data-validate placeholder="Ваше имя">
 							</div>
 							<!-- Телефон -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for='phone-call'>Телефон*</label>
-								<input type="text" class="form__input" id='phone-call' required placeholder="+375 (00) 000-00-00">
+								<input type="text" class="form__input" id='phone-call' data-required='phone' data-validate required
+									placeholder="+375 (00) 000-00-00">
 							</div>
 						</div>
 
@@ -41,7 +42,7 @@
 										<use xlink:href="img/icons/icons.svg#checked"></use>
 									</svg>
 								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
+								<input type="checkbox" id="check-call" class="checkbox__input" data-required data-validate>
 							</label>
 							<span>я согласен(а) на</span>
 							<a href="#" class="checkbox__link">обработку персональных данных</a>
@@ -86,12 +87,14 @@
 							<!-- Имя -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="name-service">Ваше имя*</label>
-								<input class="form__input" type="text" name="name" id="name-service" required placeholder="Ваше имя">
+								<input class="form__input" type="text" name="name" id="name-service" data-required data-validate required
+									placeholder="Ваше имя">
 							</div>
 							<!-- Телефон -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="phone-service">Ваш телефон*</label>
-								<input name="phone" id="phone-service" type="tel" class="form__input" required placeholder="+375 (00) 000-00-00">
+								<input name="phone" id="phone-service" type="tel" class="form__input" data-required='phone' data-validate required
+									placeholder="+375 (00) 000-00-00">
 							</div>
 							<!-- Select -->
 							<div class="form__cell" data-formSelect>
@@ -120,7 +123,7 @@
 										<use xlink:href="img/icons/icons.svg#checked"></use>
 									</svg>
 								</span>
-								<input type="checkbox" id="check-service" class="checkbox__input">
+								<input type="checkbox" id="check-service" class="checkbox__input" data-required data-validate>
 							</label>
 							<span>я согласен(а) на</span>
 							<a href="#" class="checkbox__link">обработку персональных данных</a>
@@ -165,17 +168,20 @@
 							<!-- Имя -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="name-message">Ваше имя*</label>
-								<input class="form__input" type="text" name="name" id="name-message" required="" placeholder="Ваше имя">
+								<input class="form__input" type="text" name="name" id="name-message" data-required data-validate required
+									placeholder="Ваше имя">
 							</div>
 							<!-- Телефон -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="phone-message">Ваш телефон*</label>
-								<input name="phone" id="phone-message" type="tel" class="form__input" required="" placeholder="+375 (00) 000-00-00">
+								<input name="phone" id="phone-message" type="tel" class="form__input" data-required='phone' data-validate required=""
+									placeholder="+375 (00) 000-00-00">
 							</div>
 							<!-- Email -->
 							<div class="form__cell" data-formData>
 								<label for="emeil-message">Ваш e-mail*</label>
-								<input name="phone" id="emeil-message" type="email" class="form__input" required placeholder="example@mail.org">
+								<input name="email" id="emeil-message" type="email" class="form__input" data-required='email' data-validate required
+									placeholder="example@mail.org">
 							</div>
 							<!-- textarea -->
 							<div class="form__cell" data-textArea>
@@ -192,7 +198,7 @@
 										<use xlink:href="img/icons/icons.svg#checked"></use>
 									</svg>
 								</span>
-								<input type="checkbox" id="check-message" class="checkbox__input">
+								<input type="checkbox" id="check-message" class="checkbox__input" data-required data-validate>
 							</label>
 							<span>я согласен(а) на</span>
 							<a href="#" class="checkbox__link">обработку персональных данных</a>
@@ -234,17 +240,19 @@
 							<!-- Имя -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="name-resume">Ваше имя и фамилия*</label>
-								<input class="form__input" type="text" name="name" id="name-resume" required placeholder="Ваше имя">
+								<input class="form__input" type="text" name="name" id="name-resume" data-required data-validate required
+									placeholder="Ваше имя">
 							</div>
 							<!-- Должность  -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="position-resume">Желаемая должность*</label>
-								<input class="form__input" type="text" name="name" id="position-resume" required placeholder="Frontend Developer">
+								<input class="form__input" type="text" name="name" id="position-resume" data-required data-validate required
+									placeholder="Frontend Developer">
 							</div>
 							<!-- Резюме -->
 							<div class="form__cell" data-formFile>
 								<label for='file-resume'>Ваше резюме</label>
-								<input type="file" name="file" id="file-resume" class="upload" required />
+								<input type="file" name="file" id="file-resume" class="upload" data-required data-validate required />
 								<div class="upload__wrapper">
 									<button type="button" class="upload__button">
 										<svg class='upload__svg'>
@@ -258,12 +266,14 @@
 							<!-- Email -->
 							<div class="form__cell" data-formData>
 								<label for="emeil-resume">Ваш e-mail*</label>
-								<input name="phone" id="emeil-resume" type="email" class="form__input" required placeholder="example@mail.org">
+								<input name="email" id="emeil-resume" type="email" class="form__input" data-required='email' data-validate required
+									placeholder="example@mail.org">
 							</div>
 							<!-- Телефон -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="phone-resume">Ваш телефон*</label>
-								<input name="phone" id="phone-resume" type="tel" class="form__input" required="" placeholder="+375 (00) 000-00-00">
+								<input name="phone" id="phone-resume" type="tel" class="form__input" data-required='phone' data-validate required
+									placeholder="+375 (00) 000-00-00">
 							</div>
 
 							<!-- textarea -->
@@ -281,7 +291,7 @@
 										<use xlink:href="img/icons/icons.svg#checked"></use>
 									</svg>
 								</span>
-								<input type="checkbox" id="check-resume" class="checkbox__input">
+								<input type="checkbox" id="check-resume" class="checkbox__input" data-required data-validate>
 							</label>
 							<span>я согласен(а) на</span>
 							<a href="#" class="checkbox__link">обработку персональных данных</a>
@@ -323,7 +333,8 @@
 							<!-- Имя -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="name-current-resume">Ваше имя и фамилия*</label>
-								<input class="form__input" type="text" name="name" id="name-current-resume" required placeholder="Ваше имя">
+								<input class="form__input" type="text" name="name" id="name-current-resume" data-required data-validate required
+									placeholder="Ваше имя">
 							</div>
 							<!-- Должность  -->
 							<div class="form__cell" data-formData>
@@ -348,14 +359,14 @@
 							<!-- Email -->
 							<div class="form__cell" data-formData>
 								<label for="emeil-current-resume">Ваш e-mail*</label>
-								<input name="phone" id="emeil-current-resume" type="email" class="form__input" required
-									placeholder="example@mail.org">
+								<input name="email" id="emeil-current-resume" type="email" class="form__input" data-required='email' data-validate
+									required placeholder="example@mail.org">
 							</div>
 							<!-- Телефон -->
 							<div class="form__cell" data-formData>
 								<label class="form__label" for="phone-current-resume">Ваш телефон*</label>
-								<input name="phone" id="phone-current-resume" type="tel" class="form__input" required=""
-									placeholder="+375 (00) 000-00-00">
+								<input name="phone" id="phone-current-resume" type="tel" class="form__input" data-required='phone' data-validate
+									required placeholder="+375 (00) 000-00-00">
 							</div>
 
 							<!-- textarea -->
@@ -373,7 +384,7 @@
 										<use xlink:href="img/icons/icons.svg#checked"></use>
 									</svg>
 								</span>
-								<input type="checkbox" id="check-current-resume" class="checkbox__input">
+								<input type="checkbox" id="check-current-resume" class="checkbox__input" data-required data-validate>
 							</label>
 							<span>я согласен(а) на</span>
 							<a href="#" class="checkbox__link">обработку персональных данных</a>

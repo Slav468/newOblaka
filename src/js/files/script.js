@@ -1,3 +1,4 @@
+import { formValidate } from './forms/forms.js';
 import { bodyLock, bodyUnlock, menuClose, overlayHide } from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
-	function removeAny(array, selector) {}
 
 	function removeDrop(array, selector, parentNode) {
 		array.forEach(item => {
@@ -131,41 +131,23 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// Enable button in form
-	function toggleBtnForm() {
-		const checkBoxes = document.querySelectorAll('[data-formCheckbox]');
-		checkBoxes.forEach(item => {
-			item.addEventListener('change', e => {
-				const currTarget = e.currentTarget;
-				const parentElement = currTarget.closest('[data-form]');
-				const currBtn = parentElement.querySelector('[data-formBtn] button');
-				const currCheck = item.querySelector('input');
-				const isChecked = currCheck.checked;
-				toggleBtnAttr(isChecked, currBtn);
-			});
-		});
-	}
-
 	function setBtnState() {
 		const forms = document.querySelectorAll('[data-form]');
 		forms.forEach(form => {
 			const formCheckBox = form.querySelector('[data-formCheckbox] input');
 			const formBtn = form.querySelector('[data-formBtn] button');
-			const isChecked = formCheckBox.checked;
-			toggleBtnAttr(isChecked, formBtn);
-		});
-	}
 
-	function toggleBtnAttr(state, btn) {
-		if (state) {
-			btn.removeAttribute('disabled');
-		} else {
-			btn.setAttribute('disabled', '');
-		}
+			formCheckBox.addEventListener('change', () => {
+				let isChecked = formCheckBox.checked;
+				let error = formValidate.getErrors(form);
+
+				formValidate.toggleBtnAttr(isChecked, error, formBtn);
+			});
+		});
 	}
 
 	if (document.querySelector('[data-formCheckbox]')) {
 		setBtnState();
-		toggleBtnForm();
 	}
 
 	// Counter in card
