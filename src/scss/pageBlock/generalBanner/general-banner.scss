@@ -111,9 +111,7 @@
 			.banner__text {
 				height: auto;
 			}
-			.banner__slider {
-				height: toRem(249);
-			}
+
 			.banner__content {
 				gap: toRem(12);
 			}
@@ -123,6 +121,7 @@
 			.banner__title {
 				font-size: toRem(21);
 				line-height: 1.2;
+				@include textOverflow(3, 21, 1.2);
 			}
 			.banner__text {
 				font-size: toRem(14);
@@ -186,7 +185,7 @@
 		z-index: 2;
 		&.swiper-pagination-bullets {
 			@media (max-width: $mobile) {
-				bottom: toRem(20);
+				bottom: toRem(10);
 			}
 		}
 	}
