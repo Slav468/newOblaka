@@ -39,6 +39,7 @@ export function formFieldsInit(
 	});
 	document.body.addEventListener('focusout', function (e) {
 		const targetElement = e.target;
+		const targetForm = targetElement.closest('[data-form]');
 		if (
 			targetElement.tagName === 'INPUT' ||
 			targetElement.tagName === 'TEXTAREA'
@@ -47,10 +48,14 @@ export function formFieldsInit(
 				targetElement.classList.remove('_form-focus');
 				targetElement.parentElement.classList.remove('_form-focus');
 			}
-			// Миттєва валідація
+
 			targetElement.hasAttribute('data-validate')
 				? formValidate.validateInput(targetElement)
 				: null;
+
+			let error = formValidate.checkValidate(targetForm);
+
+			formValidate.toggleBtnAttr(error, targetForm);
 		}
 	});
 	// Якщо увімкнено, додаємо функціонал "Показати пароль"
@@ -116,12 +121,32 @@ export let formValidate = {
 
 		return error;
 	},
-	toggleBtnAttr(state, error, btn) {
-		if (state && !error) {
+	toggleBtnAttr(error, form) {
+		let btn = form.querySelector('[data-formbtn] button');
+		if (!error) {
 			btn.removeAttribute('disabled');
 		} else {
 			btn.setAttribute('disabled', '');
 		}
+	},
+	checkValidate(form) {
+		let error = 0;
+		let validateInput = form.querySelectorAll('*[data-required]');
+		if (validateInput.length) {
+			validateInput.forEach(validateItem => {
+				const type = validateItem.getAttribute('type');
+
+				if (type === 'checkbox') {
+					return validateItem.checked ? error : error++;
+				}
+
+				if (type !== 'checkbox') {
+					return validateItem.value.trim() ? error : error++;
+				}
+			});
+		}
+
+		return error;
 	},
 	validateInput(formRequiredItem) {
 		let error = 0;

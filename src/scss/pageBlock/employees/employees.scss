@@ -51,11 +51,11 @@
 		}
 
 		@media (max-width: $tablet) {
-			width: calc((100% - toRem(16) * 3) / 4);
+			width: calc((100% - toRem(16) * 2) / 3);
 		}
 
 		@media (max-width: $mobile) {
-			width: calc((100% - toRem(16) * 2) / 3);
+			width: calc((100% - toRem(16) * 1) / 2);
 		}
 
 		@media (max-width: toEm(520)) {
@@ -81,27 +81,21 @@
 	}
 
 	&__img {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		border-radius: var(--radius8);
-		overflow: hidden;
-
+		flex: 1 1 auto;
+		height: auto;
 		img {
 			display: block;
+			object-fit: contain;
+			object-position: center;
 			width: 100%;
 			height: 100%;
-			border-radius: var(--radius8);
 		}
 	}
 
 	&__bottom {
 		padding: toRem(15) toRem(15) toRem(15);
 		width: 100%;
-		min-height: toRem(73);
+		min-height: toRem(75);
 		position: relative;
 		bottom: 0;
 		left: 0;
@@ -109,22 +103,28 @@
 		transition: 0.3s;
 		color: var(--text-primary);
 		background: var(--bg-primary);
-		border-radius: var(--radius8) var(--radius8) 0 0;
 		overflow: auto;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		@media (max-width: toEm(1330)) {
+			min-height: toRem(95);
+		}
+		@media (max-width: toEm(576)) {
+			min-height: toRem(75);
+			padding: toRem(12);
+		}
 		@media (max-width: $mobileSmall) {
 			padding: toRem(6);
 		}
 	}
 
 	&__pos {
-		margin-bottom: toRem(10);
 		font-size: toRem(12);
 		font-weight: 500;
 		color: var(--text-secondary);
+		@include textOverflow(2, 12, 1);
 		@media (max-width: toEm(576)) {
 			font-size: toRem(11);
 			margin-bottom: toRem(2);
@@ -137,8 +137,13 @@
 		display: flex;
 		font-weight: 400;
 		font-size: toRem(18);
+		line-height: 1.37;
+		@media (max-width: toEm(1280)) {
+			@include textOverflow(2, 18, 1.37);
+		}
 		@media (max-width: toEm(576)) {
 			font-size: toRem(14);
+			@include textOverflow(2, 14, 1.37);
 		}
 	}
 
