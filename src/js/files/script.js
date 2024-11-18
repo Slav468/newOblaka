@@ -302,23 +302,32 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Accordion toggle
 	function eventAccord() {
 		const accordingAll = document.querySelectorAll('.accordion');
-		accordingAll.forEach(accordion => {
-			const accordionItems = accordion.children;
-			for (let item of accordionItems) {
-				item.addEventListener('click', e => {
-					const targetChild = e.currentTarget;
 
-					if (targetChild.matches('.drop')) {
-						targetChild.classList.toggle('drop');
-					} else {
-						for (let item of accordionItems) {
-							item.classList.remove('drop');
+		accordingAll.forEach(accordion => {
+			const accordionChildren = accordion.children;
+			for (const item of accordionChildren) {
+				item.addEventListener('click', e => {
+					const target = e.target;
+
+					if (target.closest('.accordion__head')) {
+						if (item.classList.contains('drop')) {
+							item.classList.toggle('drop');
+						} else {
+							removeDropAccordion(target);
+							item.classList.add('drop');
 						}
-						targetChild.classList.toggle('drop');
 					}
 				});
 			}
 		});
+	}
+
+	function removeDropAccordion(target) {
+		const accordions = target.closest('.accordion');
+
+		for (const item of accordions.children) {
+			item.classList.remove('drop');
+		}
 	}
 
 	if (document.querySelector('.accordion')) {

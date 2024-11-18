@@ -110,7 +110,9 @@
 			flex-direction: column;
 			gap: toRem(0);
 			align-self: flex-start;
+			flex: 1 1 auto;
 			border-radius: var(--radius8);
+
 
 			@media (max-width: toRem(1300)) {
 				padding: toRem(16) toRem(14) toRem(8);

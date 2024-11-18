@@ -106,8 +106,6 @@
 		font-size: toRem(16);
 		line-height: 1.37;
 		color: var(--text-primary);
-		-webkit-hyphens: auto;
-		-ms-hyphens: auto;
 		hyphens: auto;
 		@include textOverflow(2, 16, 1.37);
 
