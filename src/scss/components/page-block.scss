@@ -32,11 +32,11 @@
 		font-size: toRem(28);
 		color: var(--text-primary);
 		&::after {
-			content: ' ';
+			content: " ";
 			position: absolute;
 			bottom: -20px;
 			left: 0;
-			z-index: 3;
+			z-index: 0;
 			width: toRem(90);
 			height: 3px;
 			background-color: var(--primary);

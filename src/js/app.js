@@ -38,7 +38,7 @@ import * as flsFunctions from './files/functions.js';
 /* Модуль для роботи з меню (Бургер) */
 flsFunctions.menuInit();
 /* Форматування чисел */
-// import './libs/wNumb.min.js';
+import './libs/wNumb.min.js';
 
 /*
 Модуль "Спойлери"
@@ -147,7 +147,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://refreshless.com/nouislider/
 Сніппет (HTML): range
 */
-// import "./files/forms/range.js";
+// import './files/forms/range.js';
 
 /* Модуль роботи з підказками (tippy) */
 /*

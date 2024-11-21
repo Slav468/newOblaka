@@ -15,7 +15,7 @@
 		flex: 1 1 percent(820, $maxWidthContainer);
 		width: 100%;
 		height: auto;
-		border: 1px solid #eee;
+		border: 1px solid var(--border);
 		border-radius: var(--radius8);
 		overflow: hidden;
 		display: flex;

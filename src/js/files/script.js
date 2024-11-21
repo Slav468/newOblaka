@@ -1,5 +1,12 @@
+import noUiSlider from 'nouislider';
 import { formValidate } from './forms/forms.js';
-import { bodyLock, bodyUnlock, menuClose, overlayHide } from './functions.js';
+import {
+	bodyLock,
+	bodyUnlock,
+	menuClose,
+	overlayHide,
+	overlayShow,
+} from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const header = document.querySelector('header');
@@ -23,6 +30,51 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 	closeAsideMenu();
+
+	// Filter menu
+	if (document.querySelector('.filter-menu')) {
+		const filterMenuButton = document.querySelector('.filter__button');
+		const filter = document.querySelector('.filter-menu');
+		function filterMenuActive(button) {
+			button.addEventListener('click', e => {
+				filterActivated(filter);
+			});
+		}
+
+		function filterActivated(parent) {
+			parent.classList.toggle('active');
+			overlayShow();
+			bodyLock();
+		}
+
+		function removeActive(parent) {
+			parent.classList.remove('active');
+			overlayHide();
+			bodyUnlock();
+		}
+
+		filterMenuActive(filterMenuButton);
+
+		function closeFilterMenu(parent, selector) {
+			const filterClose = parent.querySelector(selector);
+			filterClose.addEventListener('click', e => {
+				removeActive(filter);
+			});
+		}
+
+		closeFilterMenu(filter, '.aside-menu__close');
+		removeDropAside(filter, '.aside-menu__item');
+
+		overlay.addEventListener('click', () => {
+			removeActive(filter);
+		});
+
+		document.addEventListener('keydown', e => {
+			if (e.key === 'Escape') {
+				removeActive(filter);
+			}
+		});
+	}
 
 	// Add drop
 	function dropMenu(array, selector, event = 'click') {
@@ -115,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Close Element on click an press Esc
 	overlay.addEventListener('click', () => {
 		menuClose();
-		overlayHide();
 		removeSomeDrop('.aside-phone');
 		removeSomeDrop('.aside-menu__item');
 	});
@@ -123,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape') {
 			menuClose();
-			overlayHide();
 			removeSomeDrop('.aside-phone');
 			removeSomeDrop('.contacts-phone');
 			removeSomeDrop('.options');
+			removeSomeDrop('.sort');
 		}
 	});
 
@@ -135,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const forms = document.querySelectorAll('[data-form]');
 		forms.forEach(form => {
 			const formCheckBox = form.querySelector('[data-formCheckbox] input');
+			console.log(formCheckBox);
 
 			formCheckBox.addEventListener('change', () => {
 				let error = formValidate.checkValidate(form);
@@ -458,8 +510,134 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	// set variables in card details
+
+	if (document.querySelector('.card-variable')) {
+		setVariable();
+	}
+	function setVariable() {
+		const parentVariablesItems = document.querySelectorAll('.card-variable');
+		for (let parent of parentVariablesItems) {
+			// card-variables__items
+			const children = parent.children;
+			for (let child of children) {
+				const buttons = child.getElementsByTagName('button');
+				for (let button of buttons) {
+					setActiveVariable(buttons, button);
+					if (button.hasAttribute('data-color-value')) {
+						button.style.backgroundColor = `${button.dataset.colorValue}`;
+					}
+					if (button.hasAttribute('data-value')) {
+						button.textContent = `${button.dataset.value}`;
+					}
+				}
+			}
+		}
+	}
+	function setActiveVariable(parent, button) {
+		button.addEventListener('click', e => {
+			const target = e.target;
+			for (let child of parent) {
+				child.classList.remove('active');
+			}
+
+			target.classList.add('active');
+
+			setTitleTextActiveEl(button);
+		});
+	}
+	function setTitleTextActiveEl(button) {
+		const parent = button.parentNode;
+		const parentItem = button.closest('.card-variable__item');
+		const span = parentItem.querySelector('.card-variable__title span');
+		for (let child of parent.children) {
+			if (child.classList.contains('active')) {
+				span.textContent = `${child.dataset.title}`;
+			}
+		}
+	}
+
+	// Drop sort
+	if (document.querySelector('.sort')) {
+		dropSort('.sort', '.sort__title');
+		setActive('.sort__content', '.sort');
+	}
+
+	function dropSort(parent, head) {
+		const sort = document.querySelector(`${parent}`);
+		const title = sort.querySelector(`${head}`);
+		title.addEventListener('click', e => {
+			sort.classList.toggle('drop');
+		});
+	}
+
+	function setActive(parent, parentBlock) {
+		const parentItem = document.querySelector(`${parent}`);
+		const childrenItem = parentItem.children;
+		for (let child of childrenItem) {
+			child.addEventListener('click', e => {
+				e.preventDefault();
+				removeSomeActive(childrenItem);
+				child.classList.add('active');
+				child.closest(`${parentBlock}`).classList.remove('drop');
+			});
+		}
+	}
+	function removeSomeActive(collection) {
+		for (let child of collection) {
+			child.classList.remove('active');
+		}
+	}
+
 	// Change color
 	function changeColor(variable, color) {
 		document.documentElement.style.setProperty(`--${variable}`, `${color}`);
+	}
+
+	// noUSlider
+	if (document.getElementById('price-slider')) {
+		const slider = document.getElementById('price-slider');
+		const inputRangeMin = document.getElementById('minCost');
+		const rangeMinValue = +inputRangeMin.getAttribute('min');
+		const inputRangeMax = document.getElementById('maxCost');
+		const rangeMaxValue = +inputRangeMax.getAttribute('max');
+		const pageMaxValue = +inputRangeMax.getAttribute('data-max-value');
+		const inputs = [inputRangeMin, inputRangeMax];
+
+		noUiSlider.create(slider, {
+			start: [rangeMinValue, rangeMaxValue],
+			behaviour: 'tap',
+			connect: true,
+			tooltips: [true, wNumb({ decimals: 0 })],
+			format: wNumb({
+				decimals: 0,
+			}),
+			range: {
+				min: 0,
+				max: pageMaxValue,
+			},
+		});
+
+		slider.noUiSlider.on('update', function (values, handle) {
+			inputs[handle].value = values[handle];
+		});
+		inputs.forEach(function (input, handle) {
+			input.addEventListener('change', function () {
+				slider.noUiSlider.setHandle(handle, this.value);
+			});
+
+			input.addEventListener('keydown', function (e) {
+				let values = slider.noUiSlider.get();
+				let value = Number(values[handle]);
+
+				// [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+				let steps = slider.noUiSlider.steps();
+
+				// [down, up]
+				let step = steps[handle];
+
+				let position;
+			});
+		});
 	}
 });

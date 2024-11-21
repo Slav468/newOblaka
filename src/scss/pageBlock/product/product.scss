@@ -19,9 +19,8 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		height: auto;
+		// height: auto;
 		width: calc((100% - toRem(20) * 3) / 4);
-		min-height: toRem(490);
 		background-color: var(--bg-primary);
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
@@ -456,6 +455,7 @@
 
 .product-slider {
 	overflow: hidden;
+	width: 100%;
 
 	&__slide {
 		width: 100%;
@@ -721,6 +721,14 @@
 
 		&:hover {
 			background-color: var(--accent);
+		}
+	}
+	&__click {
+		display: flex;
+		flex: 1 1 auto;
+		width: 100%;
+		& .button {
+			width: 100%;
 		}
 	}
 }

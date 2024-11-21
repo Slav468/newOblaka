@@ -188,12 +188,14 @@
 	& svg {
 		color: var(--text-inverse);
 	}
-	&:hover {
-		svg {
-			color: var(--text-inverse);
-		}
-		& {
-			background-color: var(--swiper-theme-color);
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				color: var(--text-inverse);
+			}
+			& {
+				background-color: var(--swiper-theme-color);
+			}
 		}
 	}
 

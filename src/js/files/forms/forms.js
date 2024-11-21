@@ -24,8 +24,9 @@ export function formFieldsInit(
 	document.body.addEventListener('focusin', function (e) {
 		const targetElement = e.target;
 		if (
-			targetElement.tagName === 'INPUT' ||
-			targetElement.tagName === 'TEXTAREA'
+			(targetElement.tagName === 'INPUT' ||
+				targetElement.tagName === 'TEXTAREA') &&
+			targetElement.hasAttribute('data-validate')
 		) {
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('_form-focus');
@@ -41,8 +42,9 @@ export function formFieldsInit(
 		const targetElement = e.target;
 		const targetForm = targetElement.closest('[data-form]');
 		if (
-			targetElement.tagName === 'INPUT' ||
-			targetElement.tagName === 'TEXTAREA'
+			(targetElement.tagName === 'INPUT' ||
+				targetElement.tagName === 'TEXTAREA') &&
+			targetElement.hasAttribute('data-validate')
 		) {
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.remove('_form-focus');

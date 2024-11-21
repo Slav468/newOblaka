@@ -531,6 +531,7 @@ export function menuOpen() {
 }
 export function menuClose() {
 	bodyUnlock();
+	overlayHide();
 	document.documentElement.classList.remove('menu-open');
 }
 

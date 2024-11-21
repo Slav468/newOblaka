@@ -52,12 +52,6 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			margin-bottom: toRem(30);
-
-			& .block__title {
-				&:after {
-					content: none;
-				}
-			}
 		}
 
 		& .main__item {

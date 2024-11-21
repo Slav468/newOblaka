@@ -988,21 +988,22 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.card-general')) {
-		const swiper = new Swiper('.card-thumbs', {
+	if (document.querySelector('.slider-general')) {
+		const swiper = new Swiper('.slider-thumb', {
 			modules: [Navigation, Thumbs],
 			spaceBetween: 10,
-			slidesPerView: 4,
+			slidesPerView: 3,
 			freeMode: true,
 			watchSlidesProgress: true,
 		});
 
-		const swiper2 = new Swiper('.card-general', {
+		const swiper2 = new Swiper('.slider-general', {
 			modules: [Navigation, Thumbs],
-			spaceBetween: 10,
+			slidesPerView: 1,
+			spaceBetween: 60,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
+				nextEl: '.slider-general-next',
+				prevEl: '.slider-general-prev',
 			},
 			thumbs: {
 				swiper: swiper,
