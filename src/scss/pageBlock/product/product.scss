@@ -642,7 +642,6 @@
 	&.drop {
 		& .options__title {
 			border: none;
-			color: var(--text-primary);
 		}
 		& .options__content {
 			display: flex;

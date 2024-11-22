@@ -33,6 +33,11 @@
 		flex-direction: column;
 	}
 
+	&__navigation {
+		border-bottom: 1px solid var(--primary);
+		border-top: 1px solid var(--primary);
+	}
+
 	// .filter-menu__buttons
 	&__buttons {
 		display: flex;
@@ -40,8 +45,6 @@
 		justify-content: space-between;
 		gap: toRem(20);
 		padding: toRem(31.5) toRem(20);
-		border-bottom: 1px solid var(--border);
-		border-top: 1px solid var(--border);
 
 		& .button {
 			flex: 0 0 toRem(80);
@@ -51,6 +54,7 @@
 	& .filter-buttons {
 		&_bottom {
 			justify-content: flex-start;
+			border-top: 1px solid var(--primary);
 		}
 	}
 
@@ -101,19 +105,15 @@
 		height: toRem(15);
 		width: toRem(15);
 	}
-	& .aside-menu {
-		&__body {
-			border-bottom: 1px solid var(--border);
-		}
-	}
 
 	& .accordion {
 		gap: 0;
+		border-bottom: 1px dotted var(--border);
 		&__item {
 			border: none;
 			border-radius: 0;
 			padding: 0 toRem(20);
-			border-bottom: 1px solid var(--border);
+			border: none;
 
 			&.drop {
 				& .accordion__head {
