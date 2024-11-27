@@ -6,16 +6,6 @@
 	visibility: hidden;
 }
 
-// h1 {
-// 	font-size: 2.8em;
-// 	line-height: calc(1em + 10px);
-// }
-// h2 {
-// 	font-size: toRem(30);
-// 	line-height: calc(1rem + 14px);
-// 	font-weight: 700;
-// }
-
 .wrapper {
 	max-width: toRem(1920);
 	margin: 0 auto;
@@ -55,6 +45,7 @@
 	// .main__content
 	&__content {
 		appearance: none;
+		width: 100%;
 		flex: 1 1 percent(1240, $maxWidthContainer);
 		border: none;
 		box-shadow: none;
@@ -469,12 +460,12 @@
 		display: block;
 		width: 2px;
 		height: 100%;
-		background-color: var(--scrollTrack);
+		background-color: var(--border);
 	}
 	&::-webkit-scrollbar-thumb {
 		display: block;
 		width: 2px;
-		background-color: var(--scrollThumb);
+		background-color: var(--primary);
 	}
 }
 .hidden-img {

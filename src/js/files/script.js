@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		menuClose();
 		removeSomeDrop('.aside-phone');
 		removeSomeDrop('.aside-menu__item');
+		removeSomeDrop('.header');
 	});
 
 	document.addEventListener('keydown', e => {
@@ -181,12 +182,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	document.addEventListener('click', e => {
+		const target = e.target;
+
+		closeOnClickDocument(target, '.options');
+		closeOnClickDocument(target, '.sort');
+	});
+
+	function closeOnClickDocument(eventTarget, selector, mod = 'drop') {
+		if (document.querySelector(`${selector}`)) {
+			if (!eventTarget.closest(`${selector}`)) {
+				const elements = document.querySelectorAll(`${selector}`);
+				elements.forEach(element => {
+					element.classList.remove(`${mod}`);
+				});
+			}
+		} else {
+			return;
+		}
+	}
+
 	// Enable button in form
 	function setBtnState() {
 		const forms = document.querySelectorAll('[data-form]');
 		forms.forEach(form => {
 			const formCheckBox = form.querySelector('[data-formCheckbox] input');
-			console.log(formCheckBox);
 
 			formCheckBox.addEventListener('change', () => {
 				let error = formValidate.checkValidate(form);
@@ -511,7 +531,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// set variables in card details
-
 	if (document.querySelector('.card-variable')) {
 		setVariable();
 	}
