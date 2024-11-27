@@ -698,7 +698,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: var(--radius8);
-		border: 1px solid var(--border);
+		border: 1px solid var(--primary);
 		overflow: hidden;
 
 		@media (max-width: 360px) {
@@ -733,6 +733,7 @@
 }
 
 .count {
+	border: 1px solid var(--primary);
 	&__minus {
 		height: 100%;
 		width: calc(100% / 3);

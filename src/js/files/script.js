@@ -31,51 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	closeAsideMenu();
 
-	// Filter menu
-	if (document.querySelector('.filter-menu')) {
-		const filterMenuButton = document.querySelector('.filter__button');
-		const filter = document.querySelector('.filter-menu');
-		function filterMenuActive(button) {
-			button.addEventListener('click', e => {
-				filterActivated(filter);
-			});
-		}
-
-		function filterActivated(parent) {
-			parent.classList.toggle('active');
-			overlayShow();
-			bodyLock();
-		}
-
-		function removeActive(parent) {
-			parent.classList.remove('active');
-			overlayHide();
-			bodyUnlock();
-		}
-
-		filterMenuActive(filterMenuButton);
-
-		function closeFilterMenu(parent, selector) {
-			const filterClose = parent.querySelector(selector);
-			filterClose.addEventListener('click', e => {
-				removeActive(filter);
-			});
-		}
-
-		closeFilterMenu(filter, '.aside-menu__close');
-		removeDropAside(filter, '.aside-menu__item');
-
-		overlay.addEventListener('click', () => {
-			removeActive(filter);
-		});
-
-		document.addEventListener('keydown', e => {
-			if (e.key === 'Escape') {
-				removeActive(filter);
-			}
-		});
-	}
-
 	// Add drop
 	function dropMenu(array, selector, event = 'click') {
 		array.forEach(item => {
@@ -169,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		menuClose();
 		removeSomeDrop('.aside-phone');
 		removeSomeDrop('.aside-menu__item');
-		removeSomeDrop('.header');
 	});
 
 	document.addEventListener('keydown', e => {
@@ -181,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			removeSomeDrop('.sort');
 		}
 	});
-
 	document.addEventListener('click', e => {
 		const target = e.target;
 
@@ -208,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		forms.forEach(form => {
 			const formCheckBox = form.querySelector('[data-formCheckbox] input');
 
-			formCheckBox.addEventListener('change', () => {
+			formCheckBox.addEventListener('change', e => {
 				let error = formValidate.checkValidate(form);
 				formValidate.toggleBtnAttr(error, form);
 			});
@@ -531,6 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// set variables in card details
+
 	if (document.querySelector('.card-variable')) {
 		setVariable();
 	}
@@ -608,9 +562,49 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	// Change color
-	function changeColor(variable, color) {
-		document.documentElement.style.setProperty(`--${variable}`, `${color}`);
+	// Filter menu
+	if (document.querySelector('.filter-menu')) {
+		const filterMenuButton = document.querySelector('.filter__button');
+		const filter = document.querySelector('.filter-menu');
+		function filterMenuActive(button) {
+			button.addEventListener('click', e => {
+				filterActivated(filter);
+			});
+		}
+
+		function filterActivated(parent) {
+			parent.classList.toggle('active');
+			overlayShow();
+			bodyLock();
+		}
+
+		function removeActive(parent) {
+			parent.classList.remove('active');
+			overlayHide();
+			bodyUnlock();
+		}
+
+		filterMenuActive(filterMenuButton);
+
+		function closeFilterMenu(parent, selector) {
+			const filterClose = parent.querySelector(selector);
+			filterClose.addEventListener('click', e => {
+				removeActive(filter);
+			});
+		}
+
+		closeFilterMenu(filter, '.aside-menu__close');
+		removeDropAside(filter, '.aside-menu__item');
+
+		overlay.addEventListener('click', () => {
+			removeActive(filter);
+		});
+
+		document.addEventListener('keydown', e => {
+			if (e.key === 'Escape') {
+				removeActive(filter);
+			}
+		});
 	}
 
 	// noUSlider
@@ -658,5 +652,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				let position;
 			});
 		});
+	}
+	// Change color
+	function changeColor(variable, color) {
+		document.documentElement.style.setProperty(`--${variable}`, `${color}`);
 	}
 });
