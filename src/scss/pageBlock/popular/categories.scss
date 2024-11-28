@@ -44,6 +44,15 @@
 		@media (max-width: toEm(360)) {
 			width: calc((100% - toRem(10) * 1) / 2);
 		}
+		&.active {
+			box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+			& .decorate {
+				background-color: var(--primary);
+				&__svg {
+					color: var(--text-inverse);
+				}
+			}
+		}
 	}
 
 	&__item {

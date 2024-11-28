@@ -124,13 +124,13 @@
 				display: flex;
 				align-items: center;
 				gap: toRem(12);
-				&__actual {
-					display: none;
-				}
+				// &__actual {
+				// 	display: none;
+				// }
 
-				&__old {
-					display: none;
-				}
+				// &__old {
+				// 	display: none;
+				// }
 				&__order {
 					display: flex;
 				}

@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			removeSomeDrop('.sort');
 		}
 	});
+
 	document.addEventListener('click', e => {
 		const target = e.target;
 
@@ -211,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			<span class="menu__link">Ещё</span>
 			<div class="menu__svg">
 				<svg class="svg-arrow-down">
-					<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+					<use xlink:href="/local/templates/itoblaka/img/icons/icons.svg#menuArrow"></use>
 				</svg>
 			</div>
 			<div class="menu__drop">
@@ -484,7 +485,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// set variables in card details
-
 	if (document.querySelector('.card-variable')) {
 		setVariable();
 	}
