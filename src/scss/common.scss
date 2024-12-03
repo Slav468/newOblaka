@@ -54,10 +54,6 @@
 		gap: 1.25rem;
 		border-radius: 0;
 		overflow: hidden;
-
-		& .photo__cell {
-			width: calc((100% - toRem(20) * 2) / 3);
-		}
 	}
 
 	&:has(.blog-menu) {

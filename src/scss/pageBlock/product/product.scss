@@ -595,14 +595,14 @@
 		top: 100%;
 		left: toRem(-16);
 		z-index: 8;
-		width: calc(100% + toRem(16) * 2);
+		width: calc(100% + toRem(16) * 2 + 1px);
 		background-color: var(--bg-primary);
 		border-radius: 0 0 var(--radius8) var(--radius8);
 		border-left: 1px solid var(--border);
 		border-right: 1px solid var(--border);
 		border-bottom: 1px solid var(--border);
 		@media (max-width: toEm(576)) {
-			width: calc(100% + toRem(6) * 2);
+			width: calc(100% + toRem(6) * 2 + 1px);
 			left: toRem(-6);
 		}
 	}

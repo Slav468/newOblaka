@@ -19,10 +19,8 @@
 	&__cell {
 		position: relative;
 		display: flex;
-		justify-content: center;
-		width: percent(400, $maxWidthContainer);
-		max-height: toRem(265);
-		min-height: 100%;
+		max-width: percent(400, $maxWidthContainer);
+		width: fit-content;
 		overflow: hidden;
 		border-radius: var(--radius8);
 		appearance: none;
@@ -34,7 +32,7 @@
 			}
 		}
 		@media (max-width: toEm(1280)) {
-			width: percent(300, $maxWidthContainer);
+			max-width: percent(300, $maxWidthContainer);
 		}
 		@media (max-width: toEm(520)) {
 			width: calc((100% - toRem(14) * 2) / 3);
@@ -43,13 +41,10 @@
 	}
 
 	&__img {
-		display: flex;
-		width: 100%;
-		object-fit: cover;
-		object-position: center;
-		overflow: hidden;
-		transition: 0.3s;
-		border-radius: var(--radius8);
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
 	}
 
 	&-slider {

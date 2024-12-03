@@ -35,7 +35,6 @@
 	// .sort__title
 	display: flex;
 	flex-direction: column;
-
 	position: relative;
 
 	&__title {
@@ -49,7 +48,7 @@
 
 	// .sort__text
 	&__text {
-		font-size: toRem(12);
+		font-size: toRem(15);
 		font-weight: 400;
 		line-height: 0.914;
 	}
@@ -89,7 +88,7 @@
 
 	// .sort__button
 	&__button {
-		font-size: toRem(12);
+		font-size: toRem(15);
 		font-weight: 500;
 		line-height: 0.914;
 		color: var(--text-secondary);

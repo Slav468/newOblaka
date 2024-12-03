@@ -477,6 +477,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		lists.forEach(list => {
 			list.addEventListener('click', e => {
 				const target = e.target;
+				const listChildren = list.children;
+				for (let child of listChildren) {
+					child.classList.remove('active');
+				}
 				if (target.matches('.options__item')) {
 					target.classList.toggle('active');
 				}

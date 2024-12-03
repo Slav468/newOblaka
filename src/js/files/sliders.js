@@ -991,20 +991,21 @@ function initSliders() {
 	if (document.querySelector('.slider-general')) {
 		const swiper = new Swiper('.slider-thumb', {
 			modules: [Navigation, Thumbs],
+			direction: 'vertical',
 			spaceBetween: 10,
 			slidesPerView: 3,
 			freeMode: true,
 			watchSlidesProgress: true,
+			navigation: {
+				nextEl: '.slider-thumb-next',
+				prevEl: '.slider-thumb-prev',
+			},
 		});
 
 		const swiper2 = new Swiper('.slider-general', {
 			modules: [Navigation, Thumbs],
-			slidesPerView: 1,
-			spaceBetween: 60,
-			navigation: {
-				nextEl: '.slider-general-next',
-				prevEl: '.slider-general-prev',
-			},
+			slidesPerView: 'auto',
+			spaceBetween: 0,
 			thumbs: {
 				swiper: swiper,
 			},
