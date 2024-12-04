@@ -410,6 +410,9 @@
 			font-size: toRem(14);
 		}
 	}
+	@media (max-width: $mobileSmall) {
+		padding: toRem(15) toRem(20);
+	}
 }
 
 .slider-general {
