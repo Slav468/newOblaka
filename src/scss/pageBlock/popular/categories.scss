@@ -80,6 +80,7 @@
 	&__link {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		position: relative;
 		height: 100%;
 		width: 100%;
@@ -109,12 +110,16 @@
 
 	&__title {
 		display: flex;
-		align-items: center;
 		font-weight: 500;
 		font-size: toRem(16);
-		padding: 5%;
+		padding-right: toRem(50);
+		@include textOverflow(2, 16, 1);
+		display: flex;
+		align-items: center;
+		margin: 5%;
 		@media (max-width: toEm(520)) {
 			font-size: toRem(12);
+			@include textOverflow(2, 12, 1);
 			padding: 7%;
 		}
 	}

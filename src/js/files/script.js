@@ -507,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					if (button.hasAttribute('data-value')) {
 						button.textContent = `${button.dataset.value}`;
 					}
+					setTitleTextActiveEl(button);
 				}
 			}
 		}

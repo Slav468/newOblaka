@@ -8,6 +8,18 @@
 		display: flex;
 		gap: toRem(12);
 		overflow: auto;
+		&::-webkit-scrollbar {
+			display: block;
+			width: toRem(2);
+			height: toRem(4);
+			background-color: var(--border);
+		}
+		&::-webkit-scrollbar-thumb {
+			display: block;
+			width: toRem(2);
+			height: toRem(4);
+			background-color: var(--primary);
+		}
 	}
 	// .tabs__title
 	&__title {

@@ -120,6 +120,30 @@
 			overflow: hidden;
 		}
 
+		& .text_subtitle {
+			display: -webkit-box;
+			line-clamp: 2;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.text_general {
+			display: -webkit-box;
+			line-clamp: 4;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		& a {
+			display: flex;
+			text-decoration: underline;
+			color: var(--primary);
+			width: fit-content;
+		}
+
 		& .options-block {
 			display: flex;
 			flex-direction: column;
@@ -131,6 +155,11 @@
 			}
 			@media (max-width: 798px) {
 				order: 0;
+			}
+		}
+		& .options {
+			&__list {
+				padding: 0;
 			}
 		}
 	}
@@ -202,7 +231,7 @@
 	&__title {
 		margin: 0;
 		font-weight: 600;
-		font-size: toRem(16);
+		font-size: toRem(14);
 		color: var(--text-secondary);
 		@media (max-width: 1440px) {
 			font-size: toRem(14);
@@ -216,9 +245,9 @@
 	}
 
 	&__text {
-		font-weight: 500;
-		font-size: toRem(15);
-		color: var(--text-secondary);
+		font-weight: 600;
+		font-size: toRem(14);
+		color: var(--text-primary);
 		@media (max-width: 1440px) {
 			font-size: toRem(14);
 		}
@@ -343,6 +372,7 @@
 
 .category {
 	display: flex;
+	gap: toRem(15);
 	width: 100%;
 	padding: toRem(15) toRem(45);
 	border: 1px solid var(--border);
@@ -351,6 +381,9 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(10);
+		&:not(:has(.category__img-link)) {
+			padding-left: toRem(50);
+		}
 	}
 
 	&__img-link {
@@ -362,6 +395,8 @@
 	}
 
 	&__text {
+		display: flex;
+		gap: toRem(10);
 		font-weight: 400;
 		font-size: toRem(14);
 		color: var(--text-primary);
@@ -379,7 +414,7 @@
 
 .slider-general {
 	position: relative;
-	width: 100%;
+	flex: 0 1 toRem(400);
 	height: 100%;
 	display: flex;
 	&__wrapper {
@@ -427,9 +462,8 @@
 
 .slider-thumb {
 	$padding: toRem(10);
-	width: 100%;
+	flex: 0 0 toRem(120);
 	height: calc(100% - 2 * #{$padding});
-	margin: $padding 0;
 	display: flex;
 	overflow: visible;
 
@@ -462,10 +496,13 @@
 
 	&-prev,
 	&-next {
-		left: 50%;
-		transform: translateX(-50%);
-		right: auto;
 		background-color: transparent;
+		width: $padding;
+		height: $padding;
+		left: 50%;
+		right: auto;
+		transform: translate(-50%, 0);
+		margin: 0;
 
 		& svg {
 			color: var(--primary);
@@ -484,11 +521,11 @@
 	}
 
 	&-prev {
-		bottom: 0;
+		bottom: -$padding;
 		top: auto;
 	}
 	&-next {
-		top: 0;
+		top: -$padding;
 		bottom: auto;
 	}
 }

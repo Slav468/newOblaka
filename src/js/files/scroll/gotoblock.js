@@ -1,12 +1,17 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile, menuClose, getHash, FLS } from "../functions.js";
+import { FLS, getHash, isMobile, menuClose } from '../functions.js';
 // Підключення доповнення для збільшення можливостей
 // Документація: https://github.com/cferdinandi/smooth-scroll
 // import SmoothScroll from 'smooth-scroll';
 //==============================================================================================================================================================================================================================================================================================================================
 
 // Модуль плавної проктутки до блоку
-export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+export let gotoBlock = (
+	targetBlock,
+	noHeader = false,
+	speed = 500,
+	offsetTop = 0
+) => {
 	const targetBlockElement = document.querySelector(targetBlock);
 	if (targetBlockElement) {
 		let headerItem = '';
@@ -34,23 +39,30 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 			easing: 'easeOutQuad',
 		};
 		// Закриваємо меню, якщо воно відкрите
-		document.documentElement.classList.contains("menu-open") ? menuClose() : null;
+		document.documentElement.classList.contains('menu-open')
+			? menuClose()
+			: null;
 
 		if (typeof SmoothScroll !== 'undefined') {
 			// Прокручування з використанням доповнення
 			new SmoothScroll().animateScroll(targetBlockElement, '', options);
 		} else {
 			// Прокручування стандартними засобами
-			let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
-			targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
-			targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
+			let targetBlockElementPosition =
+				targetBlockElement.getBoundingClientRect().top + scrollY;
+			targetBlockElementPosition = headerItemHeight
+				? targetBlockElementPosition - headerItemHeight
+				: targetBlockElementPosition;
+			targetBlockElementPosition = offsetTop
+				? targetBlockElementPosition - offsetTop
+				: targetBlockElementPosition;
 			window.scrollTo({
 				top: targetBlockElementPosition,
-				behavior: "smooth"
+				behavior: 'smooth',
 			});
 		}
-		FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
+		FLS(`[gotoBlock]: Идем к ${targetBlock}`);
 	} else {
-		FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
+		FLS(`[gotoBlock]: Упс, такого блока не существует: ${targetBlock}`);
 	}
 };
