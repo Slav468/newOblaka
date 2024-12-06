@@ -19,7 +19,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		// height: auto;
+		height: auto;
 		width: calc((100% - toRem(20) * 3) / 4);
 		background-color: var(--bg-primary);
 		border-radius: var(--radius8);
@@ -290,6 +290,11 @@
 			padding: toRem(5);
 		}
 	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(10);
+	}
 
 	&__description {
 		display: flex;
@@ -479,8 +484,8 @@
 		gap: toRem(4) !important;
 
 		& span {
-			width: 6px;
-			height: 6px;
+			width: toRem(6);
+			height: toRem(6);
 			margin: 0 !important;
 		}
 	}
@@ -518,9 +523,9 @@
 	&__reviews {
 		border-bottom: 1px dotted var(--primary);
 		&-link {
-			color: var(--text-primary);
+			color: var(--primary);
 			&:hover {
-				color: var(--primary);
+				color: var(--secondary);
 			}
 		}
 	}
@@ -624,6 +629,7 @@
 		padding: toRem(12);
 		min-width: toRem(40);
 		min-height: toRem(40);
+		opacity: 0.5;
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--primary);
@@ -637,6 +643,7 @@
 		&.active {
 			background-color: var(--primary);
 			color: var(--text-inverse);
+			opacity: 1;
 		}
 	}
 
