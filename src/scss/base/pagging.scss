@@ -20,6 +20,11 @@
 				transform: rotate(-90deg);
 			}
 		}
+
+		&.disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				& > svg {

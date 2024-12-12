@@ -5,19 +5,34 @@
 
 			<div class="popup__content">
 				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
 				<!-- title -->
-				<div class="popup__title">Заказать звонок</div>
+				<div class="popup__text">
+					<div class="popup__title">
+						Заказать звонок
+					</div>
+				</div>
 				<!-- body -->
 				<div class="popup__body">
 					<form class="form" data-form>
 						<!-- Заголовок -->
 						<div class="form__title" data-formTitle hidden>
 							Заказать звонок
+						</div>
+						<!-- Подзаголовок -->
+						<div class="form__text">
+							Оставьте вашу заявку! Наши менеджеры свяжутся с вами в течение 20 минут!
 						</div>
 						<!-- Список полей -->
 						<div class="form__list">
@@ -46,7 +61,7 @@
 							</label>
 							<div class="checkbox__text">
 								я согласен(а) на
-								<a href="#" class="checkbox__link">обработку персональных данных.</a>
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
 								Наш сайт защищен с помощью reCAPTCHA и соответствует
 								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
 									конфиденциальности</a>
@@ -73,13 +88,24 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
 				<!-- title -->
-				<div class="popup__title">Выбрать услугу</div>
+
+				<div class="popup__text">
+					<div class="popup__title">Выбрать услугу</div>
+
+				</div>
 				<!-- body -->
 				<div class="popup__body">
 					<form class="form" data-form>
@@ -115,7 +141,7 @@
 										</svg>
 									</div>
 									<select class="select__form" name="form-select" id="select-service" required>
-										<option value="" hidden>Выберите нужную услугу</option>
+										<option value="0" hidden>Выберите нужную услугу</option>
 										<option value="1">Услуга 1</option>
 										<option value="2">Услуга 2</option>
 										<option value="3">Услуга 3</option>
@@ -136,7 +162,106 @@
 							</label>
 							<div class="checkbox__text">
 								я согласен(а) на
-								<a href="#" class="checkbox__link">обработку персональных данных.</a>
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
+								Наш сайт защищен с помощью reCAPTCHA и соответствует
+								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
+									конфиденциальности</a>
+
+								и <a class="checkbox__link" rel="nofollow" href="https://policies.google.com/terms" target="_blank">Условиям
+									использования</a>
+								Google.
+							</div>
+						</div>
+						<!-- Button -->
+						<div class="form__button" data-formBtn>
+							<button disabled="" type="submit" class="button button_colored button_width">
+								Выбрать
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="product" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<!-- button -->
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				<!-- title -->
+
+				<div class="popup__text">
+					<div class="popup__title">Купить в 1 клик</div>
+				</div>
+				<!-- body -->
+				<div class="popup__body">
+					<form class="form" data-form>
+						<!-- Заголовок -->
+						<div class="form__title" data-formTitle hidden>
+							Выбрать услугу
+						</div>
+						<!-- Подзаголовок -->
+						<div class="form__text">
+							Заполните форму и мы свяжемся с вами в течение 20 минут.
+						</div>
+						<!-- Список полей -->
+						<div class="form__list">
+							<!-- Имя -->
+							<div class="form__cell" data-formData>
+								<label class="form__label" for="name-product">Ваше имя*</label>
+								<input class="form__input" type="text" name="name" id="name-product" data-required data-validate required
+									placeholder="Ваше имя">
+							</div>
+							<!-- Телефон -->
+							<div class="form__cell" data-formData>
+								<label class="form__label" for="phone-product">Ваш телефон*</label>
+								<input name="phone" id="phone-product" type="tel" class="form__input" data-required='phone' data-validate required
+									placeholder="+375 (00) 000-00-00">
+							</div>
+							<!-- Select -->
+							<div class="form__cell" data-formSelect>
+								<label class="form__label" for="select-product">Товар*</label>
+								<div class="select">
+									<div class="select__svg">
+										<svg class="svg-arrow-down">
+											<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+										</svg>
+									</div>
+									<select class="select__form" name="form-select" id="select-product" required>
+										<option value="" hidden>Выберите нужный товар</option>
+										<option value="1">Товар 1</option>
+										<option value="2">Товар 2</option>
+										<option value="3">Товар 3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<!-- Checkbox -->
+						<div class="form__cell checkbox" data-formCheckbox>
+							<label for="check-product" class="checkbox__label">
+								<span class="checkbox__svg">
+									<svg class="checked-svg">
+										<use xlink:href="img/icons/icons.svg#checked"></use>
+									</svg>
+								</span>
+								<input type="checkbox" id="check-product" class="checkbox__input" data-required data-validate>
+							</label>
+							<div class="checkbox__text">
+								я согласен(а) на
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
 								Наш сайт защищен с помощью reCAPTCHA и соответствует
 								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
 									конфиденциальности</a>
@@ -163,13 +288,23 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
 				<!-- title -->
-				<div class="popup__title">Задать вопрос</div>
+				<div class="popup__text">
+					<div class="popup__title">Задать вопрос</div>
+				</div>
+
 				<!-- body -->
 				<div class="popup__body">
 					<form class="form" data-form>
@@ -220,7 +355,7 @@
 							</label>
 							<div class="checkbox__text">
 								я согласен(а) на
-								<a href="#" class="checkbox__link">обработку персональных данных.</a>
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
 								Наш сайт защищен с помощью reCAPTCHA и соответствует
 								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
 									конфиденциальности</a>
@@ -247,13 +382,22 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
 				<!-- title -->
-				<div class="popup__title">Отправить резюме</div>
+				<div class="popup__text">
+					<div class="popup__title">Отправить резюме</div>
+				</div>
 				<!-- body -->
 				<div class="popup__body">
 					<form class="form" data-form>
@@ -322,7 +466,7 @@
 							</label>
 							<div class="checkbox__text">
 								я согласен(а) на
-								<a href="#" class="checkbox__link">обработку персональных данных.</a>
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
 								Наш сайт защищен с помощью reCAPTCHA и соответствует
 								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
 									конфиденциальности</a>
@@ -349,13 +493,22 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
 				<!-- title -->
-				<div class="popup__title">Отправить резюме</div>
+				<div class="popup__text">
+					<div class="popup__title">Отправить резюме</div>
+				</div>
 				<!-- body -->
 				<div class="popup__body">
 					<form class="form" data-form>
@@ -424,7 +577,7 @@
 							</label>
 							<div class="checkbox__text">
 								я согласен(а) на
-								<a href="#" class="checkbox__link">обработку персональных данных.</a>
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
 								Наш сайт защищен с помощью reCAPTCHA и соответствует
 								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
 									конфиденциальности</a>
@@ -451,13 +604,27 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<!-- button -->
-				<button data-close type="button" class="popup__close">
-					<svg class="svg-arrow-close">
-						<use xlink:href="img/icons/icons.svg#close"></use>
-					</svg>
-				</button>
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
 				<!-- title -->
-				<div class="popup__title">Спасибо, данные отправлены!!!</div>
+				<div class="popup__text">
+					<div class="popup__title">
+						Спасибо!!!
+					</div>
+					<div class="popup__subtitle">
+						Мы получили вашу заявки! Наши менеджеры свяжутся с вами в течение 20 минут!
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

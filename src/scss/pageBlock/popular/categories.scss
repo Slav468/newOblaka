@@ -44,6 +44,7 @@
 		@media (max-width: toEm(360)) {
 			width: calc((100% - toRem(10) * 1) / 2);
 		}
+
 		&.active {
 			box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 			& .decorate {
@@ -109,18 +110,15 @@
 	}
 
 	&__title {
-		display: flex;
 		font-weight: 500;
 		font-size: toRem(16);
+		line-height: 1.2;
 		padding-right: toRem(50);
-		@include textOverflow(2, 16, 1);
-		display: flex;
-		align-items: center;
+		@include textOverflow(2, 16, 1.2);
 		margin: 5%;
 		@media (max-width: toEm(520)) {
 			font-size: toRem(12);
-			@include textOverflow(2, 12, 1);
-			padding: 7%;
+			@include textOverflow(2, 12, 1.2);
 		}
 	}
 
@@ -129,7 +127,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex: 1 1 auto;
+		flex: 1 1;
 		background-color: var(--light);
 		overflow: hidden;
 		border-radius: var(--radius8) var(--radius8) 0 0;

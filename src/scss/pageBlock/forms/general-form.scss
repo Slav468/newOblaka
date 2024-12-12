@@ -137,10 +137,8 @@
 	&__text {
 		font-weight: 400;
 		font-size: toRem(16);
+		text-align: center;
 		color: var(--text-secondary);
-		@media (max-width: $tablet) {
-			text-align: center;
-		}
 	}
 
 	&__list {
@@ -217,8 +215,11 @@
 		height: toRem(44);
 		width: 100%;
 		font-size: toRem(14);
+		font-weight: 400;
+		line-height: 1.7;
+
 		border: 1px solid var(--border);
-		border-radius: var(--radius8);
+		border-radius: toRem(2);
 
 		&::placeholder {
 			font-weight: 400;
@@ -262,7 +263,8 @@
 		pointer-events: none;
 	}
 
-	select {
+	&__form {
+		appearance: none;
 		font-family: "Montserrat";
 		display: flex;
 		align-items: center;
@@ -270,9 +272,10 @@
 		padding: toRem(5) toRem(10);
 		width: 100%;
 		height: 100%;
-		appearance: none;
+		overflow: hidden;
 		border: 1px solid var(--border);
-		border-radius: var(--radius8);
+		background-color: #eeeeee;
+		border-radius: toRem(2);
 		outline: none;
 		cursor: pointer;
 
@@ -285,14 +288,15 @@
 		@media (max-width: totoRem(798)) {
 			font-size: totoRem(11);
 		}
-		& > option {
+
+		& option {
+			appearance: none;
+			display: flex;
+			width: 100%;
 			font-weight: 400;
 			font-size: toRem(14);
 			line-height: 1.71;
 			color: var(--text-primary);
-		}
-		& > option[hidden] {
-			color: var(--text-secondary);
 		}
 	}
 }
@@ -321,6 +325,7 @@
 
 	&__label {
 		display: flex;
+		align-self: center;
 	}
 
 	&__link {
@@ -328,6 +333,12 @@
 		&:hover {
 			color: var(--accent);
 		}
+	}
+
+	&__text {
+		font-size: toRem(10);
+		font-weight: 400;
+		line-height: 1.29;
 	}
 
 	&__svg {

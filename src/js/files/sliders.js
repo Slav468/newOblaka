@@ -167,15 +167,6 @@ function initSliders() {
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
-			/*
-			Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-			// Пагінація
 			// pagination: {
 			// 	el: '.swiper-pagination',
 			// 	clickable: true,
@@ -919,8 +910,6 @@ function initSliders() {
 	}
 
 	if (document.querySelector('.page-slider')) {
-		// Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
 		new Swiper('.page-slider', {
 			modules: [Navigation, Pagination],
 			// loop: true,

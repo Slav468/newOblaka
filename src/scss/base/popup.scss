@@ -1,5 +1,5 @@
 body::after {
-	content: '';
+	content: "";
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	width: 100%;
@@ -54,7 +54,10 @@ body::after {
 	padding: 20px;
 	width: 100%;
 	max-width: 900px;
-	border-radius: 20px;
+	border-radius: var(--radius8);
+	padding: toRem(10) toRem(30) toRem(30) toRem(30);
+	gap: 20px;
+
 	.lock & {
 		visibility: visible;
 	}
@@ -65,12 +68,39 @@ body::after {
 		display: flex;
 		flex-direction: column;
 		gap: toRem(20);
+		max-width: toRem(460);
+	}
+	&__buttons {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__text:not(:first-child) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(20);
+		max-width: toRem(400);
+		align-self: center;
 	}
 	&__title {
 		align-self: center;
 		font-size: toRem(26);
 		font-weight: 600;
 	}
+	&__subtitle {
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--text-secondary);
+		text-align: center;
+	}
+
+	&__back {
+		visibility: hidden;
+	}
+
 	&__close {
 		width: toRem(27);
 		height: toRem(27);
@@ -78,6 +108,7 @@ body::after {
 		& .svg-arrow-close {
 			width: 100%;
 			height: 100%;
+			color: var(--text-secondary);
 		}
 
 		@media (any-hover: hover) {
@@ -90,9 +121,38 @@ body::after {
 	}
 
 	&#thank {
-		& .popup__title {
-			font-size: toRem(34);
-			padding: toRem(40) 0;
+		& .popup {
+			&__content {
+				max-width: toRem(460);
+			}
+
+			&__title {
+				font-size: toRem(34);
+			}
+			&__text {
+				padding: 0 0 toRem(30) 0;
+			}
+			&__title {
+				font-size: toRem(26);
+				font-weight: 600;
+				line-height: 31.69px;
+			}
+			&__subtitle {
+				font-size: toRem(16);
+				font-weight: 500;
+				line-height: 1.2;
+				color: var(--text-secondary);
+				text-align: center;
+			}
+		}
+	}
+
+	& .form {
+		&__button {
+			width: 100%;
+			& button {
+				width: 100%;
+			}
 		}
 	}
 }

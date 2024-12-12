@@ -72,7 +72,7 @@
 		&-wrap {
 			position: relative;
 			width: 100%;
-			max-height: toRem(216);
+			flex: 0 1 toRem(216);
 			overflow: hidden;
 			display: flex;
 			@include linerGradient();
@@ -112,7 +112,6 @@
 			align-self: flex-start;
 			flex: 1 1 auto;
 			border-radius: var(--radius8);
-
 
 			@media (max-width: toRem(1300)) {
 				padding: toRem(16) toRem(14) toRem(8);

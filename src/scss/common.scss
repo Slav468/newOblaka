@@ -98,6 +98,16 @@
 	width: toRem(8);
 	height: toRem(8);
 }
+.svg-arrow-back {
+	width: toRem(25);
+	height: toRem(27);
+	color: var(--text-secondary);
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--primary);
+		}
+	}
+}
 .svg-phone {
 	width: toRem(18);
 	height: toRem(18);

@@ -1,5 +1,7 @@
 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 10 15" fill="none" id="arrow" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5L2.14286 15L-8.62048e-08 12.9545L5.71429 7.5L-5.45964e-07 2.04545L2.28571 -1.03626e-07L10 7.5Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 22 16" fill="none" id="arrow-back" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.792892 7.29289C0.402369 7.68342 0.402369 8.31658 0.792892 8.70711L7.15685 15.0711C7.54738 15.4616 8.18054 15.4616 8.57107 15.0711C8.96159 14.6805 8.96159 14.0474 8.57107 13.6569L2.91421 8L8.57107 2.34315C8.96159 1.95262 8.96159 1.31946 8.57107 0.928932C8.18054 0.538408 7.54738 0.538408 7.15685 0.928932L0.792892 7.29289ZM21.5 7L1.5 7V9L21.5 9V7Z" fill="currentColor"/>
 </symbol><symbol viewBox="0 0 8 7" fill="none" id="arrowDown" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.9214 6.27847C2.8866 6.24457 2.7378 6.11656 2.6154 5.99732C1.8456 5.29825 0.5856 3.47457 0.201 2.52007C0.1392 2.37511 0.0084 2.00862 0 1.81281C0 1.62518 0.0432 1.44632 0.1308 1.27565C0.2532 1.06288 0.4458 0.892207 0.6732 0.798685C0.831 0.73848 1.3032 0.644959 1.3116 0.644959C1.8282 0.551437 2.6676 0.5 3.5952 0.5C4.479 0.5 5.2842 0.551437 5.8086 0.628008C5.817 0.636775 6.4038 0.730297 6.6048 0.832586C6.972 1.02021 7.2 1.3867 7.2 1.77891V1.81281C7.191 2.06824 6.963 2.60541 6.9546 2.60541C6.5694 3.50848 5.3712 5.29006 4.575 6.00609C4.575 6.00609 4.3704 6.20775 4.2426 6.29542C4.059 6.4322 3.8316 6.5 3.6042 6.5C3.3504 6.5 3.114 6.42343 2.9214 6.27847Z" fill="currentColor"/>
 </symbol><symbol viewBox="0 0 24 24" fill="none" id="basket" xmlns="http://www.w3.org/2000/svg">
@@ -15,13 +17,13 @@
 <path d="M5.34766 5.34717L16.6532 16.6527" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M16.6532 5.34717L5.34766 16.6527" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol viewBox="0 0 18 25" fill="none" id="comparison" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#agclip0_6548_51827)">
+<g clip-path="url(#ahclip0_6548_51827)">
 <path d="M10.125 1.31939C10.125 0.740917 9.62132 0.271973 9 0.271973C8.37868 0.271973 7.875 0.740917 7.875 1.31939V23.3152C7.875 23.8936 8.37868 24.3626 9 24.3626C9.62132 24.3626 10.125 23.8936 10.125 23.3152V1.31939Z" fill="currentColor"/>
 <path d="M18 7.60381C18 7.02534 17.4963 6.5564 16.875 6.5564C16.2537 6.5564 15.75 7.02534 15.75 7.60381V23.3151C15.75 23.8935 16.2537 24.3625 16.875 24.3625C17.4963 24.3625 18 23.8935 18 23.3151V7.60381Z" fill="currentColor"/>
 <path d="M2.25 10.7461C2.25 10.1677 1.74632 9.69873 1.125 9.69873C0.50368 9.69873 0 10.1677 0 10.7461V23.3152C0 23.8936 0.50368 24.3626 1.125 24.3626C1.74632 24.3626 2.25 23.8936 2.25 23.3152V10.7461Z" fill="currentColor"/>
 </g>
 <defs>
-<clipPath id="agclip0_6548_51827">
+<clipPath id="ahclip0_6548_51827">
 <rect width="18" height="24.0906" fill="currentColor" transform="translate(0 0.271973)"/>
 </clipPath>
 </defs>
