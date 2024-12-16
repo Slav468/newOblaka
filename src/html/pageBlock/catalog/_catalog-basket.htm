@@ -1,22 +1,28 @@
 <div class="basic-characteristic__item grid-basket">
 	<div class="basket-block">
 
-		<div class="price">
-			<div class="price__actual">
-				41.58 <span>BYN</span>
+		<div class="basket-block__price">
+			<div class="price">
+				<div class="price__actual">
+					41.58 <span>BYN</span>
+				</div>
+				<div class="price__old">51.58 <span>BYN</span></div>
+				<div class="price__order">Цена по запросу</div>
 			</div>
-			<div class="price__old">51.58 <span>BYN</span></div>
 		</div>
 
-		<div class="basket-block__available">
-			<div class="stock__wrapper">
-				<div class="stock__circle_available">
-					<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<circle cx="4" cy="4" r="4" fill="#21C746" />
+		<div class="basket-block__stock">
+			<div class="stock">
+				<div class="stock__circle">
+					<svg>
+						<use xlink:href="@img/icons/icons.svg#circle"></use>
 					</svg>
 				</div>
-				<div class="stock stock_available">В наличии</div>
+				<div class="stock__normal">В наличии</div>
+				<div class="stock__order">Под заказ</div>
+				<div class="stock__not">Нет в наличии</div>
 			</div>
+
 			<div class="characteristic-block__item">
 				<h5 class="characteristic-block__title">
 					Артикул:
@@ -37,14 +43,20 @@
 			</div>
 
 			<div class="buttons__basket buttons-basket">
-				<button type="button" class="buttons-basket">
-					В корзину
+				<button type="button" class="buttons-basket__normal">
+					<svg class="basket-svg">
+						<use xlink:href="@img/icons/icons.svg#basket"></use>
+					</svg>
 				</button>
-
-
+				<button type="button" class="buttons-basket__order">Под заказ</button>
+				<button type="button" class="buttons-basket__in">В корзине</button>
+				<button type="button" class="buttons-basket__not">
+					Нет в наличии
+				</button>
 			</div>
 
 		</div>
+
 		<div class="buttons__click">
 			<button type="button" class="button button_width">
 				Купить в 1 клик
@@ -58,14 +70,14 @@
 				<img src="@img/catalog/brand.png" alt="category image" />
 			</a>
 			<div class="category__text">
-				Все товары
+				Все товары &nbsp;
 				<a href="#" class="category__link">illy</a>
 			</div>
 		</div>
 		<div class="category__item">
 
 			<div class="category__text">
-				Все
+				Все &nbsp;
 				<a href="#" class="category__link">товары категории</a>
 			</div>
 		</div>
