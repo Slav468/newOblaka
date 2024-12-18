@@ -466,6 +466,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		item.classList.add('active');
 	}
 
+	function toggleActive(element) {
+		element.classList.toggle('active');
+	}
+
+	if (document.querySelector('.card-controls')) {
+		const cardControls = document.querySelectorAll('.card-controls');
+		for (let card of cardControls) {
+			card.addEventListener('click', e => {
+				const target = e.target;
+				if (target.closest('.card-controls__wrapper')) {
+					toggleActive(target.closest('.card-controls__wrapper'));
+				}
+			});
+		}
+	}
+
+	if (document.querySelector('.bar-right')) {
+		const cardControls = document.querySelectorAll('.bar-right');
+		for (let card of cardControls) {
+			card.addEventListener('click', e => {
+				const target = e.target;
+				if (target.closest('.bar-right__item')) {
+					toggleActive(target.closest('.bar-right__item'));
+				}
+			});
+		}
+	}
+
 	// Set options in product card
 	if (document.querySelector('.options')) {
 		setOptions();
@@ -498,7 +526,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			// card-variables__items
 			const children = parent.children;
 			for (let child of children) {
+				const childTitle = child.querySelector('.card-variable__title');
+				const childTitleValue = child.getAttribute('data-variable-title');
 				const buttons = child.getElementsByTagName('button');
+				childTitleValue
+					? (childTitle.innerHTML = `${childTitleValue}: <span>Не выбрано</span>`)
+					: false;
 				for (let button of buttons) {
 					setActiveVariable(buttons, button);
 					if (button.hasAttribute('data-color-value')) {
@@ -658,6 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
 	// Change color
 	function changeColor(variable, color) {
 		document.documentElement.style.setProperty(`--${variable}`, `${color}`);

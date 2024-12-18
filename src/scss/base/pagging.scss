@@ -11,6 +11,7 @@
 		align-items: center;
 		justify-content: center;
 		color: var(--primary);
+
 		&:first-child {
 			& > svg {
 				transform: rotate(90deg);
@@ -25,6 +26,7 @@
 		&.disabled {
 			opacity: 0.5;
 			pointer-events: none;
+			color: var(--text-primary);
 		}
 		@media (any-hover: hover) {
 			&:hover {
