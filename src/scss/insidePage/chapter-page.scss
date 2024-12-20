@@ -14,9 +14,6 @@ $gap: toRem(20);
 		display: flex;
 		flex-direction: column;
 		gap: toRem(40);
-		@media (max-width: $mobileSmall) {
-			gap: toRem(20);
-		}
 	}
 	// .chapter-page__main
 	&__main {

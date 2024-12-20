@@ -545,6 +545,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	}
+
+	if (document.querySelector('.options')) {
+		setButtonProperty('.options__list');
+	}
+
+	function setButtonProperty(parentSelector) {
+		const parents = document.querySelectorAll(parentSelector);
+		for (let parent of parents) {
+			const buttons = parent.children;
+			for (let button of buttons) {
+				if (button.hasAttribute('data-color-value')) {
+					button.style.backgroundColor = `${button.dataset.colorValue}`;
+				}
+				if (button.hasAttribute('data-value')) {
+					button.textContent = `${button.dataset.value}`;
+				}
+			}
+		}
+	}
 	function setActiveVariable(parent, button) {
 		button.addEventListener('click', e => {
 			const target = e.target;
@@ -695,5 +714,69 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Change color
 	function changeColor(variable, color) {
 		document.documentElement.style.setProperty(`--${variable}`, `${color}`);
+	}
+
+	if (document.querySelector('.basket-list')) {
+		const list = document.querySelector('.basket-list__wrapper');
+		const reset = document.querySelector('.basket-reset');
+		const menu = document.querySelector('.basket-menu');
+		if (list.children.length < 1) {
+			reset.remove();
+			menu.remove();
+			list.innerHTML = `<div class="basket-empty">
+			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
+				<a class='button'>В каталог</a>
+			</div>`;
+		} else {
+			removeElement(
+				'.basket-list__wrapper',
+				'.basket-item__remove',
+				'.basket-item',
+				'.basket-reset'
+			);
+		}
+	}
+
+	function removeElement(el, trigger, parent, check) {
+		const basketList = document.querySelector(`${el}`);
+		const elements = basketList.children;
+
+		for (let element of elements) {
+			element.addEventListener('click', e => {
+				const target = e.target;
+				if (target.closest(`${trigger}`)) {
+					const parentEl = target.closest(`${parent}`);
+					parentEl.remove();
+					checkElements(basketList, elements, check);
+				}
+			});
+		}
+	}
+
+	function checkElements(parent, el, trigger) {
+		const resetElements = document.querySelector(`${trigger}`);
+		const menu = document.querySelector('.basket-menu');
+		if (el.length < 1) {
+			resetElements.remove();
+			menu.remove();
+			parent.innerHTML = `<div class="basket-empty">
+			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
+			<a class='button'>В каталог</a>
+		</div>`;
+		}
+	}
+
+	if (document.querySelector('.basket-reset')) {
+		const resetButton = document.querySelector('.basket-reset');
+		resetButton.addEventListener('click', e => {
+			resetButton.remove();
+			const menu = document.querySelector('.basket-menu');
+			menu.remove();
+			const basketList = document.querySelector('.basket-list__wrapper');
+			basketList.innerHTML = `<div class="basket-empty">
+				<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
+				<a class='button'>В каталог</a>
+			</div>`;
+		});
 	}
 });

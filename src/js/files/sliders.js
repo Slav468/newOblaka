@@ -705,7 +705,7 @@ function initSliders() {
 			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
-			// autoHeight: true,
+			autoHeight: true,
 			speed: 300,
 			// lazy: true,
 
@@ -714,13 +714,13 @@ function initSliders() {
 			//loop: true,
 			//preloadImages: false,
 			/*
-								Ефекти
-								effect: 'fade',
-								autoplay: {
-									delay: 3000,
-									disableOnInteraction: false,
-								},
-								*/
+				Ефекти
+				effect: 'fade',
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			*/
 			// Пагінація
 			// pagination: {
 			// 	el: '.swiper-pagination',
@@ -728,11 +728,11 @@ function initSliders() {
 			// },
 			// Скроллбар
 			/*
-								scrollbar: {
-									el: '.swiper-scrollbar',
-									draggable: true,
-								},
-								*/
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					draggable: true,
+				},
+			*/
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.categories-button-prev',
@@ -852,7 +852,7 @@ function initSliders() {
 			// on: {},
 		});
 	}
-
+	// Card Slider
 	if (document.querySelector('.card-slider')) {
 		new Swiper('.card-slider', {
 			modules: [Navigation],
@@ -908,7 +908,7 @@ function initSliders() {
 			// on: {},
 		});
 	}
-
+	// Page slider
 	if (document.querySelector('.page-slider')) {
 		new Swiper('.page-slider', {
 			modules: [Navigation, Pagination],
@@ -976,7 +976,7 @@ function initSliders() {
 			// on: {},
 		});
 	}
-
+	// Slider general
 	if (document.querySelector('.slider-general')) {
 		const swiper = new Swiper('.slider-thumb', {
 			modules: [Navigation, Thumbs],

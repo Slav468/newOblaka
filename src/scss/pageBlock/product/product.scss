@@ -115,6 +115,7 @@
 			padding: toRem(5);
 		}
 	}
+
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -243,8 +244,12 @@
 }
 
 .bar-top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: toRem(5);
 	&__text {
 		align-self: center;
+		width: fit-content;
 		padding: toRem(5) toRem(8);
 		text-transform: uppercase;
 		font-weight: 500;
@@ -341,7 +346,6 @@
 	display: block;
 	width: 100%;
 	min-height: toRem(125);
-	height: 100%;
 	border-radius: var(--radius8) var(--radius8) 0 0;
 
 	&__slide {
@@ -351,7 +355,6 @@
 
 	&__link {
 		display: flex;
-
 		& img {
 			display: block;
 			width: 100%;
