@@ -35,7 +35,8 @@
 			display: none;
 		}
 
-		&:has(.blog-menu) {
+		&:has(.blog-menu),
+		&:has(.basket-menu) {
 			@media (max-width: $tablet) {
 				display: flex;
 			}

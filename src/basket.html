@@ -3,7 +3,7 @@
 @@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
 
 <body>
-	<div class="wrapper chapter-page">
+	<div class="wrapper chapter-page basket">
 		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
 
 		<div class="chapter-page__wrapper">
@@ -17,6 +17,13 @@
 		<main class="chapter-page__main main">
 			<div class="main__container">
 				<div class="main__inner">
+					<div class="main__menu">
+						<div class="basket__menu basket-menu">
+							<div class="basket-menu__body">
+								@@include('html/pageBlock/basket/_basket-menu.htm',{})
+							</div>
+						</div>
+					</div>
 					<!-- page-content -->
 					<div class="main__content">
 						<!-- Include content-->
