@@ -623,16 +623,16 @@ function initSliders() {
 					spaceBetween: 14,
 					slidesPerView: 1,
 				},
-				598: {
+				520: {
 					spaceBetween: 14,
 					slidesPerView: 2,
 				},
-				1100: {
-					spaceBetween: 100,
+				768: {
+					spaceBetween: 14,
 					slidesPerView: 3,
 				},
-				1680: {
-					spaceBetween: 100,
+				1280: {
+					spaceBetween: 14,
 					slidesPerView: 4,
 				},
 			},
@@ -705,7 +705,6 @@ function initSliders() {
 			// observeParents: true,
 			slidesPerView: 'auto',
 			spaceBetween: 20,
-			autoHeight: true,
 			speed: 300,
 			// lazy: true,
 
