@@ -36,7 +36,8 @@
 		}
 
 		&:has(.blog-menu),
-		&:has(.basket-menu) {
+		&:has(.basket-menu),
+		&:has(.calculate-menu) {
 			@media (max-width: $tablet) {
 				display: flex;
 			}
@@ -60,6 +61,15 @@
 	&:has(.blog-menu) {
 		.main__inner {
 			flex-direction: column;
+		}
+	}
+	&:has(.calculate-menu) {
+		& .main__menu {
+		}
+		& .main__inner {
+			@media (max-width: $tablet) {
+				flex-direction: column-reverse;
+			}
 		}
 	}
 }

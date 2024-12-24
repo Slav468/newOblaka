@@ -162,10 +162,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		forms.forEach(form => {
 			const formCheckBox = form.querySelector('[data-formCheckbox] input');
 
-			formCheckBox.addEventListener('change', e => {
-				let error = formValidate.checkValidate(form);
-				formValidate.toggleBtnAttr(error, form);
-			});
+			if (formCheckBox) {
+				formCheckBox.addEventListener('change', e => {
+					let error = formValidate.checkValidate(form);
+					formValidate.toggleBtnAttr(error, form);
+				});
+			} else {
+				return;
+			}
 		});
 	}
 

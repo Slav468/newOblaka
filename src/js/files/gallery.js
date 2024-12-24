@@ -15,7 +15,6 @@ import lightGallery from 'lightgallery';
 // Плагіни
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
 import lgThumbnail from 'lightGallery/plugins/thumbnail/lg-thumbnail.es5.js';
-import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.es5.js';
 
 // Базові стилі
 import '@scss/libs/gallery/lightgallery.scss';
@@ -43,13 +42,13 @@ if (galleries.length) {
 		galleyItems.push({
 			gallery,
 			galleryClass: lightGallery(gallery, {
-				plugins: [lgZoom, lgThumbnail],
+				plugins: [lgThumbnail],
 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
 				speed: 500,
+				download: false,
 				mobileSettings: {
 					controls: true,
 					showCloseIcon: true,
-					download: true,
 					rotate: false,
 				},
 			}),

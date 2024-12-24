@@ -25,8 +25,8 @@
 	}
 
 	&_white {
+		border-top: 1px solid #ddd;
 		background-color: var(--bg-primary);
-
 		& .navigation {
 			&__link {
 				color: var(--text-primary);

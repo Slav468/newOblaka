@@ -991,11 +991,15 @@ function initSliders() {
 		});
 
 		const swiper2 = new Swiper('.slider-general', {
-			modules: [Navigation, Thumbs],
+			modules: [Navigation, Thumbs, Pagination],
 			slidesPerView: 'auto',
 			spaceBetween: 0,
 			thumbs: {
 				swiper: swiper,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
 			},
 		});
 	}

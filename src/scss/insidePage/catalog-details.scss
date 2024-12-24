@@ -526,6 +526,9 @@
 			left: toRem(-23);
 		}
 	}
+
+	&__pagination {
+	}
 }
 
 .slider-thumb {
@@ -590,12 +593,18 @@
 	}
 
 	&-prev {
-		bottom: -$padding;
-		top: auto;
-	}
-	&-next {
 		top: -$padding;
 		bottom: auto;
+		& svg {
+			transform: rotate(180deg);
+		}
+	}
+	&-next {
+		bottom: -$padding;
+		top: auto;
+		& svg {
+			transform: rotate(0deg);
+		}
 	}
 }
 

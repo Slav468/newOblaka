@@ -56,6 +56,7 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			overflow: hidden;
+			flex: 1 1 auto;
 			&:has(.map-address__body) {
 				flex-direction: row;
 				flex-wrap: wrap;
@@ -125,6 +126,24 @@ $gap: toRem(20);
 	&:has(.main__menu) {
 		.partners__img {
 			width: calc(100% - ($gap * 5) / 6);
+		}
+	}
+
+	&:has(.calculate-menu) {
+		& .calculate-menu {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			border-radius: var(--radius8);
+			overflow: hidden;
+			box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+			& .form {
+				padding: toRem(20);
+			}
+		}
+		& .preview {
+			height: 100%;
 		}
 	}
 }
