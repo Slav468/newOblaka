@@ -11,9 +11,6 @@
 		flex: 1 1 auto;
 	}
 
-	&__menu {
-	}
-
 	&-reset {
 		display: flex;
 		align-items: center;
@@ -288,7 +285,14 @@
 .total {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	gap: toRem(5);
+
+	&__item {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
 	&__title {
 		text-transform: uppercase;
 		font-weight: 600;
@@ -308,6 +312,38 @@
 				font-weight: 400;
 				font-size: toRem(14);
 				color: #666;
+			}
+		}
+	}
+
+	&.score {
+		& .total {
+			&__item {
+				justify-content: flex-start;
+				align-items: center;
+				&:first-child {
+					& .price {
+						&__old {
+							display: none;
+						}
+					}
+				}
+				&:last-child {
+					& .total__title {
+						font-size: 16px;
+						font-weight: 400;
+						line-height: 19.5px;
+						text-transform: none;
+					}
+					& .price {
+						&__actual {
+							display: none;
+						}
+					}
+				}
+			}
+			&__title {
+				flex: 0 1 toRem(95);
 			}
 		}
 	}
@@ -335,6 +371,7 @@
 	&__wrapper {
 		display: flex;
 		width: 100%;
+		max-height: toRem(48);
 	}
 
 	&__input {
@@ -352,12 +389,23 @@
 		}
 	}
 	&__button {
+		max-width: percent(80, 412);
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		border: 1px solid #46b4de;
 		border-radius: 0 8px 8px 0;
 		font-weight: 500;
-		font-size: 14px;
+		font-size: toRem(14);
 		text-align: center;
 		color: var(--primary);
+
+		& svg {
+			height: toRem(15);
+			width: toRem(20);
+			transform: rotate(180deg);
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--primary);

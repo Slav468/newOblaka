@@ -95,6 +95,7 @@
 		}
 	}
 }
+
 .card-text {
 	display: flex;
 	flex-direction: column;
@@ -102,7 +103,7 @@
 	& .text_subtitle {
 		font-size: toRem(27);
 		font-weight: 700;
-		line-height: 2;
+		line-height: 1.22;
 
 		display: -webkit-box;
 		line-clamp: 2;
@@ -169,7 +170,8 @@
 			flex-direction: row;
 			align-items: center;
 			width: 100%;
-			max-height: toRem(400);
+			max-height: toRem(420);
+			aspect-ratio: 540 / 420;
 			height: 100%;
 			overflow: hidden;
 		}

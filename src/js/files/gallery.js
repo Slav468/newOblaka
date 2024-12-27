@@ -17,7 +17,7 @@ import lightGallery from 'lightgallery';
 import lgThumbnail from 'lightGallery/plugins/thumbnail/lg-thumbnail.es5.js';
 
 // Базові стилі
-import '@scss/libs/gallery/lightgallery.scss';
+// import '@scss/libs/gallery/lightgallery.scss';
 // Стилі доповнень
 // import '@scss/libs/gallery/lg-thumbnail.scss';
 // import '@scss/libs/gallery/lg-video.scss';

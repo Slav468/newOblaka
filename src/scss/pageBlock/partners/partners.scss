@@ -19,6 +19,7 @@
 	// .partners__link
 	&__img {
 		width: calc((100% - toRem(20) * 7) / 8);
+		min-width: toRem(159);
 		height: toRem(90);
 		overflow: hidden;
 		display: flex;
@@ -29,6 +30,7 @@
 		appearance: none;
 
 		& img {
+			padding: toRem(5);
 			max-width: 100%;
 			max-height: 100%;
 		}

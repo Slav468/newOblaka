@@ -1,31 +1,37 @@
-<div class="basket-menu__item total">
-	<div class="total__title">Итого:</div>
-	<div class="total__price">
-
-		<div class="price">
-			<div class="price__actual">41.58 <span>BYN</span></div>
-			<div class="price__old">51.58 <span>BYN</span></div>
+<div class="basket__menu basket-menu">
+	<div class="basket-menu__body">
+		<div class="basket-menu__item total">
+			<div class="total__item">
+				<div class="total__title">Итого:</div>
+				<div class="total__price">
+					<div class="price">
+						<div class="price__actual">41.58 <span>BYN</span></div>
+						<div class="price__old">51.58 <span>BYN</span></div>
+					</div>
+				</div>
+			</div>
 		</div>
 
+		<div class="basket-menu__item coupon">
+
+			<label for="coupon" class="coupon__label">Введите код купона для скидки:</label>
+
+			<div class="coupon__wrapper">
+				<input type="text" class="coupon__input" id="coupon" name='coupon' placeholder='Номер купона' value=''></input>
+				<button type="button" class="coupon__button">
+					<svg>
+						<use xlink:href="@img/icons/icons.svg#arrow-back"></use>
+					</svg>
+				</button>
+			</div>
+
+		</div>
+
+		<div class="basket-menu__item basket-buttons">
+
+			<button class="basket-buttons__button">Купить в 1 клик</button>
+			<button class="basket-buttons__button">Оформить заказ</button>
+
+		</div>
 	</div>
-</div>
-
-<div class="basket-menu__item coupon">
-
-	<label for="coupon" class="coupon__label">Введите код купона для скидки:</label>
-
-	<div class="coupon__wrapper">
-		<input type="text" class="coupon__input" id="coupon" name='coupon' value=''></input>
-		<button type="button" class="coupon__button">
-			Применить купон
-		</button>
-	</div>
-
-</div>
-
-<div class="basket-menu__item basket-buttons">
-
-	<button class="basket-buttons__button">Купить в 1 клик</button>
-	<button class="basket-buttons__button">Оформить заказ</button>
-
 </div>
