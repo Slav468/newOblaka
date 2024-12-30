@@ -1,7 +1,7 @@
 .filter-menu {
 	// .filter-menu__overlay
 	width: 35vw;
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	left: -35vw;
@@ -26,7 +26,6 @@
 		left: -100vw;
 	}
 
-	// .filter-menu__body
 	&__body {
 		height: 100%;
 		display: flex;
@@ -38,7 +37,6 @@
 		border-top: 1px solid var(--primary);
 	}
 
-	// .filter-menu__buttons
 	&__buttons {
 		display: flex;
 		align-items: center;
@@ -55,11 +53,9 @@
 		&_bottom {
 			justify-content: flex-start;
 			border-top: 1px solid var(--primary);
-			margin-top: toRem(52);
 		}
 	}
 
-	// .filter-menu__text
 	&__text {
 		font-weight: 700;
 		font-size: toRem(18);
@@ -67,7 +63,6 @@
 		color: var(--text-primary);
 	}
 
-	// .filter-menu__content
 	&__content {
 		width: 100%;
 		display: flex;
