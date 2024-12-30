@@ -201,6 +201,12 @@
 				outline: 1px solid var(--for-false);
 			}
 		}
+
+		&:has(select[disabled]) {
+			& .select__svg {
+				display: none;
+			}
+		}
 	}
 
 	&__label {
@@ -266,6 +272,9 @@
 	&__form {
 		appearance: none;
 		font-family: "Montserrat";
+		font-weight: 400;
+		font-size: toRem(14);
+		line-height: 1.71;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -289,6 +298,7 @@
 		}
 
 		& option {
+			font-family: "Montserrat";
 			appearance: none;
 			display: flex;
 			width: 100%;
