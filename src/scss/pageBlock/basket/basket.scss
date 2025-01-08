@@ -113,7 +113,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(5);
-		flex: 1 1 toRem(300);
+		max-width: toRem(300);
 		@media (max-width: $tablet) {
 			grid-column: 3/6;
 		}
