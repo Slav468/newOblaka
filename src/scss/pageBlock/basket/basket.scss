@@ -56,6 +56,39 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(16);
+		@media (max-width: $mobileSmall) {
+			align-items: center;
+		}
+	}
+
+	&__left {
+		display: flex;
+		@include adaptiveValue("gap", 34, 10);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 0 1 toRem(320);
+		@include adaptiveValue("gap", 16, 5);
+		@media (max-width: $tablet) {
+			margin-right: toRem(43);
+			flex-direction: column-reverse;
+		}
+		@media (max-width: $mobileSmall) {
+			margin-right: 0;
+			margin-bottom: toRem(43);
+			padding: 0 toRem(10);
+			flex: none;
+			gap: toRem(10);
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
 	}
 }
 
@@ -63,23 +96,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: toRem(40);
 	width: 100%;
-	padding: toRem(25) toRem(40);
 	border: 1px solid var(--border);
 	border-radius: var(--radius8);
 	overflow: hidden;
 	@media (max-width: $tablet) {
-		display: grid;
-		grid-template-columns: repeat(8, 1fr);
-		row-gap: 0;
 		position: relative;
-		padding: toRem(20);
 	}
 	@media (max-width: $mobileSmall) {
-		row-gap: toRem(10);
-		column-gap: toRem(10);
-		grid-template-columns: repeat(2, 50%);
+		flex-direction: column;
+	}
+	@media (max-width: $mobileSmall) {
+		gap: toRem(16);
+		width: fit-content;
 	}
 
 	&__wrapper {
@@ -87,52 +116,52 @@
 	}
 
 	&__bar {
+		position: absolute;
+		z-index: 2;
+		top: toRem(16);
+		left: toRem(16);
 		display: flex;
-		width: 100%;
 	}
 
 	&__img {
 		display: flex;
-		max-width: toRem(130);
-		max-height: toRem(140);
-		min-width: toRem(130);
-		min-height: toRem(140);
+		max-width: toRem(300);
+		aspect-ratio: 400 / 258;
+		position: relative;
 		& img {
 			width: 100%;
 			object-fit: contain;
-		}
-		@media (max-width: $tablet) {
-			grid-column: 1/3;
-		}
-		@media (max-width: $mobileSmall) {
-			grid-column: 1/2;
 		}
 	}
 
 	&__content {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(5);
+		gap: toRem(10);
 		max-width: toRem(300);
-		@media (max-width: $tablet) {
-			grid-column: 3/6;
+		padding: toRem(16) 0;
+
+		& .price {
+			white-space: nowrap;
+			flex-wrap: wrap;
+			&__old {
+				display: none;
+			}
 		}
-		@media (max-width: toEm(689)) {
-			grid-column: 1/8;
-			grid-row: 2/4;
-			max-width: none;
+		@media (max-width: $mobile) {
+			padding: toRem(16) 0 toRem(16) toRem(16);
 		}
 		@media (max-width: $mobileSmall) {
-			grid-column: 1/3;
-			width: 100%;
+			padding: 0 toRem(10);
 		}
 	}
 
 	&__title {
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.25;
-		@include textOverflow(3, 16, 1.25);
+		font-weight: 600;
+		font-size: toRem(14);
+		line-height: 1.29;
+		color: var(--text-primary);
+		@include textOverflow(2, 14, 1.29);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -143,6 +172,7 @@
 
 	&__subtitle {
 		display: inline-flex;
+		gap: toRem(10);
 		width: 100%;
 		font-weight: 400;
 		font-size: toRem(14);
@@ -160,16 +190,10 @@
 		border: 1px solid var(--primary);
 		border-radius: var(--radius8);
 		@media (max-width: $tablet) {
-			grid-column: 6/8;
-			grid-row: 2 /3;
-		}
-		@media (max-width: toEm(689)) {
-			grid-column: 3/6;
-			grid-row: 1/2;
+			align-self: flex-end;
 		}
 		@media (max-width: $mobileSmall) {
-			grid-row: 4 / 5;
-			grid-column: 2/3;
+			align-self: center;
 		}
 	}
 
@@ -181,7 +205,9 @@
 		& .price {
 			flex-direction: column;
 			gap: 0;
-			align-items: flex-start;
+			align-items: flex-end;
+			white-space: nowrap;
+			min-width: toRem(158);
 			&__actual {
 				font-weight: 700;
 				font-size: toRem(20);
@@ -193,13 +219,15 @@
 				font-size: toRem(13);
 				line-height: 1.62;
 			}
+			@media (max-width: $mobileSmall) {
+				gap: toRem(5);
+			}
 		}
 		@media (max-width: $tablet) {
-			grid-column: 6/9;
+			align-self: flex-end;
 		}
 		@media (max-width: $mobileSmall) {
-			grid-row: 4 / 5;
-			grid-column: 1/2;
+			align-self: center;
 		}
 	}
 
@@ -226,8 +254,14 @@
 		}
 		@media (max-width: $tablet) {
 			position: absolute;
-			top: 20px;
-			right: 20px;
+			top: 0;
+			right: 0;
+		}
+		@media (max-width: $mobileSmall) {
+			top: auto;
+			bottom: 0;
+			right: 50%;
+			transform: translateX(50%);
 		}
 	}
 
@@ -246,7 +280,7 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(30);
+		gap: toRem(32);
 		width: 100%;
 		padding: toRem(35);
 		border: 1px solid var(--border);
@@ -274,6 +308,7 @@
 
 .economy {
 	display: none;
+	align-self: flex-end;
 	width: fit-content;
 	border: 1px solid var(--price-in-product);
 	border-radius: 3px;
@@ -351,7 +386,7 @@
 	}
 
 	@media (max-width: toEm(1250)) {
-		grid-column: span 3;
+		grid-column: span 4;
 	}
 	@media (max-width: $mobile) {
 		grid-column: 1 / 7;
@@ -417,7 +452,7 @@
 	}
 	@media (max-width: toEm(1250)) {
 		grid-row: 2 / span 1;
-		grid-column: span 3;
+		grid-column: span 4;
 	}
 	@media (max-width: $mobile) {
 		grid-column: 1 / 7;
@@ -426,10 +461,11 @@
 
 .basket-buttons {
 	display: flex;
-	gap: toRem(20);
+	flex-direction: column;
+	gap: toRem(16);
 	&__button {
 		padding: toRem(14) 0;
-		width: 80%;
+		width: 100%;
 		&:first-child {
 			flex: 1 1 50%;
 			border-radius: var(--radius8);
@@ -460,8 +496,8 @@
 		}
 	}
 	@media (max-width: toEm(1250)) {
-		grid-column: 4 / span 3;
-		grid-row: 1 / span 2;
+		grid-column: 5 / span 2;
+		grid-row: 1;
 		align-items: center;
 	}
 	@media (max-width: $tablet) {
