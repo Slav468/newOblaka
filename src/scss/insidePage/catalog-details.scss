@@ -113,10 +113,6 @@
 		text-overflow: ellipsis;
 	}
 	& .text_general {
-		font-size: toRem(16);
-		font-weight: 400;
-		line-height: 1.4;
-
 		display: -webkit-box;
 		line-clamp: 3;
 		-webkit-line-clamp: 3;
@@ -652,6 +648,9 @@
 			color: var(--price-in-product);
 		}
 		&__old {
+			display: flex;
+		}
+		&__result {
 			display: flex;
 		}
 	}

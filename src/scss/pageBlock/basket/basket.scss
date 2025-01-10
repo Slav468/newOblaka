@@ -15,10 +15,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		width: fit-content;
+		align-self: flex-end;
 		&__title {
 			font-weight: 400;
 			font-size: toRem(14);
-			color: #666;
+			color: var(--text-secondary);
 		}
 		&__button {
 			height: toRem(20);
@@ -34,6 +36,9 @@
 
 		@media (any-hover: hover) {
 			&:hover {
+				& .basket-reset__title {
+					color: var(--for-false);
+				}
 				& .basket-reset__button {
 					& svg {
 						color: var(--for-false);
@@ -56,7 +61,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(16);
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			align-items: center;
 		}
 	}
@@ -65,37 +70,60 @@
 		display: flex;
 		@include adaptiveValue("gap", 34, 10);
 		@media (max-width: $mobile) {
-			flex-direction: column;
+			grid-column: 3 / span 5;
 		}
+		// @media (max-width: $mobileSmall) {
+		// 	flex-direction: column;
+		// }
 	}
 	&__right {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		flex: 0 1 toRem(320);
+		flex: 0 5 toRem(380);
 		@include adaptiveValue("gap", 16, 5);
 		@media (max-width: $tablet) {
 			margin-right: toRem(43);
-			flex-direction: column-reverse;
+		}
+		@media (max-width: $mobile) {
+			grid-row: 2 / span 1;
+			grid-column: 3 / span 5;
+			margin-right: 0;
+			margin-bottom: toRem(16);
 		}
 		@media (max-width: $mobileSmall) {
-			margin-right: 0;
-			margin-bottom: toRem(43);
-			padding: 0 toRem(10);
-			flex: none;
-			gap: toRem(10);
-			flex-direction: row;
-			justify-content: center;
+			// flex-direction: column;
+			margin: 0 toRem(16) toRem(16) toRem(16);
+			grid-column: 1 / span 8;
 			align-items: center;
-			width: 100%;
 		}
+
+		// @media (max-width: $mobile) {
+		// 	margin-right: 0;
+		// 	flex: none;
+		// 	width: 60%;
+		// 	padding: toRem(16);
+		// 	align-self: flex-end;
+		// 	align-items: center;
+		// 	justify-content: space-between;
+		// 	flex-direction: row;
+		// }
+		// @media (max-width: $mobileSmall) {
+		// 	margin-right: 0;
+		// 	margin-bottom: toRem(43);
+		// 	padding: 0 toRem(10);
+		// 	flex: none;
+		// 	gap: toRem(10);
+		// 	justify-content: center;
+		// 	width: 100%;
+		// }
 	}
 }
 
 .basket-item {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	gap: toRem(10);
 	width: 100%;
 	border: 1px solid var(--border);
 	border-radius: var(--radius8);
@@ -103,13 +131,19 @@
 	@media (max-width: $tablet) {
 		position: relative;
 	}
-	@media (max-width: $mobileSmall) {
-		flex-direction: column;
+	@media (max-width: $mobile) {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: auto;
+		gap: toRem(12);
 	}
-	@media (max-width: $mobileSmall) {
-		gap: toRem(16);
-		width: fit-content;
-	}
+	// @media (max-width: $mobileSmall) {
+	// 	flex-direction: column;
+	// }
+	// @media (max-width: $mobileSmall) {
+	// 	gap: toRem(16);
+	// 	width: fit-content;
+	// }
 
 	&__wrapper {
 		display: flex;
@@ -125,9 +159,16 @@
 
 	&__img {
 		display: flex;
-		max-width: toRem(300);
+		max-width: toRem(230);
+		flex-shrink: 2;
 		aspect-ratio: 400 / 258;
 		position: relative;
+		// @media (max-width: $mobileSmall) {
+		// 	max-width: none;
+		// }
+		@media (max-width: $mobile) {
+			grid-column: 1 / span 2;
+		}
 		& img {
 			width: 100%;
 			object-fit: contain;
@@ -139,20 +180,19 @@
 		flex-direction: column;
 		gap: toRem(10);
 		max-width: toRem(300);
+		height: auto;
 		padding: toRem(16) 0;
 
 		& .price {
 			white-space: nowrap;
 			flex-wrap: wrap;
+			gap: toRem(10);
 			&__old {
 				display: none;
 			}
 		}
 		@media (max-width: $mobile) {
-			padding: toRem(16) 0 toRem(16) toRem(16);
-		}
-		@media (max-width: $mobileSmall) {
-			padding: 0 toRem(10);
+			padding: 0;
 		}
 	}
 
@@ -167,6 +207,9 @@
 			&:hover {
 				color: var(--primary);
 			}
+		}
+		@media (max-width: $mobile) {
+			margin-top: 16px;
 		}
 	}
 
@@ -184,49 +227,30 @@
 
 	&__count {
 		display: flex;
-		max-width: toRem(175);
+		max-width: toRem(105);
+		min-width: toRem(87);
 		width: 100%;
-		height: toRem(45);
+		height: toRem(35);
 		border: 1px solid var(--primary);
 		border-radius: var(--radius8);
-		@media (max-width: $tablet) {
-			align-self: flex-end;
-		}
-		@media (max-width: $mobileSmall) {
-			align-self: center;
-		}
+		overflow: hidden;
 	}
 
 	&__price {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(5);
 
 		& .price {
 			flex-direction: column;
-			gap: 0;
+			gap: toRem(5);
 			align-items: flex-end;
 			white-space: nowrap;
 			min-width: toRem(158);
-			&__actual {
-				font-weight: 700;
-				font-size: toRem(20);
-				line-height: 1.05;
-			}
-			&__old {
-				display: none;
-				font-weight: 500;
-				font-size: toRem(13);
-				line-height: 1.62;
-			}
 			@media (max-width: $mobileSmall) {
 				gap: toRem(5);
 			}
 		}
 		@media (max-width: $tablet) {
-			align-self: flex-end;
-		}
-		@media (max-width: $mobileSmall) {
 			align-self: center;
 		}
 	}
@@ -257,18 +281,18 @@
 			top: 0;
 			right: 0;
 		}
-		@media (max-width: $mobileSmall) {
-			top: auto;
-			bottom: 0;
-			right: 50%;
-			transform: translateX(50%);
-		}
 	}
 
 	&.sale {
 		& .basket-item__price {
-			& .economy {
-				display: flex;
+			// & .economy {
+			// 	display: flex;
+			// }
+
+			& .price {
+				&__actual {
+					color: var(--text-primary);
+				}
 			}
 		}
 	}
@@ -300,6 +324,14 @@
 	&__item {
 		width: 100%;
 		display: flex;
+	}
+
+	&.sale {
+		& .price {
+			&__actual {
+				color: var(--text-primary);
+			}
+		}
 	}
 	@media (max-width: $tablet) {
 		width: 100%;

@@ -376,11 +376,6 @@
 				}
 			}
 		}
-
-		@media (max-width: $mobile) {
-			font-size: toRem(14);
-			text-align: justify;
-		}
 	}
 	&_light {
 		font-weight: 400;
