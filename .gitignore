@@ -3,6 +3,7 @@ package-lock.json
 node_modules/
 phpmailer/
 .gitignore
+.codegpt
 dist/
 Source/
 version.json
@@ -13,5 +14,3 @@ undefined
 
 # git add dist && git commit -m "Update gh-pages version"
 # git subtree push --prefix dist origin gh-pages
-
-.codegpt
