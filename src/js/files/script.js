@@ -776,3 +776,41 @@ if (document.querySelector('.basket-reset')) {
 			</div>`;
 	});
 }
+
+if (document.querySelector('.formalization-form')) {
+	const form = document.querySelector('.formalization-form');
+	const list = form.querySelector('.formalization-form__list');
+	const listItem = list.children;
+	for (let i = 0; i < listItem.length; i++) {
+		const prevButton = listItem[i].querySelector('[data-button-prev]');
+		const nextButton = listItem[i].querySelector('[data-button-next]');
+
+		prevButton?.addEventListener('click', e => {
+			e.preventDefault();
+			toggleActiveFormEl('prev', listItem, i);
+		});
+
+		nextButton?.addEventListener('click', e => {
+			e.preventDefault();
+			toggleActiveFormEl('next', listItem, i);
+		});
+	}
+}
+
+function toggleActiveFormEl(move, list, index) {
+	switch (move) {
+		case 'prev':
+			list[index].classList.remove('active');
+			list[index - 1].classList.remove('resolved');
+			list[index - 1].classList.add('active');
+			break;
+
+		case 'next':
+			list[index].classList.remove('active');
+			list[index].classList.add('resolved');
+			list[index + 1].classList.add('active');
+			break;
+		default:
+			break;
+	}
+}
