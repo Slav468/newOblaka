@@ -185,17 +185,26 @@ if (document.querySelector('.count')) {
 				const counter = target
 					.closest('.count')
 					.querySelector('.count__counter');
-				let num =
-					+counter.textContent > 1
-						? +counter.textContent--
-						: +counter.textContent;
+				let num = +counter.value > 1 ? +counter.value-- : +counter.value;
 			}
 			if (target.closest('.count__plus')) {
 				let num = +target.closest('.count').querySelector('.count__counter')
-					.textContent++;
+					.value++;
 			}
 		});
 	});
+
+	for (let count of countsBlocks) {
+		const countInputs = count.querySelector('.count__counter');
+		countInputs.addEventListener('input', e => {
+			e.preventDefault();
+			if (+countInputs.value === 0) {
+				countInputs.value = 1;
+			} else {
+				countInputs.value = countInputs.value.replace(/\D/gm, '');
+			}
+		});
+	}
 }
 
 if (document.querySelector('.menu__list')) {

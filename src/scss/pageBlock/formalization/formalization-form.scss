@@ -8,6 +8,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(30);
+		width: 100%;
 	}
 	&__fieldset {
 		display: flex;
@@ -21,7 +22,8 @@
 		&.resolved {
 			background-color: var(--bg-primary);
 			& .formalization-form {
-				&__checked {
+				&__checked,
+				&__change {
 					visibility: visible;
 				}
 				&__result {
@@ -44,6 +46,10 @@
 				}
 			}
 		}
+
+		@media (max-width: $mobileSmall) {
+			padding: toRem(15) toRem(15) 0 toRem(15);
+		}
 	}
 
 	&__head {
@@ -59,6 +65,10 @@
 		font-weight: 600;
 		font-size: toRem(18);
 		line-height: 1.11;
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(16);
+			margin: 0 toRem(10);
+		}
 	}
 
 	&__control {
@@ -111,6 +121,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(20);
+		@media (max-width: $mobileSmall) {
+			margin-left: 0;
+		}
 	}
 
 	&__wrap {
@@ -126,10 +139,7 @@
 		justify-content: center;
 		gap: toRem(12);
 		padding: toRem(2);
-
-		&:first-child {
-			width: 70%;
-		}
+		width: 100%;
 
 		& .form__cell {
 			max-width: toRem(485);
@@ -162,11 +172,13 @@
 			color: #666;
 		}
 	}
+
 	&__buttons {
 		display: flex;
 		gap: toRem(20);
 		width: fit-content;
 	}
+
 	&__button {
 		&-prev {
 			border: 1px solid #dadada;
@@ -200,6 +212,7 @@
 			}
 		}
 	}
+
 	&__btns {
 		width: fit-content;
 		& button:disabled {
@@ -209,6 +222,7 @@
 			background-color: #c4c4c4;
 		}
 	}
+
 	&__result {
 		display: none;
 		justify-content: center;
@@ -219,14 +233,19 @@
 		font-size: toRem(16);
 		line-height: 1.25;
 	}
+
 	&__result-item {
 		display: flex;
 		gap: toRem(12);
 	}
+
 	&__result-subresult {
 		& span {
 			font-weight: 600;
 		}
+	}
+	@media (max-width: toEm(589)) {
+		align-items: center;
 	}
 }
 
@@ -277,7 +296,8 @@
 
 	&__checkmark {
 		order: -1;
-		display: block;
+		display: flex;
+		flex: 0 0 toRem(18);
 		pointer-events: none;
 		position: relative;
 		height: toRem(18);

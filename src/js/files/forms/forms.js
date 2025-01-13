@@ -11,7 +11,7 @@ import {
 } from '../functions.js';
 // Модуль прокручування до блоку
 import { gotoBlock } from '../scroll/gotoblock.js';
-//================================================================================================================================================================================================================================================================================================================================
+//===================================
 
 /*
 Документація: https://template.fls.guru/template-docs/rabota-s-formami.html
@@ -175,6 +175,14 @@ export let formValidate = {
 				formRequiredItem.classList.add('validated');
 				this.removeError(formRequiredItem);
 			}
+		} else if (formRequiredItem.dataset.required === 'number') {
+			if (this.numberTest(formRequiredItem)) {
+				this.addError(formRequiredItem);
+				error++;
+			} else {
+				formRequiredItem.classList.add('validated');
+				this.removeError(formRequiredItem);
+			}
 		} else {
 			if (!formRequiredItem.value.trim()) {
 				this.addError(formRequiredItem);
@@ -246,6 +254,9 @@ export let formValidate = {
 		return !/^\+375[\s|-]?[0-9]{2}[\s|-]?[0-9]{3}[\s|-]?[0-9]{2}[\s|-]?[0-9]{2}$/.test(
 			formRequiredItem.value
 		);
+	},
+	numberTest(formRequiredItem) {
+		return !/^[0-9]+$/.test(formRequiredItem.value);
 	},
 };
 /* Відправлення форм */
