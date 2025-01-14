@@ -2,6 +2,7 @@
 	display: flex;
 	width: 100%;
 	margin-bottom: toRem(20);
+	background: rgba(80, 87, 89, 0.5);
 
 	&__container {
 		position: relative;
@@ -33,7 +34,6 @@
 
 	&:not(:has(.header-bottom)) {
 		.header__top {
-			border-bottom: 1px solid var(--inverse);
 			@media (max-width: $mobile) {
 				gap: 1%;
 			}
@@ -252,16 +252,13 @@
 			& > .icon-menu {
 				display: flex;
 				justify-content: center;
+				align-items: flex-end;
 				color: var(--text-inverse);
 				position: relative;
 				z-index: 5;
-				max-width: toRem(182);
+				max-width: toRem(70);
+				height: toRem(15);
 				width: 100%;
-				justify-self: flex-start;
-				border: 1px solid var(--primary);
-				border-radius: var(--radius8);
-				padding: toRem(14) toRem(30) toRem(15) toRem(95);
-				background-color: var(--primary);
 				font-weight: 600;
 				font-size: toRem(15);
 
@@ -269,11 +266,9 @@
 					cursor: default;
 				}
 				span,
-				&::before,
-				&::after {
+				&::before {
 					content: "";
 					transition: all 0.3s ease 0s;
-					left: 23%;
 					position: absolute;
 					width: toRem(25);
 					height: toRem(2);
@@ -286,8 +281,8 @@
 					bottom: 30%;
 				}
 				span {
-					top: calc(50% - toRem(1));
-					width: toRem(18);
+					display: block;
+					width: 100%;
 				}
 
 				.menu-open & {
@@ -295,12 +290,10 @@
 						width: 0;
 					}
 					&::before {
-						top: calc(50% - toRem(1));
-						transform: rotate(-45deg);
+						width: 0;
 					}
 					&::after {
-						bottom: calc(50% - toRem(1));
-						transform: rotate(45deg);
+						width: 0;
 					}
 				}
 			}
@@ -472,7 +465,6 @@
 		top: 0;
 		left: 0;
 		z-index: 15;
-		background-color: var(--bg-primary);
 		box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 
 		& .header__top {
@@ -594,6 +586,7 @@
 
 	&__logo {
 		display: flex;
+		align-items: center;
 		width: 100%;
 		height: 100%;
 
@@ -606,6 +599,12 @@
 			position: relative;
 			z-index: 5;
 		}
+	}
+
+	&__slogan {
+		font-weight: 600;
+		font-size: toRem(26);
+		color: var(--pant-420-s);
 	}
 
 	@media (max-width: toEm(489)) {

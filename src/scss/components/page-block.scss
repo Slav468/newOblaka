@@ -10,7 +10,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(40);
-		padding: toRem(40) 0;
+		padding: toRem(80) 0;
 	}
 
 	// .block__inner
@@ -23,24 +23,20 @@
 	&__head {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		padding: toRem(30) 0;
+		border-top: 1px solid var(--pant-420-s);
 	}
 
 	&__title {
 		position: relative;
-		font-weight: 600;
-		font-size: toRem(28);
-		color: var(--text-primary);
-		&::after {
-			content: " ";
-			position: absolute;
-			bottom: -20px;
-			left: 0;
-			z-index: 0;
-			width: toRem(90);
-			height: 3px;
-			background-color: var(--primary);
-		}
+
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 40px;
+		text-transform: uppercase;
+		text-align: center;
+		color: var(--pant-445-c);
 
 		@media (max-width: toEm(1280)) {
 			font-size: toRem(26);
@@ -48,6 +44,7 @@
 	}
 
 	&__reference {
+		display: none;
 		align-self: flex-end;
 		@media (max-width: toEm(400)) {
 			display: none;
@@ -76,12 +73,14 @@
 
 	// .block__button
 	&__button {
-		border: 1px solid var(--primary);
-		border-radius: var(--radius8);
-		padding: toRem(13) toRem(75);
-		font-weight: 700;
-		font-size: toRem(16);
-		color: var(--primary);
+		border: 0.5px solid var(--pant-420-s);
+		padding: 18px 36px;
+		background: var(--pant-425-c);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: var(--white);
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--primary);

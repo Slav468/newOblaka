@@ -62,9 +62,11 @@
 	}
 
 	&__title {
-		font-weight: 600;
-		font-size: toRem(16);
-		color: var(--text-inverse);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 32px;
+		text-transform: uppercase;
+		color: var(--white);
 		hyphens: auto;
 		@media (max-width: toEm(520)) {
 			font-size: toRem(14);

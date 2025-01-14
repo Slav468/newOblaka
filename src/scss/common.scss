@@ -229,16 +229,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: toRem(13) toRem(20);
+
 	min-height: toRem(46);
-	border-radius: toRem(8);
+
 	font-weight: 600;
-	font-size: toRem(15);
-	background-color: var(--text-inverse);
-	border: 1px solid var(--primary);
-	color: var(--primary);
+	font-size: toRem(16);
+
+	font-family: var(--second-family);
+
+	color: var(--white);
+
+	background: var(--pant-425-c);
+
 	width: 100%;
 	text-wrap: nowrap;
+
+	border: 1px solid var(--pant-420-s);
+	padding: 13px 30px;
 
 	&:hover {
 		background-color: var(--primary);

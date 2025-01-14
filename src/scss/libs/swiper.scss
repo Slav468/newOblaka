@@ -175,9 +175,9 @@
 	bottom: 35px;
 	width: 32px;
 	height: 32px;
-	border-radius: 100%;
+
 	overflow: hidden;
-	background-color: var(--text-secondary);
+	background: var(--pant-445-c);
 	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
 	z-index: 10;
 	cursor: pointer;
@@ -186,7 +186,7 @@
 	justify-content: center;
 	// color: var(--swiper-navigation-color, var(--swiper-theme-color));
 	& svg {
-		color: var(--text-inverse);
+		color: var(--white);
 	}
 	@media (any-hover: hover) {
 		&:hover {
@@ -194,7 +194,7 @@
 				color: var(--text-inverse);
 			}
 			& {
-				background-color: var(--swiper-theme-color);
+				background: var(--pant-445-c);
 			}
 		}
 	}
@@ -311,18 +311,15 @@
 	width: 10px;
 	height: 10px;
 	display: inline-block;
-	border-radius: 50%;
-	background: var(--text-secondary);
+
+	background: rgba(80, 87, 89, 0.5);
 
 	&:hover {
-		background-color: var(--swiper-theme-color);
+		background: var(--pant-445-c);
 		& {
 			transform: scale(1.5);
 		}
 	}
-	// &:not(.swiper-pagination-bullet-active) {
-	// 	box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
-	// }
 
 	@media (max-width: $mobile) {
 		width: 8px;
@@ -345,9 +342,9 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
 	opacity: var(--swiper-pagination-bullet-opacity, 1);
-	background: var(--swiper-pagination-color, var(--swiper-theme-color));
 	width: 15px;
 	height: 15px;
+	background: var(--pant-445-c);
 
 	@media (max-width: $mobile) {
 		width: 12px;

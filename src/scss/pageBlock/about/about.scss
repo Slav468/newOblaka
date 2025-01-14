@@ -12,7 +12,7 @@
 	}
 	& .block {
 		&__buttons {
-			align-self: flex-start;
+			align-self: flex-end;
 			justify-self: flex-start;
 			@media (max-width: toEm(576)) {
 				width: 100%;
@@ -36,7 +36,6 @@
 				position: relative;
 				width: calc(100% / 2 - 10px);
 				height: auto;
-				border-radius: var(--radius8);
 				overflow: hidden;
 
 				img {
@@ -52,6 +51,7 @@
 			}
 
 			&__overlay {
+				display: none;
 				position: absolute;
 				top: 0;
 				left: 0;

@@ -54,5 +54,15 @@
 		position: relative;
 		transition: 0.3s;
 		border-radius: var(--radius8);
+		@media (any-hover: hover) {
+			&:hover {
+				& .decorate {
+					background: var(--pant-420-s);
+					&__svg {
+						color: var(--pant-445-c);
+					}
+				}
+			}
+		}
 	}
 }
