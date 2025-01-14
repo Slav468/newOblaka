@@ -157,9 +157,10 @@
 
 	// .footer-left__description
 	&__description {
-		font-weight: 500;
-		font-size: toRem(14);
-		color: var(--text-inverse);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: var(--white);
 	}
 }
 .navigation {
@@ -180,13 +181,13 @@
 
 	// .navigation__link
 	&__link {
-		font-weight: 600;
-		font-size: toRem(18);
-		color: var(--text-inverse);
-		text-transform: uppercase;
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 18px;
+		color: var(--white);
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--primary);
+				color: var(--pant-420-s);
 			}
 		}
 	}

@@ -967,6 +967,14 @@
 		align-items: center;
 	}
 
+	&__text {
+		margin-left: toRem(28);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: var(--white);
+	}
+
 	&__svg {
 		width: toRem(28);
 		height: toRem(28);

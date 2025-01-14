@@ -667,8 +667,8 @@ button.swiper-pagination-bullet {
 		z-index: 4;
 		width: toRem(32);
 		height: toRem(32);
-		border-radius: 50%;
-		border: 1px solid var(--primary);
+
+		border: 1px solid var(--pant-445-c);
 		background: none;
 		display: flex;
 		align-items: center;
@@ -676,7 +676,7 @@ button.swiper-pagination-bullet {
 		cursor: pointer;
 		margin: 0;
 		& svg {
-			color: var(--primary);
+			color: var(--pant-445-c);
 			width: toRem(14);
 			height: toRem(20);
 		}
@@ -687,7 +687,7 @@ button.swiper-pagination-bullet {
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: var(--primary);
+				background-color: var(--pant-420-s);
 				& svg {
 					color: var(--text-inverse);
 				}

@@ -366,6 +366,7 @@ function initSliders() {
 			// observer: true,
 			// observeParents: true,
 			slidesPerView: 'auto',
+			spaceBetween: 8,
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -397,20 +398,6 @@ function initSliders() {
 			navigation: {
 				prevEl: '.partners-button-prev',
 				nextEl: '.partners-button-next',
-			},
-			breakpoints: {
-				320: {
-					spaceBetween: 10,
-				},
-				479: {
-					spaceBetween: 14,
-				},
-				698: {
-					spaceBetween: 16,
-				},
-				991: {
-					spaceBetween: 20,
-				},
 			},
 			// Події
 			// on: {},
