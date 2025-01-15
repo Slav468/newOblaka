@@ -793,6 +793,9 @@ if (document.querySelector('.formalization-form')) {
 	for (let i = 0; i < listItem.length; i++) {
 		const prevButton = listItem[i].querySelector('[data-button-prev]');
 		const nextButton = listItem[i].querySelector('[data-button-next]');
+		const changeButton = listItem[i].querySelector(
+			'.formalization-form__change'
+		);
 
 		prevButton?.addEventListener('click', e => {
 			e.preventDefault();
@@ -803,23 +806,42 @@ if (document.querySelector('.formalization-form')) {
 			e.preventDefault();
 			toggleActiveFormEl('next', listItem, i);
 		});
+
+		changeButton?.addEventListener('click', e => {
+			e.preventDefault();
+			toggleActiveFormEl('change', listItem, i);
+		});
 	}
 }
 
 function toggleActiveFormEl(move, list, index) {
-	switch (move) {
-		case 'prev':
-			list[index].classList.remove('active');
-			list[index - 1].classList.remove('resolved');
-			list[index - 1].classList.add('active');
-			break;
+	if (move === 'prev') {
+		list[index].classList.remove('active');
+		list[index - 1].classList.remove('resolved');
+		list[index - 1].classList.add('active');
+	}
 
-		case 'next':
-			list[index].classList.remove('active');
-			list[index].classList.add('resolved');
+	if (move === 'next') {
+		list[index].classList.remove('active');
+		list[index].classList.add('resolved');
+
+		if (list[index + 1].matches('.resolved')) {
+			for (let i = 0; i <= list.length - 1; i++) {
+				if (!list[i].matches('.resolved') && list[i - 1].matches('.resolved')) {
+					list[i].classList.add('active');
+				}
+			}
+		} else {
 			list[index + 1].classList.add('active');
-			break;
-		default:
-			break;
+			list[index + 1].classList.remove('resolved');
+		}
+	}
+
+	if (move === 'change') {
+		for (let item of list) {
+			item.classList.remove('active');
+		}
+		list[index].classList.remove('resolved');
+		list[index].classList.add('active');
 	}
 }
