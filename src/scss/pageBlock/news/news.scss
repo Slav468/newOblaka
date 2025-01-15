@@ -18,9 +18,9 @@
 	&__cell {
 		display: flex;
 		width: calc((100% - toRem(20) * 3) / 4);
+		aspect-ratio: 400 / 327;
 		height: auto;
 		overflow: hidden;
-		border-radius: var(--radius8);
 		appearance: none;
 
 		@media (any-hover: hover) {
@@ -48,7 +48,6 @@
 		position: relative;
 		overflow: hidden;
 		transition: 0.3s;
-		border-radius: var(--radius8);
 		border: 1px solid var(--border);
 	}
 
@@ -66,7 +65,6 @@
 		width: 100%;
 		aspect-ratio: 400 / 230;
 		overflow: hidden;
-		@include linerGradient();
 
 		img {
 			display: block;
@@ -94,11 +92,11 @@
 	}
 
 	&__rubric {
-		font-weight: 500;
-		font-size: toRem(12);
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 12px;
 		text-transform: uppercase;
-		color: var(--primary);
-		@include textOverflow(2, 12, 1);
+		color: var(--pant-420-s);
 	}
 
 	&__title {

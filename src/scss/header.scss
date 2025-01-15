@@ -240,13 +240,19 @@
 		}
 	}
 
+	&__control {
+		display: flex;
+		align-items: center;
+		gap: toRem(5);
+	}
+
 	&_menu-left {
 		& .header__top {
 			position: relative;
 		}
 
 		& .menu {
-			flex: 0 1 11.2%;
+			flex: 0 1 70px;
 			align-self: center;
 
 			& > .icon-menu {
@@ -605,6 +611,7 @@
 		font-weight: 600;
 		font-size: toRem(26);
 		color: var(--pant-420-s);
+		text-transform: uppercase;
 	}
 
 	@media (max-width: toEm(489)) {

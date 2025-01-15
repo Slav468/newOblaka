@@ -1,0 +1,19 @@
+.eye {
+	display: flex;
+	// .eye__icon
+	&__icon {
+		width: toRem(30);
+		height: toRem(30);
+		color: var(--white);
+		& svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--pant-420-s);
+			}
+		}
+	}
+}

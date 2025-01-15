@@ -111,10 +111,10 @@
 .svg-arrow-back {
 	width: toRem(25);
 	height: toRem(27);
-	color: var(--text-secondary);
+	color: var(--pant-420-s);
 	@media (any-hover: hover) {
 		&:hover {
-			color: var(--primary);
+			color: var(--pant-420-s);
 		}
 	}
 }
@@ -207,12 +207,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: toRem(27);
-		height: toRem(27);
+		width: toRem(32);
+		height: toRem(32);
 		cursor: pointer;
+		color: var(--white);
 		& svg {
-			height: toRem(17);
-			width: toRem(17);
+			height: 100%;
+			width: 100%;
 		}
 	}
 }
@@ -300,6 +301,7 @@
 	& span {
 		font-size: toRem(15);
 		font-weight: 600;
+		color: var(--pant-420-s);
 	}
 }
 
@@ -326,9 +328,11 @@
 // Text
 .text {
 	&_banner {
-		font-weight: 500;
-		font-size: toRem(18);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 18px;
 		line-height: 1.33;
+		color: var(--white);
 
 		@media (max-width: $mobile) {
 			font-size: toRem(16);
@@ -442,12 +446,17 @@
 		font-size: toRem(15);
 		line-height: 1.4;
 		text-wrap: nowrap;
+		color: var(--white);
 	}
 	&__regime {
 		font-weight: 500;
 		font-size: toRem(14);
 		line-height: 1.4;
 		text-wrap: nowrap;
+		color: var(--white);
+	}
+	&__svg {
+		color: var(--white);
 	}
 }
 

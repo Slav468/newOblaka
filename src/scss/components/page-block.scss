@@ -9,7 +9,7 @@
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(40);
+		gap: toRem(16);
 		padding: toRem(80) 0 0 0;
 	}
 
@@ -17,7 +17,7 @@
 	&__inner {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(46);
+		gap: toRem(16);
 	}
 
 	&__head {
@@ -90,7 +90,7 @@
 	// .block__button
 	&__button {
 		border: 0.5px solid var(--pant-420-s);
-		padding: 18px 36px;
+		padding: 18px 71.5px;
 		background: var(--pant-425-c);
 		font-family: var(--font-family);
 		font-weight: 400;

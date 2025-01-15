@@ -212,7 +212,7 @@
 	&__description {
 		display: flex;
 		flex-direction: column;
-		gap: toRem(15);
+		gap: toRem(30);
 		@media (max-width: $mobile) {
 			gap: toRem(15);
 		}
@@ -237,34 +237,16 @@
 	}
 
 	&__title {
-		color: var(--text-inverse);
-		@include textOverflow(3, 38, 1.2);
-		@media (max-width: toEm(1280)) {
-			@include textOverflow(3, 36, 1.2);
-		}
-		@media (max-width: $tablet) {
-			font-size: toRem(30);
-			@include textOverflow(3, 30, 1.2);
-		}
-		@media (max-width: $mobile) {
-			font-size: toRem(26);
-			@include textOverflow(3, 26, 1.2);
-		}
-		@media (max-width: toEm(576)) {
-			font-size: toRem(20);
-			@include textOverflow(3, 20, 1.2);
-		}
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 120%;
+		text-transform: uppercase;
+		color: var(--white);
 	}
 
 	&__text {
 		color: var(--text-inverse);
-		@include textOverflow(3, 18, 1.33);
-		@media (max-width: $mobile) {
-			@include textOverflow(3, 16, 1.33);
-		}
-		@media (max-width: toEm(576)) {
-			@include textOverflow(3, 15, 1.33);
-		}
 	}
 
 	&__buttons {
@@ -276,12 +258,12 @@
 			align-self: flex-start;
 			position: relative;
 			z-index: 2;
+			width: fit-content;
 		}
 
 		& .button:first-child {
 			display: flex;
-			max-width: toRem(221);
-			padding: toRem(13) toRem(20);
+			padding: toRem(13) toRem(76);
 		}
 
 		@media (max-width: toEm(550)) {
@@ -295,7 +277,8 @@
 			padding: 0;
 		}
 		& .banner__slider {
-			height: toRem(715);
+			aspect-ratio: 1920 / 720;
+			height: toRem(720);
 			border-radius: 0;
 			@media (max-width: $mobile) {
 				height: toRem(483);
@@ -309,8 +292,10 @@
 		}
 
 		& .banner__content {
-			height: 100%;
-			justify-content: center;
+			height: 51%;
+			justify-content: space-between;
+			margin-top: 80px;
+			margin-left: 30px;
 
 			@media (max-width: toEm(1280)) {
 				max-width: 85.951807%;
