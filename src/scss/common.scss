@@ -417,18 +417,25 @@
 .address {
 	display: flex;
 	gap: toRem(4);
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+	}
 	&__city {
-		font-weight: 600;
-		font-size: toRem(15);
-		line-height: 1.4;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 14px;
+		color: var(--white);
 		text-wrap: nowrap;
 	}
 
 	&__street {
-		font-weight: 500;
-		font-size: toRem(14);
-		line-height: 1.4;
-		text-wrap: nowrap;
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: var(--white);
 	}
 }
 
@@ -439,20 +446,19 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		gap: toRem(5);
 	}
 
 	&__time {
-		font-weight: 600;
-		font-size: toRem(15);
-		line-height: 1.4;
-		text-wrap: nowrap;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 15px;
 		color: var(--white);
 	}
 	&__regime {
-		font-weight: 500;
-		font-size: toRem(14);
-		line-height: 1.4;
-		text-wrap: nowrap;
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
 		color: var(--white);
 	}
 	&__svg {

@@ -259,7 +259,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: flex-end;
-				color: var(--text-inverse);
+				color: var(--white);
 				position: relative;
 				z-index: 5;
 				max-width: toRem(70);
@@ -268,9 +268,6 @@
 				font-weight: 600;
 				font-size: toRem(15);
 
-				@media (any-hover: none) {
-					cursor: default;
-				}
 				span,
 				&::before {
 					content: "";
@@ -278,7 +275,7 @@
 					position: absolute;
 					width: toRem(25);
 					height: toRem(2);
-					background-color: var(--text-inverse);
+					background-color: var(--white);
 				}
 				&::before {
 					top: 29%;
@@ -300,6 +297,15 @@
 					}
 					&::after {
 						width: 0;
+					}
+				}
+
+				@media (any-hover: hover) {
+					&:hover {
+						span,
+						&::before {
+							background-color: var(--pant-420-s);
+						}
 					}
 				}
 			}
@@ -404,7 +410,7 @@
 			& .icon-menu span,
 			.icon-menu::before,
 			.icon-menu::after {
-				background-color: var(--text-inverse);
+				background-color: var(--white);
 			}
 			@media (max-width: toEm(498)) {
 				& .contacts-phone__link {
