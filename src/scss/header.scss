@@ -42,12 +42,12 @@
 
 	&:has(.header-bottom) {
 		.header-bottom {
+			padding: 0 toRem(50);
+			border-radius: var(--radius8);
+			background-color: var(--primary);
 			& > .menu {
 				max-width: none;
 				& > .menu__body {
-					padding: 0 toRem(50);
-					border-radius: var(--radius8);
-					background-color: var(--primary);
 					& > .menu__list {
 						& > .menu__item {
 							&:first-child {
