@@ -328,6 +328,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__title {
 		text-transform: uppercase;
@@ -342,6 +343,7 @@
 			&__actual {
 				font-weight: 700;
 				font-size: toRem(24);
+				color: var(--text-primary) !important;
 			}
 			&__old {
 				font-weight: 400;
@@ -352,30 +354,6 @@
 
 	&.score {
 		& .total {
-			&__item {
-				justify-content: flex-start;
-				align-items: center;
-				&:first-child {
-					& .price {
-						&__old {
-							display: none;
-						}
-					}
-				}
-				&:last-child {
-					& .total__title {
-						font-size: toRem(16);
-						font-weight: 400;
-						line-height: 1.2;
-						text-transform: none;
-					}
-					& .price {
-						&__actual {
-							display: none;
-						}
-					}
-				}
-			}
 			&__title {
 				flex: 0 1 toRem(95);
 			}

@@ -731,7 +731,7 @@ if (document.querySelector('.basket-list')) {
 		menu.remove();
 		list.innerHTML = `<div class="basket-empty">
 			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-				<a href='#' class='button'>В каталог</a>
+				<a href='/catalog/' class='button'>В каталог</a>
 			</div>`;
 	} else {
 		removeElement(
@@ -767,7 +767,7 @@ function checkElements(parent, el, trigger) {
 		menu.remove();
 		parent.innerHTML = `<div class="basket-empty">
 			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-			<a href='#' class='button'>В каталог</a>
+			<a href='/catalog/' class='button'>В каталог</a>
 		</div>`;
 	}
 }
@@ -781,7 +781,7 @@ if (document.querySelector('.basket-reset')) {
 		const basketList = document.querySelector('.basket-list__wrapper');
 		basketList.innerHTML = `<div class="basket-empty">
 				<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-				<a href='#' class='button'>В каталог</a>
+				<a href='/catalog/' class='button'>В каталог</a>
 			</div>`;
 	});
 }
