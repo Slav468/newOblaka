@@ -804,7 +804,12 @@ if (document.querySelector('.formalization-form')) {
 
 		nextButton?.addEventListener('click', e => {
 			e.preventDefault();
-			toggleActiveFormEl('next', listItem, i);
+			let checked = checkRadioButtons(listItem, i);
+			if (checked) {
+				toggleActiveFormEl('next', listItem, i);
+			} else {
+				return;
+			}
 		});
 
 		changeButton?.addEventListener('click', e => {
@@ -844,4 +849,10 @@ function toggleActiveFormEl(move, list, index) {
 		list[index].classList.remove('resolved');
 		list[index].classList.add('active');
 	}
+}
+
+function checkRadioButtons(list, i) {
+	const radioButtons = list[i].querySelectorAll('input[type="radio"]');
+	let checked = Array.from(radioButtons).some(radio => radio.checked);
+	return checked;
 }

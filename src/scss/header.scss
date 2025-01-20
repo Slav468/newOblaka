@@ -552,9 +552,9 @@
 			}
 
 			& .header-bottom {
+				background-color: var(--bg-primary);
 				& .menu {
 					& .menu__body {
-						background-color: var(--bg-primary);
 						& > .menu__list {
 							& > .menu__item {
 								& > .menu__link {
@@ -566,6 +566,30 @@
 									}
 								}
 							}
+						}
+					}
+				}
+
+				& .control {
+					&-button {
+						&__button {
+							color: var(--text-primary);
+							border-color: var(--text-primary);
+						}
+					}
+					&__button {
+						color: var(--text-primary);
+					}
+				}
+
+				& .dropdown {
+					&-head {
+						border-color: var(--text-primary);
+						&__link {
+							color: var(--text-primary);
+						}
+						&__trigger {
+							color: var(--text-primary);
 						}
 					}
 				}
