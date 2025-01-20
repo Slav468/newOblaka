@@ -1,7 +1,6 @@
 .header {
 	display: flex;
 	width: 100%;
-	margin-bottom: toRem(20);
 	background: rgba(80, 87, 89, 0.5);
 
 	&__container {
@@ -613,6 +612,7 @@
 	}
 
 	&__slogan {
+		font-family: var(--third-family);
 		font-weight: 600;
 		font-size: toRem(26);
 		color: var(--pant-420-s);

@@ -2,6 +2,7 @@
 	position: relative;
 	width: 100%;
 	display: flex;
+	padding: toRem(30) 0;
 	// .bread__list
 	&__list {
 		display: flex;
@@ -19,7 +20,7 @@
 
 	// .bread__item
 	&__item {
-		color: var(--primary);
+		color: var(--pant-420-s);
 		font-weight: 400;
 		font-size: toRem(15);
 		line-height: 1.67;
@@ -32,10 +33,14 @@
 
 	// .bread__link
 	&__link {
-		color: var(--text-primary);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.5;
+		color: var(--pant-445-c);
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--primary);
+				color: var(--pant-420-s);
 			}
 		}
 	}
