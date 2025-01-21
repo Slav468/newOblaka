@@ -121,6 +121,7 @@ overlay.addEventListener('click', () => {
 	menuClose();
 	removeSomeDrop('.aside-phone');
 	removeSomeDrop('.aside-menu__item');
+	toggleActiveSearchForm();
 });
 
 document.addEventListener('keydown', e => {
@@ -726,24 +727,26 @@ if (document.querySelector('.basket-list')) {
 	const list = document.querySelector('.basket-list__wrapper');
 	const reset = document.querySelector('.basket-reset');
 	const menu = document.querySelector('.basket-menu');
-	if (list.children.length < 1) {
-		reset.remove();
-		menu.remove();
-		list.innerHTML = `<div class="basket-empty">
+	const addEl = `<div class="basket-empty">
 			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
 				<a href='/catalog/' class='button'>В каталог</a>
 			</div>`;
+	if (list.children.length < 1) {
+		reset.remove();
+		menu.remove();
+		list.innerHTML = addEl;
 	} else {
 		removeElement(
 			'.basket-list__wrapper',
 			'.basket-item__remove',
 			'.basket-item',
-			'.basket-reset'
+			'.basket-reset',
+			addEl
 		);
 	}
 }
 
-function removeElement(el, trigger, parent, check) {
+function removeElement(el, trigger, parent, check, addEl) {
 	const basketList = document.querySelector(`${el}`);
 	const elements = basketList.children;
 
@@ -753,22 +756,19 @@ function removeElement(el, trigger, parent, check) {
 			if (target.closest(`${trigger}`)) {
 				const parentEl = target.closest(`${parent}`);
 				parentEl.remove();
-				checkElements(basketList, elements, check);
+				checkElements(basketList, elements, check, addEl);
 			}
 		});
 	}
 }
 
-function checkElements(parent, el, trigger) {
+function checkElements(parent, el, trigger, addEl) {
 	const resetElements = document.querySelector(`${trigger}`);
 	const menu = document.querySelector('.basket-menu');
 	if (el.length < 1) {
 		resetElements.remove();
 		menu.remove();
-		parent.innerHTML = `<div class="basket-empty">
-			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-			<a href='/catalog/' class='button'>В каталог</a>
-		</div>`;
+		parent.innerHTML = addEl;
 	}
 }
 
@@ -856,3 +856,46 @@ function checkRadioButtons(list, i) {
 	let checked = Array.from(radioButtons).some(radio => radio.checked);
 	return checked;
 }
+
+if (
+	document.querySelector('[data-search-activate]') &&
+	document.querySelector('.search')
+) {
+	const buttonActivateSearch = document.querySelectorAll(
+		'[data-search-activate]'
+	);
+	const closeSearchBtn = document.querySelector('.search-form__close');
+
+	for (let button of buttonActivateSearch) {
+		button.addEventListener('click', e => {
+			e.preventDefault();
+			toggleActiveSearchForm();
+		});
+	}
+
+	closeSearchBtn.addEventListener('click', e => {
+		toggleActiveSearchForm();
+	});
+}
+
+function toggleActiveSearchForm() {
+	const search = document.querySelector('.search');
+	const headerHeight = document.querySelector('.header__top').offsetHeight;
+	search.classList.toggle('active');
+	search.style.top = `${headerHeight}px`;
+	if (search.matches('.active')) {
+		bodyLock();
+		overlayShow();
+	} else {
+		search.style.top = `-100%`;
+		bodyUnlock();
+		overlayHide();
+	}
+}
+
+// Sidebar placed at the top
+// if (document.querySelector('.sidebar')) {
+// 	const sidebar = document.querySelector('.sidebar');
+// 	const headerHeight = document.querySelector('header').offsetHeight;
+// 	sidebar.style.top = `${headerHeight * 2}px`;
+// }

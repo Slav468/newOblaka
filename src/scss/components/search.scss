@@ -1,13 +1,14 @@
 .search {
 	position: fixed;
-	top: 0;
+	top: -100%;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 15;
+	z-index: 1;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	background-color: var(--primary);
+	visibility: hidden;
 
 	&__container {
 		width: 100%;
@@ -17,7 +18,7 @@
 
 	&-form {
 		width: 100%;
-		display: none;
+		display: flex;
 		align-items: center;
 		gap: toRem(10);
 		&__inlet {
@@ -60,15 +61,58 @@
 		}
 
 		&__control {
+			display: flex;
+			align-items: center;
+			gap: toRem(10);
 		}
 
 		&__search {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: toRem(10) toRem(30);
+			border: 1px solid var(--border);
+			border-radius: var(--radius8);
+			overflow: hidden;
+			color: var(--text-inverse);
+			font-weight: 600;
+			font-size: 0.9375rem;
+			@media (any-hover: hover) {
+				&:hover {
+					border-color: var(--primary);
+					background-color: var(--text-inverse);
+					color: var(--primary);
+				}
+			}
 		}
 
 		&__close {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: toRem(30);
+			width: toRem(30);
+			border-radius: var(--radius8);
+			overflow: hidden;
+			background-color: var(--text-inverse);
+			color: var(--primary);
+			& svg {
+				height: toRem(24);
+				width: toRem(24);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--for-false);
+				}
+			}
 		}
 	}
 
 	&-content {
+	}
+
+	&.active {
+		visibility: visible;
+		z-index: 17;
 	}
 }
