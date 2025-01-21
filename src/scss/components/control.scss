@@ -40,6 +40,7 @@
 	&-button {
 		color: var(--text-inverse);
 		&__button {
+			position: relative;
 			padding: toRem(12) toRem(16);
 			display: flex;
 			align-items: center;
@@ -57,8 +58,26 @@
 				&:hover {
 					background-color: var(--text-inverse);
 					color: var(--primary);
+
+					& .control-button__quantity {
+						background-color: var(--primary);
+						color: var(--text-inverse);
+					}
 				}
 			}
+		}
+		&__quantity {
+			font-weight: 400;
+			font-size: toRem(12);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--text-inverse);
+			color: var(--primary);
+			width: toRem(20);
+			height: toRem(20);
+			border-radius: 50%;
+			overflow: hidden;
 		}
 	}
 }
