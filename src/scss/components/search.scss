@@ -14,6 +14,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		gap: toRem(20);
 	}
 
 	&-form {
@@ -21,6 +22,9 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(10);
+		background-color: var(--primary);
+		border-radius: var(--radius8);
+		padding: 0 toRem(5);
 		&__inlet {
 			height: toRem(45);
 			background-color: var(--bg-primary);
@@ -109,6 +113,11 @@
 	}
 
 	&-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(20);
+		padding-bottom: toRem(20);
 	}
 
 	&.active {

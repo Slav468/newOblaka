@@ -121,7 +121,11 @@ overlay.addEventListener('click', () => {
 	menuClose();
 	removeSomeDrop('.aside-phone');
 	removeSomeDrop('.aside-menu__item');
-	toggleActiveSearchForm();
+	try {
+		removeActive('.search');
+	} catch {
+		console.log("Search don't exist");
+	}
 });
 
 document.addEventListener('keydown', e => {
@@ -131,6 +135,11 @@ document.addEventListener('keydown', e => {
 		removeSomeDrop('.contacts-phone');
 		removeSomeDrop('.options');
 		removeSomeDrop('.sort');
+		try {
+			removeActive('.search');
+		} catch {
+			console.log("Search don't exist");
+		}
 	}
 });
 
@@ -874,23 +883,29 @@ if (
 	}
 
 	closeSearchBtn.addEventListener('click', e => {
-		toggleActiveSearchForm();
+		removeActive('.search');
 	});
 }
 
 function toggleActiveSearchForm() {
 	const search = document.querySelector('.search');
-	const headerHeight = document.querySelector('.header__top').offsetHeight;
-	search.classList.toggle('active');
-	search.style.top = `${headerHeight}px`;
+
 	if (search.matches('.active')) {
+		removeActive('.search');
+	} else {
+		search.classList.toggle('active');
+		search.style.top = `0`;
 		bodyLock();
 		overlayShow();
-	} else {
-		search.style.top = `-100%`;
-		bodyUnlock();
-		overlayHide();
 	}
+}
+
+function removeActive(selector) {
+	const element = document.querySelector(`${selector}`);
+	element.classList.remove('active');
+	element.style.top = `-100%`;
+	bodyUnlock();
+	overlayHide();
 }
 
 // Sidebar placed at the top
