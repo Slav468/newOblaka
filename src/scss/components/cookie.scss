@@ -23,6 +23,11 @@
 		color: var(--text-inverse);
 	}
 
+	&__button {
+		display: flex;
+		gap: toRem(10);
+	}
+
 	&_alternative {
 		background-color: transparent;
 		& .cookie-plank {

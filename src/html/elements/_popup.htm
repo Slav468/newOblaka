@@ -628,4 +628,64 @@
 		</div>
 	</div>
 
+	<div id="cookie-setting" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<!-- title -->
+				<div class="popup__text">
+					<div class="popup__title">Обработка файлов cookie</div>
+				</div>
+				<!-- body -->
+				<div class="popup__body">
+					<form class="form" data-form>
+						<!-- Заголовок -->
+						<div class="form__title" data-formTitle hidden>
+							Обработка файлов cookie
+						</div>
+						<!-- Список полей -->
+						<div class="form__list">
+
+							<!-- Checkbox -->
+							<div class="switch" data-formCheckbox>
+								<label class="switch__label" for="check-cookie-default">
+									<input type="checkbox" id="check-cookie-default" class="switch__input" disabled checked>
+									<span class="switch__round">
+									</span>
+								</label>
+								<div class="switch__text">Системные файлы cookie</div>
+							</div>
+
+							<div class="text_general">Эти файлы необходимы для функционирования сайта и не могут быть отключены в наших системах. Вы
+								можете настроить браузер так, чтобы он блокировал их или уведомлял вас об их использвании, но в таком случае возможно,
+								что некоторые разделы сайта не будут работать</div>
+
+							<!-- Checkbox -->
+							<div class="switch" data-formCheckbox>
+								<label class="switch__label" for="check-cookie-analyst">
+									<input type="checkbox" id="check-cookie-analyst" class="switch__input">
+									<span class="switch__round">
+									</span>
+								</label>
+								<div class="switch__text">Аналитические файлы cookie</div>
+							</div>
+
+							<div class="text_general">Эти файлы могут использоваться для сбора данных о ваших интересах, посещаемых страницах и
+								источниках трафика, чтобы оценивать и улучшать работу нашего сайта, а также для работы онлайн-чата</div>
+
+						</div>
+						<!-- Button -->
+						<div class="form__button" data-formBtn>
+							<button type="button" class="button ">
+								Отклонить
+							</button>
+							<button type="submit" class="button button_colored">
+								Выбрать
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
