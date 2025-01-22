@@ -51,4 +51,8 @@
 		font-weight: 500;
 		line-height: 1.33; /* 24/18 */
 	}
+	@media (max-width: $mobileSmall) {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
 }

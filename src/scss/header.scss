@@ -149,6 +149,9 @@
 			.header__contacts {
 				padding-right: toRem(55);
 			}
+			& .control {
+				display: none;
+			}
 		}
 	}
 
@@ -599,6 +602,11 @@
 					.icon-menu::after {
 						background-color: var(--text-primary);
 					}
+				}
+			}
+			@media (max-width: $mobile) {
+				& .control {
+					display: none;
 				}
 			}
 		}

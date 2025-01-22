@@ -894,7 +894,6 @@ function toggleActiveSearchForm() {
 		removeActive('.search');
 	} else {
 		search.classList.toggle('active');
-		search.style.top = `0`;
 		bodyLock();
 		overlayShow();
 	}
@@ -903,7 +902,6 @@ function toggleActiveSearchForm() {
 function removeActive(selector) {
 	const element = document.querySelector(`${selector}`);
 	element.classList.remove('active');
-	element.style.top = `-100%`;
 	bodyUnlock();
 	overlayHide();
 }
