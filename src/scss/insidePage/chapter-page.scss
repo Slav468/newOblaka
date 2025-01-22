@@ -6,7 +6,7 @@ $gap: toRem(20);
 	// .chapter-page__wrapper
 	&__wrapper {
 		display: flex;
-		margin: toRem(20) 0 toRem(40) 0;
+		margin: toRem(30) 0 toRem(50) 0;
 	}
 	// .chapter-page__container
 	&__container {
@@ -14,6 +14,35 @@ $gap: toRem(20);
 		display: flex;
 		flex-direction: column;
 		gap: toRem(40);
+	}
+
+	& .bread {
+		padding: 0;
+	}
+
+	& .block {
+		&__head {
+			padding: 0;
+			border-top: none;
+			justify-content: flex-start;
+		}
+		&__title {
+			position: relative;
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: 28px;
+			color: var(--pant-445-c);
+			text-transform: none;
+			&:after {
+				content: " ";
+				position: absolute;
+				width: 90px;
+				height: 3px;
+				background: var(--pant-420-s);
+				left: 0;
+				bottom: -20px;
+			}
+		}
 	}
 	// .chapter-page__main
 	&__main {
@@ -34,7 +63,6 @@ $gap: toRem(20);
 					}
 					&__bg {
 						position: relative;
-						border-radius: var(--radius8);
 						width: fit-content;
 						display: flex;
 						justify-content: center;

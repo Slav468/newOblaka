@@ -2,7 +2,6 @@
 	width: 100%;
 	transition: left 0.3s ease;
 	border: 1px solid var(--border);
-	border-radius: var(--radius8);
 	overflow: hidden;
 
 	&__body {
@@ -84,7 +83,6 @@
 		}
 
 		&:last-child.active.drop {
-			border-radius: 0 0 var(--radius8) var(--radius8);
 			overflow: hidden;
 		}
 	}

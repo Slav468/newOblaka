@@ -279,9 +279,7 @@
 				&::before {
 					top: 29%;
 				}
-				&::after {
-					bottom: 30%;
-				}
+
 				span {
 					display: block;
 					width: 100%;
@@ -292,9 +290,6 @@
 						width: 0;
 					}
 					&::before {
-						width: 0;
-					}
-					&::after {
 						width: 0;
 					}
 				}
@@ -319,7 +314,6 @@
 					span,
 					&::before,
 					&::after {
-						background-color: var(--text-accent);
 						visibility: visible;
 						right: toRem(10);
 						left: auto;
@@ -333,9 +327,6 @@
 				&__top {
 					& .office {
 						display: none;
-					}
-					& .menu {
-						flex: 0 2 38.5%;
 					}
 				}
 			}
