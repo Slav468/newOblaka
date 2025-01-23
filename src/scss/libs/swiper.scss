@@ -236,10 +236,7 @@
 		left: toRem(9.5);
 	}
 }
-// .swiper-button-prev:after,
-// .swiper-rtl .swiper-button-next:after {
-// 	content: url('@img/icons/icons.svg');
-// }
+
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
 	right: 20px;
@@ -255,10 +252,6 @@
 		right: toRem(9.5);
 	}
 }
-// .swiper-button-next:after,
-// .swiper-rtl .swiper-button-prev:after {
-// 	content: 'next';
-// }
 
 .swiper-pagination {
 	display: flex;

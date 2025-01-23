@@ -470,16 +470,28 @@ if (document.querySelector('.cookie-plank')) {
 	setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
 
 	const cookieBtn = document.querySelector('[data-cookieBtn]');
+	const cookieClose = document.querySelector('.cookie-plank [data-close]');
 	cookieBtn.addEventListener('click', e => {
 		e.preventDefault();
 		const item = document.querySelector(`.cookie-plank`);
 		item.classList.remove('active');
+		bodyUnlock();
+		overlayHide();
+	});
+	cookieClose.addEventListener('click', e => {
+		e.preventDefault();
+		const item = document.querySelector(`.cookie-plank`);
+		item.classList.remove('active');
+		bodyUnlock();
+		overlayHide();
 	});
 }
 
 function cookieActive(selector) {
 	const item = document.querySelector(`${selector}`);
 	item.classList.add('active');
+	bodyLock();
+	overlayShow();
 }
 
 function toggleActive(element) {

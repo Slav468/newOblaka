@@ -1,26 +1,55 @@
 .cookie-plank {
 	position: fixed;
+	top: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 11;
+	right: 0;
+	z-index: 20;
 	transform: translateY(100%);
 	transition: transform 0.3s ease;
 	width: 100%;
-	background-color: var(--text-secondary);
 	opacity: 0;
+
+	&__container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 	&__content {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		gap: toRem(20);
-		padding: toRem(42) 0;
+		padding: toRem(20) toRem(20);
+		max-width: 32.5rem;
+		background-color: var(--bg-primary);
+		border-radius: var(--radius8);
+		overflow: hidden;
+
 		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
 	}
 
+	&__title {
+		font-size: toRem(18);
+		font-weight: 600;
+	}
+
 	&__text {
-		color: var(--text-inverse);
+		color: var(--text-primary);
+	}
+
+	&__settings {
+		color: var(--primary);
+		align-self: flex-start;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--secondary);
+			}
+		}
 	}
 
 	&__button {
