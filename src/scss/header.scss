@@ -243,6 +243,10 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(5);
+
+		@media (max-width: toEm(639)) {
+			display: none;
+		}
 	}
 
 	&_menu-left {
@@ -477,7 +481,7 @@
 			.mode__svg,
 			.mode__regime,
 			.mode__time {
-				color: var(--text-primary);
+				color: var(--pant-420-s);
 			}
 
 			// & .header__contacts .contacts-phone__svg {
@@ -487,7 +491,7 @@
 			& .contacts-phone__link,
 			.contacts-phone__arrow,
 			.contacts-phone__svg {
-				color: var(--text-primary);
+				color: var(--pant-420-s);
 			}
 			@media (max-width: $mobileSmall) {
 				.contacts-phone__link {
@@ -515,10 +519,10 @@
 			& .icon-menu span,
 			.icon-menu::before,
 			.icon-menu::after {
-				background-color: var(--text-inverse);
+				color: var(--pant-420-s);
 				@media (max-width: toEm(640)) {
 					visibility: visible;
-					background-color: var(--text-primary);
+					color: var(--pant-420-s);
 				}
 			}
 		}

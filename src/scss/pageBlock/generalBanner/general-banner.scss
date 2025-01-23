@@ -158,14 +158,14 @@
 	&__slider {
 		position: relative;
 		width: 100%;
-		height: toRem(552);
+		// height: toRem(552);
 		border-radius: toRem(8);
-		@media (max-width: $mobile) {
-			height: toRem(323);
-		}
-		@media (max-width: toEm(457)) {
-			height: toRem(491);
-		}
+		// @media (max-width: $mobile) {
+		// 	height: toRem(323);
+		// }
+		// @media (max-width: toEm(457)) {
+		// 	height: toRem(491);
+		// }
 	}
 	&__slide {
 		position: relative;
@@ -176,7 +176,7 @@
 		justify-content: center;
 		gap: toRem(40);
 		max-width: toRem(1700);
-		@include imageOverlay();
+		// @include imageOverlay();
 	}
 	&__pagination {
 		position: absolute;
@@ -197,7 +197,6 @@
 		max-width: percent(1460, $maxWidthContainer);
 		gap: toRem(55);
 		@media (max-width: toEm(1280)) {
-			max-width: 82.951807%;
 			gap: toRem(50);
 		}
 		@media (max-width: $mobile) {
@@ -205,7 +204,6 @@
 			gap: toRem(15);
 		}
 		@media (max-width: toEm(698)) {
-			max-width: 95%;
 		}
 	}
 
@@ -224,7 +222,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: right;
+		object-position: center;
 		z-index: -2;
 	}
 	&__link {
@@ -277,14 +275,10 @@
 			padding: 0;
 		}
 		& .banner__slider {
-			aspect-ratio: 1920 / 720;
 			height: toRem(720);
 			border-radius: 0;
 			@media (max-width: $mobile) {
-				height: toRem(483);
-			}
-			@media (max-width: toEm(457)) {
-				height: toRem(485);
+				height: toRem(620);
 			}
 		}
 		& .banner__slide {
@@ -292,15 +286,12 @@
 		}
 
 		& .banner__content {
-			height: 51%;
 			justify-content: space-between;
-
-			margin: 80px 30px 0 60px;
+			padding: toRem(100) 0;
+			margin: 0 30px 0 60px;
 			@media (max-width: toEm(1280)) {
-				max-width: 85.951807%;
 			}
 			@media (max-width: toEm(698)) {
-				max-width: 95%;
 			}
 			@media (max-width: toEm(457)) {
 				justify-content: center;

@@ -78,6 +78,10 @@
 
 		-webkit-background-clip: text;
 		background-clip: text;
+
+		@media (max-width: $mobile) {
+			font-size: toRem(30);
+		}
 	}
 
 	// .block__buttons

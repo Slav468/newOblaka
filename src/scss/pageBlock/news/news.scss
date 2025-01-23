@@ -18,7 +18,6 @@
 	&__cell {
 		display: flex;
 		width: calc((100% - toRem(20) * 3) / 4);
-		aspect-ratio: 400 / 327;
 		height: auto;
 		overflow: hidden;
 		appearance: none;
