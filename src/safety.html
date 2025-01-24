@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper chapter-page">
+		@@include('html/pageBlock/headers/_header-menuLeft-notAbsolute.htm',{})
+
+		<div class="chapter-page__wrapper">
+			<div class="chapter-page__container">
+				@@include('html/baseHtml/_breads.htm',{})
+				@@include('html/elements/_titleForInside.htm',{"title": "Дистрибуция"})
+			</div>
+
+		</div>
+
+		<main class="chapter-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+					<!-- menu -->
+					<div class="main__menu">
+						<!-- Include menu -->
+						@@include('html/baseHtml/_page-menu.htm',{})
+					</div>
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="main__item">
+							<div class="text_general">
+								ОАО «Гомельский ликеро-водочный завод «Радамир» имеет официального дистрибьютора на рынке Республики Беларусь –
+								торговое унитарное предприятие «ТОРГОВАЯ КОМПАНИЯ «МИНСК КРИСТАЛЛ ТРЕЙД» (<a href="#">alcotrade.by</a>). Благодаря
+								торговой компании,
+								занимающей лидерские позиции в алкогольной индустрии Беларуси, продукцию ОАО «Гомельский ликеро-водочный завод
+								«Радамир» можно найти во всех торговых  объектах страны. Кроме этого, торговая компания реализует алкогольную
+								продукцию «Радамир» через собственную специализированную сеть фирменных магазинов «Минск Кристалл», которая включает в
+								себя более 90 современных алкомаркетов.
+
+							</div>
+						</div>
+
+						<div class="main__item">
+							@@include('html/pageBlock/projects/projects-variable/_projects-block.htm',{})
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+	</div>
+
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_overlay.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>

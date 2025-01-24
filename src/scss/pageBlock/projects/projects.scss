@@ -17,7 +17,7 @@
 
 	&__cell {
 		width: calc((100% - toRem(20) * 2) / 3);
-		aspect-ratio: 540 / 350;
+		aspect-ratio: 540 / 595;
 		overflow: hidden;
 		border-radius: var(--radius8);
 		appearance: none;
@@ -25,12 +25,12 @@
 		@media (any-hover: hover) {
 			&:hover {
 				box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+				.decorate {
+					background: var(--pant-420-s);
+				}
 			}
 		}
 
-		@media (max-width: toEm(1280)) {
-			aspect-ratio: 540 / 360;
-		}
 		@media (max-width: $tablet) {
 			width: calc((100% - toRem(16) * 2) / 3);
 		}
@@ -58,9 +58,22 @@
 		& .hover__bottom {
 			display: none;
 		}
-		& .hover__wrapper {
-			display: flex !important;
-			padding: toRem(20) toRem(20) toRem(23) !important;
+		// & .hover__wrapper {
+		// 	display: flex !important;
+		// 	padding: toRem(20) toRem(20) toRem(23) !important;
+		// }
+		.hover {
+			&__title {
+				font-family: var(--font-family);
+				font-weight: 700;
+				font-size: 16px;
+				color: var(--white);
+				text-transform: none;
+			}
+		}
+
+		& .decorate {
+			border-radius: 50%;
 		}
 	}
 }

@@ -223,18 +223,18 @@
 					opacity: 0;
 				}
 
-				&:before {
-					opacity: 1;
-				}
+				// &:before {
+				// 	opacity: 1;
+				// }
 			}
 
 			.hover__item {
 				padding: 0;
 			}
-			.hover__wrapper {
-				padding: toRem(30);
-				display: none;
-			}
+			// .hover__wrapper {
+			// 	padding: toRem(30);
+			// 	display: none;
+			// }
 
 			.hover-content {
 				height: auto;
