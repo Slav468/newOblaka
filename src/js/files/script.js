@@ -461,8 +461,13 @@ function fixedHeader() {
 
 // Show block on timeout
 function setTimeOutPopup(cb, selector, delay) {
+	const elem = document.querySelector(`${selector}`);
+
 	setTimeout(() => {
-		cb(selector);
+		const attr = elem.hasAttribute('data-disabled');
+		if (!attr) {
+			cb(selector);
+		}
 	}, delay);
 }
 
