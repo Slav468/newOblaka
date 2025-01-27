@@ -480,6 +480,7 @@ if (document.querySelector('.cookie-plank')) {
 		e.preventDefault();
 		const item = document.querySelector(`.cookie-plank`);
 		item.classList.remove('active');
+		item.dataset.disabled = true;
 		bodyUnlock();
 		overlayHide();
 	});
