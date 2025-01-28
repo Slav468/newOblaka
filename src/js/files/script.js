@@ -7,6 +7,7 @@ import {
 	overlayHide,
 	overlayShow,
 } from './functions.js';
+import { initSearchSlider } from './sliders.js';
 
 const header = document.querySelector('header');
 const asideMenu = document.querySelector('.aside-menu');
@@ -930,3 +931,19 @@ function removeActive(selector) {
 // 	const headerHeight = document.querySelector('header').offsetHeight;
 // 	sidebar.style.top = `${headerHeight * 2}px`;
 // }
+
+if (document.querySelector('.search')) {
+	const block = document.querySelector('.search');
+	const mutationObserver = new MutationObserver(function (mutations) {
+		for (let mutation of mutations) {
+			if (mutation.type === 'childList') {
+				console.log('mutations');
+				initSearchSlider();
+			}
+		}
+	});
+
+	mutationObserver.observe(block, {
+		childList: true,
+	});
+}

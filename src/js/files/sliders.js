@@ -1005,6 +1005,30 @@ function initSliders() {
 	}
 }
 
+export function initSearchSlider() {
+	if (document.querySelector('.card-slider')) {
+		new Swiper('.card-slider', {
+			modules: [Navigation],
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			speed: 300,
+			lazy: true,
+			navigation: {
+				prevEl: '.card-button-prev',
+				nextEl: '.card-button-next',
+			},
+			breakpoints: {
+				320: {
+					spaceBetween: 10,
+				},
+				992: {
+					spaceBetween: 20,
+				},
+			},
+		});
+	}
+}
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
