@@ -12,6 +12,37 @@
 	// .control__item
 	&__item {
 		width: fit-content;
+		& .dropdown {
+			&-head {
+				border-radius: toRem(32);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					& .dropdown-head {
+						background-color: var(--text-inverse);
+						color: var(--primary);
+
+						&__trigger {
+							& svg {
+								transform: rotate(180deg);
+							}
+						}
+					}
+					& .dropdown-body {
+						display: flex;
+					}
+					&::before {
+						content: " ";
+						height: toRem($width);
+						width: 100%;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						z-index: 5;
+					}
+				}
+			}
+		}
 	}
 
 	// .control__button

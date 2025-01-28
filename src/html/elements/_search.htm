@@ -11,9 +11,35 @@
 					</button>
 				</div>
 				<div class="search-form__control">
-					<!-- <button type='submit' class="search-form__search">
-						Поиск
-					</button> -->
+					<div class="dropdown" data-click>
+
+						<div class="dropdown-head">
+							<div class="dropdown-head__link">
+								<div class="dropdown-head__title">Поиск по</div>
+							</div>
+							<div class="dropdown-head__trigger">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrowLight"></use>
+								</svg>
+							</div>
+						</div>
+
+						<div class="dropdown-body">
+							<div class="dropdown-body__list">
+								<div class="dropdown-body__item active" data-value='catalog'>
+									<div class="dropdown-body__link">
+										<div class="dropdown-body__text">По каталогу</div>
+									</div>
+								</div>
+								<div class="dropdown-body__item" data-value='all'>
+									<div class="dropdown-body__link">
+										<div class="dropdown-body__text">По сайту</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
 					<button type='button' class="search-form__close">
 						<svg>
 							<use xlink:href="@img/icons/icons.svg#close"></use>

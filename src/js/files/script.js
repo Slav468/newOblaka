@@ -61,6 +61,17 @@ function dropAny(array, selector, event = 'click') {
 	});
 }
 
+if (document.querySelector('.dropdown[data-click]')) {
+	const triggers = document.querySelectorAll(
+		'.dropdown[data-click] .dropdown-head'
+	);
+
+	dropAny(triggers, '.dropdown');
+	setActive('.dropdown[data-click] .dropdown-body__list', '.dropdown');
+
+	console.log(triggers);
+}
+
 function removeDrop(array, selector, parentNode) {
 	array.forEach(item => {
 		item.addEventListener('click', e => {
@@ -122,6 +133,7 @@ overlay.addEventListener('click', () => {
 	menuClose();
 	removeSomeDrop('.aside-phone');
 	removeSomeDrop('.aside-menu__item');
+
 	try {
 		removeActive('.search');
 	} catch {
@@ -136,11 +148,12 @@ document.addEventListener('keydown', e => {
 		removeSomeDrop('.contacts-phone');
 		removeSomeDrop('.options');
 		removeSomeDrop('.sort');
-		try {
-			removeActive('.search');
-		} catch {
-			console.log("Search don't exist");
-		}
+		removeSomeDrop('.dropdown[data-click]');
+		// try {
+		// 	removeActive('.search');
+		// } catch {
+		// 	console.log("Search don't exist");
+		// }
 	}
 });
 
@@ -149,6 +162,7 @@ document.addEventListener('click', e => {
 
 	closeOnClickDocument(target, '.options');
 	closeOnClickDocument(target, '.sort');
+	closeOnClickDocument(target, '.dropdown[data-click]');
 });
 
 function closeOnClickDocument(eventTarget, selector, mod = 'drop') {
