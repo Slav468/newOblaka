@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper chapter-page">
+		@@include('html/pageBlock/headers/_header-menuLeft-notAbsolute.htm',{})
+
+		<div class="chapter-page__wrapper">
+			<div class="chapter-page__container">
+				@@include('html/baseHtml/_breads.htm',{})
+				@@include('html/elements/_titleForInside.htm',{"title": "Обращения граждан и юридических лиц"})
+			</div>
+
+		</div>
+
+		<main class="chapter-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+					<!-- menu -->
+					<div class="main__menu">
+						<!-- Include menu -->
+						@@include('html/baseHtml/_page-menu.htm',{})
+					</div>
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="main__item">
+							<div class="text_general">
+								Со 2 января 2023 года подача электронных обращений осуществляется посредством государственной единой (интегрированной)
+								республиканской информационной системы учета и обработки обращений граждан и юридических лиц https://<a
+									href="#">обращения.бел</a> (интернет-сайт)
+
+								При этом на сообщения, направленные на адрес электронной почты ОАО "Гомельский ликеро-водочный завод "Радамир" –
+								управляющая компания холдинга «МИНСК КРИСТАЛЛ ГРУПП»: <a href="#" mailto="glp@kristal.by">glp@kristal.by</a> не
+								распространяется действие Закона Республики
+								Беларусь от 18.07.2011 № 300-З «Об обращениях граждан и юридических лиц», и ответы на такие сообщения не направляются.
+
+								Оставляются без рассмотрения по существу обращения, которые (по которым):
+								• изложены не на белорусском или русском языке;
+								• не содержат фамилии, собственного имени, отчества, адреса места жительства (места пребывания) гражданина;
+								• не содержат полного наименования юридического лица и адреса его места нахождения, фамилии, собственного имени,
+								отчества руководителя или лица, уполномоченного в установленном порядке подписывать обращения (для юридических лиц);
+								• содержат текст, не поддающийся прочтению;
+								• содержат нецензурные либо оскорбительные слова или выражения;
+
+								Оценить качество обслуживания, оказываемых услуг ОАО «МИНСК КРИСТАЛЛ» – управляющая компания холдинга «МИНСК КРИСТАЛЛ
+								ГРУПП» Вы можете на <a href="#">Портале рейтинговой оценки</a>
+
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+
+	</div>
+	@@include('html/elements/_cookie-plank.htm',{})
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_overlay.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>

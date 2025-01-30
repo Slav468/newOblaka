@@ -19,11 +19,10 @@
 
 			& > .accordion__head {
 				& .accordion__img {
-					background-color: var(--primary);
+					background-color: transparent;
 				}
 				& .accordion__svg {
 					transform: rotate(180deg);
-					color: var(--text-inverse);
 				}
 			}
 		}
@@ -62,19 +61,12 @@
 		min-width: toRem(27);
 		min-height: toRem(27);
 		border-radius: 50%;
-		background-color: var(--light);
 		overflow: hidden;
 		cursor: pointer;
+		background-color: var(--primary);
+
 		@media (max-width: $mobile) {
 			align-self: flex-start;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				.accordion__svg {
-					color: var(--primary);
-				}
-			}
 		}
 	}
 
@@ -84,6 +76,8 @@
 		color: var(--text-secondary);
 		transform: rotate(0deg);
 		transition: transform 0.3s ease;
+		stroke-width: 1.5px;
+		color: var(--pant-445-c);
 	}
 
 	&__description {

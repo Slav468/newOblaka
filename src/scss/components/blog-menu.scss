@@ -4,7 +4,7 @@
 
 	& .accordion {
 		width: 100%;
-		background-color: var(--iverse);
+
 		border: 1px solid var(--border);
 		border-radius: var(--radius8);
 
@@ -59,18 +59,23 @@
 		align-items: center;
 		gap: toRem(10);
 		position: relative;
-		font-size: toRem(14);
-		color: var(--text-primary);
-		font-weight: 500;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 14px;
+		color: var(--pant-420-s);
+		color: var(--pant-445-c);
 
 		span {
 			min-width: toRem(22);
 			display: block;
-			border-radius: var(--radius3);
-			font-weight: 400;
-			border: 1px solid var(--border);
-			background: var(--bg-secondary);
-			color: var(--text-secondary);
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: 14px;
+
+			border: 1px solid var(--pant-420-s);
+			border-radius: 4px;
+			padding: 2px 8px;
+			background: var(--pant-420-700);
 			text-align: center;
 		}
 
@@ -92,19 +97,20 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--primary);
+				& span {
+					color: var(--pant-445-c);
+				}
 			}
 		}
 
 		&.active {
-			color: var(--primary);
-			font-weight: 600;
+			color: var(--pant-420-s);
 
+			& span {
+				color: var(--pant-445-c);
+			}
 			&:before {
 				opacity: 1;
-			}
-			& span {
-				color: var(--text-inverse);
-				background-color: var(--primary);
 			}
 		}
 		@media (max-width: toRem(991)) {

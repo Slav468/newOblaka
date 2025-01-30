@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper chapter-page">
+		@@include('html/pageBlock/headers/_header-menuLeft-notAbsolute.htm',{})
+
+		<div class="chapter-page__wrapper">
+			<div class="chapter-page__container">
+				@@include('html/baseHtml/_breads.htm',{})
+				@@include('html/elements/_titleForInside.htm',{"title": "Административные процедуры"})
+			</div>
+
+		</div>
+
+		<main class="chapter-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+					<!-- menu -->
+					<div class="main__menu">
+						<!-- Include menu -->
+						@@include('html/baseHtml/_page-menu.htm',{})
+					</div>
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="main__item">
+							<div class="text_general">
+								Административные процедуры
+								Перечень административных процедур, выполняемых ОАО «Гомельский ликеро-водочный завод «Радамир» по обращениям граждан
+								за выдачей справок или других документов
+								Время приема граждан по всем административным процедурам установлено с 8-00 до 17-00 с понедельника по четверг, с
+								8-00 до 15-45 в пятницу, обед с 12-15 до 13-00 часов.
+
+								<a href="#">Перечень административных процедур</a>
+
+								<a href="#">Образцы заявлений по административным процедурам</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+
+	</div>
+	@@include('html/elements/_cookie-plank.htm',{})
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_overlay.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>

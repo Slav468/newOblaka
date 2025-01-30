@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper chapter-page">
+		@@include('html/pageBlock/headers/_header-menuLeft-notAbsolute.htm',{})
+
+		<div class="chapter-page__wrapper">
+			<div class="chapter-page__container">
+				@@include('html/baseHtml/_breads.htm',{})
+				@@include('html/elements/_titleForInside.htm',{"title": "Горячая линия"})
+			</div>
+
+		</div>
+
+		<main class="chapter-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+					<!-- menu -->
+					<div class="main__menu">
+						<!-- Include menu -->
+						@@include('html/baseHtml/_page-menu.htm',{})
+					</div>
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="main__item">
+							<div class="text_general">
+								Горячая линия
+								Телефон "горячей линии" ОАО "Гомельский ликеро-водочный завод "Радамир" – +375 232 26-10-01, специалист по
+								делопроизводству Приходько Наталья Николаевна.
+
+								По этому номеру вы можете поделиться своими пожеланиями и предложениями, задать интересующий Вас вопрос о деятельности
+								открытого акционерного общества "Гомельский ликеро-водочный завод "Радамир", а также по улучшению работы предприятия и
+								его структурных подразделений, высказать свое мнение о качестве выпускаемой продукции, уровне обслуживания. Все
+								замечания и предложения, поступающие по телефону "горячей линии" анализируются. По конструктивным предложениям
+								службами ОАО "Гомельский ликеро-водочный завод "Радамир" будут приняты адресные меры.
+
+								Для оперативного реагирования на вопросы и замечания необходимо оставить следующую информацию:
+								- вопрос или причину обращения;
+								- контактный телефон или адрес для предоставления ответа;
+								- ваше имя и фамилия.
+
+								При наличии полной информации, ответ вы получите в течение пяти суток. При рассмотрении сложных вопросов, получив
+								предварительный ответ, вы получите полную информацию в течение одного месяца.
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+
+	</div>
+	@@include('html/elements/_cookie-plank.htm',{})
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_overlay.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>

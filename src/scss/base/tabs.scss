@@ -8,6 +8,9 @@
 		display: flex;
 		gap: toRem(12);
 		overflow: auto;
+		border: 1px solid var(--pant-420-s);
+		border-radius: 8px;
+		padding: 0 toRem(30);
 		&::-webkit-scrollbar {
 			display: block;
 			width: toRem(2);
@@ -25,20 +28,20 @@
 	&__title {
 		display: flex;
 		width: fit-content;
-		border: 1px solid var(--text-secondary);
-		border-radius: var(--radius8);
-		padding: toRem(12) toRem(10);
+		padding: toRem(17) toRem(10);
+		font-family: var(--second-family);
 		font-weight: 400;
-		font-size: toRem(15);
-		line-height: 1.67;
+		font-size: 14px;
+		color: var(--pant-445-c);
 		text-align: center;
-		color: var(--text-secondary);
+
 		text-wrap: nowrap;
-		margin-bottom: toRem(5);
+
 		&._tab-active {
-			border: 1px solid var(--primary);
-			background-color: var(--primary);
-			color: var(--text-inverse);
+			font-family: var(--second-family);
+			font-weight: 600;
+			font-size: 14px;
+			color: var(--pant-420-s);
 		}
 	}
 	// .tabs__content
