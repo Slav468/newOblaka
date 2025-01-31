@@ -132,7 +132,6 @@
 		background-color: var(--bg-primary);
 		display: flex;
 		flex-direction: column;
-		align-self: center;
 		gap: toRem(20);
 	}
 
@@ -156,7 +155,7 @@
 		max-width: toRem(285);
 		width: 100%;
 		align-self: center;
-		@include adaptiveValue('margin-bottom', 40, 20);
+		@include adaptiveValue("margin-bottom", 40, 20);
 		& .button {
 			width: fit-content;
 		}

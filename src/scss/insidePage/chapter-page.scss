@@ -112,8 +112,11 @@ $gap: toRem(20);
 	}
 
 	& .map__wrapper {
-		& > .map-address {
+		& .map-address {
 			display: none;
+			&__body {
+				align-self: center;
+			}
 		}
 	}
 
