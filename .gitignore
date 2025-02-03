@@ -4,7 +4,8 @@ node_modules/
 phpmailer/
 .gitignore
 .codegpt
-dist/
+.qodo
+dist
 Source/
 version.json
 undefined
