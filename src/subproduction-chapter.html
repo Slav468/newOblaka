@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
+
+<body>
+	<div class="wrapper detail-page">
+		@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
+
+		<div class="detail-page__wrapper">
+			<section class="preview">
+				<div class="preview__bg">
+					<img class='preview__img' src="@img/generalBanner/generalBanner.jpg" alt="page banner">
+				</div>
+				<div class="preview__container">
+					<div class="preview__description">
+						<div class="preview__title">
+							<h1>Водка</h1>
+						</div>
+						<div class="preview__text">
+							Мы гордимся тем, что создаем!
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="detail-page__container">
+				<div class="bread">
+					<ul class='bread__list'>
+						<li class='bread__item'><a class='bread__link' href="#">Главная</a></li>
+						<li class="bread__divider">-</li>
+						<li class='bread__item'><a class='bread__link' href="#">Продукция</a></li>
+						<li class="bread__divider">-</li>
+						<li class='bread__item'><a class='bread__link' href="#">Водка</a></li>
+						<li class="bread__divider">-</li>
+						<li class='bread__item'>Водка премиум</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<main class="detail-page__main main">
+			<div class="main__container">
+				<div class="main__inner">
+					<!-- page-content -->
+					<div class="main__content">
+						<!-- Include content-->
+						<div class="main__item">
+							@@include('html/pageBlock/product/product-variables/_product-list.htm',{})
+						</div>
+						<div class="main__item">
+							<div class="main__item">
+								<div class="text_general">
+									Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О города все, толку,
+									агентство знаках повстречался алфавит ручеек власти первую рекламных несколько большого которое родного путь щеке
+									подпоясал журчит.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		@@include('html/pageBlock/footer/_footer.htm',{})
+	</div>
+
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_overlay.htm',{})
+	@@include('html/elements/_popup.htm',{})
+	@@include('html/pageBlock/_js.htm',{})
+</body>
+
+</html>

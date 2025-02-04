@@ -40,6 +40,7 @@ function initSliders() {
 			//autoHeight: true,
 			speed: 300,
 			grabCursor: true,
+			watchSlidesProgress: true,
 			//touchRatio: 0,
 			// simulateTouch: false,
 			//loop: true,
@@ -964,26 +965,11 @@ function initSliders() {
 	}
 	// Slider general
 	if (document.querySelector('.slider-general')) {
-		const swiper = new Swiper('.slider-thumb', {
-			modules: [Navigation, Thumbs],
-			direction: 'vertical',
-			spaceBetween: 10,
-			slidesPerView: 3,
-			freeMode: true,
-			watchSlidesProgress: true,
-			navigation: {
-				nextEl: '.slider-thumb-next',
-				prevEl: '.slider-thumb-prev',
-			},
-		});
-
-		const swiper2 = new Swiper('.slider-general', {
-			modules: [Navigation, Thumbs, Pagination],
+		new Swiper('.slider-general', {
+			modules: [Navigation],
 			slidesPerView: 'auto',
 			spaceBetween: 0,
-			thumbs: {
-				swiper: swiper,
-			},
+
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,

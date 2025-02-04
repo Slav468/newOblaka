@@ -176,7 +176,7 @@
 		justify-content: center;
 		gap: toRem(40);
 		max-width: toRem(1700);
-		// @include imageOverlay();
+		@include imageOverlay();
 	}
 	&__pagination {
 		position: absolute;

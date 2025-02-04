@@ -385,6 +385,39 @@
 				}
 			}
 		}
+
+		p {
+			& img {
+				float: left;
+				margin-right: toRem(36);
+			}
+		}
+
+		table {
+			table-layout: fixed;
+			border-spacing: 1px;
+			text-align: center;
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		caption {
+			caption-side: top;
+			text-align: left;
+		}
+
+		th {
+			border: 1px solid #dededf;
+			background-color: #ffffff;
+			color: #000000;
+			padding: 5px;
+		}
+		td {
+			border: 1px solid #dededf;
+			background-color: #ffffff;
+			color: #000000;
+			padding: 5px;
+		}
 	}
 	&_light {
 		font-weight: 400;

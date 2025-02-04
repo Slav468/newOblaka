@@ -4,12 +4,12 @@
 
 <body>
 	<div class="wrapper chapter-page">
-		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
+		@@include('html/pageBlock/headers/_header-menuLeft-notAbsolute.htm',{})
 
 		<div class="chapter-page__wrapper">
 			<div class="chapter-page__container">
 				@@include('html/baseHtml/_breads.htm',{})
-				@@include('html/elements/_titleForInside.htm',{})
+				@@include('html/elements/_titleForInside.htm',{"title":"Достижения"})
 			</div>
 
 		</div>
@@ -24,15 +24,10 @@
 					</div>
 					<!-- page-content -->
 					<div class="main__content">
-
 						<!-- Include content-->
-						<div class="text_general">
-							Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Lorem имеет щеке решила, не там
-							переписали парадигматическая напоивший меня но снова всеми которой агентство языкового лучше ipsum заманивший
-							необходимыми.
+						<div class="main__item">
+							@@include('html/pageBlock/certificate/certificate-variable/_certificate-block.htm',{})
 						</div>
-
-						@@include('html/pageBlock/certificate/certificate-variable/_certificate-block.htm',{})
 
 					</div>
 				</div>

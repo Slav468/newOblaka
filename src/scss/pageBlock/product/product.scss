@@ -7,8 +7,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: toRem(20);
-		@media (max-width: toEm(991)) {
-			gap: toRem(16);
+		@media (max-width: toEm(1100)) {
+			gap: toRem(14);
 		}
 		@media (max-width: $mobile) {
 			gap: toRem(14);
@@ -49,14 +49,14 @@
 			}
 		}
 
-		@media (max-width: toEm(991)) {
-			width: calc((100% - toRem(16) * 2) / 3);
-		}
-		@media (max-width: $mobile) {
-			width: calc((100% - toRem(14) * 2) / 3);
-		}
-		@media (max-width: toEm(576)) {
+		@media (max-width: toEm(1100)) {
 			width: calc((100% - toRem(14) * 1) / 2);
+		}
+		@media (max-width: toEm(778)) {
+			width: calc((100% - toRem(14) * 1) / 2);
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
 		}
 	}
 
@@ -101,6 +101,9 @@
 	&__slider {
 		width: 100%;
 		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__data {
@@ -128,6 +131,8 @@
 	&__description {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		gap: toRem(6);
 	}
 
@@ -143,7 +148,6 @@
 		font-size: toRem(14);
 		line-height: 1.29;
 		color: var(--text-primary);
-		@include textOverflow(2, 14, 1.29);
 
 		&:hover {
 			color: var(--primary);

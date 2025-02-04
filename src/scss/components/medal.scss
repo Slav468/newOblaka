@@ -1,0 +1,22 @@
+.medal {
+	// .medal__list
+
+	&__list {
+		display: flex;
+		gap: toRem(30);
+		flex-wrap: wrap;
+
+		// .medal__item
+
+		&__item {
+			width: toRem(100);
+			height: toRem(100);
+		}
+
+		// .medal__img
+		&__img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

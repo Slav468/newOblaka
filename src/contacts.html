@@ -4,44 +4,48 @@
 
 <body>
 	<div class="wrapper chapter-page">
-		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
+		@@include('html/pageBlock/headers/_header-menuLeft-notAbsolute.htm',{})
 
 		<div class="chapter-page__wrapper">
 			<div class="chapter-page__container">
 				@@include('html/baseHtml/_breads.htm',{})
-				@@include('html/elements/_titleForInside.htm',{})
+				@@include('html/elements/_titleForInside.htm',{"title":"Контакты"})
 			</div>
 		</div>
 
 		<main class="chapter-page__main main">
 			<div class="main__container">
 				<div class="main__inner">
+					<!-- menu -->
+					<div class="main__menu">
+						<!-- Include menu -->
+						@@include('html/baseHtml/_page-menu.htm',{})
+					</div>
 
 					<!-- page-content -->
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
-							<div class="text_subtitle">
-								Как доехать
-							</div>
 
 							<div class="text_general">
-								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Lorem имеет щеке решила, не там
-								переписали парадигматическая напоивший меня но снова всеми которой агентство языкового лучше ipsum заманивший
-								необходимыми.
-								Парадигматическая переписывается правилами вершину своего, от всех свой коварных решила злых что образ великий дорогу
-								до
-								подзаголовок рукописи ведущими вопроса оксмокс пунктуация всеми точках ему бросил. Родного снова необходимыми
-								обеспечивает
-								правилами.
-
+								<b>ОАО «Гомельский ликеро-водочный завод «Радамир»</b> <br>
+								ул. Севастопольская, 106, 246042, г. Гомель, Республика Беларусь<br>
+								Банк: Дирекция ОАО «Белинвестбанк» по Гомельской области<br>
+								Банковский идентификационный код в формате IBAN: BLBBBY2X<br>
+								Адрес банка: г. Гомель, ул. Советская, 7<br>
+								Р\с: BY86 BLBB 3012 0400 0783 1600 1007<br>
+								УНН: 400078316<br>
+								Тел./факс: <a href="tel:+375232261001">+375 (232) 26-10-01</a><br><br>
 							</div>
-
 						</div>
 
 						<div class="main__item">
 							<!-- 1 -->
 							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
 								<!-- address -->
 								<div class="map-address__item">
 									<div class="map-address_svg">
@@ -93,6 +97,587 @@
 									</div>
 								</div>
 							</div>
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+							<!-- 1 -->
+							<div class="map-address__body">
+								<div class="map-address__descr">
+									<div class="map-address__name">Генеральный директор:</div>
+									<div class="map-address__subname">Демидовец Андрей Васильевич</div>
+								</div>
+								<!-- address -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#location"></use>
+										</svg>
+									</div>
+									<a href="https://yandex.ru/map-widget/v1/?um=constructor%3A39462b4038263cdab2957c7d0d023ba8ff96ea88bcc236ed8727978106970df5&amp;source=constructor"
+										class="map-address__text" target="_blank">
+										Минск, улица Ленина, 27
+									</a>
+								</div>
+								<!-- phone -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="map-address__description">
+										<a href="tel:+375296762606" class="map-address__text">
+											+375 (29) 676-26-06
+										</a>
+										<div class="text_light">
+											Администратор
+										</div>
+									</div>
+								</div>
+								<!-- email -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#letter"></use>
+										</svg>
+									</div>
+									<a href="mailto:pochta@yandex.by" class="map-address__text">
+										pochta@yandex.by
+									</a>
+								</div>
+								<!-- work time -->
+								<div class="map-address__item">
+									<div class="map-address_svg">
+										<svg class="map-svg">
+											<use xlink:href="img/icons/icons.svg#time"></use>
+										</svg>
+									</div>
+									<div class="map-address__text" target="_blank">
+										пн.-пт. 9:00 - 21:00 <br> без обеда
+									</div>
+								</div>
+							</div>
+
+
 
 						</div>
 

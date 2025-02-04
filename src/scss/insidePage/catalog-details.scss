@@ -46,6 +46,10 @@
 			flex-wrap: wrap;
 		}
 	}
+
+	& .block__head {
+		justify-content: flex-start;
+	}
 }
 
 .card-head {
@@ -208,13 +212,18 @@
 	}
 }
 .grid-char {
-	grid-area: 1 / 5 / 2 / 10;
+	grid-area: 1 / 5 / 2 / 13;
 	gap: toRem(30);
+
+	& p:has(img) {
+		display: flex;
+		align-items: center;
+	}
 	@media (max-width: 1199px) {
 		grid-area: 1 / 7 / 2 / 13;
 	}
 	@media (max-width: 798px) {
-		grid-area: 2 / 1 / 3 / 7;
+		grid-area: 2 / 1 / 3 / 12;
 		flex-direction: column;
 	}
 	@media (max-width: 598px) {

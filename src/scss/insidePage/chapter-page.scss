@@ -95,7 +95,7 @@ $gap: toRem(20);
 				width: calc((100% - toRem(20) * 2) / 3);
 				max-width: toRem(400);
 				min-width: toRem(245);
-				gap: toRem(5);
+				gap: toRem(24);
 				& .map-address_svg {
 					align-self: flex-start;
 				}
