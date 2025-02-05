@@ -44,7 +44,35 @@
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
-							@@include('html/pageBlock/product/product-variables/_product-list.htm',{})
+
+							<section class="block directions">
+								<div class="block__container">
+									<div class="block__wrapper">
+										<div class="block__inner">
+											<div class="block__head">
+												<h2 class="block__title">Водка премиум</h2>
+												<div class="block__reference reference">
+													<a href="#" class="reference__link">
+														<p class="reference__text">Смотреть все</p>
+														<div class="reference__img">
+															<svg class="reference__svg">
+																<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+															</svg>
+														</div>
+													</a>
+												</div>
+											</div>
+											<div class="block__body">
+												<div class="block__content">
+													<!-- Изменяющийся контент -->
+													@@include('html/pageBlock/product/product-variables/_product-list.htm',{})
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</section>
 						</div>
 						<div class="main__item">
 							<div class="main__item">

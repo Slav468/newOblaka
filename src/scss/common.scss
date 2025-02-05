@@ -233,14 +233,10 @@
 
 	min-height: toRem(46);
 
-	font-weight: 600;
-	font-size: toRem(16);
-
 	font-family: var(--second-family);
-
-	color: var(--white);
-
-	background: var(--pant-425-c);
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--pant-445-c);
 
 	width: 100%;
 	text-wrap: nowrap;
@@ -249,7 +245,17 @@
 	padding: 13px 30px;
 
 	&:hover {
-		background-color: var(--pant-420-s);
+		background: var(--pant-425-c);
+		color: var(--white);
+	}
+
+	&_inverse {
+		background: var(--pant-425-c);
+		color: var(--white);
+		&:hover {
+			background: var(--white);
+			color: var(--pant-425-c);
+		}
 	}
 
 	&_colored {
