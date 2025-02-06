@@ -28,15 +28,15 @@
 			}
 		}
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			width: calc((100% - toRem(16) * 2) / 3);
 		}
 
-		@media (max-width: toEm(520)) {
+		@media (max-width: $mobile) {
 			width: calc((100% - toRem(14) * 1) / 2);
 		}
-		@media (max-width: toEm(360)) {
-			width: calc((100% - toRem(10) * 1) / 2);
+		@media (max-width: toEm(375)) {
+			width: 100%;
 		}
 	}
 

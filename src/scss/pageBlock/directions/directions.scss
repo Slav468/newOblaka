@@ -28,19 +28,10 @@
 			}
 		}
 		@media (max-width: $tablet) {
-			width: calc((100% - toRem(16) * 3) / 4);
-		}
-		@media (max-width: $mobile) {
-			width: calc((100% - toRem(16) * 2) / 3);
-		}
-		@media (max-width: toEm(576)) {
-			width: calc((100% - toRem(14) * 2) / 3);
+			width: calc((100% - toRem(16) * 1) / 2);
 		}
 		@media (max-width: toEm(520)) {
-			width: calc((100% - toRem(14) * 1) / 2);
-		}
-		@media (max-width: toEm(360)) {
-			width: calc((100% - toRem(10) * 1) / 2);
+			width: 100%;
 		}
 	}
 
@@ -65,11 +56,20 @@
 
 		& .hover__title {
 			@include textOverflow(2, 32, 1);
-			@media (max-width: toEm(1350)) {
-				@include textOverflow(3, 20, 1);
+			@media (max-width: toEm(1200)) {
+				@include textOverflow(2, 24, 1);
+			}
+			@media (max-width: $tablet) {
+				@include textOverflow(2, 30, 1);
 			}
 			@media (max-width: $mobile) {
-				@include textOverflow(2, 15, 1);
+				@include textOverflow(2, 24, 1);
+			}
+			@media (max-width: toEm(635)) {
+				@include textOverflow(2, 18, 1);
+			}
+			@media (max-width: toEm(520)) {
+				@include textOverflow(2, 24, 1);
 			}
 		}
 

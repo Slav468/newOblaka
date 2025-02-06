@@ -33,6 +33,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: toRem(5);
 		padding: toRem(20) toRem(20) toRem(23);
 		pointer-events: none;
 	}
@@ -44,14 +45,20 @@
 		text-transform: uppercase;
 		color: var(--white);
 		hyphens: auto;
-		@media (max-width: toEm(1350)) {
-			font-size: toRem(20);
+		@media (max-width: toEm(1200)) {
+			font-size: toRem(24);
+		}
+		@media (max-width: $tablet) {
+			font-size: toRem(30);
 		}
 		@media (max-width: $mobile) {
-			font-size: toRem(15);
+			font-size: toRem(24);
+		}
+		@media (max-width: toEm(635)) {
+			font-size: toRem(18);
 		}
 		@media (max-width: toEm(520)) {
-			font-size: toRem(14);
+			font-size: toRem(24);
 		}
 	}
 

@@ -1,4 +1,5 @@
 .medal {
+	display: flex;
 	// .medal__list
 
 	&__list {
@@ -7,7 +8,6 @@
 		flex-wrap: wrap;
 
 		// .medal__item
-
 		&__item {
 			width: toRem(100);
 			height: toRem(100);

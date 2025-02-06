@@ -166,15 +166,6 @@
 		flex-direction: column;
 		gap: toRem(20);
 
-		&:first-child {
-			flex-direction: row;
-			align-items: center;
-			width: 100%;
-			max-height: toRem(420);
-			aspect-ratio: 540 / 420;
-			height: 100%;
-			overflow: hidden;
-		}
 		& .options-block {
 			display: flex;
 			flex-direction: column;
@@ -199,6 +190,28 @@
 
 .grid-slider {
 	grid-area: 1 / 1 / 2 / 5;
+
+	display: flex;
+	flex-direction: column;
+	gap: toRem(5);
+	align-items: center;
+	width: 100%;
+	max-height: toRem(420);
+	aspect-ratio: 540 / 420;
+	height: 100%;
+	overflow: hidden;
+
+	& .swiper-block__prev,
+	& .swiper-block__next {
+		position: static;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: toRem(30);
+	}
 
 	@media (max-width: 1199px) {
 		grid-area: 1 / 1 / 2 / 7;
@@ -490,6 +503,7 @@
 .slider-general {
 	position: relative;
 	flex: 0 1 toRem(400);
+	width: 100%;
 	height: 100%;
 	display: flex;
 	&__wrapper {

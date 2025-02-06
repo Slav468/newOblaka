@@ -8,10 +8,15 @@
 
 		<div class="chapter-page__wrapper">
 			<div class="chapter-page__container">
-				@@include('html/baseHtml/_breads.htm',{})
+				<div class="bread">
+					<ul class='bread__list'>
+						<li class='bread__item'><a class='bread__link' href="#">Главная</a></li>
+						<li class="bread__divider">-</li>
+						<li class='bread__item'>O “Radamir”</li>
+					</ul>
+				</div>
 				@@include('html/elements/_titleForInside.htm',{"title": "О “Radamir”"})
 			</div>
-
 		</div>
 
 		<main class="chapter-page__main main">
