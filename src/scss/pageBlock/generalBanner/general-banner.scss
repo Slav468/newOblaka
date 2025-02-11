@@ -158,8 +158,8 @@
 	&__slider {
 		position: relative;
 		width: 100%;
-		// height: toRem(552);
 		border-radius: toRem(8);
+		// height: toRem(552);
 		// @media (max-width: $mobile) {
 		// 	height: toRem(323);
 		// }
@@ -176,7 +176,7 @@
 		justify-content: center;
 		gap: toRem(40);
 		max-width: toRem(1700);
-		@include imageOverlay();
+		// @include imageOverlay();
 	}
 	&__pagination {
 		position: absolute;
