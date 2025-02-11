@@ -233,6 +233,23 @@
 		}
 	}
 
+	&__click {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-inverse);
+		background-color: var(--primary);
+		border: 1px solid var(--primary);
+		border-radius: var(--radius8);
+		overflow: hidden;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--secondary);
+			}
+		}
+	}
+
 	&__not {
 		display: none;
 		// opacity: 0.5;
@@ -590,6 +607,17 @@
 		}
 	}
 	&__order {
+		display: none;
+		font-weight: 600;
+		font-size: toRem(20);
+		line-height: 1.05;
+		color: var(--text-primary);
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+	}
+
+	&__click {
 		display: none;
 		font-weight: 600;
 		font-size: toRem(20);

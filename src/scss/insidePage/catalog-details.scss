@@ -277,6 +277,11 @@
 			}
 		}
 	}
+	&.click {
+		& .buttons {
+			display: none;
+		}
+	}
 }
 
 .characteristic-block {
@@ -762,6 +767,58 @@
 			display: none;
 		}
 		&__not {
+			display: flex;
+		}
+	}
+}
+
+.click {
+	& .count {
+		display: none;
+	}
+
+	& .buttons-basket {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&__normal {
+			display: none;
+		}
+
+		&__order {
+			display: none;
+		}
+
+		&__in {
+			display: none;
+		}
+
+		&__not {
+			display: none;
+		}
+
+		&__click {
+			display: flex;
+		}
+	}
+
+	& .price {
+		display: flex;
+		gap: toRem(12);
+		&__actual {
+			display: none;
+		}
+
+		&__old {
+			display: none;
+		}
+		&__order {
+			display: none;
+		}
+		&__click {
 			display: flex;
 		}
 	}

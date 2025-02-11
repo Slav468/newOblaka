@@ -78,6 +78,7 @@
 					<div class="price__actual">41.58 <span>BYN</span></div>
 					<div class="price__old">51.58 <span>BYN</span></div>
 					<div class="price__order">Цена по запросу</div>
+					<div class="price__click">Индивидуальная</div>
 				</div>
 
 				<div class="product__options options">
@@ -104,19 +105,8 @@
 
 			<div class="product__buttons buttons">
 				@@include('./_product-counter.htm',{})
+				@@include('./_product-button.htm',{})
 
-				<div class="buttons__basket buttons-basket">
-					<button type="button" class="buttons-basket__normal">
-						<svg class="basket-svg">
-							<use xlink:href="@img/icons/icons.svg#basket"></use>
-						</svg>
-					</button>
-					<button type="button" class="buttons-basket__order">Под заказ</button>
-					<button type="button" class="buttons-basket__in">В корзине</button>
-					<button type="button" class="buttons-basket__not">
-						Нет в наличии
-					</button>
-				</div>
 			</div>
 
 		</div>
