@@ -194,13 +194,20 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		max-width: percent(1460, $maxWidthContainer);
+		// max-width: percent(1460, $maxWidthContainer);
+		max-width: 30%;
 		gap: toRem(55);
+		align-self: flex-start;
 		@media (max-width: toEm(1280)) {
 			gap: toRem(50);
+			max-width: 40%;
+		}
+		@media (max-width: $tablet) {
+			max-width: 83.6%;
+
 		}
 		@media (max-width: $mobile) {
-			max-width: 83.6%;
+
 			gap: toRem(15);
 		}
 		@media (max-width: toEm(698)) {
@@ -288,7 +295,7 @@
 		& .banner__content {
 			justify-content: space-between;
 			padding: toRem(100) 0;
-			margin: 0 30px 0 60px;
+			margin: 0 30px 0 7vw;
 			@media (max-width: toEm(1280)) {
 			}
 			@media (max-width: toEm(698)) {
