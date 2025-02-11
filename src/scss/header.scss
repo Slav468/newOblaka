@@ -981,6 +981,13 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(14);
+
+		&:not(:has(.messengers)),
+		&:not(:has(.social)) {
+			& .divider {
+				display: none;
+			}
+		}
 	}
 }
 
