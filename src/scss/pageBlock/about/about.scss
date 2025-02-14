@@ -67,7 +67,13 @@
 	&_reverse {
 		& .block {
 			&__body {
-				flex-direction: row-reverse!important;
+				flex-direction: row-reverse !important;
+			}
+		}
+
+		& .about {
+			&__description {
+				justify-content: flex-end;
 			}
 		}
 	}
