@@ -27,7 +27,10 @@ function closeAsideMenu() {
 		overlayHide();
 	});
 }
-closeAsideMenu();
+
+if (asideCloseButton) {
+	closeAsideMenu();
+}
 
 // Add drop
 function dropMenu(array, selector, event = 'click') {
@@ -117,7 +120,10 @@ function removeDropAside(asideMenu, selector) {
 		});
 	});
 }
-removeDropAside(asideMenu, '.aside-menu__item');
+
+if (asideMenu) {
+	removeDropAside(asideMenu, '.aside-menu__item');
+}
 
 function removeSomeDrop(selector) {
 	const allDrop = document.querySelectorAll(selector);

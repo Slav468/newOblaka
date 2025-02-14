@@ -69,6 +69,7 @@ body {
 	// Сайт завантажений
 	.loaded & {
 	}
+	background-color: var(--bg-inverse);
 }
 // Оболонка wrapper ============================
 .wrapper {
@@ -155,13 +156,13 @@ body {
 @import "footer";
 
 // Підключення стилів окремих сторінок
-@import "./insidePage/detail-page";
-@import "./insidePage/chapter-page";
-@import "./insidePage/catalog-details";
-@import "./insidePage/404";
+// @import "./insidePage/detail-page";
+// @import "./insidePage/chapter-page";
+// @import "./insidePage/catalog-details";
+// @import "./insidePage/404";
 
 // Динамические стили
-@import "cardWidthAdaptive";
+// @import "cardWidthAdaptive";
 
 // Отключение блоков для подгрузки при скролле
-@import "./hidden";
+// @import "./hidden";
