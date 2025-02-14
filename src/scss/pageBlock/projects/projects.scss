@@ -2,22 +2,22 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: toRem(20);
+		gap: toRem(10);
 		flex-wrap: wrap;
-		@media (max-width: $tablet) {
-			gap: toRem(16);
-		}
-		@media (max-width: toEm(576)) {
-			gap: toRem(14);
-		}
-		@media (max-width: toEm(360)) {
-			gap: toRem(10);
-		}
+		// @media (max-width: $tablet) {
+		// 	gap: toRem(16);
+		// }
+		// @media (max-width: toEm(576)) {
+		// 	gap: toRem(14);
+		// }
+		// @media (max-width: toEm(360)) {
+		// 	gap: toRem(10);
+		// }
 	}
 
 	&__cell {
-		width: calc((100% - toRem(20) * 2) / 3);
-		aspect-ratio: 540 / 350;
+		width: calc((100% - toRem(10) * 7) / 8);
+		aspect-ratio: 200 / 240;
 		overflow: hidden;
 		border-radius: var(--radius8);
 		appearance: none;
@@ -28,21 +28,21 @@
 			}
 		}
 
-		@media (max-width: toEm(1280)) {
-			aspect-ratio: 540 / 360;
-		}
-		@media (max-width: $tablet) {
-			width: calc((100% - toRem(16) * 2) / 3);
-		}
-		@media (max-width: toEm(576)) {
-			width: calc((100% - toRem(14) * 2) / 3);
-		}
-		@media (max-width: toEm(520)) {
-			width: calc((100% - toRem(14) * 1) / 2);
-		}
-		@media (max-width: toEm(360)) {
-			width: calc((100% - toRem(10) * 1) / 2);
-		}
+		// @media (max-width: toEm(1280)) {
+		// 	aspect-ratio: 540 / 360;
+		// }
+		// @media (max-width: $tablet) {
+		// 	width: calc((100% - toRem(16) * 2) / 3);
+		// }
+		// @media (max-width: toEm(576)) {
+		// 	width: calc((100% - toRem(14) * 2) / 3);
+		// }
+		// @media (max-width: toEm(520)) {
+		// 	width: calc((100% - toRem(14) * 1) / 2);
+		// }
+		// @media (max-width: toEm(360)) {
+		// 	width: calc((100% - toRem(10) * 1) / 2);
+		// }
 	}
 
 	&__item {

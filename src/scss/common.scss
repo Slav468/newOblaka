@@ -236,18 +236,18 @@
 	font-size: toRem(15);
 	background-color: var(--text-inverse);
 	border: 1px solid var(--primary);
-	color: var(--primary);
+	color: var(--text-accent);
 	width: 100%;
 	text-wrap: nowrap;
 
 	&:hover {
 		background-color: var(--primary);
-		color: var(--text-inverse);
+		color: var(--text-accent);
 	}
 
 	&_colored {
 		background-color: var(--primary);
-		color: var(--text-inverse);
+		color: var(--text-accent);
 		&:hover {
 			background-color: var(--secondary);
 		}
