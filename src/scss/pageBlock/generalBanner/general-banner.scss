@@ -14,9 +14,6 @@
 			@media (max-width: $mobile) {
 				flex: 0 1 67.5%;
 			}
-			& .banner__img {
-				object-position: 55%;
-			}
 		}
 
 		& .banner-second {
@@ -95,9 +92,9 @@
 				max-width: 80%;
 				gap: toRem(20);
 			}
-			& .banner__slider {
-				height: toRem(420);
-			}
+			// & .banner__slider {
+			// 	height: toRem(420);
+			// }
 		}
 		@media (max-width: $tablet) {
 			.banner__pagination {
@@ -121,7 +118,7 @@
 			.banner__title {
 				font-size: toRem(21);
 				line-height: 1.2;
-				@include textOverflow(3, 21, 1.2);
+				// @include textOverflow(3, 21, 1.2);
 			}
 			.banner__text {
 				font-size: toRem(14);
@@ -140,11 +137,11 @@
 				bottom: toRem(6);
 			}
 		}
-		@media (max-width: toEm(457)) {
-			.banner__slider {
-				min-height: toRem(491);
-			}
-		}
+		// @media (max-width: toEm(457)) {
+		// 	.banner__slider {
+		// 		min-height: toRem(491);
+		// 	}
+		// }
 	}
 
 	&__general {
@@ -158,13 +155,10 @@
 	&__slider {
 		position: relative;
 		width: 100%;
-		height: toRem(552);
 		border-radius: toRem(8);
+		min-height: toRem(550);
 		@media (max-width: $mobile) {
-			height: toRem(323);
-		}
-		@media (max-width: toEm(457)) {
-			height: toRem(491);
+			min-height: toRem(325);
 		}
 	}
 	&__slide {
@@ -196,6 +190,8 @@
 		width: 100%;
 		max-width: percent(1460, $maxWidthContainer);
 		gap: toRem(55);
+		margin-top: toRem(50);
+		margin-bottom: toRem(50);
 		@media (max-width: toEm(1280)) {
 			max-width: 82.951807%;
 			gap: toRem(50);
@@ -224,7 +220,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: right;
+		object-position: 75%;
 		z-index: -2;
 	}
 	&__link {
@@ -238,33 +234,33 @@
 
 	&__title {
 		color: var(--text-inverse);
-		@include textOverflow(3, 38, 1.2);
-		@media (max-width: toEm(1280)) {
-			@include textOverflow(3, 36, 1.2);
-		}
-		@media (max-width: $tablet) {
-			font-size: toRem(30);
-			@include textOverflow(3, 30, 1.2);
-		}
-		@media (max-width: $mobile) {
-			font-size: toRem(26);
-			@include textOverflow(3, 26, 1.2);
-		}
-		@media (max-width: toEm(576)) {
-			font-size: toRem(20);
-			@include textOverflow(3, 20, 1.2);
-		}
+		// @include textOverflow(3, 38, 1.2);
+		// @media (max-width: toEm(1280)) {
+		// 	@include textOverflow(3, 36, 1.2);
+		// }
+		// @media (max-width: $tablet) {
+		// 	font-size: toRem(30);
+		// 	@include textOverflow(3, 30, 1.2);
+		// }
+		// @media (max-width: $mobile) {
+		// 	font-size: toRem(26);
+		// 	@include textOverflow(3, 26, 1.2);
+		// }
+		// @media (max-width: toEm(576)) {
+		// 	font-size: toRem(20);
+		// 	@include textOverflow(3, 20, 1.2);
+		// }
 	}
 
 	&__text {
 		color: var(--text-inverse);
-		@include textOverflow(3, 18, 1.33);
-		@media (max-width: $mobile) {
-			@include textOverflow(3, 16, 1.33);
-		}
-		@media (max-width: toEm(576)) {
-			@include textOverflow(3, 15, 1.33);
-		}
+		// @include textOverflow(3, 18, 1.33);
+		// @media (max-width: $mobile) {
+		// 	@include textOverflow(3, 16, 1.33);
+		// }
+		// @media (max-width: toEm(576)) {
+		// 	@include textOverflow(3, 15, 1.33);
+		// }
 	}
 
 	&__buttons {
@@ -295,13 +291,13 @@
 			padding: 0;
 		}
 		& .banner__slider {
-			height: toRem(715);
+			min-height: toRem(720);
 			border-radius: 0;
 			@media (max-width: $mobile) {
-				height: toRem(483);
+				min-height: toRem(483);
 			}
 			@media (max-width: toEm(457)) {
-				height: toRem(485);
+				min-height: toRem(485);
 			}
 		}
 		& .banner__slide {
@@ -311,6 +307,8 @@
 		& .banner__content {
 			height: 100%;
 			justify-content: center;
+			margin-top: toRem(100);
+			margin-bottom: toRem(50);
 
 			@media (max-width: toEm(1280)) {
 				max-width: 85.951807%;
