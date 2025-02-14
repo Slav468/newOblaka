@@ -241,6 +241,7 @@
 
 	& .contacts__block {
 		gap: toRem(13);
+		align-items: flex-start;
 	}
 
 	& .messengers {

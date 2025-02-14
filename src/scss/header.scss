@@ -183,7 +183,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: toRem(5);
+		gap: toRem(20);
 		@media (max-width: toEm(1200)) {
 			flex: 0 0 auto;
 		}
@@ -966,6 +966,7 @@
 .contacts {
 	&__block {
 		display: flex;
+		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		gap: toRem(2);
@@ -1064,6 +1065,11 @@
 			padding-top: toRem(24);
 		}
 	}
+}
+
+.contacts-email {
+	display: flex;
+	gap: toRem(5);
 }
 
 .phone-dropdown {
