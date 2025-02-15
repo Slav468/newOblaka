@@ -5,7 +5,7 @@ phpmailer/
 .gitignore
 .codegpt
 .qodo
-# dist
+dist
 Source/
 version.json
 undefined
