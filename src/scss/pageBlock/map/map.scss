@@ -35,6 +35,11 @@
 		bottom: percent(80, 600);
 		left: percent(40, $maxWidth);
 		z-index: 2;
+		& .map-address {
+			&__body {
+				align-self: center;
+			}
+		}
 		@media (max-width: toEm(576)) {
 			bottom: 20%;
 		}
@@ -132,6 +137,7 @@
 		background-color: var(--bg-primary);
 		display: flex;
 		flex-direction: column;
+
 		gap: toRem(20);
 	}
 

@@ -471,6 +471,7 @@
 	}
 
 	&_fixed {
+		width: 100vw;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -524,9 +525,25 @@
 			& .icon-menu span,
 			.icon-menu::before,
 			.icon-menu::after {
-				background-color: var(--text-inverse);
+				background-color: var(--text-primary);
 				@media (max-width: toEm(640)) {
 					visibility: visible;
+					background-color: var(--text-primary);
+				}
+			}
+		}
+
+		&.header_menu-left {
+			& .icon-menu span,
+			.icon-menu::before,
+			.icon-menu::after {
+				background-color: var(--text-inverse);
+			}
+
+			@media (max-width: toEm(640)) {
+				& .icon-menu span,
+				.icon-menu::before,
+				.icon-menu::after {
 					background-color: var(--text-primary);
 				}
 			}
