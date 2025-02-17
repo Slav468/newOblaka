@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { Grid, Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -643,13 +643,16 @@ function initSliders() {
 	// Projects slider
 	if (document.querySelector('.projects-slider')) {
 		new Swiper('.projects-slider', {
-			modules: [Navigation],
+			modules: [Navigation, Grid],
+			grid: {
+				rows: 2,
+			},
 			// loop: true,
 			// loopAddBlankSlides: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 'auto',
-			spaceBetween: 20,
+			slidesPerView: 8,
+			spaceBetween: 30,
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -683,14 +686,7 @@ function initSliders() {
 				prevEl: '.projects-button-prev',
 				nextEl: '.projects-button-next',
 			},
-			breakpoints: {
-				320: {
-					spaceBetween: 10,
-				},
-				992: {
-					spaceBetween: 20,
-				},
-			},
+
 			// Події
 			// on: {},
 		});
