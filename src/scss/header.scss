@@ -166,8 +166,11 @@
 	}
 
 	&__menu {
-		display: flex;
 		flex: 1 1 auto;
+
+		@media (max-width: toEm(1080)) {
+			display: none;
+		}
 
 		@media (max-width: $mobile) {
 			order: 3;
@@ -192,14 +195,13 @@
 			justify-content: flex-end;
 		}
 		& .button {
-			@media (max-width: toEm(898)) {
+			@media (max-width: $mobile) {
 				display: none;
 			}
 		}
 
 		@media (max-width: toEm(498)) {
 			& .contacts__block {
-				flex-direction: row;
 				gap: toRem(0);
 			}
 			& .contacts-phone {
@@ -227,10 +229,10 @@
 				}
 			}
 			& .contacts-block__social {
-				& .social,
-				.divider {
-					display: none;
-				}
+				// & .social,
+				// .divider {
+				// 	display: none;
+				// }
 			}
 		}
 	}
@@ -970,6 +972,18 @@
 		justify-content: center;
 		flex-direction: column;
 		gap: toRem(2);
+		@media (max-width: toEm(498)) {
+			align-items: flex-end;
+		}
+	}
+
+	& .language {
+		@media (max-width: toEm(498)) {
+			position: fixed;
+			bottom: 70px;
+			right: 15px;
+			z-index: 5;
+		}
 	}
 }
 
@@ -989,6 +1003,19 @@
 				display: none;
 			}
 		}
+
+		@media (max-width: toEm(498)) {
+			gap: toRem(5);
+			align-items: flex-end;
+
+			& .divider {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: toEm(498)) {
+		align-items: flex-end;
 	}
 }
 
@@ -1068,8 +1095,26 @@
 }
 
 .contacts-email {
+	position: relative;
 	display: flex;
 	gap: toRem(5);
+	@media (max-width: toEm(498)) {
+		&__link {
+			position: absolute;
+			width: toRem(26);
+			height: toRem(26);
+			overflow: hidden;
+			opacity: 0;
+		}
+
+		&__svg {
+			width: toRem(26);
+			height: toRem(26);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
 
 .phone-dropdown {

@@ -85,11 +85,6 @@
 			}
 		}
 
-		.swiper-pagination-bullet {
-			width: toRem(10);
-			height: toRem(10);
-		}
-
 		@media (max-width: toEm(1280)) {
 			& .banner__content {
 				max-width: 80%;
@@ -151,6 +146,7 @@
 		display: flex;
 		flex: 1 1 70%;
 		overflow: hidden;
+		aspect-ratio: 1920 / 1080;
 	}
 	&__second {
 		display: flex;
@@ -158,14 +154,14 @@
 	&__slider {
 		position: relative;
 		width: 100%;
-		height: toRem(552);
+		// height: toRem(552);
 		border-radius: toRem(8);
-		@media (max-width: $mobile) {
-			height: toRem(323);
-		}
-		@media (max-width: toEm(457)) {
-			height: toRem(491);
-		}
+		// @media (max-width: $mobile) {
+		// 	height: toRem(323);
+		// }
+		// @media (max-width: toEm(457)) {
+		// 	height: toRem(491);
+		// }
 	}
 	&__slide {
 		position: relative;

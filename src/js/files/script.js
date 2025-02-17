@@ -236,14 +236,14 @@ if (document.querySelector('.count')) {
 	}
 }
 
-if (document.querySelector('.menu__list')) {
-	hideMenuItem();
-	let timeout = null;
-	window.addEventListener('resize', function () {
-		clearTimeout(timeout);
-		timeout = setTimeout(hideMenuItem, 100);
-	});
-}
+// if (document.querySelector('.menu__list')) {
+// 	hideMenuItem();
+// 	let timeout = null;
+// 	window.addEventListener('resize', function () {
+// 		clearTimeout(timeout);
+// 		timeout = setTimeout(hideMenuItem, 100);
+// 	});
+// }
 
 function addMenuEl(menuList) {
 	const li = `
