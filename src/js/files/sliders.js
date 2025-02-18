@@ -646,13 +646,14 @@ function initSliders() {
 			modules: [Navigation, Grid],
 			grid: {
 				rows: 2,
+				fill: 'row',
 			},
 			// loop: true,
 			// loopAddBlankSlides: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 8,
-			spaceBetween: 30,
+
+			spaceBetween: 10,
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -661,14 +662,31 @@ function initSliders() {
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
+			breakpoints: {
+				320: {
+					slidesPerView: 2,
+				},
+				479: {
+					slidesPerView: 3,
+				},
+				768: {
+					slidesPerView: 4,
+				},
+				991: {
+					slidesPerView: 6,
+				},
+				1400: {
+					slidesPerView: 8,
+				},
+			},
 			/*
-							Ефекти
-							effect: 'fade',
-							autoplay: {
-								delay: 3000,
-								disableOnInteraction: false,
-							},
-							*/
+				Ефекти
+				effect: 'fade',
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			*/
 			// Пагінація
 			// pagination: {
 			// 	el: '.swiper-pagination',
@@ -676,11 +694,11 @@ function initSliders() {
 			// },
 			// Скроллбар
 			/*
-							scrollbar: {
-								el: '.swiper-scrollbar',
-								draggable: true,
-							},
-							*/
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					draggable: true,
+				},
+			*/
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.projects-button-prev',
