@@ -236,14 +236,21 @@ if (document.querySelector('.count')) {
 	}
 }
 
-// if (document.querySelector('.menu__list')) {
-// 	hideMenuItem();
-// 	let timeout = null;
-// 	window.addEventListener('resize', function () {
-// 		clearTimeout(timeout);
-// 		timeout = setTimeout(hideMenuItem, 100);
-// 	});
-// }
+if (document.querySelector('.menu__list')) {
+	hideMenuItem();
+	let timeout = null;
+	window.addEventListener('resize', function () {
+		clearTimeout(timeout);
+		timeout = setTimeout(hideMenuItem, 100);
+		if (
+			document.querySelector('[data-menu-group]') &&
+			document.querySelector('[data-menu-group] .menu__list').children.length <=
+				0
+		) {
+			removeGroupMenu(document.querySelector('[data-menu-group]'));
+		}
+	});
+}
 
 function addMenuEl(menuList) {
 	const li = `
@@ -319,19 +326,28 @@ function hideMenuItem() {
 			}
 		}
 
+		if (menuLastItem && menuLastItem.children < 1) {
+			menuLastItem.remove();
+		}
+
 		if (totalWidthItem > width && menuListChildren.length > 2 && menuLastItem) {
 			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
 			hideMenuItem();
 		}
 
 		if (
-			totalWidthItem + 110 < width &&
+			totalWidthItem + 70 < width &&
 			menuListChildren.length < 8 &&
-			menuLastItem
+			menuLastItem &&
+			menuLastItemListChildren.length > 0
 		) {
 			menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
 		}
 	}
+}
+
+function removeGroupMenu(elem) {
+	elem.remove();
 }
 function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
 	let element = menuList.removeChild(

@@ -83,6 +83,7 @@
 		& .aside-menu__link {
 			display: flex;
 			width: 100%;
+			color: var(--text-accent);
 			@media (any-hover: hover) {
 				&:hover {
 					color: var(--primary);
@@ -125,6 +126,7 @@
 		align-items: center;
 		cursor: pointer;
 		transform: rotate(-90deg);
+		color: var(--text-accent);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -196,6 +198,8 @@
 		&__link {
 			display: flex;
 			align-items: center;
+			color: var(--text-accent);
+
 			@media (any-hover: hover) {
 				&:hover {
 					color: var(--primary);
@@ -204,10 +208,17 @@
 		}
 	}
 
+	& .contacts-block {
+		&__social {
+			align-items: flex-start;
+		}
+	}
+
 	& .svg-arrow-close {
 		width: 27px;
 		height: 27px;
 		transform: rotate(-180deg);
+		color: var(--text-accent);
 	}
 
 	& .svg-arrow-down {
@@ -238,11 +249,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			color: var(--text-accent);
 		}
 		&__link {
 			font-weight: 700;
 			font-size: toRem(16);
 			text-wrap: nowrap;
+			color: var(--text-accent);
 			@media (any-hover: hover) {
 				&:hover {
 					color: var(--primary);
@@ -311,6 +324,12 @@
 			padding: 0.625rem 0;
 		}
 	}
+
+	& .messengers__item svg,
+	.social__item svg {
+		color: var(--text-accent);
+	}
+
 	.menu-open & {
 		transform: translateX(100%);
 		transition: transform 0.3s ease-out;
