@@ -241,6 +241,14 @@ if (document.querySelector('.menu__list')) {
 	window.addEventListener('resize', function () {
 		clearTimeout(timeout);
 		timeout = setTimeout(hideMenuItem, 100);
+
+		if (
+			document.querySelector('[data-menu-group]') &&
+			document.querySelector('[data-menu-group] .menu__list').children.length <=
+				0
+		) {
+			removeGroupMenu(document.querySelector('[data-menu-group]'));
+		}
 	});
 }
 
