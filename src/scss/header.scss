@@ -709,8 +709,9 @@
 								padding: 0;
 
 								& > .menu__link {
-									text-transform: none;
+									// text-transform: none;
 									text-wrap: wrap;
+									color: var(--text-accent);
 								}
 								& > .menu__svg {
 									transform: rotate(-90deg);
@@ -720,7 +721,6 @@
 										& > .menu__link,
 										& > .menu__svg .svg-arrow-down,
 										& > .svg-dotted {
-											color: var(--primary);
 										}
 										& > .menu__svg .svg-arrow-down {
 											transform: rotate(180deg);
@@ -859,6 +859,9 @@
 		}
 
 		&[data-menu-group] {
+			& .menu__link {
+				text-transform: uppercase;
+			}
 			@media (any-hover: hover) and (min-width: $mobile) {
 				&:hover {
 					& > .menu__drop {
