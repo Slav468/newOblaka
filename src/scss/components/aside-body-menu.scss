@@ -84,11 +84,11 @@
 			display: flex;
 			width: 100%;
 			color: var(--text-accent);
-			@media (any-hover: hover) {
-				&:hover {
-					color: var(--primary);
-				}
-			}
+			// @media (any-hover: hover) {
+			// 	&:hover {
+			// 		color: var(--primary);
+			// 	}
+			// }
 		}
 
 		&.drop {
@@ -183,8 +183,20 @@
 		font-size: toRem(18);
 	}
 
+	& .contacts-phone {
+		&__svg {
+			color: var(--text-primary);
+		}
+		&__link {
+			color: var(--text-primary);
+		}
+		&__dropdown {
+			display: none;
+		}
+	}
+
 	& .contacts-email {
-		display: flex;
+		display: none;
 		gap: toRem(15);
 
 		// .contacts-email__svg
@@ -260,11 +272,11 @@
 			font-size: toRem(16);
 			text-wrap: nowrap;
 			color: var(--text-accent);
-			@media (any-hover: hover) {
-				&:hover {
-					color: var(--primary);
-				}
-			}
+			// @media (any-hover: hover) {
+			// 	&:hover {
+			// 		color: var(--primary);
+			// 	}
+			// }
 		}
 		&__arrow {
 			display: flex;
@@ -274,13 +286,13 @@
 			height: toRem(27);
 			cursor: pointer;
 			transform: rotate(-90deg);
-			@media (any-hover: hover) {
-				&:hover {
-					& .svg-arrow-down {
-						color: var(--primary);
-					}
-				}
-			}
+			// @media (any-hover: hover) {
+			// 	&:hover {
+			// 		& .svg-arrow-down {
+			// 			color: var(--primary);
+			// 		}
+			// 	}
+			// }
 		}
 		&__dropdown {
 			position: absolute;

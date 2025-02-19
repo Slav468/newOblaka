@@ -197,41 +197,40 @@
 			}
 		}
 
-		// @media (max-width: toEm(589)) {
-		// 	& .contacts__block {
-		// 		gap: toRem(0);
-		// 	}
-		// 	& .contacts-phone {
-		// 		order: 2;
-		// 		&__svg {
-		// 			background-color: var(--text-inverse);
-		// 			position: relative;
-		// 			z-index: 1;
-		// 			pointer-events: none;
-		// 			& svg {
-		// 				width: toRem(17);
-		// 				height: toRem(17);
-		// 			}
-		// 		}
-		// 		&__link {
-		// 			width: toRem(27);
-		// 			height: toRem(27);
-		// 			overflow: hidden;
-		// 			position: absolute;
-		// 			top: 0;
-		// 			left: 0;
-		// 		}
-		// 		&__arrow {
-		// 			display: none;
-		// 		}
-		// 	}
-		// 	& .contacts-block__social {
-		// 		// & .social,
-		// 		// .divider {
-		// 		// 	display: none;
-		// 		// }
-		// 	}
-		// }
+		@media (max-width: toEm(589)) {
+			& .contacts__block {
+				gap: toRem(0);
+			}
+			& .contacts-phone {
+				&__svg {
+					position: relative;
+					z-index: 1;
+					pointer-events: none;
+					& svg {
+						width: toRem(17);
+						height: toRem(17);
+					}
+				}
+				&__link {
+					width: toRem(27);
+					height: toRem(27);
+					overflow: hidden;
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+				}
+				&__arrow {
+					display: none;
+				}
+			}
+			& .contacts-block__social {
+				// & .social,
+				// .divider {
+				// 	display: none;
+				// }
+			}
+		}
 	}
 
 	&.drop {
@@ -409,11 +408,11 @@
 			.icon-menu::after {
 				background-color: var(--text-inverse);
 			}
-			// @media (max-width: toEm(589)) {
-			// 	& .contacts-phone__link {
-			// 		opacity: 0;
-			// 	}
-			// }
+			@media (max-width: toEm(589)) {
+				& .contacts-phone__link {
+					opacity: 0;
+				}
+			}
 		}
 
 		&:has(.header-bottom) {
@@ -436,11 +435,11 @@
 				.contacts-phone__svg {
 					color: var(--text-inverse);
 				}
-				// @media (max-width: toEm(589)) {
-				// 	& .contacts-phone__link {
-				// 		opacity: 0;
-				// 	}
-				// }
+				@media (max-width: toEm(589)) {
+					& .contacts-phone__link {
+						opacity: 0;
+					}
+				}
 			}
 			& .header-bottom {
 				& .menu {
@@ -488,9 +487,9 @@
 				color: var(--text-primary);
 			}
 
-			// & .header__contacts .contacts-phone__svg {
-			// 	background-color: transparent;
-			// }
+			& .header__contacts .contacts-phone__svg {
+				background-color: transparent;
+			}
 
 			& .contacts-phone__link,
 			.contacts-phone__arrow,
@@ -1024,13 +1023,13 @@
 
 .contacts-phone {
 	position: relative;
-	@media (any-hover: hover) and (min-width: $mobile) {
-		&:hover {
-			.phone-dropdown {
-				display: flex;
-			}
-		}
-	}
+	// @media (any-hover: hover) and (min-width: $mobile) {
+	// 	&:hover {
+	// 		.phone-dropdown {
+	// 			display: flex;
+	// 		}
+	// 	}
+	// }
 
 	&__wrapper {
 		position: relative;
@@ -1044,15 +1043,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		color: var(--text-inverse);
 	}
 
 	&__link {
 		font-weight: 700;
 		font-size: toRem(16);
 		text-wrap: nowrap;
+		color: var(--text-inverse);
 	}
 	&__arrow {
-		display: flex;
+		display: none;
 		align-items: center;
 		justify-content: center;
 		width: toRem(27);
