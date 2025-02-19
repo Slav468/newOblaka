@@ -196,9 +196,13 @@
 			height: toRem(27);
 		}
 		&__link {
+			position: static;
 			display: flex;
 			align-items: center;
 			color: var(--text-accent);
+			width: fit-content;
+			height: auto;
+			opacity: 1;
 
 			@media (any-hover: hover) {
 				&:hover {

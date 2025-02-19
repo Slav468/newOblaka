@@ -197,6 +197,7 @@
 		& svg {
 			height: toRem(17);
 			width: toRem(17);
+			color: var(--text-inverse);
 		}
 	}
 }
@@ -213,6 +214,7 @@
 		& svg {
 			height: toRem(17);
 			width: toRem(17);
+			color: var(--text-inverse);
 		}
 	}
 }
@@ -335,7 +337,7 @@
 		font-weight: 500;
 		font-size: toRem(18);
 		line-height: 1.56;
-		color: var(--text-primary);
+		color: var(--text-inverse);
 		& a {
 			color: var(--primary);
 		}
@@ -358,7 +360,7 @@
 		font-weight: 400;
 		font-size: toRem(16);
 		line-height: 1.5;
-		color: var(--text-primary);
+		color: var(--text-inverse);
 		& a {
 			color: var(--primary);
 		}

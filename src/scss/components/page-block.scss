@@ -33,7 +33,7 @@
 		position: relative;
 		font-weight: 600;
 		font-size: toRem(28);
-		color: var(--text-primary);
+		color: var(--text-inverse);
 		&::after {
 			content: " ";
 			position: absolute;

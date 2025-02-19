@@ -254,6 +254,7 @@
 				}
 			}
 		}
+
 		&__block {
 			gap: toRem(13);
 			align-items: flex-start;
@@ -270,6 +271,22 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	& .contacts-email {
+		&__link {
+			position: static;
+			display: flex;
+			align-items: center;
+			width: fit-content;
+			height: auto;
+			opacity: 1;
+			color: var(--text-inverse);
 		}
 	}
 

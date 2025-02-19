@@ -61,6 +61,7 @@
 	}
 	// .menu__link
 	&__link {
+		color: var(--text-inverse);
 		@media (max-width: $mobile) {
 		}
 	}
