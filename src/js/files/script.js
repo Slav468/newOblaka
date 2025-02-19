@@ -326,10 +326,6 @@ function hideMenuItem() {
 			}
 		}
 
-		if (menuLastItem && menuLastItem.children < 1) {
-			menuLastItem.remove();
-		}
-
 		if (totalWidthItem > width && menuListChildren.length > 2 && menuLastItem) {
 			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
 			hideMenuItem();
