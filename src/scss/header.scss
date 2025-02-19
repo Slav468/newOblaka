@@ -17,6 +17,7 @@
 		justify-content: space-between;
 		padding: toRem(10) 0;
 		gap: toRem(60);
+		border-bottom: 1px solid var(--inverse);
 
 		&:has(.menu) {
 			& .office {
@@ -31,16 +32,10 @@
 		}
 	}
 
-	&:not(:has(.header-bottom)) {
-		.header__top {
-			border-bottom: 1px solid var(--inverse);
-			@media (max-width: $mobile) {
-				gap: 1%;
-			}
-		}
-	}
-
 	&:has(.header-bottom) {
+		.header-top {
+			border-bottom: none;
+		}
 		.header-bottom {
 			padding: 0 toRem(50);
 			border-radius: var(--radius8);
@@ -370,6 +365,7 @@
 		left: 0;
 		z-index: 5;
 		& .header__top {
+			border-bottom: none;
 			& .address__svg,
 			.address__city,
 			.address__street,
@@ -446,15 +442,14 @@
 			& .header-bottom {
 				& .menu {
 					& .menu__body {
-						background-color: var(--bg-primary);
 						& > .menu__list {
 							& > .menu__item {
 								& > .menu__link {
-									color: var(--text-primary);
+									color: var(--text-inverse);
 								}
 								& > .menu__svg {
 									& > .svg-arrow-down {
-										color: var(--text-primary);
+										color: var(--text-inverse);
 									}
 								}
 							}
