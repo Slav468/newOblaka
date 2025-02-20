@@ -1,7 +1,6 @@
 .header {
 	display: flex;
 	width: 100%;
-	margin-bottom: toRem(20);
 
 	&__container {
 		position: relative;
@@ -17,7 +16,6 @@
 		justify-content: space-between;
 		padding: toRem(10) 0;
 		gap: toRem(60);
-		border-bottom: 1px solid var(--inverse);
 
 		&:has(.menu) {
 			& .office {
@@ -33,6 +31,7 @@
 	}
 
 	&:has(.header-bottom) {
+		margin-bottom: toRem(20);
 		.header-top {
 			border-bottom: none;
 		}

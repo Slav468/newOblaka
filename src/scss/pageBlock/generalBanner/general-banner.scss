@@ -233,8 +233,8 @@
 	&__text {
 		color: var(--text-inverse);
 		display: -webkit-box;
-		line-clamp: 7;
-		-webkit-line-clamp: 7;
+		line-clamp: 4;
+		-webkit-line-clamp: 4;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;

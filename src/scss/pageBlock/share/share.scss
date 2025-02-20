@@ -164,11 +164,11 @@
 	&__term {
 		font-weight: 400;
 		font-size: toRem(14);
-		line-height: 2;
+		line-height: 1.2;
 		color: var(--text-inverse);
 		@media (max-width: toEm(576)) {
 			font-size: toRem(11);
-			line-height: 2.55;
+			line-height: 1.55;
 		}
 	}
 }

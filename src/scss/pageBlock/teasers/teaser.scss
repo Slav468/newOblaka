@@ -68,8 +68,8 @@
 		font-weight: 400;
 		font-size: toRem(13);
 		line-height: 1.67;
-		color: var(--text-secondary);
-		@include textOverflow(2, 13, 1.6);
+		// color: var(--text-secondary);
+		@include textOverflow(3, 13, 1.6);
 	}
 
 	&_colored {

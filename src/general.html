@@ -5,9 +5,9 @@
 <body>
 	<div class="wrapper">
 
-		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
-		@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
 		@@include('html/pageBlock/headers/_header.htm',{})
+		@@include('html/pageBlock/headers/_header-menuLeft.htm',{})
+		@@include('html/pageBlock/headers/_header-menuDown.htm',{})
 		<main class="page">
 			<!-- General banner -->
 
@@ -31,10 +31,6 @@
 			<!-- Gallery -->
 			@@include('html/pageBlock/photoGallery/_photoGallery.htm',{})
 			<!-- Gallery end -->
-			<!-- Banners -->
-			@@include('html/pageBlock/banners/_question.htm',{})
-			@@include('html/pageBlock/banners/_questionsWithInput.htm',{})
-			<!-- Banners end -->
 			<!-- FAQ -->
 			@@include('html/pageBlock/faq/_faq.htm',{})
 			<!-- FAQ end -->
@@ -50,9 +46,16 @@
 			<!-- News -->
 			@@include('html/pageBlock/news/_news.htm',{})
 			<!-- News end -->
+			<!-- Banners -->
+			@@include('html/pageBlock/banners/_question.htm',{})
+			@@include('html/pageBlock/banners/_questionsWithInput.htm',{})
+			<!-- Banners end -->
 			<!-- Sale -->
 			@@include('html/pageBlock/banners/_sale.htm',{})
 			<!-- Sale -->
+			<!-- LIke -->
+			@@include('html/pageBlock/banners/_like.htm',{})
+			<!-- Like -->
 			<!-- Share -->
 			@@include('html/pageBlock/share/_share.htm',{})
 			<!-- Share end -->
