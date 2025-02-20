@@ -183,6 +183,9 @@
 		font-size: toRem(18);
 	}
 
+	& .logo {
+	}
+
 	& .contacts-phone {
 		&__svg {
 			color: var(--text-primary);
