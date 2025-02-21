@@ -330,6 +330,14 @@
 		@media (max-width: toEm(576)) {
 			font-size: toRem(15);
 		}
+		& h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font: revert;
+		}
 	}
 	&_subtitle {
 		font-weight: 500;
@@ -352,6 +360,15 @@
 					color: var(--primary);
 				}
 			}
+		}
+
+		& h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font: revert;
 		}
 	}
 	&_general {
@@ -376,6 +393,15 @@
 				}
 			}
 		}
+
+		& h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font: revert;
+		}
 	}
 	&_light {
 		font-weight: 400;
@@ -396,6 +422,15 @@
 					color: var(--primary);
 				}
 			}
+		}
+
+		& h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font: revert;
 		}
 
 		@media (max-width: $mobile) {

@@ -373,19 +373,27 @@ function eventAccord() {
 
 	accordingAll.forEach(accordion => {
 		const accordionChildren = accordion.children;
-		for (const item of accordionChildren) {
-			item.addEventListener('click', e => {
-				const target = e.target;
+		if (accordion.classList.contains('accordion_noborder')) {
+			for (const item of accordionChildren) {
+				item.addEventListener('click', e => {
+					item.classList.toggle('drop');
+				});
+			}
+		} else {
+			for (const item of accordionChildren) {
+				item.addEventListener('click', e => {
+					const target = e.target;
 
-				if (target.closest('.accordion__head')) {
-					if (item.classList.contains('drop')) {
-						item.classList.toggle('drop');
-					} else {
-						removeDropAccordion(target);
-						item.classList.add('drop');
+					if (target.closest('.accordion__head')) {
+						if (item.classList.contains('drop')) {
+							item.classList.toggle('drop');
+						} else {
+							removeDropAccordion(target);
+							item.classList.add('drop');
+						}
 					}
-				}
-			});
+				});
+			}
 		}
 	});
 }

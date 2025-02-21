@@ -38,12 +38,12 @@
 		}
 	}
 
-	& .preview {
-		min-height: toRem(720);
-		border-radius: 0;
+	// & .preview {
+	// 	min-height: toRem(720);
+	// 	border-radius: 0;
 
-		@media (max-width: $mobile) {
-			min-height: toRem(485);
-		}
-	}
+	// 	@media (max-width: $mobile) {
+	// 		min-height: toRem(485);
+	// 	}
+	// }
 }

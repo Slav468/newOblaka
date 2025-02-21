@@ -88,6 +88,14 @@ body {
 	> * {
 		min-width: 0;
 	}
+
+	&:has(.main + section) {
+		.main {
+			&__container {
+				margin-bottom: toRem(40);
+			}
+		}
+	}
 }
 // Обмежуючий контейнер ====================
 
