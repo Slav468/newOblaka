@@ -92,7 +92,6 @@
 		gap: toRem(5);
 	}
 
-	// .accordion__title
 	&__title {
 		font-weight: 600;
 		font-size: toRem(18);
@@ -111,7 +110,6 @@
 		}
 	}
 
-	// .accordion__content
 	&__content {
 		display: flex;
 		align-items: flex-start;
@@ -121,6 +119,15 @@
 		overflow: hidden;
 		& .button {
 			width: fit-content;
+		}
+	}
+
+	&.accordion_nogap {
+		gap: 0;
+		& .accordion {
+			&__item {
+				margin-bottom: toRem(-1);
+			}
 		}
 	}
 }
@@ -134,29 +141,25 @@
 	font-weight: 600;
 	font-size: toRem(18);
 
-	color: #333;
+	color: var(--text-primary);
 
 	&__sum {
 		display: flex;
 	}
 
 	// .money__value
-
 	&__value {
 	}
 
 	// .money__currency
-
 	&__currency {
 	}
 
 	// .money__plus
-
 	&__plus {
 	}
 
 	// .money__percent
-
 	&__percent {
 	}
 }

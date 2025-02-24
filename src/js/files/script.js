@@ -367,13 +367,25 @@ if (document.querySelector('.page-menu')) {
 	dropPageMenu(pageMenuButtons, '.page-menu__item');
 }
 
+/**
+ * Аккордеон
+ * @description Делегирование события для элементов
+
+ * @param {string} drop - селектор для открытого элемента
+ * @param {string} dataset.toggle - Дата атрибут для определения поведения
+ * dataset.toggle = "true" - элемент открывается но не закрывается предыдущий
+ *  dataset.toggle = "false" - элемент открывается и закрывается предыдущий
+ *
+ */
+
 // Accordion toggle
 function eventAccord() {
 	const accordingAll = document.querySelectorAll('.accordion');
 
 	accordingAll.forEach(accordion => {
 		const accordionChildren = accordion.children;
-		if (accordion.classList.contains('accordion_noborder')) {
+
+		if (accordion.dataset.toggle === 'true') {
 			for (const item of accordionChildren) {
 				item.addEventListener('click', e => {
 					item.classList.toggle('drop');
