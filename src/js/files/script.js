@@ -369,12 +369,12 @@ if (document.querySelector('.page-menu')) {
 
 /**
  * Аккордеон
- * @description Делегирование события для элементов
+ * @description Делегирование события для элементов;
 
- * @param {string} drop - селектор для открытого элемента
- * @param {string} dataset.toggle - Дата атрибут для определения поведения
- * dataset.toggle = "true" - элемент открывается но не закрывается предыдущий
- *  dataset.toggle = "false" - элемент открывается и закрывается предыдущий
+ * @param {string} drop - селектор для открытого элемента;
+ * @param {string} dataset.toggle - Дата атрибут для определения поведения;
+ * dataset.toggle = "true" - элемент открывается но не закрывается предыдущий;
+ *  dataset.toggle = "false" - элемент открывается и закрывается предыдущий;
  *
  */
 
