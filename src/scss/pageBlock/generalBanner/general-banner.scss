@@ -288,7 +288,7 @@
 				max-width: 85.951807%;
 			}
 			@media (max-width: toEm(698)) {
-				max-width: 95%;
+				max-width: calc(100% - toRem(20));
 			}
 			@media (max-width: toEm(457)) {
 				justify-content: center;

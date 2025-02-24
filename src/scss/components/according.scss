@@ -130,6 +130,17 @@
 			}
 		}
 	}
+	&.accordion_wrap {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(300), 1fr));
+		grid-template-rows: auto;
+		gap: toRem(20);
+		& .accordion {
+			&__item {
+				height: fit-content;
+			}
+		}
+	}
 }
 
 .money {
