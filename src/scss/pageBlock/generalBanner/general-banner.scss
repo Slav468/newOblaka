@@ -1,6 +1,9 @@
 .banner {
 	&__container {
 		display: flex;
+
+		padding: 0 toRem(7);
+		gap: toRem(20);
 	}
 	// если есть маленькие блоки
 	&:has(.banner__second) {
@@ -121,7 +124,7 @@
 				flex-direction: column;
 			}
 			& .banner__content {
-				max-width: 90%;
+				max-width: calc(100% - toRem(20));
 			}
 			.banner__pagination {
 				display: flex;
@@ -141,11 +144,8 @@
 	&__slider {
 		position: relative;
 		width: 100%;
-		border-radius: toRem(8);
 		min-height: toRem(550);
-		@media (max-width: $mobile) {
-			min-height: toRem(325);
-		}
+		border-radius: toRem(8);
 	}
 	&__slide {
 		position: relative;
@@ -155,7 +155,8 @@
 		align-items: center;
 		justify-content: center;
 		gap: toRem(40);
-		max-width: toRem(1700);
+		// max-width: toRem(1700);
+		width: 100%;
 		@include imageOverlay();
 	}
 	&__pagination {
@@ -187,9 +188,11 @@
 		@media (max-width: $mobile) {
 			max-width: 83.6%;
 			gap: toRem(15);
+			margin-top: toRem(30);
+			margin-bottom: toRem(30);
 		}
 		@media (max-width: toEm(698)) {
-			max-width: 95%;
+			max-width: calc(100% - toRem(20));
 		}
 	}
 
@@ -228,6 +231,11 @@
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		@media (max-width: toEm(457)) {
+			line-clamp: 6;
+			-webkit-line-clamp: 6;
+			-webkit-box-orient: vertical;
+		}
 	}
 
 	&__text {
@@ -270,19 +278,14 @@
 		& .banner__slider {
 			min-height: toRem(720);
 			border-radius: 0;
-			@media (max-width: $mobile) {
-				min-height: toRem(485);
+			@media (max-width: toEm(698)) {
+				min-height: toRem(550);
 			}
-		}
-		& .banner__slide {
-			max-width: none;
 		}
 
 		& .banner__content {
 			height: 100%;
 			justify-content: center;
-			margin-top: toRem(100);
-			margin-bottom: toRem(50);
 
 			@media (max-width: toEm(1280)) {
 				max-width: 85.951807%;

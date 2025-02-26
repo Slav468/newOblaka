@@ -9,6 +9,13 @@
 .wrapper {
 	max-width: toRem(1920);
 	margin: 0 auto;
+	&:has(.header_absolute) {
+		.banner_width {
+			.banner__content {
+				margin-top: toRem(110);
+			}
+		}
+	}
 }
 .page {
 	display: flex;
@@ -514,6 +521,7 @@
 		background-color: var(--primary);
 	}
 }
+
 .hidden-img {
 	display: none !important;
 }
