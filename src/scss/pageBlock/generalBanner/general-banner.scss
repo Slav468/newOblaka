@@ -26,11 +26,13 @@
 				flex-direction: column;
 				gap: toRem(20);
 				width: 100%;
+				@media (max-width: toEm(1280)) {
+					flex-direction: row;
+				}
 				@media (max-width: $mobile) {
 					gap: toRem(16);
 				}
 				@media (max-width: toEm(698)) {
-					flex-direction: row;
 				}
 				@media (max-width: toEm(457)) {
 					flex-direction: column;
@@ -47,11 +49,8 @@
 				border-radius: var(--radius8);
 				overflow: hidden;
 				@include imageOverlay();
-				@media (max-width: toEm(698)) {
+				@media (max-width: toEm(1280)) {
 					aspect-ratio: 268 / 132;
-				}
-				@media (max-width: toEm(457)) {
-					height: toRem(265);
 				}
 			}
 
@@ -87,8 +86,10 @@
 
 		@media (max-width: toEm(1280)) {
 			& .banner__content {
-				max-width: 80%;
 				gap: toRem(20);
+			}
+			& .banner__container {
+				flex-direction: column;
 			}
 		}
 		@media (max-width: $tablet) {
@@ -120,15 +121,11 @@
 			}
 		}
 		@media (max-width: toEm(698)) {
-			& .banner__container {
-				flex-direction: column;
+			.banner__pagination {
+				display: flex;
 			}
 			& .banner__content {
 				max-width: calc(100% - toRem(20));
-			}
-			.banner__pagination {
-				display: flex;
-				bottom: toRem(6);
 			}
 		}
 	}

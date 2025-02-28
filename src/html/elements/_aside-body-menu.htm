@@ -1,6 +1,7 @@
 <div class="aside-menu">
 	<div class="aside-menu__overlay"></div>
 	<div class="aside-menu__content scroll-vertical">
+		<!-- aside head -->
 		<div class="aside-menu__buttons">
 			<div class="logo">
 				<a class="logo__logo" href="#">
@@ -14,6 +15,7 @@
 				</svg>
 			</button>
 		</div>
+		<!-- aside navigation -->
 		<nav class="aside-menu__body">
 			<ul class="aside-menu__list">
 				<!-- about -->
@@ -302,6 +304,10 @@
 					<a href="#" class="aside-menu__link">Контакты</a>
 				</li>
 			</ul>
+
+		</nav>
+
+		<div class="aside-menu__footer">
 			<div class="aside-phone">
 				<div class="aside-phone__wrapper">
 					<div class="aside-phone__body">
@@ -408,6 +414,7 @@
 				<!-- social nets -->
 				@@include('../elements/_social.htm',{})
 			</div>
-		</nav>
+			@@include('./_language.htm',{})
+		</div>
 	</div>
 </div>

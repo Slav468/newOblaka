@@ -181,6 +181,13 @@
 		font-size: toRem(18);
 	}
 
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(10);
+		padding: toRem(10) toRem(20);
+	}
+
 	& .contacts-email {
 		display: flex;
 		gap: toRem(15);
