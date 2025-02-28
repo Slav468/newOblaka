@@ -64,6 +64,11 @@ function dropAny(array, selector, event = 'click') {
 	});
 }
 
+if (document.querySelector('.language')) {
+	const languages = document.querySelectorAll('.language__head');
+	dropAny(languages, '.language', 'touchstart');
+}
+
 if (document.querySelector('.dropdown[data-click]')) {
 	const triggers = document.querySelectorAll(
 		'.dropdown[data-click] .dropdown-head'

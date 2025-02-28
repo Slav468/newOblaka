@@ -74,6 +74,19 @@
 	&__flag {
 	}
 
+	&.drop {
+		.language {
+			&__body {
+				display: flex;
+			}
+			&__icon {
+				svg {
+					transform: rotate(270deg);
+				}
+			}
+		}
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			& .language {
