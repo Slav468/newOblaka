@@ -53,6 +53,15 @@ if (document.querySelector('.options')) {
 	const optionsTitle = document.querySelectorAll('.options__title');
 	dropAny(optionsTitle, '.options');
 }
+
+/**
+ * Attaches an event listener to each element in the array that toggles
+ * the 'drop' class on the closest parent element matching the selector.
+ *
+ * @param {Array} array - The array of elements to attach the event listener to.
+ * @param {string} selector - The CSS selector to find the closest parent element.
+ * @param {string} [event='click'] - The event type to listen for. Defaults to 'click'.
+ */
 function dropAny(array, selector, event = 'click') {
 	array.forEach(item => {
 		item.addEventListener(`${event}`, e => {
@@ -61,6 +70,11 @@ function dropAny(array, selector, event = 'click') {
 			parentDrop.classList.toggle('drop');
 		});
 	});
+}
+
+if (document.querySelector('.language')) {
+	const languages = document.querySelectorAll('.language__head');
+	dropAny(languages, '.language', 'touchstart');
 }
 
 if (document.querySelector('.dropdown[data-click]')) {
@@ -152,11 +166,6 @@ document.addEventListener('keydown', e => {
 		removeSomeDrop('.options');
 		removeSomeDrop('.sort');
 		removeSomeDrop('.dropdown[data-click]');
-		// try {
-		// 	removeActive('.search');
-		// } catch {
-		// 	console.log("Search don't exist");
-		// }
 	}
 });
 
@@ -166,7 +175,16 @@ document.addEventListener('click', e => {
 	closeOnClickDocument(target, '.options');
 	closeOnClickDocument(target, '.sort');
 	closeOnClickDocument(target, '.dropdown[data-click]');
+	closeOnClickDocument(target, '.language');
 });
+
+/**
+ * Closes elements with a specified class when a click occurs outside of them.
+ *
+ * @param {EventTarget} eventTarget - The target of the click event.
+ * @param {string} selector - The CSS selector for the elements to be closed.
+ * @param {string} [mod='drop'] - The class to be removed from the elements.
+ */
 
 function closeOnClickDocument(eventTarget, selector, mod = 'drop') {
 	if (document.querySelector(`${selector}`)) {
