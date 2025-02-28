@@ -22,6 +22,11 @@
 		font-size: toRem(14);
 		line-height: 1.14286;
 		color: var(--text-primary);
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
 	}
 
 	&__icon {
