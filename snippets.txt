@@ -146,7 +146,7 @@
 		"body": "@include gridContainer();",
 		"description": "Додає грід-контейнер"
 	},
-	"Adaptiv Value": {
+	"Adaptive Value": {
 		"scope": "scss",
 		"prefix": "av",
 		"body": [
