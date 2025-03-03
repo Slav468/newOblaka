@@ -127,6 +127,18 @@
 		& .accordion {
 			&__item {
 				margin-bottom: toRem(-1);
+				&.drop {
+					box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.15);
+				}
+			}
+		}
+		&[data-toggle="true"] {
+			& .accordion {
+				&__item {
+					&.drop {
+						box-shadow: none;
+					}
+				}
 			}
 		}
 	}
