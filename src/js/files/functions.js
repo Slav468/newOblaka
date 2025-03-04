@@ -71,7 +71,7 @@ export function setHash(hash) {
 	hash = hash ? `#${hash}` : window.location.href.split('#')[0];
 	history.pushState('', '', hash);
 }
-// Допоміжні модулі плавного розкриття та закриття об'єкта ======================================================================================================================================================================
+// Допоміжні модулі плавного розкриття та закриття об'єкта =============================
 export let _slideUp = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
@@ -151,7 +151,7 @@ export let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 };
-// Допоміжні модулі блокування прокручування та стрибка ====================================================================================================================================================================================================================================================================================
+// Допоміжні модулі блокування прокручування та стрибка =====================================
 export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 500) => {
 	if (document.documentElement.classList.contains('lock')) {
@@ -165,9 +165,9 @@ export let bodyUnlock = (delay = 0) => {
 		const lockPaddingElements = document.querySelectorAll('[data-lp]');
 		setTimeout(() => {
 			lockPaddingElements.forEach(lockPaddingElement => {
-				lockPaddingElement.style.paddingRight = '';
+				lockPaddingElement.style.marginRight = '';
 			});
-			document.body.style.paddingRight = '';
+			document.body.style.marginRight = '';
 			document.documentElement.classList.remove('lock');
 		}, delay);
 		bodyLockStatus = false;
@@ -182,10 +182,10 @@ export let bodyLock = (delay = 0) => {
 		const lockPaddingValue =
 			window.innerWidth - document.body.clientWidth + 'px';
 		lockPaddingElements.forEach(lockPaddingElement => {
-			lockPaddingElement.style.paddingRight = lockPaddingValue;
+			lockPaddingElement.style.marginRight = lockPaddingValue;
 		});
 
-		document.body.style.paddingRight = lockPaddingValue;
+		document.body.style.marginRight = lockPaddingValue;
 		document.documentElement.classList.add('lock');
 
 		bodyLockStatus = false;
@@ -194,7 +194,7 @@ export let bodyLock = (delay = 0) => {
 		}, delay);
 	}
 };
-// Модуль роботи зі спойлерами =======================================================================================================================================================================================================================
+// Модуль роботи зі спойлерами ================================================
 export function spollers() {
 	const spollersArray = document.querySelectorAll('[data-spollers]');
 	if (spollersArray.length > 0) {
@@ -354,7 +354,7 @@ export function spollers() {
 		}
 	}
 }
-// Модуль роботи з табами =======================================================================================================================================================================================================================
+// Модуль роботи з табами ===========================================
 export function tabs() {
 	const tabs = document.querySelectorAll('[data-tabs]');
 	let tabsActiveHash = [];
@@ -502,7 +502,7 @@ export function tabs() {
 		}
 	}
 }
-// Модуль роботи з меню (бургер) =======================================================================================================================================================================================================================
+// Модуль роботи з меню (бургер) ===========================================
 export function menuInit() {
 	if (document.querySelector('.icon-menu')) {
 		document.addEventListener('click', function (e) {
@@ -546,7 +546,7 @@ export function overlayHide() {
 	overlay.classList.remove('show');
 }
 
-// Модуль "показати ще" =======================================================================================================================================================================================================================
+// Модуль "показати ще" ========================================
 export function showMore() {
 	window.addEventListener('load', function (e) {
 		const showMoreBlocks = document.querySelectorAll('[data-showmore]');
@@ -703,7 +703,7 @@ export function showMore() {
 		}
 	});
 }
-// Модуль "Ripple effect" =======================================================================================================================================================================================================================
+// Модуль "Ripple effect" =========================================
 export function rippleEffect() {
 	// Подія кліку на кнопці
 	document.addEventListener('click', function (e) {
@@ -747,7 +747,7 @@ export function rippleEffect() {
 		}
 	});
 }
-// Модуль "Сustom сursor" =======================================================================================================================================================================================================================
+// Модуль "Сustom сursor" ============================================
 export function customCursor(isShadowTrue) {
 	const wrapper = document.querySelector('[data-custom-cursor]')
 		? document.querySelector('[data-custom-cursor]')
@@ -915,4 +915,4 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
-//================================================================================================================================================================================================================================================================================================================
+//===================================================

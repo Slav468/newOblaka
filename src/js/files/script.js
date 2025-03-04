@@ -2,6 +2,7 @@ import noUiSlider from 'nouislider';
 import { formValidate } from './forms/forms.js';
 import {
 	bodyLock,
+	bodyLockStatus,
 	bodyUnlock,
 	menuClose,
 	overlayHide,

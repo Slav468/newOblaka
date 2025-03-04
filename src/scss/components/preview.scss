@@ -48,6 +48,7 @@
 		@media (max-width: toEm(570)) {
 			margin-top: toRem(30);
 			margin-bottom: toRem(30);
+			gap: toRem(15);
 		}
 	}
 
@@ -61,16 +62,19 @@
 	// .preview__title
 	&__title {
 		font-weight: 700;
-		// font-size: toRem(40);
-
+		line-height: 1.1;
 		color: var(--text-inverse);
 		display: -webkit-box;
 		line-clamp: 4;
 		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
+		// -webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		@include adaptiveValue("font-size", 40, 20);
+		@media (max-width: $mobileSmall) {
+			line-clamp: 7;
+			-webkit-line-clamp: 7;
+		}
 	}
 
 	// .preview__text
@@ -92,5 +96,8 @@
 		display: flex;
 		gap: toRem(20);
 		flex-wrap: wrap;
+		@media (max-width: toEm(570)) {
+			gap: toRem(10);
+		}
 	}
 }

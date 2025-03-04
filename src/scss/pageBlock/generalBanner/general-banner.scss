@@ -275,7 +275,7 @@
 		& .banner__slider {
 			min-height: toRem(720);
 			border-radius: 0;
-			@media (max-width: toEm(698)) {
+			@media (max-width: toEm(768)) {
 				min-height: toRem(550);
 			}
 		}
