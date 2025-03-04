@@ -24,6 +24,7 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	scrollbar-width: thin;
 }
 .popup_show {
 	z-index: 150;
