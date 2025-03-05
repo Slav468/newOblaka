@@ -691,7 +691,7 @@
 				& > .menu__link,
 				& > .menu__svg .svg-arrow-down,
 				& > .svg-dotted {
-					color: var(--primary);
+					color: var(--primary) !important;
 				}
 				& > .menu__svg .svg-arrow-down {
 					transform: rotate(180deg);

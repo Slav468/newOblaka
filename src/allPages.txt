@@ -1,0 +1,79 @@
+
+		@@include('html/pageBlock/headers/_header-menuLeft.htm,{})
+		@@include('html/pageBlock/headers/_header-menuDown.htm,{})
+<!-- General banner -->
+			@@include('html/pageBlock/generalBanners/general-banner-width.htm',{})
+			@@include('html/pageBlock/generalBanners/general-banner-withSmall.htm',{})
+			@@include('html/pageBlock/generalBanners/general-banner.htm',{})
+			<!-- General banner end -->
+			<!-- Directions -->
+			@@include('html/pageBlock/directions/_directions.htm',{})
+			<!-- Directions end -->
+			<!-- Services -->
+			@@include('html/pageBlock/service/_service-block.htm',{})
+			<!-- Services end -->
+			<!-- About -->
+			@@include('html/pageBlock/about/_about.htm',{})
+			<!-- About end -->
+			<!-- Projects -->
+			@@include('html/pageBlock/projects/_projects.htm',{})
+			<!-- Projects end -->
+			<!-- Gallery -->
+			@@include('html/pageBlock/photoGallery/_photoGallery.htm',{})
+			<!-- Gallery end -->
+			<!-- FAQ -->
+			@@include('html/pageBlock/faq/_faq.htm',{})
+			<!-- FAQ end -->
+			<!-- Reviews -->
+			@@include('html/pageBlock/reviews/_reviews.htm',{})
+			<!-- Reviews end -->
+			<!-- Employees -->
+			@@include('html/pageBlock/employees/_employees.htm',{})
+			<!-- Employees end -->
+			<!-- Partners -->
+			@@include('html/pageBlock/partners/_partners.htm',{})
+			<!-- Partners end -->
+			<!-- News -->
+			@@include('html/pageBlock/news/_news.htm',{})
+			<!-- News end -->
+			<!-- Banners -->
+			@@include('html/pageBlock/banners/_question.htm',{})
+			@@include('html/pageBlock/banners/_questionsWithInput.htm',{})
+			<!-- Banners end -->
+			<!-- Sale -->
+			@@include('html/pageBlock/banners/_sale.htm',{})
+			<!-- Sale -->
+			<!-- LIke -->
+			@@include('html/pageBlock/banners/_like.htm',{})
+			<!-- Like -->
+			<!-- Share -->
+			@@include('html/pageBlock/share/_share.htm',{})
+			<!-- Share end -->
+			<!-- Popular -->
+			@@include('html/pageBlock/popular/_popular.htm',{})
+			@@include('html/pageBlock/popular/_request.htm',{})
+			<!-- Popular end -->
+			<!-- Instagram -->
+			@@include('html/pageBlock/instagram/_instagram.htm',{})
+			<!-- Instagram end -->
+			<!-- General form -->
+			@@include('html/pageBlock/forms/_form.htm',{})
+			<!-- General form end -->
+			<!-- Teasers -->
+			@@include('html/pageBlock/teaser/_teaser.htm',{})
+			@@include('html/pageBlock/teaser/_teaser-horizontal.htm',{})
+			@@include('html/pageBlock/teaser/_teaser-slider.htm',{})
+			@@include('html/pageBlock/teaser/_teaser-horizontal-slider.htm',{})
+			<!-- Teasers end -->
+			<!-- Best -->
+			@@include('html/pageBlock/product/_product.htm',{})
+			<!-- Best ends -->
+			<!-- Map -->
+			@@include('html/pageBlock/map/_map.htm',{})
+			<!-- Map end -->
+
+				@@include('html/elements/_search.htm',{})
+	@@include('html/elements/_cookie-plank.htm',{})
+	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/baseHtml/_sidebar.htm',{})
+
