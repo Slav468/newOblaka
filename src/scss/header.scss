@@ -28,6 +28,9 @@
 		@media (max-width: $pc) {
 			gap: toRem(20);
 		}
+		@media (max-width: $tablet) {
+			gap: toRem(15);
+		}
 	}
 
 	&:has(.header-bottom) {
@@ -141,7 +144,7 @@
 			}
 
 			.header__contacts {
-				padding-right: toRem(55);
+				padding-right: toRem(65);
 			}
 			& .control {
 				display: none;
@@ -347,7 +350,6 @@
 		@media (max-width: toEm(640)) {
 			.header {
 				&__top {
-					gap: 1%;
 					& .menu {
 						flex: 0 0 toRem(50);
 						order: 3;
