@@ -68,11 +68,27 @@
 	&__flag {
 	}
 
+	&.drop {
+		.language {
+			&__body {
+				display: flex;
+				width: 100%;
+			}
+			&__icon {
+				color: var(--pant-420-s);
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			& .language {
 				&__body {
 					display: flex;
+					width: 100%;
 				}
 				&__icon {
 					color: var(--pant-420-s);
