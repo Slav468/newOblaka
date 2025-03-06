@@ -8,6 +8,7 @@ import {
 	overlayHide,
 	overlayShow,
 } from './functions.js';
+import { initSearchSlider } from './sliders.js';
 
 const header = document.querySelector('header');
 const asideMenu = document.querySelector('.aside-menu');
@@ -27,7 +28,9 @@ function closeAsideMenu() {
 		overlayHide();
 	});
 }
-closeAsideMenu();
+if (asideCloseButton) {
+	closeAsideMenu();
+}
 
 // Add drop
 function dropMenu(array, selector, event = 'click') {
@@ -51,6 +54,15 @@ if (document.querySelector('.options')) {
 	const optionsTitle = document.querySelectorAll('.options__title');
 	dropAny(optionsTitle, '.options');
 }
+
+/**
+ * Attaches an event listener to each element in the array that toggles
+ * the 'drop' class on the closest parent element matching the selector.
+ *
+ * @param {Array} array - The array of elements to attach the event listener to.
+ * @param {string} selector - The CSS selector to find the closest parent element.
+ * @param {string} [event='click'] - The event type to listen for. Defaults to 'click'.
+ */
 function dropAny(array, selector, event = 'click') {
 	array.forEach(item => {
 		item.addEventListener(`${event}`, e => {
@@ -59,6 +71,20 @@ function dropAny(array, selector, event = 'click') {
 			parentDrop.classList.toggle('drop');
 		});
 	});
+}
+
+if (document.querySelector('.language')) {
+	const languages = document.querySelectorAll('.language__head');
+	dropAny(languages, '.language', 'touchstart');
+}
+
+if (document.querySelector('.dropdown[data-click]')) {
+	const triggers = document.querySelectorAll(
+		'.dropdown[data-click] .dropdown-head'
+	);
+
+	dropAny(triggers, '.dropdown');
+	setActive('.dropdown[data-click] .dropdown-body__list', '.dropdown');
 }
 
 function removeDrop(array, selector, parentNode) {
@@ -108,7 +134,10 @@ function removeDropAside(asideMenu, selector) {
 		});
 	});
 }
-removeDropAside(asideMenu, '.aside-menu__item');
+
+if (asideMenu) {
+	removeDropAside(asideMenu, '.aside-menu__item');
+}
 
 function removeSomeDrop(selector) {
 	const allDrop = document.querySelectorAll(selector);
@@ -122,6 +151,12 @@ overlay.addEventListener('click', () => {
 	menuClose();
 	removeSomeDrop('.aside-phone');
 	removeSomeDrop('.aside-menu__item');
+
+	try {
+		removeActive('.search');
+	} catch {
+		console.log("Search don't exist");
+	}
 });
 
 document.addEventListener('keydown', e => {
@@ -131,6 +166,7 @@ document.addEventListener('keydown', e => {
 		removeSomeDrop('.contacts-phone');
 		removeSomeDrop('.options');
 		removeSomeDrop('.sort');
+		removeSomeDrop('.dropdown[data-click]');
 	}
 });
 
@@ -139,7 +175,17 @@ document.addEventListener('click', e => {
 
 	closeOnClickDocument(target, '.options');
 	closeOnClickDocument(target, '.sort');
+	closeOnClickDocument(target, '.dropdown[data-click]');
+	closeOnClickDocument(target, '.language');
 });
+
+/**
+ * Closes elements with a specified class when a click occurs outside of them.
+ *
+ * @param {EventTarget} eventTarget - The target of the click event.
+ * @param {string} selector - The CSS selector for the elements to be closed.
+ * @param {string} [mod='drop'] - The class to be removed from the elements.
+ */
 
 function closeOnClickDocument(eventTarget, selector, mod = 'drop') {
 	if (document.querySelector(`${selector}`)) {
@@ -214,6 +260,14 @@ if (document.querySelector('.menu__list')) {
 	window.addEventListener('resize', function () {
 		clearTimeout(timeout);
 		timeout = setTimeout(hideMenuItem, 100);
+
+		if (
+			document.querySelector('[data-menu-group]') &&
+			document.querySelector('[data-menu-group] .menu__list').children.length <=
+				0
+		) {
+			removeGroupMenu(document.querySelector('[data-menu-group]'));
+		}
 	});
 }
 
@@ -332,25 +386,45 @@ if (document.querySelector('.page-menu')) {
 	dropPageMenu(pageMenuButtons, '.page-menu__item');
 }
 
+/**
+ * Аккордеон
+ * @description Делегирование события для элементов;
+
+ * @param {string} drop - селектор для открытого элемента;
+ * @param {string} dataset.toggle - Дата атрибут для определения поведения;
+ * dataset.toggle = "true" - элемент открывается но не закрывается предыдущий;
+ *  dataset.toggle = "false" - элемент открывается и закрывается предыдущий;
+ *
+ */
+
 // Accordion toggle
 function eventAccord() {
 	const accordingAll = document.querySelectorAll('.accordion');
 
 	accordingAll.forEach(accordion => {
 		const accordionChildren = accordion.children;
-		for (const item of accordionChildren) {
-			item.addEventListener('click', e => {
-				const target = e.target;
 
-				if (target.closest('.accordion__head')) {
-					if (item.classList.contains('drop')) {
-						item.classList.toggle('drop');
-					} else {
-						removeDropAccordion(target);
-						item.classList.add('drop');
+		if (accordion.dataset.toggle === 'true') {
+			for (const item of accordionChildren) {
+				item.addEventListener('click', e => {
+					item.classList.toggle('drop');
+				});
+			}
+		} else {
+			for (const item of accordionChildren) {
+				item.addEventListener('click', e => {
+					const target = e.target;
+
+					if (target.closest('.accordion__head')) {
+						if (item.classList.contains('drop')) {
+							item.classList.toggle('drop');
+						} else {
+							removeDropAccordion(target);
+							item.classList.add('drop');
+						}
 					}
-				}
-			});
+				});
+			}
 		}
 	});
 }
@@ -452,8 +526,13 @@ function fixedHeader() {
 
 // Show block on timeout
 function setTimeOutPopup(cb, selector, delay) {
+	const elem = document.querySelector(`${selector}`);
+
 	setTimeout(() => {
-		cb(selector);
+		const attr = elem.hasAttribute('data-disabled');
+		if (!attr) {
+			cb(selector);
+		}
 	}, delay);
 }
 
@@ -461,16 +540,29 @@ if (document.querySelector('.cookie-plank')) {
 	setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
 
 	const cookieBtn = document.querySelector('[data-cookieBtn]');
+	const cookieClose = document.querySelector('.cookie-plank [data-close]');
 	cookieBtn.addEventListener('click', e => {
 		e.preventDefault();
 		const item = document.querySelector(`.cookie-plank`);
 		item.classList.remove('active');
+		item.dataset.disabled = true;
+		bodyUnlock();
+		overlayHide();
+	});
+	cookieClose.addEventListener('click', e => {
+		e.preventDefault();
+		const item = document.querySelector(`.cookie-plank`);
+		item.classList.remove('active');
+		bodyUnlock();
+		overlayHide();
 	});
 }
 
 function cookieActive(selector) {
 	const item = document.querySelector(`${selector}`);
 	item.classList.add('active');
+	bodyLock();
+	overlayShow();
 }
 
 function toggleActive(element) {
@@ -727,24 +819,26 @@ if (document.querySelector('.basket-list')) {
 	const list = document.querySelector('.basket-list__wrapper');
 	const reset = document.querySelector('.basket-reset');
 	const menu = document.querySelector('.basket-menu');
+	const addEl = `<div class="basket-empty">
+			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
+				<a href='/catalog/' class='button'>В каталог</a>
+			</div>`;
 	if (list.children.length < 1) {
 		reset.remove();
 		menu.remove();
-		list.innerHTML = `<div class="basket-empty">
-			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-				<a href='#' class='button'>В каталог</a>
-			</div>`;
+		list.innerHTML = addEl;
 	} else {
 		removeElement(
 			'.basket-list__wrapper',
 			'.basket-item__remove',
 			'.basket-item',
-			'.basket-reset'
+			'.basket-reset',
+			addEl
 		);
 	}
 }
 
-function removeElement(el, trigger, parent, check) {
+function removeElement(el, trigger, parent, check, addEl) {
 	const basketList = document.querySelector(`${el}`);
 	const elements = basketList.children;
 
@@ -754,22 +848,19 @@ function removeElement(el, trigger, parent, check) {
 			if (target.closest(`${trigger}`)) {
 				const parentEl = target.closest(`${parent}`);
 				parentEl.remove();
-				checkElements(basketList, elements, check);
+				checkElements(basketList, elements, check, addEl);
 			}
 		});
 	}
 }
 
-function checkElements(parent, el, trigger) {
+function checkElements(parent, el, trigger, addEl) {
 	const resetElements = document.querySelector(`${trigger}`);
 	const menu = document.querySelector('.basket-menu');
 	if (el.length < 1) {
 		resetElements.remove();
 		menu.remove();
-		parent.innerHTML = `<div class="basket-empty">
-			<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-			<a href='#' class='button'>В каталог</a>
-		</div>`;
+		parent.innerHTML = addEl;
 	}
 }
 
@@ -782,7 +873,7 @@ if (document.querySelector('.basket-reset')) {
 		const basketList = document.querySelector('.basket-list__wrapper');
 		basketList.innerHTML = `<div class="basket-empty">
 				<div class="basket-empty__title">Исправить это просто: выберите в каталоге интересующий товар и нажмите кнопку «В корзину»</div>
-				<a href='#' class='button'>В каталог</a>
+				<a href='/catalog/' class='button'>В каталог</a>
 			</div>`;
 	});
 }
@@ -794,6 +885,9 @@ if (document.querySelector('.formalization-form')) {
 	for (let i = 0; i < listItem.length; i++) {
 		const prevButton = listItem[i].querySelector('[data-button-prev]');
 		const nextButton = listItem[i].querySelector('[data-button-next]');
+		const changeButton = listItem[i].querySelector(
+			'.formalization-form__change'
+		);
 
 		prevButton?.addEventListener('click', e => {
 			e.preventDefault();
@@ -802,25 +896,118 @@ if (document.querySelector('.formalization-form')) {
 
 		nextButton?.addEventListener('click', e => {
 			e.preventDefault();
-			toggleActiveFormEl('next', listItem, i);
+			let checked = checkRadioButtons(listItem, i);
+			if (checked) {
+				toggleActiveFormEl('next', listItem, i);
+			} else {
+				return;
+			}
+		});
+
+		changeButton?.addEventListener('click', e => {
+			e.preventDefault();
+			toggleActiveFormEl('change', listItem, i);
 		});
 	}
 }
 
 function toggleActiveFormEl(move, list, index) {
-	switch (move) {
-		case 'prev':
-			list[index].classList.remove('active');
-			list[index - 1].classList.remove('resolved');
-			list[index - 1].classList.add('active');
-			break;
-
-		case 'next':
-			list[index].classList.remove('active');
-			list[index].classList.add('resolved');
-			list[index + 1].classList.add('active');
-			break;
-		default:
-			break;
+	if (move === 'prev') {
+		list[index].classList.remove('active');
+		list[index - 1].classList.remove('resolved');
+		list[index - 1].classList.add('active');
 	}
+
+	if (move === 'next') {
+		list[index].classList.remove('active');
+		list[index].classList.add('resolved');
+
+		if (list[index + 1].matches('.resolved')) {
+			for (let i = 0; i <= list.length - 1; i++) {
+				if (!list[i].matches('.resolved') && list[i - 1].matches('.resolved')) {
+					list[i].classList.add('active');
+				}
+			}
+		} else {
+			list[index + 1].classList.add('active');
+			list[index + 1].classList.remove('resolved');
+		}
+	}
+
+	if (move === 'change') {
+		for (let item of list) {
+			item.classList.remove('active');
+		}
+		list[index].classList.remove('resolved');
+		list[index].classList.add('active');
+	}
+}
+
+function checkRadioButtons(list, i) {
+	const radioButtons = list[i].querySelectorAll('input[type="radio"]');
+	let checked = Array.from(radioButtons).some(radio => radio.checked);
+	return checked;
+}
+
+if (
+	document.querySelector('[data-search-activate]') &&
+	document.querySelector('.search')
+) {
+	const buttonActivateSearch = document.querySelectorAll(
+		'[data-search-activate]'
+	);
+	const closeSearchBtn = document.querySelector('.search-form__close');
+
+	for (let button of buttonActivateSearch) {
+		button.addEventListener('click', e => {
+			e.preventDefault();
+			toggleActiveSearchForm();
+		});
+	}
+
+	closeSearchBtn.addEventListener('click', e => {
+		removeActive('.search');
+	});
+}
+
+function toggleActiveSearchForm() {
+	const search = document.querySelector('.search');
+
+	if (search.matches('.active')) {
+		removeActive('.search');
+	} else {
+		search.classList.toggle('active');
+		bodyLock();
+		overlayShow();
+	}
+}
+
+function removeActive(selector) {
+	const element = document.querySelector(`${selector}`);
+	element.classList.remove('active');
+	bodyUnlock();
+	overlayHide();
+}
+
+// Sidebar placed at the top
+// if (document.querySelector('.sidebar')) {
+// 	const sidebar = document.querySelector('.sidebar');
+// 	const headerHeight = document.querySelector('header').offsetHeight;
+// 	sidebar.style.top = `${headerHeight * 2}px`;
+// }
+
+if (document.querySelector('.search')) {
+	const block = document.querySelector('.search');
+	const mutationObserver = new MutationObserver(function (mutations) {
+		for (let mutation of mutations) {
+			if (mutation.type === 'childList') {
+				console.log('mutations');
+				initSearchSlider();
+			}
+		}
+	});
+
+	mutationObserver.observe(block, {
+		childList: true,
+	});
 }
