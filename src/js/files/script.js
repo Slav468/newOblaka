@@ -536,9 +536,27 @@ function setTimeOutPopup(cb, selector, delay) {
 	}, delay);
 }
 
-if (document.querySelector('.cookie-plank')) {
-	setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
+if (document.querySelector('.majority')) {
+	setTimeOutPopup(cookieActive, '.majority', 0);
 
+	const majority = document.querySelector('.majority');
+	const majorityBtnYes = majority.querySelector('[data-confirm]');
+	const majorityBtnNo = majority.querySelector('[data-close]');
+
+	majorityBtnYes.addEventListener('click', e => {
+		e.preventDefault();
+		majority.dataset.majority = true;
+		majority.classList.remove('active');
+		bodyUnlock();
+		overlayHide();
+
+		if (document.querySelector('.cookie-plank')) {
+			setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
+		}
+	});
+}
+
+if (document.querySelector('.cookie-plank')) {
 	const cookieBtn = document.querySelector('[data-cookieBtn]');
 	const cookieClose = document.querySelector('.cookie-plank [data-close]');
 	cookieBtn.addEventListener('click', e => {

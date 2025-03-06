@@ -165,9 +165,9 @@ export let bodyUnlock = (delay = 0) => {
 		const lockPaddingElements = document.querySelectorAll('[data-lp]');
 		setTimeout(() => {
 			lockPaddingElements.forEach(lockPaddingElement => {
-				lockPaddingElement.style.paddingRight = '';
+				lockPaddingElement.style.marginRight = '';
 			});
-			document.body.style.paddingRight = '';
+			document.body.style.marginRight = '';
 			document.documentElement.classList.remove('lock');
 		}, delay);
 		bodyLockStatus = false;
@@ -182,10 +182,10 @@ export let bodyLock = (delay = 0) => {
 		const lockPaddingValue =
 			window.innerWidth - document.body.clientWidth + 'px';
 		lockPaddingElements.forEach(lockPaddingElement => {
-			lockPaddingElement.style.paddingRight = lockPaddingValue;
+			lockPaddingElement.style.marginRight = lockPaddingValue;
 		});
 
-		document.body.style.paddingRight = lockPaddingValue;
+		document.body.style.marginRight = lockPaddingValue;
 		document.documentElement.classList.add('lock');
 
 		bodyLockStatus = false;

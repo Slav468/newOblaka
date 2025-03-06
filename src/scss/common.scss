@@ -377,6 +377,11 @@
 		color: var(--text-primary);
 		& a {
 			color: var(--primary);
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--pant-425-c);
+				}
+			}
 		}
 		ul,
 		ol {
