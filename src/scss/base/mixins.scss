@@ -192,3 +192,9 @@
 	text-overflow: ellipsis;
 	height: calc($num * $lh * toRem($fs));
 }
+
+@mixin boxShadow() {
+	box-shadow:
+		0 toRem(4) toRem(4) 0 rgba(0, 0, 0, 0.3),
+		0 toRem(8) toRem(12) toRem(6) rgba(0, 0, 0, 0.15);
+}

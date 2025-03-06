@@ -2,24 +2,11 @@
 	<div class="block__container">
 		<div class="block__wrapper">
 			<div class="block__inner">
-				<div class="block__head">
-					<div class="block__title">Заголовок</div>
-
-				</div>
+				@@include('../../elements/_titleForInside.htm',{"title": "Популярные запросы"})
 				<div class="block__body">
-					<div class="block__text text_subtitle">
-						Кофе – вкусный и ароматный напиток, приносящий удовольствие.
-					</div>
-					<div class="block__text text_general">
-						Кофе – вкусный и ароматный напиток, приносящий удовольствие.
-						Способов приготовить кофе множество. Современные технологии шагнули
-						далеко вперед и, теперь, в приготовлении кофе используются
-						кофемашины.
-					</div>
 					<div class="block__content">
 						<!-- Изменяющийся контент -->
 						@@include('./popular-variable/_request.htm',{})
-						@@include('./popular-variable/_request-slider.htm',{})
 					</div>
 				</div>
 			</div>

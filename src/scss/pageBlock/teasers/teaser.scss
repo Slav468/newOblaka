@@ -1,43 +1,42 @@
 .teaser {
 	width: 100%;
+	margin: toRem(60) 0 toRem(40) 0;
 
 	&__container {
-		overflow: hidden;
-	}
-
-	&__inner {
-		width: 100%;
 	}
 
 	&__row {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-
 		width: 100%;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: var(--primary);
+		@include boxShadow();
 	}
 
 	&__cell {
-		width: calc((100%) / 4);
-		padding: toRem(40) 0;
+		width: calc((100%) / 6);
+		padding: toRem(60) 0;
 		display: flex;
 		justify-content: center;
-		@media (max-width: toEm(1280)) {
-			width: calc((100%) / 3);
-		}
-		@media (max-width: toEm(991)) {
-			width: calc((100%) / 2);
-		}
-		@media (max-width: $mobileSmall) {
-			width: 100%;
-		}
+		// @media (max-width: toEm(1280)) {
+		// 	width: calc((100%) / 3);
+		// }
+		// @media (max-width: toEm(991)) {
+		// 	width: calc((100%) / 2);
+		// }
+		// @media (max-width: $mobileSmall) {
+		// 	width: 100%;
+		// }
 	}
 
 	&__item {
 		width: 100%;
 		display: flex;
 		gap: toRem(20);
-		padding: 0 toRem(10);
+		padding: 0 toRem(15);
 	}
 
 	&__ic {
@@ -58,11 +57,12 @@
 
 	&__tx {
 		display: flex;
-		font-weight: 600;
-		font-size: toRem(15);
+		font-family: $fontFamily2;
+		font-weight: 400;
+		font-size: 18px;
 		line-height: 1.2;
-		color: var(--text-primary);
-		@include textOverflow(2, 15, 1.2);
+		color: var(--text-inverse);
+		@include textOverflow(1, 15, 1.2);
 	}
 	&__descr {
 		font-weight: 400;

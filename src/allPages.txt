@@ -60,7 +60,7 @@
 			@@include('html/pageBlock/forms/_form.htm',{})
 			<!-- General form end -->
 			<!-- Teasers -->
-			@@include('html/pageBlock/teaser/_teaser.htm',{})
+
 			@@include('html/pageBlock/teaser/_teaser-horizontal.htm',{})
 			@@include('html/pageBlock/teaser/_teaser-slider.htm',{})
 			@@include('html/pageBlock/teaser/_teaser-horizontal-slider.htm',{})

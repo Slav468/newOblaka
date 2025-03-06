@@ -10,13 +10,16 @@
 	&__link {
 		display: flex;
 		width: fit-content;
-		border: 1px solid var(--text-secondary);
+
 		border-radius: var(--radius8);
 		cursor: pointer;
+		box-shadow:
+			0 4px 4px 0 rgba(0, 0, 0, 0.3),
+			0 8px 12px 6px rgba(0, 0, 0, 0.15);
+		background: #fff;
 
 		@media (any-hover: hover) {
 			&:hover {
-				border: 1px solid var(--primary);
 				background-color: var(--primary);
 				box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 				& .request__text {
@@ -26,7 +29,6 @@
 		}
 
 		&.active {
-			border: 1px solid var(--primary);
 			background-color: var(--primary);
 			box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 			& .request__text {
@@ -36,7 +38,7 @@
 	}
 
 	&__item {
-		padding: 12px 24px;
+		padding: 8px 10px;
 		display: flex;
 		align-items: center;
 		gap: toRem(10);
@@ -58,11 +60,12 @@
 	&__text {
 		display: flex;
 		align-items: center;
-		font-weight: 400;
-		font-size: toRem(15);
-		line-height: 1.67;
+		font-family: $fontFamily2;
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 1.66667;
 		text-align: center;
-		color: var(--text-secondary);
+		color: #000;
 		overflow: hidden;
 	}
 }

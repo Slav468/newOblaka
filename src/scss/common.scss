@@ -239,7 +239,8 @@
 	padding: toRem(13) toRem(20);
 	min-height: toRem(46);
 	border-radius: toRem(8);
-	font-weight: 600;
+	font-family: $fontFamily2;
+	font-weight: 500;
 	font-size: toRem(15);
 	background-color: var(--text-inverse);
 	border: 1px solid var(--primary);
