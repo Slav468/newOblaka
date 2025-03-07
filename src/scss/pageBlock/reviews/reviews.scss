@@ -1,8 +1,14 @@
 .reviews {
 	&:has(.reviews-slider) {
+		& .block {
+			&__content {
+				overflow: hidden;
+			}
+		}
 		& .reviews-slider {
+			padding-inline: toRem(45);
 			& .reviews__cell {
-				width: calc((100% - toRem(20)) / 2);
+				// width: calc((100% - toRem(20) - toRem(77) * 2) / 2);
 			}
 		}
 	}
@@ -29,7 +35,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+				// box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 			}
 		}
 	}
@@ -43,8 +49,8 @@
 		flex-direction: column;
 		justify-content: space-between;
 		gap: toRem(20);
-		background-color: var(--bg-primary);
-		border: 1px solid var(--border);
+		// background-color: var(--bg-primary);
+		// border: 1px solid var(--border);
 		border-radius: var(--radius8);
 		overflow: hidden;
 
@@ -126,7 +132,7 @@
 		font-size: toRem(16);
 		line-height: 1.2;
 		color: var(--text-primary);
-		@include textOverflow(2, 16, 1.2);
+		@include textOverflow(5, 16, 1.2);
 	}
 	&__img {
 		display: none;

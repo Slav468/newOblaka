@@ -251,11 +251,12 @@ function initSliders() {
 	// Reviews slider
 	if (document.querySelector('.reviews-slider')) {
 		new Swiper('.reviews-slider', {
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			// loop: true,
 			// observer: true,
 			// observeParents: true,
 			// autoHeight: true,
+			spaceBetween: 30,
 			speed: 300,
 			// lazy: true,
 			//touchRatio: 0,
@@ -287,13 +288,15 @@ function initSliders() {
 				prevEl: '.reviews-button-prev',
 				nextEl: '.reviews-button-next',
 			},
+			pagination: {
+				el: '.reviews-slider__pagination',
+				clickable: true,
+			},
 			breakpoints: {
 				320: {
-					spaceBetween: 10,
 					slidesPerView: 1,
 				},
-				520: {
-					spaceBetween: 20,
+				991: {
 					slidesPerView: 2,
 				},
 			},
@@ -698,12 +701,12 @@ function initSliders() {
 	// Categories slider
 	if (document.querySelector('.categories-slider')) {
 		new Swiper('.categories-slider', {
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			// loop: true,
 			// loopAddBlankSlides: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 6,
+
 			speed: 300,
 			// lazy: true,
 
@@ -736,12 +739,26 @@ function initSliders() {
 				prevEl: '.categories-button-prev',
 				nextEl: '.categories-button-next',
 			},
+			pagination: {
+				el: '.categories-slider__pagination',
+				clickable: true,
+			},
 			breakpoints: {
 				320: {
-					spaceBetween: 10,
+					spaceBetween: 20,
+					slidesPerView: 2,
+				},
+				550: {
+					spaceBetween: 30,
+					slidesPerView: 3,
 				},
 				992: {
 					spaceBetween: 30,
+					slidesPerView: 5,
+				},
+				1380: {
+					spaceBetween: 30,
+					slidesPerView: 6,
 				},
 			},
 			// Події
