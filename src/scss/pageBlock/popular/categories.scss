@@ -1,4 +1,12 @@
 .categories {
+	& .block {
+		&__content {
+			overflow: hidden;
+		}
+	}
+	&-slider {
+		padding-inline: toRem(60);
+	}
 	&__list {
 		display: flex;
 		gap: toRem(20);
@@ -16,10 +24,8 @@
 
 	&__cell {
 		display: flex;
-		width: calc((100% - toRem(20) * 4) / 5);
-		max-height: toRem(200);
-		border-radius: var(--radius8);
-		border: toRem(1) solid var(--border);
+		width: calc((100% - toRem(20) * 5 - toRem(55) * 2) / 6);
+		border-radius: 10px;
 		appearance: none;
 		height: auto;
 
@@ -29,21 +35,21 @@
 			}
 		}
 
-		@media (max-width: toEm(1280)) {
-			width: calc((100% - toRem(20) * 3) / 4);
-		}
-		@media (max-width: $tablet) {
-			width: calc((100% - toRem(16) * 3) / 4);
-		}
-		@media (max-width: $mobile) {
-			width: calc((100% - toRem(16) * 2) / 3);
-		}
-		@media (max-width: toEm(598)) {
-			width: calc((100% - toRem(14) * 1) / 2);
-		}
-		@media (max-width: toEm(360)) {
-			width: calc((100% - toRem(10) * 1) / 2);
-		}
+		// @media (max-width: toEm(1280)) {
+		// 	width: calc((100% - toRem(20) * 3) / 4);
+		// }
+		// @media (max-width: $tablet) {
+		// 	width: calc((100% - toRem(16) * 3) / 4);
+		// }
+		// @media (max-width: $mobile) {
+		// 	width: calc((100% - toRem(16) * 2) / 3);
+		// }
+		// @media (max-width: toEm(598)) {
+		// 	width: calc((100% - toRem(14) * 1) / 2);
+		// }
+		// @media (max-width: toEm(360)) {
+		// 	width: calc((100% - toRem(10) * 1) / 2);
+		// }
 
 		&.active {
 			box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
@@ -81,6 +87,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		gap: toRem(5);
 		position: relative;
 		height: 100%;
 		width: 100%;
@@ -109,16 +116,48 @@
 	}
 
 	&__title {
-		align-content: center;
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		justify-content: center;
+		margin: toRem(10) 0;
+	}
+
+	&__country {
+		font-family: var(--font-secondary);
 		font-weight: 500;
-		font-size: toRem(16);
-		line-height: 1.2;
-		padding-right: toRem(50);
-		@include textOverflow(2, 16, 1.2);
-		margin: 5%;
+		font-size: 20px;
+		line-height: 1.05;
+		color: #000;
+		@include textOverflow(1, 20, 1.05);
 		@media (max-width: toEm(520)) {
 			font-size: toRem(12);
-			@include textOverflow(2, 12, 1.2);
+		}
+	}
+
+	&__flag {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	&__button {
+		display: inline-block;
+		border-radius: 10px;
+		padding: toRem(13) 0;
+		font-family: var(--font-secondary);
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		background: var(--bg-inverse);
+		border: 1px solid #000;
+		font-family: var(--font-secondary);
+		font-weight: 500;
+		font-size: 16px;
+		text-align: center;
+		color: var(--text-inverse);
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--primary);
+				// color: var(--bg-inverse);
+			}
 		}
 	}
 
@@ -128,7 +167,7 @@
 		align-items: center;
 		justify-content: center;
 		flex: 1 1;
-		background-color: var(--light);
+		// background-color: var(--light);
 		overflow: hidden;
 		border-radius: var(--radius8) var(--radius8) 0 0;
 		border-top: toRem(1) solid var(--border);

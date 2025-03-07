@@ -243,10 +243,11 @@
 	font-weight: 500;
 	font-size: toRem(15);
 	background-color: var(--text-inverse);
-	border: 1px solid var(--primary);
+	// border: 1px solid var(--primary);
 	color: var(--primary);
 	width: 100%;
 	text-wrap: nowrap;
+	@include boxShadow();
 
 	&:hover {
 		background-color: var(--primary);

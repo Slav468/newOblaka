@@ -1,23 +1,13 @@
-<section class="block news">
+<section class="block">
 	<div class="block__container">
 		<div class="block__wrapper">
 			<div class="block__inner">
 				<div class="block__head">
-					<div class="block__title">F.A.Q.</div>
+					@@include('../../elements/_titleForInside.htm',{"title":"Вопрос-ответ"})
 				</div>
 				<div class="block__body">
-					<div class="block__text text_subtitle">
-						Кофе – вкусный и ароматный напиток, приносящий удовольствие.
-					</div>
-					<div class="block__text text_general">
-						Кофе – вкусный и ароматный напиток, приносящий удовольствие.
-						Способов приготовить кофе множество. Современные технологии шагнули
-						далеко вперед и, теперь, в приготовлении кофе используются
-						кофемашины.
-					</div>
 					<div class="block__content">
 						<!-- Изменяющийся контент -->
-						@@include('./faq-variable/_faq-list.htm',{})
 						@@include('./faq-variable/_faq-list-no_border.htm',{})
 					</div>
 				</div>

@@ -10,10 +10,48 @@
 		flex-direction: column;
 		gap: toRem(20);
 	}
+
 	& .block {
+		&__inner {
+			padding: toRem(30) toRem(70);
+			border-radius: 10px;
+			background-color: var(--primary);
+			box-shadow:
+				0 4px 4px 0 rgba(0, 0, 0, 0.3),
+				0 8px 12px 6px rgba(0, 0, 0, 0.15);
+		}
+
+		&__title {
+			color: var(--text-inverse);
+			&::after {
+				background-color: var(--bg-primary);
+			}
+		}
+		&__text {
+			&.text {
+				&_subtitle {
+					font-family: var(--font-secondary);
+					font-weight: 500;
+					font-size: 20px;
+					line-height: 1.4;
+					color: var(--text-inverse);
+				}
+				&_general {
+					font-family: var(--font-secondary);
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 1.33333;
+					color: var(--text-inverse);
+				}
+			}
+		}
 		&__buttons {
 			align-self: flex-start;
 			justify-self: flex-start;
+			& .button {
+				border: 1px solid var(--text-inverse);
+			}
+
 			@media (max-width: toEm(576)) {
 				width: 100%;
 				justify-content: center;

@@ -3,7 +3,7 @@
 		<div class="block__wrapper">
 			<div class="block__inner">
 				<div class="block__head">
-					<div class="block__title">Заголовок</div>
+					@@include('../../elements/_titleForInside.htm',{"title":"Отзывы"})
 					<div class="block__reference reference">
 						<a href="#" class="reference__link">
 							<p class="reference__text">Смотреть все</p>
@@ -16,26 +16,18 @@
 					</div>
 				</div>
 				<div class="block__body">
-					<div class="block__text text_subtitle">
-						Кофе – вкусный и ароматный напиток, приносящий удовольствие.
-					</div>
 					<div class="block__text text_general">
-						Кофе – вкусный и ароматный напиток, приносящий удовольствие.
-						Способов приготовить кофе множество. Современные технологии шагнули
-						далеко вперед и, теперь, в приготовлении кофе используются
-						кофемашины.
+						Здесь место для краткого текста в 2 строки. В основном используется seo специалистами.
+						<br>
+						Если не заполнено, тоесть нет текста, то не будет ничего и карточки снизу будут сразу после заголовка
 					</div>
 					<div class="block__content">
 						<!-- Изменяющийся контент -->
-						@@include('./reviews-variable/_reviews-block.htm',{})
 						@@include('./reviews-variable/_reviews-slider.htm',{})
-
 					</div>
 				</div>
 			</div>
-			<div class="block__buttons">
-				<a href="#" class="block__button">Все содержимое</a>
-			</div>
+
 		</div>
 	</div>
 </section>

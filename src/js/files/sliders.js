@@ -703,8 +703,7 @@ function initSliders() {
 			// loopAddBlankSlides: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 'auto',
-			spaceBetween: 20,
+			slidesPerView: 6,
 			speed: 300,
 			// lazy: true,
 
@@ -742,7 +741,7 @@ function initSliders() {
 					spaceBetween: 10,
 				},
 				992: {
-					spaceBetween: 20,
+					spaceBetween: 30,
 				},
 			},
 			// Події

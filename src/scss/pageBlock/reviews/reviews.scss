@@ -126,7 +126,7 @@
 		font-size: toRem(16);
 		line-height: 1.2;
 		color: var(--text-primary);
-		@include textOverflow(5, 16, 1.2);
+		@include textOverflow(2, 16, 1.2);
 	}
 	&__img {
 		display: none;
