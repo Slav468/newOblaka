@@ -32,7 +32,7 @@
 	// .main__inner
 	&__inner {
 		display: flex;
-		@include adaptiveValue("gap", 20, 10);
+		@include adaptiveValue("gap", 40, 20);
 	}
 
 	// .main__menu
@@ -201,9 +201,10 @@
 		width: toRem(27);
 		height: toRem(27);
 		cursor: pointer;
+		color: var(--text-inverse);
 		& svg {
-			height: toRem(17);
-			width: toRem(17);
+			height: toRem(24);
+			width: toRem(24);
 		}
 	}
 }
@@ -218,8 +219,8 @@
 		height: toRem(27);
 		cursor: pointer;
 		& svg {
-			height: toRem(17);
-			width: toRem(17);
+			height: toRem(24);
+			width: toRem(24);
 		}
 	}
 }
@@ -255,10 +256,10 @@
 	}
 
 	&_colored {
-		background-color: var(--primary);
+		background-color: var(--bg-inverse);
 		color: var(--text-inverse);
 		&:hover {
-			background-color: var(--secondary);
+			background-color: var(--primary);
 		}
 	}
 	&_width {

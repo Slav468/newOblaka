@@ -93,7 +93,7 @@
 	gap: toRem(30);
 	border-radius: var(--radius8);
 	overflow: hidden;
-	background-color: var(--bg-primary);
+
 	@media (max-width: $mobile) {
 		max-width: toRem(323);
 	}
@@ -134,7 +134,7 @@
 	&__body {
 		max-width: toRem(285);
 		width: 100%;
-		background-color: var(--bg-primary);
+
 		display: flex;
 		flex-direction: column;
 

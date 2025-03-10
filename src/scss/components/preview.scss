@@ -15,6 +15,10 @@
 		height: 100%;
 		z-index: 0;
 		overflow: hidden;
+		box-shadow:
+			0 4px 4px 0 rgba(0, 0, 0, 0.3),
+			0 8px 12px 6px rgba(0, 0, 0, 0.15);
+
 		&::after {
 			content: " ";
 			position: absolute;
@@ -96,6 +100,14 @@
 		display: flex;
 		gap: toRem(20);
 		flex-wrap: wrap;
+		& button {
+			border-radius: 8px;
+			padding: 13px 50px;
+			box-shadow:
+				0 4px 4px 0 rgba(0, 0, 0, 0.3),
+				0 8px 12px 6px rgba(0, 0, 0, 0.15);
+			background: #fff;
+		}
 		@media (max-width: toEm(570)) {
 			gap: toRem(10);
 		}

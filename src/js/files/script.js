@@ -345,7 +345,7 @@ function hideMenuItem() {
 			}
 		}
 
-		if (totalWidthItem > width && menuListChildren.length > 2 && menuLastItem) {
+		if (totalWidthItem > width && menuListChildren.length > 1 && menuLastItem) {
 			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
 			hideMenuItem();
 		}

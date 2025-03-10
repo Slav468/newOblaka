@@ -8,6 +8,7 @@
 		border: 1px solid var(--border);
 		border-radius: var(--radius8);
 		overflow: hidden;
+		background-color: var(--primary);
 		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
@@ -31,7 +32,7 @@
 	&__text {
 		font-weight: 500;
 		font-size: toRem(16);
-		color: var(--text-secondary);
+		color: var(--text-inverse);
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(14);
 		}

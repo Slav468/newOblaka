@@ -7,6 +7,7 @@
 		border: toRem(1) solid var(--primary);
 		border-radius: toRem(16);
 		padding: toRem(30) toRem(50);
+		background-color: var(--primary);
 		@media (max-width: toRem(576)) {
 			padding: toRem(20);
 		}
@@ -51,6 +52,7 @@
 	&__title {
 		font-weight: 600;
 		font-size: toRem(30);
+		color: var(--text-inverse);
 		@media (max-width: toRem(576)) {
 			font-size: toRem(20);
 		}
@@ -61,7 +63,7 @@
 		font-weight: 400;
 		font-size: toRem(16);
 		line-height: 1.5;
-		color: var(--text-secondary);
+		color: var(--text-inverse);
 		@media (max-width: toRem(576)) {
 			font-size: toRem(15);
 		}
@@ -70,5 +72,10 @@
 	&__buttons {
 		width: 100%;
 		display: flex;
+	}
+
+	&__button {
+		width: fit-content;
+		padding: 13px 50px;
 	}
 }

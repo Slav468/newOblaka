@@ -76,12 +76,15 @@
 
 	// .block__button
 	&__button {
-		border: 1px solid var(--primary);
 		border-radius: var(--radius8);
 		padding: toRem(13) toRem(75);
 		font-weight: 700;
 		font-size: toRem(16);
 		color: var(--primary);
+		box-shadow:
+			0 4px 4px 0 rgba(0, 0, 0, 0.3),
+			0 8px 12px 6px rgba(0, 0, 0, 0.15);
+
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--primary);

@@ -57,4 +57,28 @@
 		gap: toRem(40);
 		overflow: hidden;
 	}
+
+	&_simple {
+		& .tabs {
+			&__navigation {
+				box-shadow:
+					0 4px 4px 0 rgba(0, 0, 0, 0.3),
+					0 8px 12px 6px rgba(0, 0, 0, 0.15);
+				border-radius: 8px;
+				padding-left: toRem(32);
+				@include adaptiveValue("padding-left", 32, 10);
+			}
+			&__title {
+				border: none;
+				background-color: transparent;
+				font-weight: 400;
+				font-size: 16px;
+				color: var(--text-accent);
+				padding: toRem(17) toRem(10) toRem(12) toRem(10);
+				&._tab-active {
+					font-weight: 600;
+				}
+			}
+		}
+	}
 }

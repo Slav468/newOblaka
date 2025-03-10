@@ -472,7 +472,7 @@
 		top: 0;
 		left: 0;
 		z-index: 15;
-		background-color: var(--bg-primary);
+		background-color: var(--primary);
 		box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 
 		& .header__top {
@@ -483,7 +483,7 @@
 			.mode__svg,
 			.mode__regime,
 			.mode__time {
-				color: var(--text-primary);
+				color: var(--text-inverse);
 			}
 
 			// & .header__contacts .contacts-phone__svg {
@@ -493,7 +493,7 @@
 			& .contacts-phone__link,
 			.contacts-phone__arrow,
 			.contacts-phone__svg {
-				color: var(--text-primary);
+				color: var(--text-inverse);
 			}
 			@media (max-width: $mobileSmall) {
 				.contacts-phone__link {
@@ -506,11 +506,24 @@
 					& > .menu__list {
 						& > .menu__item {
 							& > .menu__link {
-								color: var(--text-primary);
+								color: var(--text-inverse);
 							}
 							& > .menu__svg {
 								& > .svg-arrow-down {
-									color: var(--text-primary);
+									color: var(--text-inverse);
+								}
+							}
+
+							@media (any-hover: hover) {
+								&:hover {
+									& > .menu__link {
+										color: var(--accent) !important;
+									}
+									& > .menu__svg {
+										& > .svg-arrow-down {
+											color: var(--accent) !important;
+										}
+									}
 								}
 							}
 						}

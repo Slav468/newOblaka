@@ -167,9 +167,9 @@ body {
 @import "footer";
 
 // Підключення стилів окремих сторінок
-// @import "./insidePage/detail-page";
-// @import "./insidePage/chapter-page";
-// @import "./insidePage/catalog-details";
+@import "./insidePage/detail-page";
+@import "./insidePage/chapter-page";
+@import "./insidePage/catalog-details";
 // @import "./insidePage/404";
 
 // Динамические стили

@@ -11,6 +11,10 @@
 		display: flex;
 		gap: toRem(20);
 		flex-wrap: wrap;
+		justify-content: space-around;
+		& .categories__cell {
+			min-width: toRem(240);
+		}
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 		}
@@ -25,6 +29,7 @@
 	&__cell {
 		display: flex;
 		width: calc((100% - toRem(20) * 5 - toRem(55) * 2) / 6);
+
 		border-radius: 10px;
 		appearance: none;
 		height: auto;

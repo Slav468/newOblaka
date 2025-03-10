@@ -3,6 +3,76 @@ $gap: toRem(20);
 	display: flex;
 	flex-direction: column;
 
+	& .header {
+		background-color: var(--primary);
+		& .header__top {
+			border-bottom: none !important;
+			& .address__svg,
+			.address__city,
+			.address__street,
+			.mode__svg,
+			.mode__regime,
+			.mode__time {
+				color: var(--text-inverse);
+			}
+
+			// & .header__contacts .contacts-phone__svg {
+			// 	background-color: transparent;
+			// }
+
+			& .contacts-phone__link,
+			.contacts-phone__arrow,
+			.contacts-phone__svg {
+				color: var(--text-inverse);
+			}
+			@media (max-width: $mobileSmall) {
+				.contacts-phone__link {
+					opacity: 0;
+				}
+			}
+
+			& .menu {
+				& .menu__body {
+					& > .menu__list {
+						& > .menu__item {
+							& > .menu__link {
+								color: var(--text-inverse);
+							}
+							& > .menu__svg {
+								& > .svg-arrow-down {
+									color: var(--text-inverse);
+								}
+							}
+
+							@media (any-hover: hover) {
+								&:hover {
+									& > .menu__link {
+										color: var(--accent) !important;
+									}
+									& > .menu__svg {
+										& > .svg-arrow-down {
+											color: var(--accent) !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			& .icon-menu span,
+			.icon-menu::before,
+			.icon-menu::after {
+				background-color: var(--text-primary);
+				@media (max-width: toEm(640)) {
+					visibility: visible;
+					background-color: var(--text-primary);
+				}
+			}
+		}
+	}
+
 	// .chapter-page__wrapper
 	&__wrapper {
 		display: flex;
@@ -47,7 +117,7 @@ $gap: toRem(20);
 		& .main__block {
 			display: flex;
 			flex-direction: column;
-			gap: toRem(20);
+			gap: toRem(40);
 			margin-bottom: toRem(30);
 		}
 
@@ -55,7 +125,7 @@ $gap: toRem(20);
 			display: flex;
 			flex-direction: column;
 			gap: toRem(20);
-			overflow: hidden;
+			// overflow: hidden;
 			flex: 1 1 auto;
 			&:has(.map-address__body) {
 				flex-direction: row;

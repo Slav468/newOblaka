@@ -124,7 +124,7 @@
 
 	& a {
 		display: flex;
-		text-decoration: underline;
+		// text-decoration: underline;
 		color: var(--primary);
 		width: fit-content;
 
@@ -132,13 +132,13 @@
 		font-weight: 600;
 		line-height: 1.4;
 
-		text-decoration-line: underline;
-		text-decoration-style: solid;
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--secondary);
-			}
-		}
+		// text-decoration-line: underline;
+		// text-decoration-style: solid;
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		color: var(--secondary);
+		// 	}
+		// }
 	}
 }
 

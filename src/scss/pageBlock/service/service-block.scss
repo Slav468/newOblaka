@@ -1,6 +1,11 @@
 .service {
 	width: 100%;
 
+	&-slider {
+		padding: toRem(40) toRem(40) toRem(40) toRem(40);
+		overflow: hidden;
+	}
+
 	&__content {
 		position: relative;
 	}
@@ -75,7 +80,7 @@
 			flex: 0 1 toRem(216);
 			overflow: hidden;
 			display: flex;
-			@include linerGradient();
+			// @include linerGradient();
 			& img {
 				width: 100%;
 				height: 100%;
@@ -140,14 +145,23 @@
 		position: relative;
 		z-index: 2;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: toRem(20);
+		gap: toRem(10);
 		padding: 0 toRem(14);
 		margin-bottom: toRem(15);
+		& [data-popup] {
+			background-color: var(--bg-inverse);
+			color: var(--text-inverse);
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: var(--primary);
+				}
+			}
+		}
 		@media (max-width: toEm(1280)) {
 			margin-bottom: toRem(5);
-			flex-wrap: wrap;
 			gap: toRem(5);
 		}
 		@media (max-width: toEm(576)) {

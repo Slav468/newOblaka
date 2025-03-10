@@ -4,7 +4,7 @@
 
 	& .accordion {
 		width: 100%;
-		background-color: var(--iverse);
+		background-color: var(--primary);
 		border: 1px solid var(--border);
 		border-radius: var(--radius8);
 
@@ -18,15 +18,23 @@
 
 		&__title {
 			font-size: toRem(14);
-			color: var(--text-primary);
+			color: var(--text-inverse);
 		}
 		&__img {
 			width: toRem(24);
 			height: toRem(24);
+			@media (any-hover: hover) {
+				&:hover {
+					& svg {
+						color: var(--text-inverse);
+					}
+				}
+			}
 		}
 		&__svg {
 			width: toRem(15);
 			transform: rotate(0deg);
+			color: var(--text-inverse);
 		}
 
 		&__item {
@@ -60,7 +68,7 @@
 		gap: toRem(10);
 		position: relative;
 		font-size: toRem(14);
-		color: var(--text-primary);
+		color: var(--text-inverse);
 		font-weight: 500;
 
 		span {
@@ -72,6 +80,12 @@
 			background: var(--bg-secondary);
 			color: var(--text-secondary);
 			text-align: center;
+			box-shadow:
+				0 4px 4px 0 rgba(0, 0, 0, 0.3),
+				0 8px 12px 6px rgba(0, 0, 0, 0.15);
+			background: #fff;
+			border-radius: 4px;
+			padding: 2px 8px;
 		}
 
 		&:before {
@@ -79,7 +93,7 @@
 			width: toRem(3);
 			height: toRem(14);
 			display: block;
-			background-color: var(--primary);
+			background-color: var(--bg-primary);
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -89,22 +103,22 @@
 			opacity: 0;
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--primary);
-			}
-		}
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		color: var(--primary);
+		// 	}
+		// }
 
 		&.active {
-			color: var(--primary);
+			// color: var(--primary);
 			font-weight: 600;
 
 			&:before {
 				opacity: 1;
 			}
 			& span {
-				color: var(--text-inverse);
-				background-color: var(--primary);
+				// color: var(--text-inverse);
+				// background-color: var(--primary);
 			}
 		}
 		@media (max-width: toRem(991)) {

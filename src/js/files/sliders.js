@@ -159,7 +159,7 @@ function initSliders() {
 			// loop: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 'auto',
+
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -185,10 +185,20 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 10,
+					slidesPerView: 1,
+					spaceBetween: 30,
 				},
-				992: {
-					spaceBetween: 20,
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 40,
+				},
+				991: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+				},
+				1200: {
+					spaceBetween: 40,
+					slidesPerView: 4,
 				},
 			},
 			// Події
@@ -994,7 +1004,7 @@ function initSliders() {
 	// Slider general
 	if (document.querySelector('.slider-general')) {
 		const swiper = new Swiper('.slider-thumb', {
-			modules: [Navigation, Thumbs],
+			modules: [Navigation],
 			direction: 'vertical',
 			spaceBetween: 10,
 			slidesPerView: 3,
@@ -1007,12 +1017,9 @@ function initSliders() {
 		});
 
 		const swiper2 = new Swiper('.slider-general', {
-			modules: [Navigation, Thumbs, Pagination],
+			modules: [Navigation, Pagination],
 			slidesPerView: 'auto',
 			spaceBetween: 0,
-			thumbs: {
-				swiper: swiper,
-			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,

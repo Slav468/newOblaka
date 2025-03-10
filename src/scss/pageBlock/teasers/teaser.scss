@@ -18,6 +18,7 @@
 
 	&__cell {
 		width: calc((100%) / 6);
+		min-width: toRem(276);
 		padding: toRem(60) 0;
 		display: flex;
 		justify-content: center;

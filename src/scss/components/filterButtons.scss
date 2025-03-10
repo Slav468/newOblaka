@@ -4,12 +4,19 @@
 	align-items: center;
 	justify-content: flex-end;
 	width: 100%;
+	box-shadow:
+		0 4px 4px 0 rgba(0, 0, 0, 0.3),
+		0 8px 12px 6px rgba(0, 0, 0, 0.15);
+	background: #fff;
+	border-radius: 8px;
 
 	&__list {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
 		gap: toRem(30);
+		padding: toRem(5) 0;
+		margin-right: toRem(5);
 	}
 
 	// .filter__button

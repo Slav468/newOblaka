@@ -4,6 +4,9 @@
 	border: 1px solid var(--border);
 	border-radius: var(--radius8);
 	overflow: hidden;
+	box-shadow:
+		0 4px 4px 0 rgba(0, 0, 0, 0.3),
+		0 8px 12px 6px rgba(0, 0, 0, 0.15);
 
 	&__body {
 		width: 100%;
