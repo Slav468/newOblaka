@@ -1,7 +1,7 @@
 
-		@@include('html/pageBlock/headers/_header-menuLeft.htm,{})
-		@@include('html/pageBlock/headers/_header-menuDown.htm,{})
-<!-- General banner -->
+	@@include('html/pageBlock/headers/_header-menuLeft.htm,{})
+	@@include('html/pageBlock/headers/_header-menuDown.htm,{})
+			<!-- General banner -->
 			@@include('html/pageBlock/generalBanners/general-banner-width.htm',{})
 			@@include('html/pageBlock/generalBanners/general-banner-withSmall.htm',{})
 			@@include('html/pageBlock/generalBanners/general-banner.htm',{})
@@ -72,7 +72,8 @@
 			@@include('html/pageBlock/map/_map.htm',{})
 			<!-- Map end -->
 
-				@@include('html/elements/_search.htm',{})
+			@@include('html/elements/_search.htm',{})
+
 	@@include('html/elements/_cookie-plank.htm',{})
 	@@include('html/elements/_aside-body-menu.htm',{})
 	@@include('html/baseHtml/_sidebar.htm',{})
