@@ -101,9 +101,10 @@
 	flex-direction: column;
 	gap: toRem(10);
 	& .text_subtitle {
-		font-size: toRem(27);
+		font-family: var(--font-family);
 		font-weight: 700;
-		line-height: 1.22;
+		font-size: 27px;
+		color: #000;
 
 		display: -webkit-box;
 		line-clamp: 2;
@@ -113,6 +114,12 @@
 		text-overflow: ellipsis;
 	}
 	& .text_general {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.4;
+		color: #666;
+
 		display: -webkit-box;
 		line-clamp: 3;
 		-webkit-line-clamp: 3;
@@ -293,9 +300,10 @@
 		display: flex;
 		flex: 0 1 toRem(200);
 		margin: 0;
+		font-family: var(--font-family);
 		font-weight: 600;
-		font-size: toRem(14);
-		line-height: 1.22;
+		font-size: 14px;
+		line-height: 1.4;
 		color: #a1a1a1;
 		@media (max-width: 1440px) {
 			font-size: toRem(14);
@@ -310,10 +318,11 @@
 	}
 
 	&__text {
+		font-family: var(--font-family);
 		font-weight: 600;
-		font-size: toRem(14);
-		line-height: 1.22;
-		color: var(--text-primary);
+		font-size: 14px;
+		line-height: 1.4;
+		color: #333;
 		@media (max-width: 1440px) {
 			font-size: toRem(14);
 		}

@@ -157,9 +157,9 @@
 
 	// .footer-left__description
 	&__description {
+		font-family: var(--font-family);
 		font-weight: 400;
-		font-size: toRem(16);
-		line-height: 1.5;
+		font-size: 15px;
 		color: var(--text-inverse);
 		@media (max-width: toRem(576)) {
 			font-size: toRem(15);
@@ -184,9 +184,10 @@
 
 	// .navigation__link
 	&__link {
-		font-weight: 600;
-		font-size: toRem(18);
-		color: var(--text-inverse);
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
+		color: #fff;
 		text-transform: uppercase;
 		@media (any-hover: hover) {
 			&:hover {
@@ -198,8 +199,9 @@
 .footer-right {
 	// .footer-right__title
 	&__title {
-		font-weight: 600;
-		font-size: toRem(18);
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
 		color: var(--text-inverse);
 	}
 	& .address {

@@ -28,6 +28,7 @@
 
 	&__title {
 		position: relative;
+		font-family: $fontFamily2;
 		font-weight: 600;
 		font-size: toRem(28);
 		color: var(--text-primary);
@@ -39,12 +40,19 @@
 			z-index: 0;
 			width: toRem(90);
 			height: 3px;
-			background-color: var(--primary);
+			background-color: var(--bg-inverse);
 		}
 
 		@media (max-width: toEm(1280)) {
 			font-size: toRem(26);
 		}
+	}
+	&__text {
+		font-family: var(--font-family);
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1.4;
+		color: #333;
 	}
 
 	&__reference {
@@ -80,7 +88,6 @@
 		padding: toRem(13) toRem(75);
 		font-weight: 700;
 		font-size: toRem(16);
-		color: var(--primary);
 		box-shadow:
 			0 4px 4px 0 rgba(0, 0, 0, 0.3),
 			0 8px 12px 6px rgba(0, 0, 0, 0.15);

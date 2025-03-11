@@ -15,7 +15,7 @@
 		flex-direction: row-reverse;
 		align-items: center;
 		gap: toRem(30);
-		padding: toRem(5) 0;
+		padding: toRem(9) 0;
 		margin-right: toRem(5);
 	}
 
@@ -25,10 +25,11 @@
 		border: 1px solid var(--primary);
 		padding: toRem(8) toRem(10);
 		color: var(--primary);
-		font-size: toRem(15);
+		font-family: var(--font-family);
 		font-weight: 400;
-		line-height: 1.56;
-		text-align: center;
+		font-size: 12px;
+		line-height: 1.1;
+		color: #333;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -38,6 +39,7 @@
 		}
 	}
 }
+
 .sort {
 	// .sort__title
 	display: flex;
@@ -55,9 +57,10 @@
 
 	// .sort__text
 	&__text {
-		font-size: toRem(15);
+		font-family: var(--font-family);
 		font-weight: 400;
-		line-height: 0.914;
+		font-size: 12px;
+		color: #333;
 	}
 
 	// .sort__svg
@@ -95,10 +98,10 @@
 
 	// .sort__button
 	&__button {
-		font-size: toRem(15);
-		font-weight: 500;
-		line-height: 0.914;
-		color: var(--text-secondary);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 12px;
+		color: #333;
 		&.active {
 			color: var(--primary);
 			font-weight: 500;

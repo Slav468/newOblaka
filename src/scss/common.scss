@@ -147,9 +147,10 @@
 .reference {
 	// .reference__text
 	&__text {
-		font-weight: 600;
-		font-size: toRem(20);
-		color: var(--text-accent);
+		font-family: var(--font-family);
+		font-weight: 300;
+		font-size: 20px;
+		color: #333;
 	}
 
 	// .reference__link
@@ -162,11 +163,11 @@
 				& .reference__text {
 					color: var(--primary);
 				}
-				& .reference__img {
-					background-color: var(--primary);
-				}
+				// & .reference__img {
+				// 	background-color: var(--primary);
+				// }
 				& .reference__svg {
-					color: var(--inverse);
+					color: var(--primary);
 				}
 			}
 		}
@@ -175,8 +176,8 @@
 	&__img {
 		width: toRem(32);
 		height: toRem(32);
-		border-radius: 50%;
-		border: 1px solid var(--primary);
+		// border-radius: 50%;
+		// border: 1px solid var(--primary);
 		overflow: hidden;
 		display: flex;
 		align-items: center;
@@ -185,8 +186,8 @@
 
 	// .reference__svg
 	&__svg {
-		width: toRem(8);
-		height: toRem(14);
+		width: toRem(11);
+		height: toRem(20);
 		transform: rotate(-90deg);
 	}
 }
@@ -240,12 +241,14 @@
 	padding: toRem(13) toRem(20);
 	min-height: toRem(46);
 	border-radius: toRem(8);
-	font-family: $fontFamily2;
+	font-family: var(--font-family);
 	font-weight: 500;
-	font-size: toRem(15);
+	font-size: 15px;
+	text-align: center;
+	color: #000;
 	background-color: var(--text-inverse);
 	// border: 1px solid var(--primary);
-	color: var(--primary);
+	// color: var(--primary);
 	width: 100%;
 	text-wrap: nowrap;
 	@include boxShadow();
@@ -453,16 +456,16 @@
 	display: flex;
 	gap: toRem(4);
 	&__city {
-		font-weight: 600;
-		font-size: toRem(15);
-		line-height: 1.4;
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 15px;
 		text-wrap: nowrap;
 	}
 
 	&__street {
-		font-weight: 500;
-		font-size: toRem(14);
-		line-height: 1.4;
+		font-family: var(--font-family);
+		font-weight: 300;
+		font-size: 14px;
 		text-wrap: nowrap;
 	}
 }

@@ -19,6 +19,9 @@
 			box-shadow:
 				0 4px 4px 0 rgba(0, 0, 0, 0.3),
 				0 8px 12px 6px rgba(0, 0, 0, 0.15);
+			@media (max-width: $mobile) {
+				padding: toRem(20);
+			}
 		}
 
 		&__title {
@@ -30,14 +33,14 @@
 		&__text {
 			&.text {
 				&_subtitle {
-					font-family: var(--font-secondary);
+					font-family: var(--font-family);
 					font-weight: 500;
 					font-size: 20px;
 					line-height: 1.4;
 					color: var(--text-inverse);
 				}
 				&_general {
-					font-family: var(--font-secondary);
+					font-family: var(--font-family);
 					font-weight: 400;
 					font-size: 18px;
 					line-height: 1.33333;
@@ -48,9 +51,6 @@
 		&__buttons {
 			align-self: flex-start;
 			justify-self: flex-start;
-			& .button {
-				border: 1px solid var(--text-inverse);
-			}
 
 			@media (max-width: toEm(576)) {
 				width: 100%;

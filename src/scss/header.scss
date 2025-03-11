@@ -534,10 +534,10 @@
 			& .icon-menu span,
 			.icon-menu::before,
 			.icon-menu::after {
-				background-color: var(--text-primary);
+				background-color: var(--text-inverse);
 				@media (max-width: toEm(640)) {
 					visibility: visible;
-					background-color: var(--text-primary);
+					background-color: var(--text-inverse);
 				}
 			}
 		}
@@ -1042,8 +1042,9 @@
 	}
 
 	&__link {
-		font-weight: 700;
-		font-size: toRem(16);
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 16px;
 		text-wrap: nowrap;
 	}
 	&__arrow {
@@ -1107,8 +1108,9 @@
 	}
 
 	&__link {
-		font-weight: 700;
-		font-size: toRem(16);
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 16px;
 		color: var(--text-accent);
 		@media (any-hover: hover) {
 			&:hover {

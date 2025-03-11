@@ -19,10 +19,11 @@
 
 	// .bread__item
 	&__item {
-		color: var(--primary);
+		font-family: var(--font-family);
 		font-weight: 400;
-		font-size: toRem(15);
-		line-height: 1.67;
+		font-size: 15px;
+		line-height: 1.66667;
+		color: #000000;
 		list-style: none;
 
 		@media (max-width: $mobileSmall) {
@@ -32,7 +33,7 @@
 
 	// .bread__link
 	&__link {
-		color: var(--text-primary);
+		color: #929292;
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--primary);
@@ -59,8 +60,15 @@
 			}
 		}
 
-		& .bread__link {
+		& .bread__item {
 			color: var(--text-inverse);
+			@media (max-width: toEm(570)) {
+				color: #000000;
+			}
+		}
+
+		& .bread__link {
+			color: #929292;
 			@media (any-hover: hover) {
 				&:hover {
 					color: var(--primary);
@@ -68,7 +76,7 @@
 			}
 
 			@media (max-width: toEm(570)) {
-				color: var(--text-primary);
+				color: #929292;
 			}
 		}
 

@@ -2,16 +2,19 @@
 	display: flex;
 	gap: toRem(5);
 
-	&__actual {
-		font-weight: 600;
-		font-size: toRem(18);
+	& > &__actual {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.05;
 	}
 
-	&__old {
-		font-weight: 400;
-		font-size: toRem(14);
-		line-height: 1.57;
+	& > &__old {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 1.61538;
 		text-decoration: line-through;
-		color: var(--text-secondary);
+		color: #a1a1a1;
 	}
 }

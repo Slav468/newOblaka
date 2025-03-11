@@ -163,6 +163,26 @@
 			border-radius: 16px;
 			padding: 24px;
 			max-width: toRem(400);
+			@media (max-width: toEm(1200)) {
+				margin: toRem(20);
+				margin-bottom: toRem(55);
+				max-width: none;
+				gap: toRem(15);
+			}
+
+			&__list {
+				@media (max-width: toEm(1200)) {
+					flex-direction: row;
+					gap: toRem(15);
+					max-width: none;
+				}
+				@media (max-width: toEm(598)) {
+					flex-direction: column;
+				}
+			}
+			&__cell {
+				flex: 1 1 50%;
+			}
 			&__text {
 				color: var(--text-inverse);
 				font-weight: 400;
@@ -218,6 +238,11 @@
 				}
 			}
 		}
+
+		@media (max-width: toEm(1200)) {
+			flex-direction: column;
+			gap: toRem(0);
+		}
 	}
 	&__pagination {
 		position: absolute;
@@ -245,6 +270,9 @@
 		@media (max-width: toEm(1280)) {
 			max-width: 82.951807%;
 			gap: toRem(50);
+		}
+		@media (max-width: toEm(1200)) {
+			margin: toRem(50) toRem(0);
 		}
 		@media (max-width: $mobile) {
 			max-width: 83.6%;
@@ -282,7 +310,11 @@
 		height: 100%;
 	}
 	&__title {
+		font-family: $fontFamily2;
 		color: var(--text-inverse);
+		font-weight: 700;
+		font-size: 44px;
+		line-height: 1.2;
 		display: -webkit-box;
 		line-clamp: 4;
 		-webkit-line-clamp: 4;
@@ -296,7 +328,11 @@
 		}
 	}
 	&__text {
+		font-family: $fontFamily2;
 		color: var(--text-inverse);
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1;
 		display: -webkit-box;
 		line-clamp: 4;
 		-webkit-line-clamp: 4;

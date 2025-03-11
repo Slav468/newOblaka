@@ -97,18 +97,20 @@
 	}
 
 	&__rubric {
-		font-weight: 500;
-		font-size: toRem(12);
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 12px;
 		text-transform: uppercase;
-		color: var(--primary);
+		color: #000;
 		@include textOverflow(2, 12, 1);
 	}
 
 	&__title {
-		font-weight: 500;
-		font-size: toRem(16);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
 		line-height: 1.37;
-		color: var(--text-primary);
+		color: #333;
 		hyphens: auto;
 		@include textOverflow(2, 16, 1.37);
 

@@ -93,9 +93,10 @@
 	}
 
 	&__title {
-		font-weight: 600;
-		font-size: toRem(18);
-		color: var(--text-primary);
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
+		color: #333;
 		@media (max-width: toEm(1280)) {
 			font-size: toRem(16);
 		}
