@@ -536,9 +536,18 @@ function setTimeOutPopup(cb, selector, delay) {
 	}, delay);
 }
 
-if (document.querySelector('.majority')) {
-	setTimeOutPopup(cookieActive, '.majority', 0);
+function activateElem(selector) {
+	const item = document.querySelector(`${selector}`);
+	item.classList.add('active');
+	bodyLock();
+	overlayShow();
+}
 
+function toggleActive(element) {
+	element.classList.toggle('active');
+}
+
+if (document.querySelector('.majority')) {
 	const majority = document.querySelector('.majority');
 	const majorityBtnYes = majority.querySelector('[data-confirm]');
 	const majorityBtnNo = majority.querySelector('[data-close]');
@@ -551,9 +560,15 @@ if (document.querySelector('.majority')) {
 		overlayHide();
 
 		if (document.querySelector('.cookie-plank')) {
-			setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
+			setTimeOutPopup(activateElem, '.cookie-plank', 1500);
 		}
 	});
+
+	if (majority.hasAttribute('data-disabled')) {
+		setTimeOutPopup(activateElem, '.cookie-plank', 1500);
+	} else {
+		setTimeOutPopup(activateElem, '.majority', 0);
+	}
 }
 
 if (document.querySelector('.cookie-plank')) {
@@ -574,17 +589,6 @@ if (document.querySelector('.cookie-plank')) {
 		bodyUnlock();
 		overlayHide();
 	});
-}
-
-function cookieActive(selector) {
-	const item = document.querySelector(`${selector}`);
-	item.classList.add('active');
-	bodyLock();
-	overlayShow();
-}
-
-function toggleActive(element) {
-	element.classList.toggle('active');
 }
 
 if (document.querySelector('.card-controls')) {
