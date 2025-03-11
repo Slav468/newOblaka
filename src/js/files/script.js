@@ -814,7 +814,6 @@ function changeColor(variable, color) {
 }
 
 // Basket element control
-
 if (document.querySelector('.basket-list')) {
 	const list = document.querySelector('.basket-list__wrapper');
 	const reset = document.querySelector('.basket-reset');
@@ -942,7 +941,13 @@ function toggleActiveFormEl(move, list, index) {
 		list[index].classList.add('active');
 	}
 }
-
+/**
+ * Checks if any radio button is selected within a specified element in a list.
+ *
+ * @param {Array} list - An array of elements to search through.
+ * @param {number} i - The index of the element in the list to check for radio buttons.
+ * @returns {boolean} - Returns true if at least one radio button is checked, otherwise false.
+ */
 function checkRadioButtons(list, i) {
 	const radioButtons = list[i].querySelectorAll('input[type="radio"]');
 	let checked = Array.from(radioButtons).some(radio => radio.checked);

@@ -64,10 +64,10 @@ $gap: toRem(20);
 			& .icon-menu span,
 			.icon-menu::before,
 			.icon-menu::after {
-				background-color: var(--text-primary);
+				background-color: var(--text-inverse);
 				@media (max-width: toEm(640)) {
 					visibility: visible;
-					background-color: var(--text-primary);
+					background-color: var(--text-inverse);
 				}
 			}
 		}
