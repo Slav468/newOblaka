@@ -118,7 +118,6 @@ removeDrop(contactsPhones, '.contacts-phone', '.contacts__block');
 
 const menuItemsBack = document.querySelectorAll('.menu__item .mobile-back');
 removeDrop(menuItemsBack, '.menu__item', '[data-menulist]');
-
 function removeDropAside(asideMenu, selector) {
 	const removeButtons = asideMenu.querySelectorAll('.mobile-back');
 	removeButtons.forEach(item => {
