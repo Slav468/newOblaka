@@ -1,0 +1,138 @@
+.contacts {
+	&__block {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: toRem(2);
+	}
+}
+
+.contacts-block {
+	&__phone {
+		position: relative;
+		display: flex;
+	}
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: toRem(14);
+
+		&:not(:has(.messengers)),
+		&:not(:has(.social)) {
+			& .divider {
+				display: none;
+			}
+		}
+	}
+}
+
+.contacts-phone {
+	position: relative;
+	@media (any-hover: hover) and (min-width: $mobile) {
+		&:hover {
+			.phone-dropdown {
+				display: flex;
+			}
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__svg {
+		width: toRem(28);
+		height: toRem(28);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: toRem(16);
+		text-wrap: nowrap;
+	}
+	&__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(27);
+		height: toRem(27);
+		@media (max-width: $mobile) {
+			cursor: pointer;
+		}
+	}
+	&__dropdown {
+		position: absolute;
+		top: toRem(-12);
+		left: toRem(-5);
+		z-index: 5;
+		background-color: var(--bg-primary);
+		width: 100vw;
+		max-width: toRem(220);
+		display: none;
+		border-radius: var(--radius8);
+		appearance: none;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	&.drop {
+		& .phone-dropdown {
+			display: flex;
+			align-self: flex-start;
+			flex-direction: column;
+			height: 100vh;
+			width: 100vw;
+			max-width: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 17;
+			background-color: var(--bg-primary);
+			border-radius: 0;
+		}
+		& .mobile-back {
+			display: flex;
+			padding-top: toRem(24);
+		}
+	}
+}
+
+.phone-dropdown {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: toRem(8);
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding: toRem(4) toRem(8) toRem(12) toRem(30);
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: toRem(16);
+		color: var(--text-accent);
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: toRem(14);
+		color: #555;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}

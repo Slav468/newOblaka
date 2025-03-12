@@ -1,0 +1,26 @@
+// Messengers & Social
+.messengers {
+	display: flex;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(27);
+		height: toRem(27);
+		cursor: pointer;
+		& svg {
+			height: toRem(17);
+			width: toRem(17);
+		}
+	}
+}
+
+.viber-svg {
+	color: var(--viber);
+}
+.telegram-svg {
+	color: var(--telegram);
+}
+.whatsapp-svg {
+	color: var(--whatsapp);
+}

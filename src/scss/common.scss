@@ -17,6 +17,7 @@
 		}
 	}
 }
+
 .page {
 	display: flex;
 	flex-direction: column;
@@ -89,27 +90,8 @@
 		height: 100%;
 	}
 }
-.viber-svg {
-	color: var(--viber);
-}
-.telegram-svg {
-	color: var(--telegram);
-}
-.whatsapp-svg {
-	color: var(--whatsapp);
-}
-.youtube-svg {
-	color: var(--youtube);
-}
-.instagram-svg {
-	color: var(--instagram);
-}
-.facebook-svg {
-	color: var(--facebook);
-}
-.vk-svg {
-	color: var(--vk);
-}
+
+
 
 .svg-arrow-down {
 	width: toRem(8);
@@ -141,87 +123,6 @@
 // For change svg color on color scheme
 .svg-color_primary {
 	fill: var(--primary);
-}
-
-// Block link
-.reference {
-	// .reference__text
-	&__text {
-		font-weight: 600;
-		font-size: toRem(20);
-		color: var(--text-accent);
-	}
-
-	// .reference__link
-	&__link {
-		display: flex;
-		align-items: center;
-		gap: toRem(8);
-		@media (any-hover: hover) {
-			&:hover {
-				& .reference__text {
-					color: var(--primary);
-				}
-				& .reference__img {
-					background-color: var(--primary);
-				}
-				& .reference__svg {
-					color: var(--inverse);
-				}
-			}
-		}
-	}
-
-	&__img {
-		width: toRem(32);
-		height: toRem(32);
-		border-radius: 50%;
-		border: 1px solid var(--primary);
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	// .reference__svg
-	&__svg {
-		width: toRem(8);
-		height: toRem(14);
-		transform: rotate(-90deg);
-	}
-}
-
-// Messengers & Social
-.messengers {
-	display: flex;
-	&__item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: toRem(27);
-		height: toRem(27);
-		cursor: pointer;
-		& svg {
-			height: toRem(17);
-			width: toRem(17);
-		}
-	}
-}
-
-.social {
-	display: flex;
-	&__item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: toRem(27);
-		height: toRem(27);
-		cursor: pointer;
-		& svg {
-			height: toRem(17);
-			width: toRem(17);
-		}
-	}
 }
 
 .divider {
@@ -443,47 +344,6 @@
 		@media (max-width: $mobile) {
 			font-size: toRem(11);
 		}
-	}
-}
-
-.address {
-	display: flex;
-	gap: toRem(4);
-	&__city {
-		font-weight: 600;
-		font-size: toRem(15);
-		line-height: 1.4;
-		text-wrap: nowrap;
-	}
-
-	&__street {
-		font-weight: 500;
-		font-size: toRem(14);
-		line-height: 1.4;
-		text-wrap: nowrap;
-	}
-}
-
-.mode {
-	display: flex;
-	gap: toRem(4);
-	&__wrapper {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__time {
-		font-weight: 600;
-		font-size: toRem(15);
-		line-height: 1.4;
-		text-wrap: nowrap;
-	}
-	&__regime {
-		font-weight: 500;
-		font-size: toRem(14);
-		line-height: 1.4;
-		text-wrap: nowrap;
 	}
 }
 

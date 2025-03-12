@@ -1,0 +1,65 @@
+.coupon {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: toRem(16);
+
+	&__label {
+		font-weight: 400;
+		font-size: toRem(14);
+		color: var(--text-primary);
+	}
+
+	&__wrapper {
+		display: flex;
+		width: 100%;
+		max-height: toRem(48);
+	}
+
+	&__input {
+		display: flex;
+		width: 100%;
+		padding: toRem(12);
+		border: 1px solid #ddd;
+		border-right: none;
+		border-radius: 8px 0 0 8px;
+		appearance: none;
+		outline: none;
+		&::placeholder {
+			padding: 0 toRem(15);
+			font-size: toRem(12);
+		}
+	}
+	&__button {
+		max-width: percent(80, 412);
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid var(--primary);
+		border-radius: 0 8px 8px 0;
+		font-weight: 500;
+		font-size: toRem(14);
+		text-align: center;
+		color: var(--primary);
+
+		& svg {
+			height: toRem(15);
+			width: toRem(20);
+			transform: rotate(180deg);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--primary);
+				color: var(--text-inverse);
+			}
+		}
+	}
+	@media (max-width: toEm(1250)) {
+		grid-row: 2 / span 1;
+		grid-column: span 4;
+	}
+	@media (max-width: $mobile) {
+		grid-column: 1 / 7;
+	}
+}

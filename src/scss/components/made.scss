@@ -1,0 +1,29 @@
+.made {
+	display: flex;
+	width: percent(410, 1700);
+	align-items: center;
+	gap: toRem(15);
+	@media (max-width: toEm(1280)) {
+		width: 37%;
+	}
+	@media (max-width: $tablet) {
+		width: auto;
+	}
+	// .made__text
+	&__text {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 14px;
+		color: #ddd;
+	}
+
+	// .made__logo
+
+	&__logo {
+		max-width: toRem(120);
+		width: 100%;
+		& img {
+			width: 100%;
+		}
+	}
+}

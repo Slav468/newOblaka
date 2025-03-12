@@ -1,0 +1,44 @@
+.summary {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(12);
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: toRem(24);
+		&:nth-child(2) {
+			margin-top: toRem(12);
+		}
+	}
+
+	&__title {
+		font-size: toRem(20);
+		font-weight: 600;
+		line-height: 1;
+	}
+
+	&__button {
+		font-size: toRem(12);
+		font-weight: 400;
+		line-height: 1.65;
+		color: var(--primary);
+		&:hover {
+			color: var(--secondary);
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: toRem(16);
+		line-height: 1.25;
+		color: var(--text-primary);
+	}
+
+	&__quantity {
+		font-weight: 600;
+		font-size: toRem(18);
+		line-height: 1.11;
+		color: var(--text-primary);
+	}
+}

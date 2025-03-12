@@ -1,0 +1,29 @@
+.navigation {
+	// .navigation__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 2.27%;
+		row-gap: toRem(17);
+		padding: 0;
+		margin: 0;
+		@media (max-width: $tablet) {
+			column-gap: toRem(20);
+			row-gap: toRem(16);
+		}
+	}
+
+	// .navigation__link
+	&__link {
+		font-weight: 600;
+		font-size: toRem(18);
+		color: var(--text-inverse);
+		text-transform: uppercase;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.mode {
+	display: flex;
+	gap: toRem(4);
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__time {
+		font-weight: 600;
+		font-size: toRem(15);
+		line-height: 1.4;
+		text-wrap: nowrap;
+	}
+	&__regime {
+		font-weight: 500;
+		font-size: toRem(14);
+		line-height: 1.4;
+		text-wrap: nowrap;
+	}
+}

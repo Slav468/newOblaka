@@ -1,0 +1,27 @@
+.social {
+	display: flex;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(27);
+		height: toRem(27);
+		cursor: pointer;
+		& svg {
+			height: toRem(17);
+			width: toRem(17);
+		}
+	}
+}
+.youtube-svg {
+	color: var(--youtube);
+}
+.instagram-svg {
+	color: var(--instagram);
+}
+.facebook-svg {
+	color: var(--facebook);
+}
+.vk-svg {
+	color: var(--vk);
+}

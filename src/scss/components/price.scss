@@ -1,17 +1,64 @@
 .price {
 	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 	gap: toRem(5);
+	hyphens: auto;
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: toRem(5);
+	}
 
 	&__actual {
 		font-weight: 600;
-		font-size: toRem(18);
+		font-size: toRem(20);
+		line-height: 1.2;
+		color: var(--text-primary);
+		white-space: nowrap;
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
 	}
 
-	&__old {
-		font-weight: 400;
+	&__old,
+	&__result {
+		display: none;
+		gap: toRem(5);
+		font-weight: 500;
 		font-size: toRem(14);
-		line-height: 1.57;
+		line-height: 1.2;
 		text-decoration: line-through;
+		white-space: nowrap;
 		color: var(--text-secondary);
+		@media (max-width: toEm(576)) {
+			font-size: toRem(10);
+		}
+	}
+	&__order {
+		display: none;
+		font-weight: 600;
+		font-size: toRem(20);
+		line-height: 1.05;
+		color: var(--text-primary);
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+	}
+
+	&__click {
+		display: none;
+		font-weight: 600;
+		font-size: toRem(20);
+		line-height: 1.05;
+		color: var(--text-primary);
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+	}
+
+	&__result {
+		text-decoration: none;
+		color: var(--for-false);
 	}
 }
