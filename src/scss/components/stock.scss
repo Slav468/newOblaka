@@ -1,0 +1,20 @@
+.stock {
+	font-weight: 400;
+	font-size: toRem(12);
+	line-height: 1;
+	color: var(--text-secondary);
+	&__normal {
+		color: var(--primary);
+		display: none;
+	}
+	&__in {
+		color: var(--primary);
+		display: none;
+	}
+	&__order {
+		display: none;
+	}
+	&__not {
+		display: none;
+	}
+}

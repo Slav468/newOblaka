@@ -1,0 +1,39 @@
+.rating {
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: toRem(15);
+	}
+
+	&__star-wrapper {
+		display: flex;
+		align-items: center;
+		gap: toRem(5);
+	}
+
+	&__star {
+		width: toRem(18);
+		height: toRem(18);
+	}
+
+	&__number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-weight: 500;
+		font-size: toRem(14);
+		line-height: 1.5;
+		color: var(--text-primary);
+	}
+	&__reviews {
+		border-bottom: 1px dotted var(--primary);
+		&-link {
+			color: var(--primary);
+			&:hover {
+				color: var(--secondary);
+			}
+		}
+	}
+}

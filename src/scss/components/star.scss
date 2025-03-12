@@ -1,0 +1,12 @@
+.star {
+	width: toRem(18);
+	height: toRem(18);
+	color: var(--star);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& .star-svg {
+		width: 100%;
+		height: 100%;
+	}
+}

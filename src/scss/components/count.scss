@@ -1,0 +1,61 @@
+.count {
+	border: 1px solid var(--primary);
+	&__minus {
+		height: 100%;
+		width: calc(100% / 3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		& button {
+			height: 100%;
+			width: 100%;
+			color: var(--text-secondary);
+			font-weight: 500;
+			font-size: toRem(16);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--primary);
+				& button {
+					color: var(--text-inverse);
+				}
+			}
+		}
+	}
+
+	&__counter {
+		height: 100%;
+		width: calc(100% / 3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--textLight);
+		font-weight: 500;
+		font-size: toRem(16);
+		text-align: center;
+		outline: none;
+	}
+
+	&__plus {
+		height: 100%;
+		width: calc(100% / 3 + 1px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		& button {
+			height: 100%;
+			width: 100%;
+			color: var(--text-secondary);
+			font-weight: 500;
+			font-size: toRem(16);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--primary);
+				& button {
+					color: var(--text-inverse);
+				}
+			}
+		}
+	}
+}
