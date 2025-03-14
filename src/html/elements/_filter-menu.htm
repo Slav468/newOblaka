@@ -1,118 +1,16 @@
-<div class="filter-menu ">
-	<div class="filter-menu__body">
-		<div class="filter-menu__buttons">
-			<div class="filter-menu__text">
+<div class="page-filter ">
+	<div class="page-filter__body">
+		<div class="page-filter__buttons">
+			<div class="page-filter__text">
 				Каталог и фильтры
 			</div>
-
-			<button class="aside-menu__close icon-wrap" type="button">
-				<svg class="svg-arrow-close">
-					<use xlink:href="img/icons/icons.svg#close"></use>
-				</svg>
-			</button>
 		</div>
 
-		<div class="filter-menu__content scroll-vertical">
-			<div class="filter-menu__navigation">
-				<nav class="aside-menu__body">
-					<ul class="aside-menu__list">
-						<!-- about -->
-						<li class="aside-menu__item">
-							<a href="#" class="aside-menu__link">Каталог</a>
-							<div class="aside-menu__svg">
-								<svg class="svg-arrow-down">
-									<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-								</svg>
-							</div>
-
-							<div class="aside-menu__drop">
-								<div class="aside-menu__body scroll-vertical">
-									<!-- button -->
-									<button class="mobile-back" type="button">
-										<svg class="svg-arrow-back">
-											<use xlink:href="img/icons/icons.svg#arrow"></use>
-										</svg>
-										<span>Назад</span>
-									</button>
-									<!-- title -->
-									<div class="aside-menu__title">
-										<a href="#">Каталог</a>
-									</div>
-									<!-- list -->
-									<ul class="aside-menu__list">
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Создание сайтов</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Разработка интернет-магазинов</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Создание корпоративных сайтов</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Создание Landing page</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">
-												Разработка сайтов визиток - максимальное количество
-											</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Реклама и продвижение</a>
-											<div class="aside-menu__svg">
-												<svg class="svg-arrow-down">
-													<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-												</svg>
-											</div>
-											<!-- drop -->
-											<div class="aside-menu__drop">
-												<div class="aside-menu__body scroll-vertical">
-													<!-- button -->
-													<button class="mobile-back" type="button">
-														<svg class="svg-arrow-back">
-															<use xlink:href="img/icons/icons.svg#arrow"></use>
-														</svg>
-														<span>Назад</span>
-													</button>
-													<!-- title -->
-													<div class="aside-menu__title">
-														<a href="#">Реклама и продвижение</a>
-													</div>
-													<!-- list -->
-													<ul class="aside-menu__list">
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Создание сайтов</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Разработка интернет-магазинов</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Создание корпоративных сайтов</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Создание Landing page</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">
-																Разработка сайтов визиток - максимальное количество
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-
-					</ul>
-				</nav>
-			</div>
+		<div class="page-filter__content scroll-vertical">
 
 			<div class="accordion">
 				<!-- 1 -->
-				<div class="accordion__item filter-menu__price drop">
+				<div class="accordion__item page-filter__price drop">
 					<div class="accordion__head">
 						<div class="accordion__description">
 							<div class="accordion__title">
@@ -129,15 +27,16 @@
 					<div class="accordion__content">
 
 						<div class="accordion__wrapper">
-							<div id="price-slider"></div>
-							<div class="filter-menu__inputs filter-inputs">
+							<div id="page-filter-slider"></div>
+							<div class="page-filter__inputs filter-inputs">
 								<div class="filter-inputs__item">
 									<label for="minCost">от</label>
-									<input type="number" class="filter-inputs__input" id="minCost" min="200">
+									<input type="number" class="filter-inputs__input" id="page-filter-minCost" min="200">
 								</div>
 								<div class="filter-inputs__item">
 									<label for="maxCost">до</label>
-									<input type="number" class="filter-inputs__input" id="maxCost" min="1" max="10000" data-max-value="20000">
+									<input type="number" class="filter-inputs__input" id="page-filter-maxCost" min="1" max="10000"
+										data-max-value="20000">
 								</div>
 							</div>
 						</div>
@@ -426,8 +325,8 @@
 				</div>
 
 			</div>
-
 			<div class="accordion">
+
 				<!--  -->
 				<div class="accordion__item ">
 					<div class="accordion__head">
@@ -564,9 +463,10 @@
 
 					</div>
 				</div>
-			</div>
 
+			</div>
 			<div class="accordion">
+
 				<!--  -->
 				<div class="accordion__item ">
 					<div class="accordion__head">
@@ -703,9 +603,10 @@
 
 					</div>
 				</div>
-			</div>
 
+			</div>
 			<div class="accordion">
+
 				<!--  -->
 				<div class="accordion__item ">
 					<div class="accordion__head">
@@ -842,10 +743,12 @@
 
 					</div>
 				</div>
+
 			</div>
+
 		</div>
 
-		<div class="filter-menu__buttons filter-buttons_bottom">
+		<div class="page-filter__buttons filter-buttons_bottom">
 			<button class="button button_colored filter-buttons__apply" type="button">Фильтровать</button>
 			<button class=" button filter-buttons__reset" type="button">Сбросить</button>
 		</div>

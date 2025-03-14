@@ -18,13 +18,15 @@
 
 	&__cell {
 		position: relative;
-		display: flex;
+		display: inline-flex;
 		max-width: percent(400, $maxWidthContainer);
+		max-height: toRem(400);
 		width: fit-content;
+		// height: fit-content;
 		overflow: hidden;
 		border-radius: var(--radius8);
 		appearance: none;
-		@include linerGradient();
+		// @include linerGradient();
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -41,9 +43,11 @@
 	}
 
 	&__img {
-		display: block;
+		// flex: 0 0 auto;
 		max-width: 100%;
 		max-height: 100%;
+		// height: fit-content;
+		// width: fit-content;
 		object-fit: contain;
 	}
 

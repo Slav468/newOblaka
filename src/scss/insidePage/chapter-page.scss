@@ -56,7 +56,7 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			overflow: hidden;
-			flex: 1 1 auto;
+			// flex: 1 1 auto;
 			&:has(.map-address__body) {
 				flex-direction: row;
 				flex-wrap: wrap;

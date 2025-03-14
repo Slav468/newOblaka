@@ -53,7 +53,7 @@
 					font-weight: 600;
 				}
 				& .svg-arrow-down {
-					transform: rotate(90deg);
+					transform: rotate(0deg);
 				}
 			}
 			& > .page-menu__drop {
@@ -64,9 +64,13 @@
 				& .page-menu__item {
 					border: none;
 					& > .page-menu__control {
-						padding: toRem(10) toRem(0) toRem(10) toRem(10);
 						& .page-menu__link {
-							padding: toRem(10) toRem(15) toRem(10) toRem(20);
+							&:last-child {
+								padding: toRem(20) toRem(5) toRem(20) toRem(25);
+							}
+							&:not(:last-child) {
+								padding: toRem(20) toRem(5) toRem(20) toRem(25);
+							}
 						}
 					}
 					& .page-menu__drop {
@@ -74,7 +78,12 @@
 							border: none;
 							& > .page-menu__control {
 								& .page-menu__link {
-									padding: toRem(10) toRem(15) toRem(10) toRem(40);
+									&:last-child {
+										padding: toRem(20) toRem(5) toRem(20) toRem(35);
+									}
+									&:not(:last-child) {
+										padding: toRem(20) toRem(5) toRem(20) toRem(35);
+									}
 								}
 							}
 						}
@@ -94,7 +103,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(20) toRem(0) toRem(20) toRem(16);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -111,6 +119,12 @@
 
 	&__link {
 		width: 100%;
+		&:last-child {
+			padding: toRem(20) toRem(5) toRem(20) toRem(15);
+		}
+		&:not(:last-child) {
+			padding: toRem(20) toRem(5) toRem(20) toRem(15);
+		}
 	}
 
 	&__svg {
@@ -118,13 +132,15 @@
 		align-items: center;
 		justify-content: center;
 		width: toRem(55);
-		height: toRem(20);
+		height: toRem(58);
 		cursor: pointer;
-		transform: rotate(-90deg);
+
 		& .svg-arrow-down {
+			display: flex;
 			width: toRem(10);
 			height: toRem(6);
 			transition: all 0.3s ease;
+			transform: rotate(-90deg);
 		}
 	}
 

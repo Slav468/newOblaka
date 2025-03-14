@@ -51,6 +51,14 @@
 				display: flex;
 			}
 		}
+
+		// & .filter-menu {
+		// 	width: 100%;
+		// 	position: static;
+		// 	& .aside-menu__close {
+		// 		display: none;
+		// 	}
+		// }
 	}
 
 	// .main__content
@@ -90,8 +98,6 @@
 		height: 100%;
 	}
 }
-
-
 
 .svg-arrow-down {
 	width: toRem(8);

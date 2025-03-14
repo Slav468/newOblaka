@@ -766,12 +766,57 @@ if (document.querySelector('.filter-menu')) {
 	});
 }
 
-// noUSlider
+// noUSlider filter aside
 if (document.getElementById('price-slider')) {
 	const slider = document.getElementById('price-slider');
 	const inputRangeMin = document.getElementById('minCost');
 	const rangeMinValue = +inputRangeMin.getAttribute('min');
 	const inputRangeMax = document.getElementById('maxCost');
+	const rangeMaxValue = +inputRangeMax.getAttribute('max');
+	const pageMaxValue = +inputRangeMax.getAttribute('data-max-value');
+	const inputs = [inputRangeMin, inputRangeMax];
+
+	noUiSlider.create(slider, {
+		start: [rangeMinValue, rangeMaxValue],
+		behaviour: 'tap',
+		connect: true,
+		tooltips: [true, wNumb({ decimals: 0 })],
+		format: wNumb({
+			decimals: 0,
+		}),
+		range: {
+			min: 0,
+			max: pageMaxValue,
+		},
+	});
+
+	slider.noUiSlider.on('update', function (values, handle) {
+		inputs[handle].value = values[handle];
+	});
+	inputs.forEach(function (input, handle) {
+		input.addEventListener('change', function () {
+			slider.noUiSlider.setHandle(handle, this.value);
+		});
+
+		input.addEventListener('keydown', function (e) {
+			let values = slider.noUiSlider.get();
+			let value = Number(values[handle]);
+
+			let steps = slider.noUiSlider.steps();
+
+			// [down, up]
+			let step = steps[handle];
+			let position;
+		});
+	});
+}
+
+// noUSlider filter menu
+if (document.getElementById('page-filter-slider')) {
+	const slider = document.getElementById('page-filter-slider');
+	const inputRangeMin = document.getElementById('page-filter-minCost');
+	const rangeMinValue = +inputRangeMin.getAttribute('min');
+	const inputRangeMax = document.getElementById('page-filter-maxCost');
 	const rangeMaxValue = +inputRangeMax.getAttribute('max');
 	const pageMaxValue = +inputRangeMax.getAttribute('data-max-value');
 	const inputs = [inputRangeMin, inputRangeMax];
@@ -817,7 +862,6 @@ function changeColor(variable, color) {
 }
 
 // Basket element control
-
 if (document.querySelector('.basket-list')) {
 	const list = document.querySelector('.basket-list__wrapper');
 	const reset = document.querySelector('.basket-reset');
