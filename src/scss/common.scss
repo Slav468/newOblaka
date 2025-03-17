@@ -32,12 +32,12 @@
 	// .main__inner
 	&__inner {
 		display: flex;
-		@include adaptiveValue("gap", 40, 20);
+		@include adaptiveValue("gap", 30, 20);
 	}
 
 	// .main__menu
 	&__menu {
-		flex: 0 1 percent(400, $maxWidthContainer);
+		flex: 0 1 percent(323, $maxWidthContainer);
 		@media (max-width: $tablet) {
 			display: none;
 		}

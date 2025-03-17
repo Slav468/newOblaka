@@ -23,12 +23,17 @@
 			<div class="main__container">
 				<div class="main__inner">
 					<!-- menu -->
-
+					<div class="main__menu">
+						@@include('./html/elements/_page-filter.htm',{})
+					</div>
 					<!-- page-content -->
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
 							@@include('./html/pageBlock/popular/popular-variable/_categories-catalog.htm',{})
+							<div class="block__buttons">
+								<a href="#" class="block__button">Показать еще</a>
+							</div>
 						</div>
 					</div>
 				</div>

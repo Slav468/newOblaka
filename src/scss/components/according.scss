@@ -117,7 +117,7 @@
 		flex-direction: column;
 		gap: toRem(20);
 		height: 0;
-		overflow: hidden;
+		// overflow: hidden;
 		& .button {
 			width: fit-content;
 		}

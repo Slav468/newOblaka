@@ -1,17 +1,19 @@
-$width: 10;
+$width: 30;
 
 .dropdown {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	&-head {
-		padding: toRem(12) toRem(16);
+		padding: toRem(5) toRem(11);
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: toRem(5);
-		color: var(--text-inverse);
-		border-radius: var(--radius8);
-		border: 1px solid var(--text-inverse);
+		// color: var(--text-inverse);
+		border-radius: 4px;
+		border: 1px solid #909090;
 		cursor: pointer;
 
 		&__link {
@@ -30,17 +32,21 @@ $width: 10;
 		}
 
 		&__title {
-			font-weight: 500;
-			font-size: toRem(14);
-			line-height: 1.14286;
+			font-family: var(--font-family);
+			font-weight: 300;
+			font-size: 12px;
+			line-height: 1.1;
+			color: #000;
 		}
 
 		&__trigger {
 			width: toRem(13);
 			height: toRem(13);
+			color: #000;
 			& svg {
 				width: 100%;
 				height: 100%;
+				transform: rotate(270deg);
 			}
 		}
 	}
@@ -48,8 +54,8 @@ $width: 10;
 	&-body {
 		display: none;
 		position: absolute;
-		top: calc(100% + toRem($width));
-		left: 0;
+		left: calc(100% + toRem($width));
+		top: 0;
 		z-index: 5;
 		border-radius: 10px;
 		background-color: var(--bg-primary);
@@ -58,10 +64,10 @@ $width: 10;
 			-4px -4px 10px 0 rgba(0, 0, 0, 0.1);
 
 		&__list {
-			padding: toRem(16) toRem(16);
-			display: flex;
-			flex-direction: column;
-			gap: toRem(5);
+			padding: toRem(31) toRem(31);
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: toRem(20);
 		}
 
 		&__item {

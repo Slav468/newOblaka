@@ -11,7 +11,7 @@
 		display: flex;
 		gap: toRem(20);
 		flex-wrap: wrap;
-		justify-content: space-around;
+		// justify-content: space-around;
 		& .categories__cell {
 			min-width: toRem(240);
 		}
