@@ -9,12 +9,13 @@
 		padding: 0 toRem(30);
 		height: 100%;
 		border: 1px solid var(--border);
-		border-radius: var(--radius8);
+		// border-radius: var(--radius8);
 
 		&.drop {
 			& > .accordion__content {
 				height: 100%;
 				padding-bottom: toRem(20);
+				visibility: visible;
 			}
 
 			& > .accordion__head {
@@ -118,6 +119,7 @@
 		gap: toRem(20);
 		height: 0;
 		// overflow: hidden;
+		visibility: hidden;
 		& .button {
 			width: fit-content;
 		}

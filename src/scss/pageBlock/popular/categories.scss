@@ -4,14 +4,51 @@
 			overflow: hidden;
 		}
 	}
+	& .reference {
+		display: flex;
+		align-self: flex-end;
+		margin-right: toRem(30);
+		&__link {
+			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+			background: #fff;
+			border-radius: 8px;
+			padding: 13px 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			gap: 10px;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: var(--primary);
+					& .reference__text {
+						color: var(--text-inverse);
+					}
+				}
+			}
+		}
+		&__text {
+			font-family: var(--font-family);
+			font-weight: 500;
+			font-size: 15px;
+			text-align: center;
+			color: #000;
+		}
+		&__img {
+			display: none;
+		}
+	}
 	&-slider {
 		padding-inline: toRem(27);
 	}
 	&__list {
-		display: flex;
-		gap: toRem(20);
-		flex-wrap: wrap;
+		// display: flex;
+		// gap: toRem(20);
+		// flex-wrap: wrap;
 		// justify-content: space-around;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(240), 1fr));
+		gap: toRem(20);
 		& .categories__cell {
 			min-width: toRem(240);
 		}
@@ -28,7 +65,7 @@
 
 	&__cell {
 		display: flex;
-		width: calc((100% - toRem(20) * 5 - toRem(55) * 2) / 6);
+		// width: calc((100% - toRem(20) * 5 - toRem(55) * 2) / 6);
 
 		border-radius: 10px;
 		appearance: none;
@@ -126,6 +163,13 @@
 		align-items: center;
 		justify-content: center;
 		margin: toRem(10) 0;
+		&:not(:has(.categories__flag)) {
+			& .categories__country {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 1.3125;
+			}
+		}
 	}
 
 	&__country {
@@ -149,19 +193,29 @@
 		display: inline-block;
 		border-radius: 10px;
 		padding: toRem(13) 0;
-		font-family: var(--font-secondary);
 		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-		background: var(--bg-inverse);
-		border: 1px solid #000;
+
 		font-family: var(--font-secondary);
 		font-weight: 500;
 		font-size: 16px;
 		text-align: center;
+		background: var(--primary);
 		color: var(--text-inverse);
 		@media (any-hover: hover) {
 			&:hover {
-				background: var(--primary);
-				// color: var(--bg-inverse);
+				background: var(--accent);
+				color: var(--text-inverse);
+			}
+		}
+
+		&.button {
+			background: var(--bg-secondary);
+			color: var(--text-accent);
+			@media (any-hover: hover) {
+				&:hover {
+					background: var(--primary);
+					color: var(--text-inverse);
+				}
 			}
 		}
 	}
@@ -175,7 +229,7 @@
 		// background-color: var(--light);
 		overflow: hidden;
 		border-radius: var(--radius8) var(--radius8) 0 0;
-		border-top: toRem(1) solid var(--border);
+		// border-top: toRem(1) solid var(--border);
 		& img {
 			max-height: 100%;
 		}

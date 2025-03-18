@@ -642,13 +642,27 @@ button.swiper-pagination-bullet {
 	overflow: hidden;
 }
 
+.swiper {
+	&-wrap {
+		position: relative;
+		& .swiper-block__prev,
+		& .swiper-block__next {
+			transform: translateY(-50%);
+		}
+	}
+}
+
 .swiper-block {
-	width: 100%;
+	// width: 100%;
 	position: relative;
 	display: flex;
 	overflow: visible;
 	// padding-top: toRem(55);
 	padding-bottom: toRem(55);
+
+	&__wrap {
+		position: relative;
+	}
 
 	&__navigation {
 		position: absolute;

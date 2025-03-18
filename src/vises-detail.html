@@ -3,12 +3,12 @@
 @@include('html/pageBlock/head/_head.htm',{ "title":"ITOblaka" })
 
 <body>
-	<div class="wrapper chapter-page catalog">
+	<div class="wrapper detail-page detail-page-secondary">
 		@@include('html/pageBlock/headers/_headerNotAbs.htm,{})
 
-		<div class="chapter-page__wrapper">
-			<div class="chapter-page__container">
-				<div class="bread">
+		<div class="detail-page__wrapper">
+			<div class="detail-page__container">
+				<div class="bread bread_absolute">
 					<ul class='bread__list'>
 						<li class='bread__item'><a class='bread__link' href="#">Главная</a></li>
 						<li class="bread__divider">-</li>
@@ -20,47 +20,85 @@
 					</ul>
 				</div>
 			</div>
+
+			<section class="preview">
+				<div class="preview__bg">
+					<img class='preview__img' src="@img/popular/visaBG1.png" alt="page banner">
+				</div>
+				<div class="preview__container">
+					<div class="preview__description">
+
+						<div class="preview__title">
+							<div class="bar-top">
+								<div class="bar-top__text bar-top_new">новинка</div>
+								<div class="bar-top__text bar-top_sale">ХИТ</div>
+								<div class="bar-top__text bar-top_hit">ХИТ</div>
+								<div class="bar-top__text bar-top_promotion">Акция</div>
+
+								<div class="bar-top__text bar-top_advise">советуем</div>
+							</div>
+							<h1>Рабочая виза в Польшу</h1>
+						</div>
+						<div class="preview__text">
+							Тип визы - D <br>
+							Цель поездки – работа<br>
+							Кол-во дней пребывания – 365<br>
+							Средний срок получения – более 30 дней*<br><br>
+
+							* Время изготовления визы, с учётом записи и рассмотрения документов в консульстве<br><br><br>
+
+
+							580 BYN
+						</div>
+					</div>
+
+					<div class="preview__buttons">
+						<button data-popup="#service" class="button  preview__button">
+							Заказать услугу
+						</button>
+					</div>
+				</div>
+			</section>
+
 		</div>
 
-		<main class="chapter-page__main main">
+		<main class="detail-page__main main">
 			<div class="main__container">
 				<div class="main__inner">
-
+					<!-- menu -->
 					<!-- page-content -->
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
-							<div class="catalog-card card">
+							<section class="block categories">
+								<div class="block__container">
+									<div class="block__wrapper">
+										<div class="block__inner">
+											<div class="block__head">
+												@@include('html/elements/_titleForInside.htm',{"title": "Ранее вы смотрели"})
+											</div>
+											<div class="block__body">
 
-								<div class="card-body details-basic__characteristic">
-									@@include('html/pageBlock/catalog/_catalog-sliders.htm',{})
-									@@include('html/pageBlock/catalog/_catalog-chararteristic.htm',{})
-									@@include('html/pageBlock/catalog/_catalog-basket.htm',{})
+												<div class="block__content">
+													<!-- Изменяющийся контент -->
+													@@include('html/pageBlock/popular/popular-variable/_categories-slider-button.htm',{})
+												</div>
+											</div>
+										</div>
+
+									</div>
 								</div>
-
-							</div>
+							</section>
 						</div>
 
-						<div class="main__item">
-							@@include('html/pageBlock/teaser/_teaser.htm',{})
-						</div>
-
-						<div class="main__item">
-							@@include('html/elements/_tabs.htm',{})
-						</div>
 					</div>
 				</div>
-				<div class="main__block">
-					@@include('html/elements/_titleForInside.htm',{"title": "Ранее вы смотрели"})
-					@@include('html/pageBlock/service/service-variable/_service-slider.htm',{})
-
-				</div>
-
 			</div>
 		</main>
 
 		@@include('html/pageBlock/footer/_footer.htm',{})
 	</div>
+
 
 	@@include('html/elements/_aside-body-menu.htm',{})
 	@@include('html/elements/_overlay.htm',{})

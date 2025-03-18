@@ -58,7 +58,15 @@
 	&__reference {
 		align-self: flex-end;
 		@media (max-width: toEm(400)) {
-			display: none;
+			& .reference {
+				&__text {
+					display: none;
+				}
+				&__img {
+					border: 1px solid var(--primary);
+					border-radius: 50%;
+				}
+			}
 		}
 	}
 

@@ -1,5 +1,6 @@
 <div class="filter-menu ">
-	<div class="filter-menu__body">
+	<div class="filter-menu__body scroll-vertical">
+
 		<div class="filter-menu__buttons">
 			<div class="filter-menu__text">
 				Каталог и фильтры
@@ -12,846 +13,511 @@
 			</button>
 		</div>
 
-		<div class="filter-menu__content scroll-vertical">
-			<div class="filter-menu__navigation">
-				<nav class="aside-menu__body">
-					<ul class="aside-menu__list">
-						<!-- about -->
-						<li class="aside-menu__item">
-							<a href="#" class="aside-menu__link">Каталог</a>
-							<div class="aside-menu__svg">
-								<svg class="svg-arrow-down">
-									<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+		<div class="accordion">
+			<!-- 2 -->
+			<div class="accordion__item drop">
+				<div class="accordion__head">
+					<div class="accordion__description">
+						<div class="accordion__title">
+							ВИЗЫ
+						</div>
+
+					</div>
+					<div class="accordion__img">
+						<svg class="accordion__svg">
+							<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="accordion__content">
+					<!--  -->
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__img">
+							<img src="@img/popular/flagAL.png" alt="">
+						</div>
+						<div class="checkbox__text">
+							Албания
+						</div>
+					</div>
+					<!--  -->
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__img">
+							<img src="@img/popular/flagAR.png" alt="">
+						</div>
+						<div class="checkbox__text">
+							Аргентина
+						</div>
+					</div>
+					<!--  -->
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__img">
+							<img src="@img/popular/flagBE.png" alt="">
+						</div>
+						<div class="checkbox__text">
+							Бельгия
+						</div>
+					</div>
+					<!--  -->
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__img">
+							<img src="@img/popular/flagBL.png" alt="">
+						</div>
+						<div class="checkbox__text">
+							Болгария
+						</div>
+					</div>
+					<!--  -->
+
+					<div class="dropdown" data-click>
+						<div class="dropdown-head">
+							<div class="dropdown-head__link">
+								<div class="dropdown-head__title">Все страны</div>
+							</div>
+							<div class="dropdown-head__trigger">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#arrowLight"></use>
 								</svg>
 							</div>
-
-							<div class="aside-menu__drop">
-								<div class="aside-menu__body scroll-vertical">
-									<!-- button -->
-									<button class="mobile-back" type="button">
-										<svg class="svg-arrow-back">
-											<use xlink:href="img/icons/icons.svg#arrow"></use>
-										</svg>
-										<span>Назад</span>
-									</button>
-									<!-- title -->
-									<div class="aside-menu__title">
-										<a href="#">Каталог</a>
+						</div>
+						<div class="dropdown-body">
+							<div class="dropdown-body__list scroll-vertical">
+								<!--  -->
+								<div class="checkbox">
+									<label for="al" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="al" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagAL.png" alt="">
 									</div>
-									<!-- list -->
-									<ul class="aside-menu__list">
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Создание сайтов</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Разработка интернет-магазинов</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Создание корпоративных сайтов</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Создание Landing page</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">
-												Разработка сайтов визиток - максимальное количество
-											</a>
-										</li>
-										<li class="aside-menu__item">
-											<a href="#" class="aside-menu__link">Реклама и продвижение</a>
-											<div class="aside-menu__svg">
-												<svg class="svg-arrow-down">
-													<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-												</svg>
-											</div>
-											<!-- drop -->
-											<div class="aside-menu__drop">
-												<div class="aside-menu__body scroll-vertical">
-													<!-- button -->
-													<button class="mobile-back" type="button">
-														<svg class="svg-arrow-back">
-															<use xlink:href="img/icons/icons.svg#arrow"></use>
-														</svg>
-														<span>Назад</span>
-													</button>
-													<!-- title -->
-													<div class="aside-menu__title">
-														<a href="#">Реклама и продвижение</a>
-													</div>
-													<!-- list -->
-													<ul class="aside-menu__list">
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Создание сайтов</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Разработка интернет-магазинов</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Создание корпоративных сайтов</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">Создание Landing page</a>
-														</li>
-														<li class="aside-menu__item">
-															<a href="#" class="aside-menu__link">
-																Разработка сайтов визиток - максимальное количество
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-									</ul>
+									<div class="checkbox__text">
+										Албания
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="ar" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="ar" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagAR.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Аргентина
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="be" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="be" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagBE.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Бельгия
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="bl" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="bl" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagBL.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Болгария
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="al" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="al" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagAL.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Албания
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="ar" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="ar" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagAR.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Аргентина
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="be" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="be" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagBE.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Бельгия
+									</div>
+								</div>
+								<!--  -->
+								<div class="checkbox">
+									<label for="bl" class="checkbox__label">
+										<span class="checkbox__svg">
+											<svg class="checked-svg">
+												<use xlink:href="img/icons/icons.svg#checked"></use>
+											</svg>
+										</span>
+										<input type="checkbox" id="bl" class="checkbox__input">
+									</label>
+									<div class="checkbox__img">
+										<img src="@img/popular/flagBL.png" alt="">
+									</div>
+									<div class="checkbox__text">
+										Болгария
+									</div>
 								</div>
 							</div>
-						</li>
-
-					</ul>
-				</nav>
-			</div>
-
-			<div class="accordion">
-				<!-- 1 -->
-				<div class="accordion__item filter-menu__price drop">
-					<div class="accordion__head">
-						<div class="accordion__description">
-							<div class="accordion__title">
-								Цена, BYN
-							</div>
-
-						</div>
-						<div class="accordion__img">
-							<svg class="accordion__svg">
-								<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-							</svg>
 						</div>
 					</div>
-					<div class="accordion__content">
 
-						<div class="accordion__wrapper">
-							<div id="price-slider"></div>
-							<div class="filter-menu__inputs filter-inputs">
-								<div class="filter-inputs__item">
-									<label for="minCost">от</label>
-									<input type="number" class="filter-inputs__input" id="minCost" min="200">
-								</div>
-								<div class="filter-inputs__item">
-									<label for="maxCost">до</label>
-									<input type="number" class="filter-inputs__input" id="maxCost" min="1" max="10000" data-max-value="20000">
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
-
 			</div>
-
-			<div class="accordion">
-				<!-- 2 -->
-				<div class="accordion__item ">
-					<div class="accordion__head">
-						<div class="accordion__description">
-							<div class="accordion__title">
-								Статус
-							</div>
-
-						</div>
-						<div class="accordion__img">
-							<svg class="accordion__svg">
-								<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-
-			<div class="accordion">
-
-				<!-- 2 -->
-				<div class="accordion__item ">
-					<div class="accordion__head">
-						<div class="accordion__description">
-							<div class="accordion__title">
-								Модель
-							</div>
-
-						</div>
-						<div class="accordion__img">
-							<svg class="accordion__svg">
-								<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-			<div class="accordion">
-
-				<!--  -->
-				<div class="accordion__item ">
-					<div class="accordion__head">
-						<div class="accordion__description">
-							<div class="accordion__title">
-								Бренд
-							</div>
-
-						</div>
-						<div class="accordion__img">
-							<svg class="accordion__svg">
-								<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-			<div class="accordion">
-
-				<!--  -->
-				<div class="accordion__item ">
-					<div class="accordion__head">
-						<div class="accordion__description">
-							<div class="accordion__title">
-								Цвет
-							</div>
-
-						</div>
-						<div class="accordion__img">
-							<svg class="accordion__svg">
-								<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-			<div class="accordion">
-
-				<!--  -->
-				<div class="accordion__item ">
-					<div class="accordion__head">
-						<div class="accordion__description">
-							<div class="accordion__title">
-								Размер
-							</div>
-
-						</div>
-						<div class="accordion__img">
-							<svg class="accordion__svg">
-								<use xlink:href="img/icons/icons.svg#menuArrow"></use>
-							</svg>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-						<div class="checkbox">
-							<label for="check-call" class="checkbox__label">
-								<span class="checkbox__svg">
-									<svg class="checked-svg">
-										<use xlink:href="img/icons/icons.svg#checked"></use>
-									</svg>
-								</span>
-								<input type="checkbox" id="check-call" class="checkbox__input">
-							</label>
-							<div class="checkbox__text">
-								Samsung
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-
 		</div>
 
+		<div class="accordion">
+			<!-- 2 -->
+			<div class="accordion__item drop">
+				<div class="accordion__head">
+					<div class="accordion__description">
+						<div class="accordion__title">
+							ТИП ВИЗЫ
+						</div>
+
+					</div>
+					<div class="accordion__img">
+						<svg class="accordion__svg">
+							<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="accordion__content">
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							B – транзитная
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							C – краткосрочная
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							D – долгосрочная
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion">
+			<!--  -->
+			<div class="accordion__item drop">
+				<div class="accordion__head">
+					<div class="accordion__description">
+						<div class="accordion__title">
+							ЦЕЛЬ ПОЕЗДКИ
+						</div>
+
+					</div>
+					<div class="accordion__img">
+						<svg class="accordion__svg">
+							<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="accordion__content">
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Работа
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Туризм
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Гости
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Деловой визит
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Учёба
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Иные
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion">
+			<!--  -->
+			<div class="accordion__item drop">
+				<div class="accordion__head">
+					<div class="accordion__description">
+						<div class="accordion__title">
+							КОЛ-ВО ДНЕЙ ПРЕБЫВАНИЯ
+						</div>
+
+					</div>
+					<div class="accordion__img">
+						<svg class="accordion__svg">
+							<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="accordion__content">
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							До 90 дней
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Более 90 дней
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion">
+			<!--  -->
+			<div class="accordion__item drop">
+				<div class="accordion__head">
+					<div class="accordion__description">
+						<div class="accordion__title">
+							КОГДА ПЛАНИРУЕТСЯ ПОЕЗДКА
+						</div>
+
+					</div>
+					<div class="accordion__img">
+						<svg class="accordion__svg">
+							<use xlink:href="img/icons/icons.svg#menuArrow"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="accordion__content">
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Срочно (через 1-2 месяца)
+						</div>
+					</div>
+					<div class="checkbox">
+						<label for="check-call" class="checkbox__label">
+							<span class="checkbox__svg">
+								<svg class="checked-svg">
+									<use xlink:href="img/icons/icons.svg#checked"></use>
+								</svg>
+							</span>
+							<input type="checkbox" id="check-call" class="checkbox__input">
+						</label>
+						<div class="checkbox__text">
+							Не срочно (через 3 месяца и более)
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
 		<div class="filter-menu__buttons filter-buttons_bottom">
-			<button class="button button_colored filter-buttons__apply" type="button">Фильтровать</button>
-			<button class=" button filter-buttons__reset" type="button">Сбросить</button>
+			<button class="button filter-buttons__apply" type="button">Фильтровать</button>
+			<button class="button filter-buttons__reset" type="button">Сбросить</button>
 		</div>
 	</div>
+
+
+</div>
 </div>

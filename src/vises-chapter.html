@@ -14,7 +14,7 @@
 						<li class="bread__divider">-</li>
 						<li class='bread__item'><a class='bread__link' href="#">Визы</a></li>
 						<li class="bread__divider">-</li>
-						<li class='bread__item'>Дополнительные услуги</li>
+						<li class='bread__item'>Польша</li>
 					</ul>
 				</div>
 				@@include('html/elements/_titleForInside.htm',{"title":"Польша"})
@@ -25,52 +25,30 @@
 			<div class="main__container">
 				<div class="main__inner">
 					<!-- menu -->
-
+					<div class="main__menu">
+						@@include('./html/elements/_page-filter.htm',{})
+					</div>
 					<!-- page-content -->
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
-							<div class="request__list">
-								<!-- 1 -->
-								<a href="#" class="request__link">
-									<div class="request__item">
-										<div class="request__text">Рабочая виза в Польшу</div>
-									</div>
-								</a>
-								<!-- 2 -->
-								<a href="#" class="request__link">
-									<div class="request__item">
-										<div class="request__text">Шенгенская виза</div>
-									</div>
-								</a>
-								<!-- 3 -->
-								<a href="#" class="request__link">
-									<div class="request__item">
-										<div class="request__text">Быстрая виза в Европу</div>
-									</div>
-								</a>
-								<!-- 1 -->
-								<a href="#" class="request__link">
-									<div class="request__item">
-										<div class="request__text">Дешевая виза в Польшу</div>
-									</div>
-								</a>
-								<!-- 2 -->
-								<a href="#" class="request__link">
-									<div class="request__item">
-										<div class="request__text">Виза на длительный срок</div>
-									</div>
-								</a>
-
+							<div class="filter">
+								<div class="filter__list">
+									<button class=" filter__button">Фильтры и страны
+									</button>
+								</div>
 							</div>
-
-						</div>
-						<div class="main__item">
-							@@include('html/elements/_filter-buttons.htm',{})
 						</div>
 
 						<div class="main__item">
-							@@include('./html/pageBlock/service/service-variable/_service-block.htm',{})
+							@@include('./html/elements/_search-input.htm',{})
+						</div>
+
+						<div class="main__item">
+							@@include('./html/pageBlock/popular/popular-variable/_categories-catalog-button.htm',{})
+							<div class="block__buttons">
+								<a href="#" class="block__button">Показать еще</a>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -63,6 +63,7 @@ $responsiveType: 1;
 // Стилі тега BODY =======================
 body {
 	// Скролл заблоковано
+	background-color: var(--bg-primary);
 	.lock & {
 		overflow: hidden;
 		touch-action: none;

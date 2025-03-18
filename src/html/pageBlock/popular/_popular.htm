@@ -4,9 +4,15 @@
 			<div class="block__inner">
 				<div class="block__head">
 					@@include('../../elements/_titleForInside.htm',{"title": "Популярные страны"})
-					<div class="block__reference reference">
+				</div>
+				<div class="block__body">
+					<div class="block__text text_general">
+						Здесь место для краткого текста в 2 строки. В основном используется seo специалистами. <br>
+						Если не заполнено, тоесть нет текста, то не будет ничего и карточки снизу будут сразу после заголовка
+					</div>
+					<div class="reference">
 						<a href="#" class="reference__link">
-							<p class="reference__text">Смотреть все</p>
+							<p class="reference__text">Все страны</p>
 							<div class="reference__img">
 								<svg class="reference__svg">
 									<use xlink:href="img/icons/icons.svg#menuArrow"></use>
@@ -14,21 +20,13 @@
 							</div>
 						</a>
 					</div>
-				</div>
-				<div class="block__body">
-					<div class="block__text text_general">
-						Здесь место для краткого текста в 2 строки. В основном используется seo специалистами. <br>
-						Если не заполнено, тоесть нет текста, то не будет ничего и карточки снизу будут сразу после заголовка
-					</div>
 					<div class="block__content">
 						<!-- Изменяющийся контент -->
 						@@include('./popular-variable/_categories-slider.htm',{})
 					</div>
 				</div>
 			</div>
-			<div class="block__buttons">
-				<a href="#" class="block__button">Все содержимое</a>
-			</div>
+
 		</div>
 	</div>
 </section>

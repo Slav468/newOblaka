@@ -207,13 +207,13 @@ function initSliders() {
 	}
 	// Photo slider
 	if (document.querySelector('.photo-slider')) {
-		new Swiper('.photo-slider', {
+		const swiper = new Swiper('.photo-slider', {
 			modules: [Navigation],
 			// loop: true,
 			// observer: true,
 			// observeParents: true,
 			slidesPerView: 'auto',
-			spaceBetween: 20,
+			spaceBetween: 36,
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -246,16 +246,26 @@ function initSliders() {
 				prevEl: '.photo-button-prev',
 				nextEl: '.photo-button-next',
 			},
-			breakpoints: {
-				320: {
-					spaceBetween: 10,
-				},
-				992: {
-					spaceBetween: 20,
-				},
-			},
+			// breakpoints: {
+			// 	320: {
+			// 		spaceBetween: 10,
+			// 	},
+			// 	992: {
+			// 		spaceBetween: 20,
+			// 	},
+			// },
 			// Події
 			// on: {},
+		});
+		const prev = document.querySelector('.photo-button-prev');
+		const next = document.querySelector('.photo-button-next');
+		prev.addEventListener('click', () => {
+			console.log('click');
+			swiper.slidePrev();
+		});
+		next.addEventListener('click', () => {
+			console.log('click');
+			swiper.slideNext();
 		});
 	}
 	// Reviews slider
@@ -716,7 +726,7 @@ function initSliders() {
 			// loopAddBlankSlides: true,
 			// observer: true,
 			// observeParents: true,
-
+			spaceBetween: 30,
 			speed: 300,
 			// lazy: true,
 
@@ -755,20 +765,22 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
-					spaceBetween: 20,
+					slidesPerView: 1,
+				},
+				450: {
 					slidesPerView: 2,
 				},
-				550: {
-					spaceBetween: 30,
+				650: {
 					slidesPerView: 3,
 				},
-				992: {
-					spaceBetween: 30,
-					slidesPerView: 5,
+				991: {
+					slidesPerView: 4,
 				},
 				1380: {
-					spaceBetween: 30,
 					slidesPerView: 6,
+				},
+				1460: {
+					slidesPerView: 7,
 				},
 			},
 			// Події

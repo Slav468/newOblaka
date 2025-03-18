@@ -84,7 +84,7 @@ if (document.querySelector('.dropdown[data-click]')) {
 	);
 
 	dropAny(triggers, '.dropdown');
-	setActive('.dropdown[data-click] .dropdown-body__list', '.dropdown');
+	// setActive('.dropdown[data-click] .dropdown-body__list', '.dropdown');
 }
 
 function removeDrop(array, selector, parentNode) {

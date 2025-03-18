@@ -15,14 +15,14 @@
 		flex-direction: row-reverse;
 		align-items: center;
 		gap: toRem(30);
-		padding: toRem(9) 0;
-		margin-right: toRem(5);
+		// padding: toRem(9) 0;
+		// margin-right: toRem(5);
 	}
 
 	// .filter__button
 	&__button {
 		border-radius: var(--radius8);
-		border: 1px solid var(--primary);
+		// border: 1px solid var(--primary);
 		padding: toRem(8) toRem(10);
 		color: var(--primary);
 		font-family: var(--font-family);

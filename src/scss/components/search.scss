@@ -1,9 +1,9 @@
 .search {
-	position: fixed;
-	top: -150%;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
+	// position: fixed;
+	// top: -150%;
+	// left: 50%;
+	// transform: translateX(-50%);
+	// z-index: 1;
 	width: 100%;
 	height: 100%;
 	// overflow-y: auto;
@@ -14,7 +14,7 @@
 
 	&-top {
 		width: 100%;
-		background-color: var(--primary);
+		// background-color: var(--primary);
 	}
 
 	&-bottom {
@@ -48,16 +48,18 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(10);
-
 		border-radius: var(--radius8);
-		padding: 0 toRem(5);
+		align-items: center;
+		justify-content: flex-end;
 		&__inlet {
 			height: toRem(45);
 			background-color: var(--bg-primary);
 			display: flex;
 			align-items: center;
-			flex: 1 1 auto;
-			margin: toRem(15) 0;
+			align-self: flex-end;
+			flex: 0 1 550px;
+			// margin: toRem(15) 0;
+			border: 1px solid #a1a1a1;
 			border-radius: var(--radius8);
 			overflow: hidden;
 			@media (max-width: $mobileSmall) {
@@ -74,6 +76,7 @@
 			border-radius: var(--radius8);
 			// border: 1px solid var(--border);
 			outline: none;
+			background-color: var(--bg-secondary);
 			&::placeholder {
 				font-weight: 500;
 				font-size: 14px;
@@ -87,7 +90,9 @@
 			justify-content: center;
 			align-items: center;
 			height: toRem(45);
-			width: toRem(45);
+			width: toRem(75);
+			background-color: var(--primary);
+			color: var(--text-inverse);
 			& svg {
 				height: toRem(24);
 				width: toRem(24);
@@ -95,7 +100,7 @@
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: var(--primary);
+					background-color: var(--accent);
 				}
 			}
 		}

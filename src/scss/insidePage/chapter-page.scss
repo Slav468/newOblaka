@@ -126,7 +126,7 @@ $gap: toRem(20);
 			flex-direction: column;
 			gap: toRem(20);
 			// overflow: hidden;
-			flex: 1 1 auto;
+			// flex: 1 1 auto;
 			&:has(.map-address__body) {
 				flex-direction: row;
 				flex-wrap: wrap;
@@ -171,6 +171,15 @@ $gap: toRem(20);
 
 			&:has([class*="__list"]) {
 				overflow: visible;
+			}
+			&:has(.filter) {
+				.filter {
+					display: none;
+					@media (max-width: $tablet) {
+						display: flex;
+						width: fit-content;
+					}
+				}
 			}
 		}
 	}

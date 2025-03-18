@@ -30,6 +30,17 @@
 					<div class="main__content">
 						<!-- Include content-->
 						<div class="main__item">
+							<div class="filter">
+								<div class="filter__list">
+									<button class=" filter__button">Фильтры и страны
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main__item">
+							@@include('./html/elements/_search-input.htm',{})
+						</div>
+						<div class="main__item">
 							@@include('./html/pageBlock/popular/popular-variable/_categories-catalog.htm',{})
 							<div class="block__buttons">
 								<a href="#" class="block__button">Показать еще</a>
@@ -43,8 +54,8 @@
 		@@include('html/pageBlock/footer/_footer.htm',{})
 	</div>
 
-
 	@@include('html/elements/_aside-body-menu.htm',{})
+	@@include('html/elements/_aside-filter-menu.htm',{})
 	@@include('html/elements/_overlay.htm',{})
 	@@include('html/elements/_popup.htm',{})
 	@@include('html/pageBlock/_js.htm',{})

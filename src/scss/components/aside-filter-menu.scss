@@ -30,6 +30,7 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		overflow: auto;
 	}
 
 	&__navigation {
@@ -165,5 +166,30 @@
 
 	&.active {
 		transform: translateX(100%);
+	}
+
+	& .dropdown {
+		&-head {
+			&__trigger {
+				& svg {
+					transform: rotate(0deg);
+				}
+			}
+		}
+		&.drop {
+			& .dropdown {
+				&-body {
+					position: static;
+
+					&__list {
+						padding: toRem(10);
+						width: 100%;
+						grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
+						max-height: 200px;
+						overflow: auto;
+					}
+				}
+			}
+		}
 	}
 }

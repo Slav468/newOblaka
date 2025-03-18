@@ -32,24 +32,8 @@
 					<!-- page-content -->
 					<div class="main__content">
 						<!-- Include content-->
-						<div data-tabs class="tabs tabs_simple">
-							<nav data-tabs-titles class="tabs__navigation">
-								<button type="button" class="tabs__title _tab-active">За все время</button>
-								<button type="button" class="tabs__title">2025</button>
-								<button type="button" class="tabs__title">2024</button>
-								<button type="button" class="tabs__title">2023</button>
-								<button type="button" class="tabs__title">2022</button>
-
-							</nav>
-							<div data-tabs-body class="tabs__content">
-								<div class="tabs__body">
-									@@include('html/pageBlock/news/news-variable/_news-block.htm',{})
-								</div>
-								<div class="tabs__body">Таб контент 2</div>
-								<div class="tabs__body">Таб контент 3</div>
-								<div class="tabs__body">Таб контент 3</div>
-								<div class="tabs__body">Таб контент 3</div>
-							</div>
+						<div class="main__item">
+							@@include('html/pageBlock/news/news-variable/_news-block.htm',{})
 						</div>
 						<div class="block__buttons">
 							<a href="#" class="block__button">Все новости</a>
