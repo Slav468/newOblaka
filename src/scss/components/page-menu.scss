@@ -97,7 +97,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(20) toRem(0) toRem(20) toRem(16);
+		padding: toRem(20) toRem(10) toRem(20) toRem(16);
 
 		@media (any-hover: hover) {
 			&:hover {

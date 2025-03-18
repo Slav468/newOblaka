@@ -645,6 +645,7 @@ button.swiper-pagination-bullet {
 .swiper {
 	&-wrap {
 		position: relative;
+		display: flex;
 		& .swiper-block__prev,
 		& .swiper-block__next {
 			transform: translateY(-50%);
@@ -653,7 +654,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-block {
-	// width: 100%;
+	width: 100%;
 	position: relative;
 	display: flex;
 	overflow: visible;

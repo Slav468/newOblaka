@@ -1,8 +1,8 @@
 .teaser {
 	width: 100%;
 	margin: toRem(60) 0 toRem(40) 0;
-
-	&__container {
+	@media (max-width: $mobile) {
+		margin: toRem(20) 0 toRem(20) 0;
 	}
 
 	&__row {

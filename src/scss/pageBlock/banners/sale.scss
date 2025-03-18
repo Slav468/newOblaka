@@ -2,6 +2,10 @@
 	&__container {
 		padding-top: toRem(40);
 		padding-bottom: toRem(40);
+		@media (max-width: $mobile) {
+			padding-top: toRem(20);
+			padding-bottom: toRem(20);
+		}
 	}
 	&__content {
 		position: relative;
