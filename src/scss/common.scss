@@ -33,6 +33,9 @@
 	&__inner {
 		display: flex;
 		@include adaptiveValue("gap", 30, 20);
+		@media (max-width: $tablet) {
+			gap: 0;
+		}
 	}
 
 	// .main__menu
@@ -43,13 +46,18 @@
 		}
 		&:has(.page-filter) {
 			flex: 0 1 percent(320, $maxWidthContainer);
+			@media (max-width: $tablet) {
+				display: flex;
+				visibility: hidden;
+				width: 0;
+				flex: 0 0 0;
+			}
 		}
 
 		&:has(.blog-menu),
 		&:has(.basket-menu),
 		&:has(.calculate-menu),
-		&:has(.formalization-menu),
-		&:has(.page-filter) {
+		&:has(.formalization-menu) {
 			@media (max-width: $tablet) {
 				display: flex;
 			}
