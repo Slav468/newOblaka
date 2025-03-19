@@ -88,9 +88,11 @@
 			justify-content: center;
 
 			.map {
+				width: 100%;
 				max-width: toRem(850);
 				aspect-ratio: 850 / 525;
 				&__wrapper {
+					width: 100%;
 					max-width: toRem(850);
 					aspect-ratio: 850 / 525;
 				}
