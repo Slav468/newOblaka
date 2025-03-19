@@ -89,128 +89,6 @@
 	}
 }
 
-// Svg
-.icon-wrap {
-	width: toRem(27);
-	height: toRem(27);
-	& svg {
-		width: 100%;
-		height: 100%;
-	}
-}
-
-.svg-arrow-down {
-	width: toRem(8);
-	height: toRem(8);
-}
-.svg-arrow-back {
-	width: toRem(25);
-	height: toRem(27);
-	color: var(--text-secondary);
-	@media (any-hover: hover) {
-		&:hover {
-			color: var(--primary);
-		}
-	}
-}
-.svg-phone {
-	width: toRem(18);
-	height: toRem(18);
-}
-.svg-email {
-	width: toRem(18);
-	height: toRem(18);
-}
-.svg-dotted {
-	width: 20px;
-	height: 5px;
-}
-
-// For change svg color on color scheme
-.svg-color_primary {
-	fill: var(--primary);
-}
-
-.divider {
-	display: flex;
-	height: toRem(20);
-	width: 1px;
-	background-color: var(--inverse);
-}
-
-// Button
-.button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: toRem(13) toRem(20);
-	min-height: toRem(46);
-	border-radius: toRem(8);
-	font-weight: 600;
-	font-size: toRem(15);
-	background-color: var(--text-inverse);
-	border: 1px solid var(--primary);
-	color: var(--primary);
-	width: 100%;
-	text-wrap: nowrap;
-
-	&:hover {
-		background-color: var(--primary);
-		color: var(--text-inverse);
-	}
-
-	&_colored {
-		background-color: var(--primary);
-		color: var(--text-inverse);
-		&:hover {
-			background-color: var(--secondary);
-		}
-	}
-	&_width {
-		width: toRem(265);
-		font-weight: 700;
-		font-size: toRem(16);
-	}
-	&_width-colored {
-		font-weight: 700;
-		font-size: toRem(16);
-		text-align: center;
-		padding: toRem(14) toRem(38);
-		background-color: var(--primary);
-		color: var(--text-inverse);
-		&:hover {
-			background-color: var(--secondary);
-		}
-	}
-	&_width-inverse {
-		background-color: var(--text-inverse);
-	}
-	@media (max-width: $mobile) {
-		font-size: toRem(15);
-	}
-	@media (max-width: toEm(576)) {
-		font-size: toRem(12);
-	}
-}
-
-// Back button
-.mobile-back {
-	display: none;
-	align-items: center;
-	align-self: flex-start;
-	padding: toRem(14);
-	gap: toRem(10);
-	& .svg-arrow-back {
-		width: 15px;
-		height: 15px;
-		transform: rotate(180deg);
-	}
-	& span {
-		font-size: toRem(15);
-		font-weight: 600;
-	}
-}
-
 // Title
 .title_h1 {
 	font-weight: 700;
@@ -391,7 +269,6 @@
 .hidden-img {
 	display: none !important;
 }
-
 ._form-error input {
 	border: 1px solid var(--for-false);
 }

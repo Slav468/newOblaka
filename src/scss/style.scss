@@ -153,6 +153,8 @@ body {
 
 // Підключення стилів загальних елементів проекту
 @import "common";
+@import "elements";
+@import "icons-style";
 
 // Підключення стилів окремих блоків
 @import "header";
