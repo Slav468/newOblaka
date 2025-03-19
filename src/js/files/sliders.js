@@ -188,16 +188,16 @@ function initSliders() {
 					slidesPerView: 1,
 					spaceBetween: 30,
 				},
-				768: {
+				550: {
 					slidesPerView: 2,
-					spaceBetween: 40,
+					spaceBetween: 50,
 				},
 				991: {
 					slidesPerView: 3,
-					spaceBetween: 40,
+					spaceBetween: 50,
 				},
 				1200: {
-					spaceBetween: 40,
+					spaceBetween: 55,
 					slidesPerView: 4,
 				},
 			},
@@ -777,10 +777,10 @@ function initSliders() {
 					slidesPerView: 4,
 				},
 				1380: {
-					slidesPerView: 6,
+					slidesPerView: 5,
 				},
 				1460: {
-					slidesPerView: 7,
+					slidesPerView: 6,
 				},
 			},
 			// Події

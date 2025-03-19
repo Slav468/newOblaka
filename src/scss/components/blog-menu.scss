@@ -134,16 +134,19 @@
 	align-items: center;
 	// .blog-date__link
 	&__link {
+		font-family: var(--font-family);
 		font-weight: 500;
-		font-size: toRem(12);
+		font-size: 16px;
 		text-transform: uppercase;
-		color: var(--primary);
+		color: #000;
 	}
 
 	// .blog-date__date
 	&__date {
+		font-family: var(--font-family);
 		font-weight: 500;
-		font-size: toRem(16);
-		color: var(--text-secondary);
+		font-size: 16px;
+		line-height: 1.6875;
+		color: #666;
 	}
 }

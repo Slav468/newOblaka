@@ -36,10 +36,14 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(18);
+		box-shadow:
+			0 4px 4px 0 rgba(0, 0, 0, 0.3),
+			0 8px 12px 6px rgba(0, 0, 0, 0.15);
+		background: #fff;
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
 			}
 		}
 
@@ -154,11 +158,11 @@
 		padding: 0 toRem(14);
 		margin-bottom: toRem(15);
 		& [data-popup] {
-			background-color: var(--bg-inverse);
+			background-color: var(--primary);
 			color: var(--text-inverse);
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: var(--primary);
+					background-color: var(--accent);
 				}
 			}
 		}

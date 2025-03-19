@@ -97,7 +97,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(20) toRem(10) toRem(20) toRem(16);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -114,6 +113,7 @@
 
 	&__link {
 		width: 100%;
+		padding: toRem(20) toRem(10) toRem(20) toRem(16);
 	}
 
 	&__svg {

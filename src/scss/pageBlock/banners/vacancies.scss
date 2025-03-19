@@ -44,7 +44,9 @@
 		align-items: center;
 		justify-content: center;
 		& .button {
-			width: fit-content;
+			padding: toRem(10) toRem(22);
+			width: 100%;
+			max-width: toRem(260);
 		}
 		@media (max-width: $mobile) {
 			justify-content: flex-start;

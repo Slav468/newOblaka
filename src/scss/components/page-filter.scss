@@ -20,20 +20,9 @@
 				padding: toRem(14) 0;
 			}
 
-			// .accordion__description
-			&__description {
-			}
-
 			// .accordion__title
 			&__title {
-			}
-
-			// .accordion__img
-			&__img {
-			}
-
-			// .accordion__svg
-			&__svg {
+				text-transform: uppercase;
 			}
 
 			// .accordion__content
@@ -42,17 +31,6 @@
 				& .checkbox {
 					flex: 0 1 50%;
 					align-items: center;
-					// .checkbox__label
-					&__label {
-					}
-
-					// .checkbox__svg
-					&__svg {
-					}
-
-					// .checkbox__input
-					&__input {
-					}
 
 					// .checkbox__text
 					&__text {

@@ -37,15 +37,19 @@
 
 	// .main__menu
 	&__menu {
-		flex: 0 1 percent(323, $maxWidthContainer);
+		flex: 0 1 percent(400, $maxWidthContainer);
 		@media (max-width: $tablet) {
 			display: none;
+		}
+		&:has(.page-filter) {
+			flex: 0 1 percent(320, $maxWidthContainer);
 		}
 
 		&:has(.blog-menu),
 		&:has(.basket-menu),
 		&:has(.calculate-menu),
-		&:has(.formalization-menu) {
+		&:has(.formalization-menu),
+		&:has(.page-filter) {
 			@media (max-width: $tablet) {
 				display: flex;
 			}
@@ -75,6 +79,21 @@
 		& .main__inner {
 			@media (max-width: $tablet) {
 				flex-direction: column-reverse;
+			}
+		}
+	}
+
+	&__item {
+		&:has(.map, .map__wrapper) {
+			justify-content: center;
+
+			.map {
+				max-width: toRem(850);
+				aspect-ratio: 850 / 525;
+				&__wrapper {
+					max-width: toRem(850);
+					aspect-ratio: 850 / 525;
+				}
 			}
 		}
 	}
