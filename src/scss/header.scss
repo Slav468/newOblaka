@@ -698,16 +698,36 @@
 		font-size: toRem(15);
 		padding: toRem(30) 0;
 		text-wrap: nowrap;
+		& > .menu__link {
+			position: relative;
+			&::after {
+				content: " ";
+				position: absolute;
+				top: calc(100% + 5px);
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0;
+				height: toRem(2);
+				z-index: 5;
+				background-color: var(--text-inverse);
+				transition: width 0.3s ease;
+			}
+		}
 
 		@media (any-hover: hover) and (min-width: $mobile) {
 			&:hover {
-				& > .menu__link,
-				& > .menu__svg .svg-arrow-down,
-				& > .svg-dotted {
-					color: var(--primary) !important;
-				}
+				// & > .menu__link,
+				// & > .menu__svg .svg-arrow-down,
+				// & > .svg-dotted {
+				// 	color: var(--primary) !important;
+				// }
 				& > .menu__svg .svg-arrow-down {
 					transform: rotate(180deg);
+				}
+				& > .menu__link {
+					&::after {
+						width: 85%;
+					}
 				}
 
 				& > .menu__drop {
@@ -744,13 +764,19 @@
 								}
 								@media (any-hover: hover) and (min-width: $mobile) {
 									&:hover {
-										& > .menu__link,
-										& > .menu__svg .svg-arrow-down,
-										& > .svg-dotted {
-											color: var(--primary);
-										}
+										// & > .menu__link,
+										// & > .menu__svg .svg-arrow-down,
+										// & > .svg-dotted {
+										// 	color: var(--primary);
+										// }
 										& > .menu__svg .svg-arrow-down {
 											transform: rotate(180deg);
+										}
+
+										& > .menu__link {
+											&::after {
+												background-color: var(--primary);
+											}
 										}
 
 										& > .menu__drop {
@@ -881,6 +907,15 @@
 						font-size: toRem(14);
 						color: var(--text-accent);
 					}
+				}
+			}
+		}
+
+		&.active {
+			& > .menu__link {
+				position: relative;
+				&::after {
+					width: 85%;
 				}
 			}
 		}

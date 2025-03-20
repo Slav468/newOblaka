@@ -43,19 +43,6 @@ $gap: toRem(20);
 									color: var(--text-inverse);
 								}
 							}
-
-							@media (any-hover: hover) {
-								&:hover {
-									& > .menu__link {
-										color: var(--accent) !important;
-									}
-									& > .menu__svg {
-										& > .svg-arrow-down {
-											color: var(--accent) !important;
-										}
-									}
-								}
-							}
 						}
 					}
 				}
