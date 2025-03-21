@@ -192,6 +192,14 @@
 			border: 1px solid var(--border);
 			overflow: hidden;
 			margin-right: toRem(3);
+			&:not(:has(.search-element__preview)) {
+				align-items: center;
+				justify-content: center;
+				.search-element__details {
+					max-width: toRem(1420);
+					padding: toRem(32) toRem(10);
+				}
+			}
 			@media (max-width: $mobileSmall) {
 				flex-direction: column;
 			}
@@ -199,7 +207,7 @@
 
 		&__preview {
 			display: flex;
-			max-width: 14.375rem;
+			max-width: toRem(230);
 			min-width: toRem(172);
 			width: 100%;
 			aspect-ratio: 400 / 260;
