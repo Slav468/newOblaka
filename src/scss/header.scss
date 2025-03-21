@@ -514,18 +514,18 @@
 								}
 							}
 
-							@media (any-hover: hover) {
-								&:hover {
-									& > .menu__link {
-										color: var(--accent) !important;
-									}
-									& > .menu__svg {
-										& > .svg-arrow-down {
-											color: var(--accent) !important;
-										}
-									}
-								}
-							}
+							// @media (any-hover: hover) {
+							// 	&:hover {
+							// 		& > .menu__link {
+							// 			color: var(--accent) !important;
+							// 		}
+							// 		& > .menu__svg {
+							// 			& > .svg-arrow-down {
+							// 				color: var(--accent) !important;
+							// 			}
+							// 		}
+							// 	}
+							// }
 						}
 					}
 				}
@@ -733,7 +733,8 @@
 				& > .menu__drop {
 					display: flex;
 					position: absolute;
-					background-color: var(--bg-primary);
+					background: rgba(0, 0, 0, 0.45);
+					backdrop-filter: blur(toRem(3));
 					top: toRem(75);
 					left: 0;
 					z-index: 6;
@@ -758,6 +759,8 @@
 								& > .menu__link {
 									text-transform: none;
 									text-wrap: wrap;
+									color: var(--text-inverse);
+									padding: toRem(5) 0;
 								}
 								& > .menu__svg {
 									transform: rotate(-90deg);
@@ -775,7 +778,7 @@
 
 										& > .menu__link {
 											&::after {
-												background-color: var(--primary);
+												background-color: var(--text-inverse);
 											}
 										}
 

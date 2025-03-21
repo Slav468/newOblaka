@@ -150,6 +150,11 @@
 
 			&__text {
 				width: 50%;
+				background: rgba(51, 51, 51, 0.25);
+				backdrop-filter: blur(toRem(2));
+				border-radius: toRem(4);
+				padding: toRem(10);
+				overflow: hidden;
 				@media (max-width: $mobile) {
 					width: 100%;
 				}

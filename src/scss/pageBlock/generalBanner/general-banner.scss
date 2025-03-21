@@ -128,20 +128,24 @@
 			}
 		}
 	}
+
 	&__general {
 		display: flex;
 		flex: 1 1 70%;
 		overflow: hidden;
 	}
+
 	&__second {
 		display: flex;
 	}
+
 	&__slider {
 		position: relative;
 		width: 100%;
 		min-height: toRem(550);
 		border-radius: toRem(8);
 	}
+
 	&__slide {
 		position: relative;
 		z-index: 2;
@@ -159,6 +163,7 @@
 			gap: toRem(0);
 		}
 	}
+
 	&__pagination {
 		position: absolute;
 		right: toRem(123);
@@ -213,7 +218,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: 75%;
+		object-position: center;
 		z-index: -2;
 	}
 	&__link {
@@ -282,7 +287,6 @@
 			padding: 0;
 			@media (max-width: 1660px) {
 				max-width: toRem(1680);
-				padding: 0 10px;
 			}
 		}
 		& .banner__slider {
@@ -298,14 +302,16 @@
 				position: relative;
 				z-index: 2;
 				background: rgba(51, 51, 51, 0.49);
+				backdrop-filter: blur(toRem(3));
 				border: 1px solid #c0c0c0;
 				border-radius: 16px;
-				padding: 24px;
-				max-width: toRem(400);
+				padding: toRem(70) toRem(24);
+				max-width: toRem(358);
 				@media (max-width: toEm(1200)) {
 					margin: toRem(20);
 					max-width: none;
 					gap: toRem(15);
+					padding: toRem(24);
 				}
 				@media (max-width: $mobileSmall) {
 					margin: toRem(0);
@@ -371,6 +377,7 @@
 					&[disabled] {
 						background-color: transparent;
 						color: var(--text-inverse);
+						opacity: 1;
 					}
 					@media (any-hover: hover) {
 						&:hover {
