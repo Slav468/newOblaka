@@ -14,6 +14,7 @@ body::after {
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -22,6 +23,7 @@ body::after {
 	right: 0;
 	padding: 30px 10px;
 	transition: visibility 0.8s ease 0s;
+	transition-behavior: allow-discrete;
 	visibility: hidden;
 	pointer-events: none;
 	scrollbar-width: thin;
