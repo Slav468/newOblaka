@@ -7,30 +7,22 @@
 
 	&__row {
 		display: flex;
-		justify-content: center;
 		flex-wrap: wrap;
 		width: 100%;
 		border-radius: 10px;
 		overflow: hidden;
 		background-color: var(--primary);
+		padding: toRem(10);
 		@include boxShadow();
 	}
 
 	&__cell {
+		flex: 1 1 auto;
 		width: calc((100%) / 6);
-		min-width: toRem(276);
-		padding: toRem(60) 0;
+		min-width: toRem(250);
+		padding: toRem(10);
 		display: flex;
 		justify-content: center;
-		// @media (max-width: toEm(1280)) {
-		// 	width: calc((100%) / 3);
-		// }
-		// @media (max-width: toEm(991)) {
-		// 	width: calc((100%) / 2);
-		// }
-		// @media (max-width: $mobileSmall) {
-		// 	width: 100%;
-		// }
 	}
 
 	&__item {
@@ -60,10 +52,10 @@
 		display: flex;
 		font-family: $fontFamily2;
 		font-weight: 400;
-		font-size: 18px;
+		font-size: 15px;
 		line-height: 1.2;
 		color: var(--text-inverse);
-		@include textOverflow(1, 15, 1.2);
+		// @include textOverflow(1, 15, 1.2);
 	}
 	&__descr {
 		font-weight: 400;

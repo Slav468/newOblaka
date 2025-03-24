@@ -54,7 +54,7 @@
 			padding-bottom: toRem(30) !important;
 			@media (max-width: $tablet) {
 				flex-direction: row;
-				column-gap: 0;
+				column-gap: toRem(15);
 				row-gap: toRem(15);
 				flex-wrap: wrap;
 			}
@@ -91,7 +91,7 @@
 
 		&:before {
 			content: "";
-			width: 85%;
+			width: 0;
 			height: toRem(3);
 			display: block;
 			background-color: var(--bg-primary);
@@ -99,22 +99,18 @@
 			top: calc(100% + 10px);
 			bottom: 0;
 			margin: auto;
-			left: 0;
+			left: 50%;
+			transform: translateX(-50%);
 			z-index: 2;
-			opacity: 0;
+			transition: width 0.3s ease;
 		}
-
-		// @media (any-hover: hover) {
-		// 	&:hover {
-		// 		color: var(--primary);
-		// 	}
-		// }
 
 		&.active {
 			// color: var(--primary);
 			font-weight: 600;
 
 			&:before {
+				width: 85%;
 				opacity: 1;
 			}
 			& span {
@@ -122,6 +118,15 @@
 				// background-color: var(--primary);
 			}
 		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 85%;
+				}
+			}
+		}
+
 		@media (max-width: toRem(991)) {
 			font-size: toRem(14);
 		}
