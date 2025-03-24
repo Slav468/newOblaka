@@ -4,11 +4,13 @@
 :root {
 	// Site colors:
 	// =================================================================
-	--primary: #46b4de; // Site main color
-	--secondary: #2ba8da; // Site secondary color
-	--light: rgba(70, 180, 222, 0.1);
-	--inverse: #e7e7e7; // Site inverse color
-	--accent: #0090c1; // Site accent color
+
+	--hs: 197, 70%;
+	--l: 57%;
+	--primary: hsl(var(--hs), var(--l));
+	--secondary: hsl(var(--hs), calc(var(--l) - 5%));
+	--light: hsl(var(--hs), calc(var(--l) + 30%));
+	--accent: hsl(var(--hs), calc(var(--l) - 10%));
 
 	// Background colors:
 	// =================================================================
