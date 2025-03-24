@@ -44,6 +44,7 @@
 		}
 		&:has(.page-filter) {
 			flex: 0 1 percent(320, $maxWidthContainer);
+			margin-bottom: toRem(40);
 			@media (max-width: $tablet) {
 				display: flex;
 				visibility: hidden;
@@ -74,6 +75,9 @@
 		gap: 1.25rem;
 		border-radius: 0;
 		overflow: hidden;
+		&:has(.main__item) {
+			margin-bottom: toRem(40);
+		}
 	}
 
 	&:has(.blog-menu) {

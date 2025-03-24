@@ -159,13 +159,18 @@ $gap: toRem(20);
 			&:has([class*="__list"]) {
 				overflow: visible;
 			}
+
 			&:has(.filter) {
+				display: none;
 				.filter {
 					display: none;
 					@media (max-width: $tablet) {
 						display: flex;
 						width: fit-content;
 					}
+				}
+				@media (max-width: $tablet) {
+					display: flex;
 				}
 			}
 		}

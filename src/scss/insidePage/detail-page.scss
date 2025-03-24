@@ -95,7 +95,10 @@
 	& .main__content {
 		overflow: visible;
 		&:has(.main__item) {
-			margin: toRem(40) 0 toRem(50) 0;
+			margin-bottom: toRem(40);
+			.main__item:first-child {
+				margin-top: toRem(40);
+			}
 		}
 	}
 
