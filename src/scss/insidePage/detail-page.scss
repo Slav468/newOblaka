@@ -68,6 +68,11 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	& .preview {
+		flex-grow: 1;
 	}
 
 	&__main {
@@ -105,6 +110,9 @@
 	& .main__item {
 		& [class*="__container"] {
 			padding: 0;
+		}
+		&:not(:has(*)) {
+			display: none;
 		}
 	}
 
