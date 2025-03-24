@@ -7,7 +7,6 @@
 }
 
 .wrapper {
-	max-width: toRem(1920);
 	margin: 0 auto;
 	&:has(.header_absolute) {
 		.banner_width {
@@ -27,7 +26,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(50);
-		margin-bottom: toRem(80);
 	}
 	// .main__inner
 	&__inner {

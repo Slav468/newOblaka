@@ -42,19 +42,6 @@
 									color: var(--text-inverse);
 								}
 							}
-
-							@media (any-hover: hover) {
-								&:hover {
-									& > .menu__link {
-										color: var(--accent) !important;
-									}
-									& > .menu__svg {
-										& > .svg-arrow-down {
-											color: var(--accent) !important;
-										}
-									}
-								}
-							}
 						}
 					}
 				}
@@ -84,7 +71,7 @@
 	}
 
 	&__main {
-		margin-top: toRem(40);
+		// margin-top: toRem(40);
 	}
 
 	&__content {
@@ -94,11 +81,11 @@
 		overflow: visible;
 		box-shadow: 0 10px 24px 0 rgba(196, 196, 196, 0.2);
 		background: #f7f6f6;
+
 		@media (max-width: $mobile) {
 			padding: 0;
 			border: none;
 		}
-
 		@media (max-width: $mobile) {
 			padding: 0;
 			box-shadow: none;
@@ -107,6 +94,9 @@
 
 	& .main__content {
 		overflow: visible;
+		&:has(.main__item) {
+			margin: toRem(40) 0 toRem(50) 0;
+		}
 	}
 
 	& .main__item {
@@ -150,14 +140,20 @@
 
 			&__text {
 				width: 50%;
-				background: rgba(51, 51, 51, 0.25);
-				backdrop-filter: blur(toRem(2));
+				background: rgba(51, 51, 51, 0.49);
+				backdrop-filter: blur(toRem(3));
 				border-radius: toRem(4);
 				padding: toRem(10);
 				overflow: hidden;
 				@media (max-width: $mobile) {
 					width: 100%;
 				}
+			}
+		}
+
+		& .main {
+			&__container {
+				margin-bottom: 0;
 			}
 		}
 	}
