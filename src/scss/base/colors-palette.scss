@@ -4,13 +4,19 @@
 :root {
 	// Site colors:
 	// =================================================================
+	// HSL variable
+	--hue: 197;
+	--sat: 70%;
+	--lit: 57%;
+	--alpha: 0.5;
 
-	--hs: 197, 70%;
-	--l: 57%;
-	--primary: hsl(var(--hs), var(--l));
-	--secondary: hsl(var(--hs), calc(var(--l) - 5%));
-	--light: hsl(var(--hs), calc(var(--l) + 30%));
-	--accent: hsl(var(--hs), calc(var(--l) - 10%));
+	--primary: hsl(var(--hue) var(--sat) var(--lit));
+	--secondary: hsl(var(--hue) var(--sat) calc(var(--lit) - 10%));
+	--accent: hsl(var(--hue) var(--sat) calc(var(--lit) - 20%));
+	--transparent: hsl(var(--hue) var(--sat) var(--lit) / var(--alpha));
+	--light: hsl(var(--hue) calc(var(--sat) + 30%) calc(var(--lit) + 30%));
+
+	--inverse: #e7e7e7;
 
 	// Background colors:
 	// =================================================================

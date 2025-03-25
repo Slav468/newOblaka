@@ -109,10 +109,12 @@
 						position: absolute;
 						top: 0;
 						left: 100%;
-						width: toRem(35);
-						height: toRem(25);
-						min-height: 100%;
+						width: toRem(25);
+						height: 100%;
+						min-height: toRem(40);
 						z-index: 5;
+						background-color: var(--primary);
+						border-radius: 0 0 toRem(8) 0;
 					}
 				}
 
