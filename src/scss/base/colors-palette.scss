@@ -4,25 +4,26 @@
 :root {
 	// Site colors:
 	// =================================================================
-	// HSL variable
-	--hue: 197;
-	--sat: 70%;
-	--lit: 57%;
-	--alpha: 0.5;
+
+	// OKLCH variable
+	--lit: 72.2%; // lightness
+	--chm: 29%; // chroma
+	--hue: 227.794deg; // hue
+	--alpha: 0.5; // alpha
 
 	// Main & hover colors:
 	// =================================================================
-
-	--primary: hsl(var(--hue) var(--sat) var(--lit));
-	--secondary: hsl(var(--hue) var(--sat) calc(var(--lit) - 10%));
-	--accent: hsl(var(--hue) var(--sat) calc(var(--lit) - 20%));
-	--transparent: hsl(var(--hue) var(--sat) var(--lit) / var(--alpha));
-	--light: hsl(var(--hue) calc(var(--sat) + 30%) calc(var(--lit) + 30%));
+	--primary: oklch(var(--lit) var(--chm) var(--hue));
+	--secondary: oklch(calc(var(--lit) - 10%) var(--chm) var(--hue));
+	--accent: oklch(calc(var(--lit) - 20%) var(--chm) var(--hue));
+	--transparent: oklch(var(--lit) var(--chm) var(--hue) / var(--alpha));
+	--light: oklch(calc(var(--lit) + 30%) calc(var(--chm) + 30%) var(--hue));
 
 	--inverse: #e7e7e7;
 
 	// Background colors:
 	// =================================================================
+
 	--bg-primary: #ffffff; // BG primary background color
 	--bg-secondary: #f4f4f4; // BG secondary background color
 	--bg-dark: #2f3338;
@@ -31,11 +32,11 @@
 
 	// Text colors:
 	// =================================================================
+
 	--text-primary: #333333; // Text primary text color
 	--text-secondary: #666666; // Text secondary text color
 	--text-accent: #000000; // Text accent
 	--text-inverse: #ffffff; // Text inverse
-	// =================================================================
 
 	// Other color
 	// =================================================================
@@ -51,6 +52,4 @@
 	--product-advise: #893ca9;
 	--product-order: #f9a000;
 	--product-orderHover: #e09200;
-
-	// =================================================================
 }

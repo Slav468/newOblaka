@@ -30,7 +30,10 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: var(--secondary);
+				& svg {
+					scale: 1.2;
+					color: var(--accent);
+				}
 			}
 		}
 	}
