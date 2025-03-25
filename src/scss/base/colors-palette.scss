@@ -1,6 +1,7 @@
 // ===============
 // colors palette
 // ===============
+
 :root {
 	// Site colors:
 	// =================================================================
@@ -10,14 +11,15 @@
 	--chm: 29%; // chroma
 	--hue: 227.794deg; // hue
 	--alpha: 0.5; // alpha
+	--prc: 15%;
 
 	// Main & hover colors:
 	// =================================================================
 	--primary: oklch(var(--lit) var(--chm) var(--hue));
-	--secondary: oklch(calc(var(--lit) - 10%) var(--chm) var(--hue));
-	--accent: oklch(calc(var(--lit) - 20%) var(--chm) var(--hue));
+	--secondary: oklch(calc(var(--lit) - var(--prc)) var(--chm) var(--hue));
+	--accent: oklch(calc(var(--lit) - var(--prc)) var(--chm) var(--hue));
 	--transparent: oklch(var(--lit) var(--chm) var(--hue) / var(--alpha));
-	--light: oklch(calc(var(--lit) + 30%) calc(var(--chm) + 30%) var(--hue));
+	--light: oklch(calc(var(--lit) + var(--prc)) calc(var(--chm)) var(--hue));
 
 	--inverse: #e7e7e7;
 
