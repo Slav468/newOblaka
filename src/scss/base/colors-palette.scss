@@ -10,6 +10,9 @@
 	--lit: 57%;
 	--alpha: 0.5;
 
+	// Main & hover colors:
+	// =================================================================
+
 	--primary: hsl(var(--hue) var(--sat) var(--lit));
 	--secondary: hsl(var(--hue) var(--sat) calc(var(--lit) - 10%));
 	--accent: hsl(var(--hue) var(--sat) calc(var(--lit) - 20%));
