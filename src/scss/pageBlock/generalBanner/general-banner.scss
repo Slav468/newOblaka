@@ -204,10 +204,8 @@
 		}
 		@media (max-width: $tablet) {
 			max-width: 83.6%;
-
 		}
 		@media (max-width: $mobile) {
-
 			gap: toRem(15);
 		}
 		@media (max-width: toEm(698)) {
@@ -218,6 +216,13 @@
 		display: flex;
 		flex-direction: column;
 		gap: toRem(30);
+		padding: toRem(10);
+		border-radius: var(--radius8);
+		background: rgba(80, 87, 89, 0.3);
+		backdrop-filter: blur(toRem(1));
+		box-shadow:
+			0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.3),
+			0 0.5rem 0.75rem 0.375rem rgba(0, 0, 0, 0.15);
 		@media (max-width: $mobile) {
 			gap: toRem(15);
 		}
