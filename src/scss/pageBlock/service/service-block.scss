@@ -12,11 +12,16 @@
 
 	&__list {
 		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
+		// display: flex;
+		// flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(320), 1fr));
 		gap: toRem(20);
 		@media (max-width: $tablet) {
 			gap: toRem(16);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(auto-fill, minmax(toRem(220), 1fr));
 		}
 		@media (max-width: toEm(576)) {
 			gap: toRem(14);
@@ -27,7 +32,7 @@
 	}
 
 	&__card {
-		width: calc((100% - toRem(20) * 3) / 4);
+		// width: calc((100% - toRem(20) * 3) / 4);
 		height: auto;
 		border-radius: var(--radius8);
 		border: 1px solid var(--border);
@@ -35,7 +40,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: toRem(18);
+		// gap: toRem(18);
 		box-shadow:
 			0 4px 4px 0 rgba(0, 0, 0, 0.3),
 			0 8px 12px 6px rgba(0, 0, 0, 0.15);
@@ -47,25 +52,22 @@
 			}
 		}
 
-		@media (max-width: toEm(1280)) {
-			gap: 0;
-		}
-		@media (max-width: $tablet) {
-			width: calc((100% - toRem(16) * 3) / 4);
-		}
-		@media (max-width: $mobile) {
-			width: calc((100% - toRem(16) * 2) / 3);
-		}
-		@media (max-width: toEm(576)) {
-			width: calc((100% - toRem(14) * 2) / 3);
-		}
+		// @media (max-width: $tablet) {
+		// 	width: calc((100% - toRem(16) * 3) / 4);
+		// }
+		// @media (max-width: $mobile) {
+		// 	width: calc((100% - toRem(16) * 2) / 3);
+		// }
+		// @media (max-width: toEm(576)) {
+		// 	width: calc((100% - toRem(14) * 2) / 3);
+		// }
 		@media (max-width: toEm(520)) {
-			width: calc((100% - toRem(14) * 1) / 2);
+			// width: calc((100% - toRem(14) * 1) / 2);
 			gap: toRem(5);
 		}
-		@media (max-width: toEm(360)) {
-			width: calc((100% - toRem(10) * 1) / 2);
-		}
+		// @media (max-width: toEm(360)) {
+		// 	width: calc((100% - toRem(10) * 1) / 2);
+		// }
 	}
 
 	&__link {
@@ -100,13 +102,13 @@
 			font-size: 14px;
 			line-height: 1.2;
 			color: #000;
-			@include textOverflow(2, 14, 1.2);
+			// @include textOverflow(2, 14, 1.2);
 
 			@media (max-width: $mobileSmall) {
 				font-size: toRem(13);
 			}
 			@media (max-width: $mobile) {
-				@include textOverflow(3, 14, 1.37);
+				// @include textOverflow(3, 14, 1.37);
 				font-size: toRem(14);
 			}
 		}
@@ -114,20 +116,16 @@
 
 	&__item {
 		&-wrap {
-			padding: 0 toRem(14);
+			padding: toRem(16) toRem(14) toRem(8);
 			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: column;
-			gap: toRem(0);
+			gap: toRem(8);
 			align-self: flex-start;
 			flex: 1 1 auto;
 			border-radius: var(--radius8);
 
-			@media (max-width: toRem(1300)) {
-				padding: toRem(16) toRem(14) toRem(8);
-				gap: toRem(8);
-			}
 			@media (max-width: toEm(576)) {
 				gap: toRem(7);
 				padding: 0 toRem(6);

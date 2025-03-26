@@ -179,9 +179,8 @@
 		font-size: 20px;
 		line-height: 1.05;
 		color: #000;
-		@include textOverflow(1, 20, 1.05);
 		@media (max-width: toEm(520)) {
-			font-size: toRem(12);
+			font-size: toRem(16);
 		}
 	}
 

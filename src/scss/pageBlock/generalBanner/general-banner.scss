@@ -304,6 +304,7 @@
 			display: flex;
 		}
 	}
+
 	&_width {
 		& .banner__container {
 			max-width: none;
@@ -312,6 +313,7 @@
 				max-width: toRem(1680);
 			}
 		}
+
 		& .banner__slider {
 			min-height: toRem(720);
 			border-radius: 0;
@@ -434,6 +436,14 @@
 
 		& .banner__text {
 			height: auto;
+		}
+
+		& .banner__buttons {
+			& .button:first-child {
+				@media (max-width: toEm(1200)) {
+					background-color: transparent;
+				}
+			}
 		}
 	}
 

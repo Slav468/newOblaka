@@ -691,7 +691,6 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		gap: toRem(6);
 		text-transform: uppercase;
 		font-weight: 500;
@@ -936,6 +935,7 @@
 		}
 
 		&[data-menu-group] {
+			justify-content: space-between;
 			@media (any-hover: hover) and (min-width: $mobile) {
 				&:hover {
 					& > .menu__drop {
@@ -945,6 +945,7 @@
 						& > .menu__content {
 							& > .menu__list {
 								& > .menu__item {
+									justify-content: space-between;
 									@media (any-hover: hover) and (min-width: $mobile) {
 										&:hover {
 											& > .menu__drop {
