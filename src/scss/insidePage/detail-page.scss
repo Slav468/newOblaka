@@ -102,7 +102,7 @@
 		&:has(.main__item) {
 			margin-bottom: toRem(40);
 			.main__item:first-child {
-				margin-top: toRem(40);
+				margin-top: toRem(20);
 			}
 		}
 	}
@@ -156,6 +156,19 @@
 				border-radius: toRem(4);
 				padding: toRem(10);
 				overflow: hidden;
+				@media (max-width: $mobile) {
+					width: 100%;
+				}
+			}
+
+			&__buttons {
+				align-self: flex-end;
+				width: calc(50% - toRem(10));
+				align-items: flex-start;
+				& .button {
+					width: fit-content;
+				}
+
 				@media (max-width: $mobile) {
 					width: 100%;
 				}
