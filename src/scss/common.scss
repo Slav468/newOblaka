@@ -45,8 +45,12 @@
 			@media (max-width: $tablet) {
 				display: flex;
 				visibility: hidden;
+				display: none;
 				width: 0;
 				flex: 0 0 0;
+				&:has(.active) {
+					display: flex;
+				}
 			}
 		}
 

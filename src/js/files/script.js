@@ -1,4 +1,5 @@
 import noUiSlider from 'nouislider';
+import debounce from './debounce.js';
 import { formValidate } from './forms/forms.js';
 import {
 	bodyLock,
@@ -9,6 +10,7 @@ import {
 	overlayShow,
 } from './functions.js';
 import { initSearchSlider } from './sliders.js';
+import throttle from './throttle.js';
 
 const header = document.querySelector('header');
 const asideMenu = document.querySelector('.aside-menu');
@@ -146,7 +148,7 @@ function removeSomeDrop(selector) {
 	});
 }
 
-// Close Element on click an press Esc
+// Close Element on click an p{{{res}}}s Esc
 overlay.addEventListener('click', () => {
 	menuClose();
 	removeSomeDrop('.aside-phone');
@@ -256,11 +258,9 @@ if (document.querySelector('.count')) {
 
 if (document.querySelector('.menu__list')) {
 	hideMenuItem();
-	let timeout = null;
-	window.addEventListener('resize', function () {
-		clearTimeout(timeout);
-		timeout = setTimeout(hideMenuItem, 100);
-	});
+
+	const optimizedHandler = throttle(hideMenuItem, 500);
+	window.addEventListener('resize', optimizedHandler);
 }
 
 function addMenuEl(menuList) {
@@ -1054,4 +1054,68 @@ if (document.querySelector('.search')) {
 	mutationObserver.observe(block, {
 		childList: true,
 	});
+
+	if (document.querySelector('.search')) {
+		const pizzaList = [
+			'Маргарита',
+			'Пепперони',
+			'Гавайская',
+			'4 Сыра',
+			'Диабло',
+			'Сицилийская',
+		];
+
+		function contains(query) {
+			return pizzaList.filter(title =>
+				title.toLowerCase().includes(query.toLowerCase())
+			);
+		}
+
+		const server = {
+			search(query) {
+				// Поставим логер, который будет выводить
+				// каждый принятый запрос
+				console.log(query);
+
+				return new Promise(resolve => {
+					setTimeout(
+						() =>
+							resolve({
+								list: query ? contains(query) : [],
+							}),
+						100
+					);
+				});
+			},
+		};
+
+		const searchElem = document.querySelector('.search');
+		const searchForm = searchElem.querySelector('.search-form');
+		const searchInput = searchForm.querySelector('[type="search"]');
+		const searchResultBlock = searchElem.querySelector('.search-bottom');
+		const searchResults = searchElem.querySelector('.search-content');
+
+		function handleInput(e) {
+			const { value } = e.target;
+
+			if (!value) {
+				searchResultBlock.classList.remove('active');
+				searchResults.innerHTML = '';
+				return;
+			} else {
+				server.search(value).then(function (response) {
+					const { list } = response;
+					searchResultBlock.classList.add('active');
+					const html = list.reduce((markup, item) => {
+						return `${markup}<a class='search-content__link'>${item}</a>`;
+					}, ``);
+
+					searchResults.innerHTML = html;
+				});
+			}
+		}
+
+		const debouncedHandle = debounce(handleInput, 250);
+		searchInput.addEventListener('input', debouncedHandle);
+	}
 }

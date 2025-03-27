@@ -58,7 +58,7 @@ $width: 30;
 		top: 0;
 		z-index: 5;
 		border-radius: 10px;
-		background-color: var(--bg-primary);
+		// background-color: var(--bg-primary);
 		box-shadow:
 			0 4px 10px 0 rgba(0, 0, 0, 0.1),
 			-4px -4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -118,7 +118,7 @@ $width: 30;
 
 	&.drop {
 		& .dropdown-head {
-			background-color: var(--text-inverse);
+			// background-color: var(--text-inverse);
 			color: var(--primary);
 
 			&__trigger {
