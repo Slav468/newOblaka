@@ -1,4 +1,5 @@
 import noUiSlider from 'nouislider';
+import debounce from './debounce.js';
 import { formValidate } from './forms/forms.js';
 import {
 	bodyLock,
@@ -9,6 +10,7 @@ import {
 	overlayShow,
 } from './functions.js';
 import { initSearchSlider } from './sliders.js';
+import throttle from './throttle.js';
 
 const header = document.querySelector('header');
 const asideMenu = document.querySelector('.aside-menu');
@@ -84,7 +86,7 @@ if (document.querySelector('.dropdown[data-click]')) {
 	);
 
 	dropAny(triggers, '.dropdown');
-	setActive('.dropdown[data-click] .dropdown-body__list', '.dropdown');
+	// setActive('.dropdown[data-click] .dropdown-body__list', '.dropdown');
 }
 
 function removeDrop(array, selector, parentNode) {
@@ -118,6 +120,7 @@ removeDrop(contactsPhones, '.contacts-phone', '.contacts__block');
 
 const menuItemsBack = document.querySelectorAll('.menu__item .mobile-back');
 removeDrop(menuItemsBack, '.menu__item', '[data-menulist]');
+
 function removeDropAside(asideMenu, selector) {
 	const removeButtons = asideMenu.querySelectorAll('.mobile-back');
 	removeButtons.forEach(item => {
@@ -145,7 +148,7 @@ function removeSomeDrop(selector) {
 	});
 }
 
-// Close Element on click an press Esc
+// Close Element on click an p{{{res}}}s Esc
 overlay.addEventListener('click', () => {
 	menuClose();
 	removeSomeDrop('.aside-phone');
@@ -255,11 +258,9 @@ if (document.querySelector('.count')) {
 
 if (document.querySelector('.menu__list')) {
 	hideMenuItem();
-	let timeout = null;
-	window.addEventListener('resize', function () {
-		clearTimeout(timeout);
-		timeout = setTimeout(hideMenuItem, 100);
-	});
+
+	const optimizedHandler = throttle(hideMenuItem, 500);
+	window.addEventListener('resize', optimizedHandler);
 }
 
 function addMenuEl(menuList) {
@@ -291,7 +292,6 @@ function addMenuEl(menuList) {
 
 	menuList.insertAdjacentHTML('beforeend', li);
 }
-
 function removeMenuEl(el) {
 	const element = document.querySelector(`${el}`);
 	element.remove();
@@ -341,20 +341,24 @@ function hideMenuItem() {
 			}
 		}
 
-		if (totalWidthItem > width && menuListChildren.length > 2 && menuLastItem) {
+		if (
+			totalWidthItem > width &&
+			menuListChildren.length - 1 > 0 &&
+			menuLastItem
+		) {
+			console.log(menuListChildren.length - 1);
 			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
 			hideMenuItem();
 		}
 
 		if (
 			totalWidthItem + 110 < width &&
-			menuListChildren.length < 9 &&
+			menuListChildren.length < 8 &&
 			menuLastItem
 		) {
 			menuBackItem(menuList, menuLastItemList, menuLastItemListChildren);
 		}
 	}
-
 	if (
 		document.querySelector('[data-menu-group]') &&
 		document.querySelector('[data-menu-group] .menu__list').children.length <= 0
@@ -363,9 +367,12 @@ function hideMenuItem() {
 	}
 }
 function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
+	console.log(menuListChildren[menuListChildren.length - 2]);
 	let element = menuList.removeChild(
 		menuListChildren[menuListChildren.length - 2]
 	);
+
+	console.log(element);
 
 	menuLastItemList.insertBefore(element, menuLastItemList.firstElementChild);
 }
@@ -766,57 +773,41 @@ if (document.querySelector('.filter-menu')) {
 	});
 }
 
-// noUSlider filter aside
+if (document.querySelector('.page-filter')) {
+	const filterMenu = document.querySelector('.page-filter');
+	const closeMenu = filterMenu.querySelector('.page-filter__close');
+	const openButton = document.querySelector(' .filter__button');
+
+	openButton.addEventListener('click', e => {
+		filterActivated(filterMenu);
+	});
+	function filterActivated(parent) {
+		parent.classList.toggle('active');
+		overlayShow();
+		bodyLock();
+	}
+
+	function removeActive(parent) {
+		parent.classList.remove('active');
+		overlayHide();
+		bodyUnlock();
+	}
+
+	closeMenu.addEventListener('click', e => {
+		removeActive(filterMenu);
+	});
+
+	overlay.addEventListener('click', e => {
+		removeActive(filterMenu);
+	});
+}
+
+// noUSlider
 if (document.getElementById('price-slider')) {
 	const slider = document.getElementById('price-slider');
 	const inputRangeMin = document.getElementById('minCost');
 	const rangeMinValue = +inputRangeMin.getAttribute('min');
 	const inputRangeMax = document.getElementById('maxCost');
-	const rangeMaxValue = +inputRangeMax.getAttribute('max');
-	const pageMaxValue = +inputRangeMax.getAttribute('data-max-value');
-	const inputs = [inputRangeMin, inputRangeMax];
-
-	noUiSlider.create(slider, {
-		start: [rangeMinValue, rangeMaxValue],
-		behaviour: 'tap',
-		connect: true,
-		tooltips: [true, wNumb({ decimals: 0 })],
-		format: wNumb({
-			decimals: 0,
-		}),
-		range: {
-			min: 0,
-			max: pageMaxValue,
-		},
-	});
-
-	slider.noUiSlider.on('update', function (values, handle) {
-		inputs[handle].value = values[handle];
-	});
-	inputs.forEach(function (input, handle) {
-		input.addEventListener('change', function () {
-			slider.noUiSlider.setHandle(handle, this.value);
-		});
-
-		input.addEventListener('keydown', function (e) {
-			let values = slider.noUiSlider.get();
-			let value = Number(values[handle]);
-
-			let steps = slider.noUiSlider.steps();
-
-			// [down, up]
-			let step = steps[handle];
-			let position;
-		});
-	});
-}
-
-// noUSlider filter menu
-if (document.getElementById('page-filter-slider')) {
-	const slider = document.getElementById('page-filter-slider');
-	const inputRangeMin = document.getElementById('page-filter-minCost');
-	const rangeMinValue = +inputRangeMin.getAttribute('min');
-	const inputRangeMax = document.getElementById('page-filter-maxCost');
 	const rangeMaxValue = +inputRangeMax.getAttribute('max');
 	const pageMaxValue = +inputRangeMax.getAttribute('data-max-value');
 	const inputs = [inputRangeMin, inputRangeMax];
@@ -989,7 +980,13 @@ function toggleActiveFormEl(move, list, index) {
 		list[index].classList.add('active');
 	}
 }
-
+/**
+ * Checks if any radio button is selected within a specified element in a list.
+ *
+ * @param {Array} list - An array of elements to search through.
+ * @param {number} i - The index of the element in the list to check for radio buttons.
+ * @returns {boolean} - Returns true if at least one radio button is checked, otherwise false.
+ */
 function checkRadioButtons(list, i) {
 	const radioButtons = list[i].querySelectorAll('input[type="radio"]');
 	let checked = Array.from(radioButtons).some(radio => radio.checked);
@@ -1057,4 +1054,62 @@ if (document.querySelector('.search')) {
 	mutationObserver.observe(block, {
 		childList: true,
 	});
+
+	if (document.querySelector('.search')) {
+		const pizzaList = [
+			'Маргарита',
+			'Пепперони',
+			'Гавайская',
+			'4 Сыра',
+			'Диабло',
+			'Сицилийская',
+		];
+
+		function contains(query) {
+			return pizzaList.filter(title =>
+				title.toLowerCase().includes(query.toLowerCase())
+			);
+		}
+
+		const server = {
+			search(query) {
+				// Поставим логер, который будет выводить
+				// каждый принятый запрос
+				console.log(query);
+
+				return new Promise(resolve => {
+					setTimeout(
+						() =>
+							resolve({
+								list: query ? contains(query) : [],
+							}),
+						100
+					);
+				});
+			},
+		};
+
+		const searchElem = document.querySelector('.search');
+		const searchForm = searchElem.querySelector('.search-form');
+		const searchInput = searchForm.querySelector('[type="search"]');
+		const searchResultBlock = searchElem.querySelector('.search-bottom');
+		const searchResults = searchElem.querySelector('.search-content');
+
+		function handleInput(e) {
+			const { value } = e.target;
+
+			server.search(value).then(function (response) {
+				const { list } = response;
+				searchResultBlock.classList.add('active');
+				const html = list.reduce((markup, item) => {
+					return `${markup}<a href='#' class='search-content__link'>${item}</a>`;
+				}, ``);
+
+				searchResults.innerHTML = html;
+			});
+		}
+
+		const debouncedHandle = debounce(handleInput, 250);
+		searchInput.addEventListener('input', debouncedHandle);
+	}
 }

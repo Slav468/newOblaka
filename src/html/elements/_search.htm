@@ -3,7 +3,7 @@
 		<div class="search__container">
 			<form class="search-form">
 				<div class="search-form__inlet">
-					<input type="text" class="search-form__input" placeholder="Поиск">
+					<input type="search" class="search-form__input" placeholder="Поиск">
 					<button type='button' class="search-form__button">
 						<svg>
 							<use xlink:href="@img/icons/icons.svg#search"></use>
@@ -55,9 +55,9 @@
 			<div class="search-content scroll-vertical">
 
 				@@include('../elements/_search-element.htm',{})
-			</div>
-			<div class="search-content__buttons">
-				<a href="#" class="button button_width">Показать все результаты</a>
+				<div class="search-content__buttons">
+					<a href="#" class="button button_width">Показать все результаты</a>
+				</div>
 			</div>
 		</div>
 	</div>
