@@ -1106,16 +1106,30 @@ if (document.querySelector('.search')) {
 				server.search(value).then(function (response) {
 					const { list } = response;
 					searchResultBlock.classList.add('active');
-					const html = list.reduce((markup, item) => {
-						return `${markup}<a class='search-content__link'>${item}</a>`;
-					}, ``);
+					let html = '';
+					if (list.length > 0) {
+						html = list.reduce((markup, item) => {
+							return `${markup}<a class='search-content__link'>${item}</a>`;
+						}, ``);
+					} else {
+						html =
+							"<div class='search-content__link'>По вашему запросу ничего не найдено</div>";
+					}
 
 					searchResults.innerHTML = html;
 				});
 			}
 		}
 
+		const blurHandle = function name() {
+			searchInput.value = '';
+			searchResultBlock.classList.remove('active');
+			searchResults.innerHTML =
+				"<div class='search-content__link'>По вашему запросу ничего не найдено</div>";
+		};
+
 		const debouncedHandle = debounce(handleInput, 250);
 		searchInput.addEventListener('input', debouncedHandle);
+		searchInput.addEventListener('blur', blurHandle);
 	}
 }
