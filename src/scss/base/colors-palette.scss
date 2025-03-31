@@ -21,24 +21,28 @@
 	--transparent: oklch(var(--lit) var(--chm) var(--hue) / var(--alpha));
 	--light: oklch(calc(var(--lit) + var(--prc)) calc(var(--chm)) var(--hue));
 
-	--inverse: oklch(calc(100% - var(--lit)) var(100%- var(--chm)) var(360deg - var(--hue)));
-
 	// Background colors:
 	// =================================================================
 
-	--bg-primary: #ffffff; // BG primary background color
-	--bg-secondary: #f4f4f4; // BG secondary background color
-	--bg-dark: #2f3338;
-	--bg-accent: #46b4de; // BG accent
-	--bg-inverse: #000000; // BG inverse
+	--bg-lit: 100%;
+	--bg-chm: 0%;
+	--bg-hue: 89.876deg;
+
+	--bg-primary: oklch(var(--bg-lit) var(--bg-chm) var(--bg-hue));
+	--bg-secondary: oklch(calc(var(--bg-lit) - var(--prc)) var(--bg-chm) var(--bg-hue));
+	--bg-dark: oklch(30% var(--bg-chm) var(--bg-hue));
 
 	// Text colors:
 	// =================================================================
+	--tx-lit: 0%;
+	--tx-chm: 0%;
+	--tx-hue: 89.876deg;
+	--tx-prc: 30%;
 
-	--text-primary: #333333; // Text primary text color
-	--text-secondary: #666666; // Text secondary text color
-	--text-accent: #000000; // Text accent
-	--text-inverse: #ffffff; // Text inverse
+	--text-accent: oklch(0% 0% 0deg); // Text dark
+	--text-primary: oklch(calc(var(--tx-lit) + var(--tx-prc)) var(--tx-chm) var(--tx-hue));
+	--text-secondary: oklch(calc(var(--tx-lit) + var(--tx-prc) + 20%) var(--tx-chm) var(--tx-hue));
+	--text-inverse: oklch(100% 0% 89.876deg); // Text inverse
 
 	// Other color
 	// =================================================================

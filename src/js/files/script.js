@@ -773,34 +773,34 @@ if (document.querySelector('.filter-menu')) {
 	});
 }
 
-if (document.querySelector('.page-filter')) {
-	const filterMenu = document.querySelector('.page-filter');
-	const closeMenu = filterMenu.querySelector('.page-filter__close');
-	const openButton = document.querySelector(' .filter__button');
+// if (document.querySelector('.page-filter')) {
+// 	const filterMenu = document.querySelector('.page-filter');
+// 	// const closeMenu = filterMenu.querySelector('.page-filter__close');
+// 	const openButton = document.querySelector(' .filter__button');
 
-	openButton.addEventListener('click', e => {
-		filterActivated(filterMenu);
-	});
-	function filterActivated(parent) {
-		parent.classList.toggle('active');
-		overlayShow();
-		bodyLock();
-	}
+// 	openButton.addEventListener('click', e => {
+// 		filterActivated(filterMenu);
+// 	});
+// 	function filterActivated(parent) {
+// 		parent.classList.toggle('active');
+// 		overlayShow();
+// 		bodyLock();
+// 	}
 
-	function removeActive(parent) {
-		parent.classList.remove('active');
-		overlayHide();
-		bodyUnlock();
-	}
+// 	function removeActive(parent) {
+// 		parent.classList.remove('active');
+// 		overlayHide();
+// 		bodyUnlock();
+// 	}
 
-	closeMenu.addEventListener('click', e => {
-		removeActive(filterMenu);
-	});
+// 	closeMenu.addEventListener('click', e => {
+// 		removeActive(filterMenu);
+// 	});
 
-	overlay.addEventListener('click', e => {
-		removeActive(filterMenu);
-	});
-}
+// 	overlay.addEventListener('click', e => {
+// 		removeActive(filterMenu);
+// 	});
+// }
 
 // noUSlider
 if (document.getElementById('price-slider')) {

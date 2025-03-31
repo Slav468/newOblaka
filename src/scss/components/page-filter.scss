@@ -4,6 +4,7 @@
 	height: 100%;
 	transition: transform 0.3s ease-in;
 	background-color: var(--bg-primary);
+	position: static;
 
 	&-slider {
 		width: 100%;
