@@ -79,7 +79,6 @@
 				font-weight: 500;
 				font-size: 14px;
 				line-height: 1.14286;
-				color: var();
 			}
 		}
 
@@ -179,6 +178,7 @@
 
 	&-element {
 		&__list {
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			gap: toRem(10);

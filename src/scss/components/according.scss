@@ -62,7 +62,7 @@
 		min-width: toRem(27);
 		min-height: toRem(27);
 		border-radius: 50%;
-		background-color: var(--light);
+		background-color: var(--transparent);
 		overflow: hidden;
 		cursor: pointer;
 		@media (max-width: $mobile) {

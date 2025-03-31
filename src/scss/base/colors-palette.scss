@@ -10,7 +10,7 @@
 	--lit: 72.2%; // lightness
 	--chm: 29%; // chroma
 	--hue: 227.794deg; // hue
-	--alpha: 0.5; // alpha
+	--alpha: 0.2; // alpha
 	--prc: 15%;
 
 	// Main & hover colors:
@@ -21,7 +21,7 @@
 	--transparent: oklch(var(--lit) var(--chm) var(--hue) / var(--alpha));
 	--light: oklch(calc(var(--lit) + var(--prc)) calc(var(--chm)) var(--hue));
 
-	--inverse: #e7e7e7;
+	--inverse: oklch(calc(100% - var(--lit)) var(100%- var(--chm)) var(360deg - var(--hue)));
 
 	// Background colors:
 	// =================================================================
