@@ -213,7 +213,7 @@ function initSliders() {
 			// observer: true,
 			// observeParents: true,
 			slidesPerView: 'auto',
-			spaceBetween: 36,
+			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -246,14 +246,14 @@ function initSliders() {
 				prevEl: '.photo-button-prev',
 				nextEl: '.photo-button-next',
 			},
-			// breakpoints: {
-			// 	320: {
-			// 		spaceBetween: 10,
-			// 	},
-			// 	992: {
-			// 		spaceBetween: 20,
-			// 	},
-			// },
+			breakpoints: {
+				320: {
+					spaceBetween: 10,
+				},
+				1100: {
+					spaceBetween: 33,
+				},
+			},
 			// Події
 			// on: {},
 		});

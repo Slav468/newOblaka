@@ -19,13 +19,17 @@
 	&__cell {
 		position: relative;
 		display: flex;
+		// align-items: center;
+		// justify-content: center;
 		// max-width: percent(400, $maxWidthContainer);
 		width: fit-content;
 		overflow: hidden;
 		border-radius: var(--radius8);
 		appearance: none;
+		height: fit-content;
 		max-height: toRem(266);
-		max-width: 26%;
+		// max-width: 26%;
+		width: fit-content;
 		// @include linerGradient();
 
 		@media (any-hover: hover) {
@@ -33,12 +37,23 @@
 				box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
 			}
 		}
-		@media (max-width: toEm(1280)) {
-			max-width: percent(300, $maxWidthContainer);
-		}
-		@media (max-width: toEm(520)) {
-			width: calc((100% - toRem(14) * 2) / 3);
+		// @media (max-width: toEm(1280)) {
+		// 	max-width: percent(300, $maxWidthContainer);
+		// }
+		@media (min-width: toEm(320)) {
+			width: 100%;
 			max-width: none;
+		}
+		@media (min-width: toEm(520)) {
+			max-width: 48.2%;
+			width: fit-content;
+		}
+
+		@media (min-width: toEm(768)) {
+			max-width: 33.3%;
+		}
+		@media (min-width: toEm(991)) {
+			// max-width: percent(300, $maxWidthContainer);
 		}
 	}
 
