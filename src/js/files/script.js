@@ -346,7 +346,6 @@ function hideMenuItem() {
 			menuListChildren.length - 1 > 0 &&
 			menuLastItem
 		) {
-			console.log(menuListChildren.length - 1);
 			menuRemoveChild(menuList, menuListChildren, menuLastItemList);
 			hideMenuItem();
 		}
@@ -367,12 +366,9 @@ function hideMenuItem() {
 	}
 }
 function menuRemoveChild(menuList, menuListChildren, menuLastItemList) {
-	console.log(menuListChildren[menuListChildren.length - 2]);
 	let element = menuList.removeChild(
 		menuListChildren[menuListChildren.length - 2]
 	);
-
-	console.log(element);
 
 	menuLastItemList.insertBefore(element, menuLastItemList.firstElementChild);
 }

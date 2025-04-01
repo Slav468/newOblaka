@@ -365,7 +365,7 @@ function initSliders() {
 			// loop: true,
 			// observer: true,
 			// observeParents: true,
-			slidesPerView: 'auto',
+			// slidesPerView: 'auto',
 			// autoHeight: true,
 			speed: 300,
 			// lazy: true,
@@ -400,15 +400,35 @@ function initSliders() {
 			},
 			breakpoints: {
 				320: {
+					slidesPerView: 2,
 					spaceBetween: 10,
 				},
-				479: {
+				528: {
+					slidesPerView: 3,
 					spaceBetween: 14,
 				},
-				698: {
+				708: {
+					slidesPerView: 4,
 					spaceBetween: 16,
 				},
-				991: {
+				884: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				1080: {
+					slidesPerView: 6,
+					spaceBetween: 20,
+				},
+				1260: {
+					slidesPerView: 7,
+					spaceBetween: 20,
+				},
+				1440: {
+					slidesPerView: 8,
+					spaceBetween: 20,
+				},
+				1620: {
+					slidesPerView: 9,
 					spaceBetween: 20,
 				},
 			},
