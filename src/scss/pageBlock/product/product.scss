@@ -22,7 +22,6 @@
 		height: auto;
 		width: calc((100% - toRem(20) * 3) / 4);
 		background-color: var(--bg-primary);
-		border-radius: var(--radius8);
 		border: 1px solid var(--border);
 		// overflow: hidden;
 		appearance: none;
@@ -100,6 +99,8 @@
 
 	&__slider {
 		width: 100%;
+		max-height: toRem(450);
+		padding: toRem(10);
 		position: relative;
 		display: flex;
 		align-items: center;
