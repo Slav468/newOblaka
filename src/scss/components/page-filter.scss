@@ -76,6 +76,11 @@
 							}
 						}
 					}
+
+					&-body {
+						max-height: toRem(400);
+					}
+
 					&.drop {
 						& .dropdown {
 							&-body {
@@ -93,7 +98,7 @@
 									padding: toRem(20);
 									width: 100%;
 									grid-template-columns: repeat(3, minmax(toRem(170), 1fr));
-
+									max-height: 400px;
 									overflow: auto;
 									margin-right: 2px;
 

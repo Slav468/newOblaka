@@ -1041,7 +1041,6 @@ if (document.querySelector('.search')) {
 	const mutationObserver = new MutationObserver(function (mutations) {
 		for (let mutation of mutations) {
 			if (mutation.type === 'childList') {
-				console.log('mutations');
 				initSearchSlider();
 			}
 		}
@@ -1051,81 +1050,81 @@ if (document.querySelector('.search')) {
 		childList: true,
 	});
 
-	if (document.querySelector('.search')) {
-		const pizzaList = [
-			'Маргарита',
-			'Пепперони',
-			'Гавайская',
-			'4 Сыра',
-			'Диабло',
-			'Сицилийская',
-		];
+	// if (document.querySelector('.search')) {
+	// 	const pizzaList = [
+	// 		'Маргарита',
+	// 		'Пепперони',
+	// 		'Гавайская',
+	// 		'4 Сыра',
+	// 		'Диабло',
+	// 		'Сицилийская',
+	// 	];
 
-		function contains(query) {
-			return pizzaList.filter(title =>
-				title.toLowerCase().includes(query.toLowerCase())
-			);
-		}
+	// function contains(query) {
+	// 	return pizzaList.filter(title =>
+	// 		title.toLowerCase().startsWith(query.toLowerCase())
+	// 	);
+	// }
 
-		const server = {
-			search(query) {
-				// Поставим логер, который будет выводить
-				// каждый принятый запрос
-				console.log(query);
+	// 	const server = {
+	// 		search(query) {
+	// 			// Поставим логер, который будет выводить
+	// 			// каждый принятый запрос
+	// 			console.log(query);
 
-				return new Promise(resolve => {
-					setTimeout(
-						() =>
-							resolve({
-								list: query ? contains(query) : [],
-							}),
-						100
-					);
-				});
-			},
-		};
+	// 			return new Promise(resolve => {
+	// 				setTimeout(
+	// 					() =>
+	// 						resolve({
+	// 							list: query ? contains(query) : [],
+	// 						}),
+	// 					100
+	// 				);
+	// 			});
+	// 		},
+	// 	};
 
-		const searchElem = document.querySelector('.search');
-		const searchForm = searchElem.querySelector('.search-form');
-		const searchInput = searchForm.querySelector('[type="search"]');
-		const searchResultBlock = searchElem.querySelector('.search-bottom');
-		const searchResults = searchElem.querySelector('.search-content');
+	// 	const searchElem = document.querySelector('.search');
+	// 	const searchForm = searchElem.querySelector('.search-form');
+	// 	const searchInput = searchForm.querySelector('[type="search"]');
+	// 	const searchResultBlock = searchElem.querySelector('.search-bottom');
+	// 	const searchResults = searchElem.querySelector('.search-content');
 
-		function handleInput(e) {
-			const { value } = e.target;
+	// 	function handleInput(e) {
+	// 		const { value } = e.target;
 
-			if (!value) {
-				searchResultBlock.classList.remove('active');
-				searchResults.innerHTML = '';
-				return;
-			} else {
-				server.search(value).then(function (response) {
-					const { list } = response;
-					searchResultBlock.classList.add('active');
-					let html = '';
-					if (list.length > 0) {
-						html = list.reduce((markup, item) => {
-							return `${markup}<a class='search-content__link'>${item}</a>`;
-						}, ``);
-					} else {
-						html =
-							"<div class='search-content__link'>По вашему запросу ничего не найдено</div>";
-					}
+	// 		if (!value) {
+	// 			searchResultBlock.classList.remove('active');
+	// 			searchResults.innerHTML = '';
+	// 			return;
+	// 		} else {
+	// 			server.search(value).then(function (response) {
+	// 				const { list } = response;
+	// 				searchResultBlock.classList.add('active');
+	// 				let html = '';
+	// 				if (list.length > 0) {
+	// 					html = list.reduce((markup, item) => {
+	// 						return `${markup}<a class='search-content__link'>${item}</a>`;
+	// 					}, ``);
+	// 				} else {
+	// 					html =
+	// 						"<div class='search-content__link'>По вашему запросу ничего не найдено</div>";
+	// 				}
 
-					searchResults.innerHTML = html;
-				});
-			}
-		}
+	// 				searchResults.innerHTML = html;
+	// 			});
+	// 		}
+	// 	}
 
-		const blurHandle = function name() {
-			searchInput.value = '';
-			searchResultBlock.classList.remove('active');
-			searchResults.innerHTML =
-				"<div class='search-content__link'>По вашему запросу ничего не найдено</div>";
-		};
+	// 	const blurHandle = function name() {
+	// 		searchInput.value = '';
+	// 		searchResultBlock.classList.remove('active');
+	// 		searchResults.innerHTML =
+	// 			"<div class='search-content__link'>По вашему запросу ничего не найдено</div>";
+	// 	};
 
-		const debouncedHandle = debounce(handleInput, 250);
-		searchInput.addEventListener('input', debouncedHandle);
-		searchInput.addEventListener('blur', blurHandle);
-	}
+	// 	const debouncedHandle = debounce(handleInput, 250);
+	// 	searchInput.addEventListener('input', debouncedHandle);
+	// 	searchInput.addEventListener('blur', blurHandle);
+	// }
 }
