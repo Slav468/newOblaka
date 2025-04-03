@@ -101,6 +101,14 @@
 									}
 								}
 							}
+
+							@media (any-hover: hover) {
+								&:hover {
+									& > .menu__link {
+										color: var(--accent);
+									}
+								}
+							}
 						}
 					}
 
@@ -246,8 +254,11 @@
 		}
 
 		& .menu {
-			flex: 0 1 11.2%;
+			// flex: 0 1 11%;
+			max-width: toRem(182);
 			align-self: center;
+			border-radius: var(--radius8);
+			overflow: hidden;
 
 			& > .icon-menu {
 				display: flex;
@@ -268,6 +279,7 @@
 				@media (any-hover: none) {
 					cursor: default;
 				}
+
 				span,
 				&::before,
 				&::after {
@@ -301,6 +313,14 @@
 					&::after {
 						bottom: calc(50% - toRem(1));
 						transform: rotate(45deg);
+					}
+				}
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					& > .icon-menu {
+						background-color: var(--accent);
 					}
 				}
 			}

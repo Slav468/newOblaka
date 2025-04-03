@@ -162,11 +162,12 @@
 			background: rgba(51, 51, 51, 0.49);
 			border: toRem(1) solid #c0c0c0;
 			border-radius: toRem(16);
-			padding: toRem(24);
+			padding: toRem(70) toRem(25);
 			max-width: toRem(350);
 			@media (max-width: toEm(1200)) {
 				max-width: none;
 				gap: toRem(15);
+				display: none;
 			}
 
 			&__list {
@@ -284,7 +285,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: 75%;
+		object-position: center;
 		z-index: -2;
 	}
 	&__link {
@@ -330,12 +331,6 @@
 			align-self: flex-start;
 			position: relative;
 			z-index: 2;
-		}
-
-		& .button:first-child {
-			display: flex;
-			max-width: toRem(221);
-			padding: toRem(13) toRem(20);
 		}
 
 		@media (max-width: toEm(550)) {
@@ -408,6 +403,13 @@
 			@media (max-width: toEm(1200)) {
 				max-width: calc(100% - toRem(40));
 				margin: 0;
+			}
+		}
+
+		& [data-popup="#call"] {
+			display: none;
+			@media (max-width: toEm(1200)) {
+				display: flex;
 			}
 		}
 	}
