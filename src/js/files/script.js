@@ -590,7 +590,6 @@ if (document.querySelector('.majority')) {
 	});
 
 	let cookie = getCookie();
-	console.log(cookie);
 
 	if (
 		majority.getAttribute('data-disabled') === 'true' ||
