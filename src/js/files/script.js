@@ -547,14 +547,23 @@ function toggleActive(element) {
 	element.classList.toggle('active');
 }
 
+function getCookie() {
+	return document.cookie.split('; ').reduce((acc, item) => {
+		const [name, value] = item.split('=');
+		acc[name] = value;
+		return acc;
+	}, {});
+}
+
 if (document.querySelector('.majority')) {
 	const majority = document.querySelector('.majority');
+	const majorityQuestion = majority.querySelector('[data-question]');
+	const majorityDenied = majority.querySelector('[data-denied]');
 	const majorityBtnYes = majority.querySelector('[data-confirm]');
 	const majorityBtnNo = majority.querySelector('[data-close]');
 
 	majorityBtnYes.addEventListener('click', e => {
 		e.preventDefault();
-		majority.dataset.majority = true;
 		majority.classList.remove('active');
 		bodyUnlock();
 		overlayHide();
@@ -564,7 +573,29 @@ if (document.querySelector('.majority')) {
 		}
 	});
 
-	if (majority.hasAttribute('data-disabled')) {
+	majorityBtnNo.addEventListener('click', e => {
+		e.preventDefault();
+		majorityQuestion.classList.remove('active');
+		majorityDenied.classList.add('active');
+	});
+
+	majorityDenied.addEventListener('click', e => {
+		e.preventDefault();
+		const target = e.target;
+
+		if (target.closest('.majority__close')) {
+			majorityDenied.classList.remove('active');
+			majorityQuestion.classList.add('active');
+		}
+	});
+
+	let cookie = getCookie();
+	console.log(cookie);
+
+	if (
+		majority.getAttribute('data-disabled') === 'true' ||
+		cookie.COOKIE18 == 1
+	) {
 		setTimeOutPopup(activateElem, '.cookie-plank', 1500);
 	} else {
 		setTimeOutPopup(activateElem, '.majority', 0);

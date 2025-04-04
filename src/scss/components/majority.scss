@@ -7,20 +7,24 @@
 	z-index: 20;
 	transform: translateY(100%);
 	transition: transform 0.3s ease;
-	width: 100%;
 	opacity: 0;
 	backdrop-filter: blur(5px);
 	background: rgba(241, 241, 241, 0.4);
 
 	&__container {
 		height: 100%;
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: relative;
 	}
 
 	&__content {
-		position: relative;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -29,7 +33,9 @@
 		background-color: rgba(80, 87, 89, 0.7);
 		border-radius: var(--radius8);
 		overflow: hidden;
-
+		opacity: 0;
+		z-index: 1;
+		transition: opacity 0.5s ease;
 		background:
 			linear-gradient(rgba(80, 87, 89, 0.7), rgba(80, 87, 89, 0.7)),
 			url("@img/majority/majorityBG.png") no-repeat,
@@ -42,6 +48,11 @@
 
 		@media (max-width: $mobile) {
 			flex-direction: column;
+		}
+
+		&.active {
+			opacity: 1;
+			z-index: 2;
 		}
 	}
 
@@ -93,6 +104,26 @@
 			@include adaptiveValue("font-size", 30, 15);
 			&:first-child {
 				border: 3px solid var(--white);
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: toRem(20);
+		top: toRem(20);
+		z-index: 5;
+		width: toRem(25);
+		height: toRem(25);
+		cursor: pointer;
+		color: var(--text-inverse);
+		& svg {
+			width: 100%;
+			height: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--for-false);
 			}
 		}
 	}

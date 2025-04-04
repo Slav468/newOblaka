@@ -1,6 +1,6 @@
-<div class="majority" data-majority="false">
+<div class="majority" data-disabled="false">
 	<div class="majority__container">
-		<div class="majority__content">
+		<div class="majority__content active" data-question>
 			<div class="majority__title">ОАО «Гомельский ликеро-водочный завод «Радамир»</div>
 			<div class="majority__text text_general">
 				Вам уже исполнилось 18 лет?
@@ -12,6 +12,23 @@
 				<button type='button' class="button" data-close>
 					НЕТ
 				</button>
+			</div>
+		</div>
+
+		<div class="majority__content" data-denied>
+
+			<div class="majority__close">
+				<svg>
+					<use xlink:href="@img/icons/icons.svg#close"></use>
+				</svg>
+			</div>
+
+			<div class="majority__text text_general">
+				Отказано в доступе
+			</div>
+			<div class="majority__title">
+				Вы не можете просмотреть информацию. <br>
+				Данный сайт предназначен для людей достигших 18 лет.
 			</div>
 		</div>
 	</div>
