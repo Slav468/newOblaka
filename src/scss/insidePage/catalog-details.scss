@@ -199,11 +199,17 @@
 	max-height: toRem(420);
 	aspect-ratio: 540 / 420;
 	height: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 
 	& .swiper-block__prev,
 	& .swiper-block__next {
 		position: static;
+	}
+
+	& .swiper-block__prev[data-disabled],
+	& .swiper-block__next[data-disabled] {
+		pointer-events: none;
+		opacity: 0.5;
 	}
 
 	&__buttons {

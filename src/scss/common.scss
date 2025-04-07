@@ -56,7 +56,16 @@
 		flex-direction: column;
 		gap: 1.25rem;
 		border-radius: 0;
-		overflow: hidden;
+		// overflow: hidden;
+	}
+
+	&__item {
+		overflow: visible;
+		& .block {
+			&__container {
+				overflow: visible;
+			}
+		}
 	}
 
 	&:has(.blog-menu) {
