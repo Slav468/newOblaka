@@ -163,7 +163,7 @@
 			border: toRem(1) solid #c0c0c0;
 			border-radius: toRem(16);
 			padding: toRem(70) toRem(25);
-			max-width: toRem(350);
+			max-width: toRem(400);
 			@media (max-width: toEm(1200)) {
 				max-width: none;
 				gap: toRem(15);
@@ -383,7 +383,6 @@
 		}
 
 		& .banner__slide {
-			min-height: toRem(720);
 			& .banner__container {
 				max-width: calc(toRem($containerWidth) - toRem(130));
 				margin-left: toRem(55);

@@ -598,6 +598,100 @@
 		</div>
 	</div>
 
+	<!-- Reviews -->
+	<div id="reviews" aria-hidden="false" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<!-- button -->
+				<div class="popup__buttons">
+					<button data-back type="button" class="popup__back">
+						<svg class="svg-arrow-back">
+							<use xlink:href="img/icons/icons.svg#arrow-back"></use>
+						</svg>
+					</button>
+					<button data-close type="button" class="popup__close">
+						<svg class="svg-arrow-close">
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				<!-- title -->
+				<div class="popup__text">
+					<div class="popup__title">Задать вопрос</div>
+				</div>
+
+				<!-- body -->
+				<div class="popup__body">
+					<form class="form" data-form>
+						<!-- Заголовок -->
+						<div class="form__title" data-formTitle hidden>
+							Оставить отзыв
+						</div>
+						<!-- Подзаголовок -->
+						<div class="form__text">
+							Оставьте свой отзыв о нас.
+						</div>
+						<!-- Список полей -->
+						<div class="form__list">
+							<!-- Имя -->
+							<div class="form__cell" data-formData>
+								<label class="form__label" for="name-reviews">Ваше имя*</label>
+								<input class="form__input" type="text" name="name" id="name-reviews" data-required data-validate required
+									placeholder="Ваше имя">
+							</div>
+							<!-- Телефон -->
+							<div class="form__cell" data-formData>
+								<label class="form__label" for="phone-reviews">Ваш телефон*</label>
+								<input name="phone" id="phone-reviews" type="tel" class="form__input" data-required='phone' data-validate required=""
+									placeholder="+375 (00) 000-00-00">
+							</div>
+							<!-- Email -->
+							<div class="form__cell" data-formData>
+								<label for="emeil-reviews">Ваш e-mail*</label>
+								<input name="email" id="emeil-reviews" type="email" class="form__input" data-required='email' data-validate required
+									placeholder="example@mail.org">
+							</div>
+							<!-- textarea -->
+							<div class="form__cell" data-textArea>
+								<label for='textarea-reviews'>Текст сообщения</label>
+								<textarea rows="5" spellcheck="true" id="textarea-reviews" required></textarea>
+							</div>
+						</div>
+
+						<!-- Checkbox -->
+						<div class="form__cell checkbox" data-formCheckbox>
+							<label for="check-reviews" class="checkbox__label">
+								<span class="checkbox__svg">
+									<svg class="checked-svg">
+										<use xlink:href="img/icons/icons.svg#checked"></use>
+									</svg>
+								</span>
+								<input type="checkbox" id="check-reviews" class="checkbox__input" data-required data-validate>
+							</label>
+							<div class="checkbox__text">
+								я согласен(а) на
+								<a href="#" class="checkbox__link">обработку персональных данных.</a><br>
+								Наш сайт защищен с помощью reCAPTCHA и соответствует
+								<a class="checkbox__link" rel="nofollow" href="https://policies.google.com/privacy" target="_blank">Политике
+									конфиденциальности</a>
+
+								и <a class="checkbox__link" rel="nofollow" href="https://policies.google.com/terms" target="_blank">Условиям
+									использования</a>
+								Google.
+							</div>
+						</div>
+						<!-- Button -->
+						<div class="form__button" data-formBtn>
+							<button disabled type="submit" class="button button_colored button_width">
+								Отправить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Thank -->
 	<div id="thank" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">

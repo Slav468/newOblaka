@@ -15,6 +15,7 @@
 	&__social {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: toRem(14);
 
 		&:not(:has(.messengers)),

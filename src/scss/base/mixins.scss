@@ -1,4 +1,4 @@
-//Підключення шрифту
+//Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
 		font-family: $font_name;
@@ -33,7 +33,7 @@
 	}
 }
 
-// Трикутник
+// Треугольник
 @mixin triangle($direction, $color, $size, $size2: $size) {
 	@if $direction == left {
 		border: toRem($size2) solid transparent;

@@ -26,6 +26,7 @@ body {
 	height: 100%;
 	min-width: $minWidth + px;
 	scrollbar-width: thin;
+	scroll-behavior: smooth;
 	// scrollbar-gutter: stable;
 }
 body {

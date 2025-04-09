@@ -17,6 +17,7 @@
 	&:hover {
 		background-color: var(--primary);
 		color: var(--text-inverse);
+		transform: scale(0.98);
 	}
 
 	&_colored {

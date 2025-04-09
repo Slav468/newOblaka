@@ -6,12 +6,16 @@
 	// Site colors:
 	// =================================================================
 
+	// --lit: 46.3%;
+	// --chm: 35.5%;
+	// --hue: 138.593deg;
+
 	// OKLCH variable
 	--lit: 72.2%; // lightness
 	--chm: 29%; // chroma
 	--hue: 227.794deg; // hue
 	--alpha: 0.2; // alpha
-	--prc: 15%;  //percent change from main color
+	--prc: 15%; //percent change from main color
 
 	// Main & hover colors:
 	// =================================================================
@@ -21,24 +25,24 @@
 	--transparent: oklch(var(--lit) var(--chm) var(--hue) / var(--alpha));
 	--light: oklch(calc(var(--lit) + var(--prc)) calc(var(--chm)) var(--hue));
 
-	// Background colors:
+	// Background variable:
 	// =================================================================
-
 	--bg-lit: 100%;
 	--bg-chm: 0%;
 	--bg-hue: 89.876deg;
-
+	--bg-prc: 2%;
+	// Background colors:
 	--bg-primary: oklch(var(--bg-lit) var(--bg-chm) var(--bg-hue));
-	--bg-secondary: oklch(calc(var(--bg-lit) - var(--prc)) var(--bg-chm) var(--bg-hue));
+	--bg-secondary: oklch(calc(var(--bg-lit) - var(--bg-prc)) var(--bg-chm) var(--bg-hue));
 	--bg-dark: oklch(30% var(--bg-chm) var(--bg-hue));
 
-	// Text colors:
+	// Text variable:
 	// =================================================================
 	--tx-lit: 0%;
 	--tx-chm: 0%;
 	--tx-hue: 89.876deg;
 	--tx-prc: 30%;
-
+	// Text colors:
 	--text-accent: oklch(0% 0% 0deg); // Text dark
 	--text-primary: oklch(calc(var(--tx-lit) + var(--tx-prc)) var(--tx-chm) var(--tx-hue));
 	--text-secondary: oklch(calc(var(--tx-lit) + var(--tx-prc) + 20%) var(--tx-chm) var(--tx-hue));
