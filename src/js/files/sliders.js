@@ -32,7 +32,7 @@ function initSliders() {
 		// Створюємо слайдер
 		new Swiper('.banner__slider', {
 			modules: [Navigation, Pagination],
-			// loop: true,
+			loop: true,
 			// observer: true,
 			// observeParents: true,
 			slidesPerView: 'auto',

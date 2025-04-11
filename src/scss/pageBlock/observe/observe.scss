@@ -16,18 +16,15 @@
 		flex-wrap: wrap;
 		width: 100%;
 	}
-
 	// .observe__item
 	&__item {
 		position: relative;
 		display: flex;
 		align-items: flex-end;
-
 		flex: 1 1 33.333%;
 		min-width: toRem(315);
 		width: 100%;
 		height: toRem(315);
-
 		@media (any-hover: hover) {
 			&:hover {
 				& .observe__img {
@@ -38,7 +35,7 @@
 			}
 		}
 	}
-
+	// .observe__link
 	&__link {
 		position: absolute;
 		top: 0;
@@ -47,7 +44,6 @@
 		width: 100%;
 		height: 100%;
 	}
-
 	// .observe__img
 	&__img {
 		position: absolute;
@@ -57,7 +53,6 @@
 		width: 100%;
 		height: 100%;
 		@include linerGradient();
-
 		& img {
 			display: block;
 			object-fit: cover;
@@ -66,13 +61,15 @@
 			width: 100%;
 		}
 	}
-
 	// .observe__title
 	&__title {
 		position: relative;
 		z-index: 1;
+		font-weight: 600;
+		line-height: 1.33333;
 		color: var(--text-inverse);
 		margin: toRem(60) toRem(20);
+		@include adaptiveValue("font-size", 18, 15);
 		&::after {
 			content: "";
 			position: absolute;

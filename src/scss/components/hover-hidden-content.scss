@@ -57,7 +57,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: toRem(20) toRem(20) toRem(23);
+		padding: toRem(20) toRem(20) toRem(20);
 		pointer-events: none;
 	}
 
@@ -224,7 +224,7 @@
 				padding: 0;
 			}
 			.hover__wrapper {
-				padding: toRem(30);
+				padding: toRem(20) toRem(20) toRem(20);
 				display: none;
 			}
 
