@@ -543,7 +543,11 @@ function setTimeOutPopup(cb, selector, delay) {
 }
 
 if (document.querySelector('.cookie-plank')) {
-	setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
+	let isAccepted = localStorage.getItem('cookieAccepted');
+
+	if (!isAccepted) {
+		setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
+	}
 
 	const cookieBtn = document.querySelector('[data-cookieBtn]');
 	const cookieClose = document.querySelector('.cookie-plank [data-close]');
@@ -554,6 +558,7 @@ if (document.querySelector('.cookie-plank')) {
 		item.dataset.disabled = true;
 		bodyUnlock();
 		overlayHide();
+		setLocalStorage('cookieAccepted', true);
 	});
 	cookieClose.addEventListener('click', e => {
 		e.preventDefault();
@@ -562,6 +567,47 @@ if (document.querySelector('.cookie-plank')) {
 		bodyUnlock();
 		overlayHide();
 	});
+
+	const cookieSetting = document.querySelector('#cookie-setting');
+	const cookieSwitches = cookieSetting.querySelectorAll('.switch');
+
+	const cookieSwitchesLibrary = {};
+
+	cookieSwitches.forEach(elem => {
+		setSwitchesLIbrary(elem, cookieSwitchesLibrary);
+	});
+
+	function setSwitchesLIbrary(elem, obj) {
+		const switchLabel = elem.querySelector('[data-switch]');
+		const switchData = switchLabel.dataset.switch;
+		const switchInput = elem.querySelector("input[type='checkbox']");
+		const switchValue = switchInput.hasAttribute('checked');
+
+		obj[switchData] = switchValue;
+
+		setLocalStorage(switchData, switchValue);
+
+		switchInput.addEventListener('change', e => {
+			const isChecked = e.target.checked;
+			setLocalStorage(switchData, isChecked);
+			obj[switchData] = isChecked;
+		});
+	}
+
+	const cookieSettingClose = document.querySelector(
+		'#cookie-setting [data-agree]'
+	);
+
+	cookieSettingClose.addEventListener('click', e => {
+		e.preventDefault();
+		for (let key in cookieSwitchesLibrary) {
+			setLocalStorage(key, cookieSwitchesLibrary[key]);
+		}
+	});
+}
+
+function setLocalStorage(key, value) {
+	localStorage.setItem(key, value);
 }
 
 function cookieActive(selector) {
