@@ -548,6 +548,7 @@ if (document.querySelector('.cookie-plank')) {
 	if (!isAccepted) {
 		setTimeOutPopup(cookieActive, '.cookie-plank', 1500);
 	}
+	const cookieSwitchesLibrary = {};
 
 	const cookieBtn = document.querySelector('[data-cookieBtn]');
 	const cookieClose = document.querySelector('.cookie-plank [data-close]');
@@ -558,7 +559,13 @@ if (document.querySelector('.cookie-plank')) {
 		item.dataset.disabled = true;
 		bodyUnlock();
 		overlayHide();
+		cookieSwitchesLibrary['cookieAccepted'] = true;
 		setLocalStorage('cookieAccepted', true);
+		// Указываем путь к файлу куда передаются данные
+		// для функции postData первым аргументом
+
+		let url = 'https://jsonplaceholder.typicode.com/posts';
+		postData(url, cookieSwitchesLibrary);
 	});
 	cookieClose.addEventListener('click', e => {
 		e.preventDefault();
@@ -570,8 +577,6 @@ if (document.querySelector('.cookie-plank')) {
 
 	const cookieSetting = document.querySelector('#cookie-setting');
 	const cookieSwitches = cookieSetting.querySelectorAll('.switch');
-
-	const cookieSwitchesLibrary = {};
 
 	cookieSwitches.forEach(elem => {
 		setSwitchesLIbrary(elem, cookieSwitchesLibrary);
@@ -608,6 +613,26 @@ if (document.querySelector('.cookie-plank')) {
 
 function setLocalStorage(key, value) {
 	localStorage.setItem(key, value);
+}
+
+async function postData(url, obj) {
+	let response = await fetch(url, {
+		method: 'POST',
+		body: JSON.stringify(obj),
+		headers: {
+			'Content-type': 'application/json; charset=UTF-8',
+		},
+	});
+	let json;
+	if (!response.ok) {
+		console.log(`Error: ${response.status}`);
+	} else {
+		json = await response.json();
+	}
+
+	console.log(json?.analyst);
+
+	return json;
 }
 
 function cookieActive(selector) {

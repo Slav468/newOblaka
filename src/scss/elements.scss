@@ -1,5 +1,6 @@
 // Button
 .button {
+	width: fit-content;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -11,7 +12,6 @@
 	background-color: var(--text-inverse);
 	border: 1px solid var(--primary);
 	color: var(--primary);
-	width: 100%;
 	text-wrap: nowrap;
 
 	&:hover {

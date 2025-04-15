@@ -231,6 +231,7 @@
 			font-weight: 400;
 			font-size: toRem(11);
 			line-height: 2.18;
+			color: var(--text-secondary);
 		}
 
 		&:focus {
@@ -267,6 +268,7 @@
 		transform: translateY(-50%);
 		right: 10px;
 		pointer-events: none;
+		color: var(--text-secondary);
 	}
 
 	&__form {
@@ -286,6 +288,8 @@
 		border-radius: toRem(2);
 		outline: none;
 		cursor: pointer;
+		background-color: transparent;
+		color: var(--text-primary);
 
 		@media (max-width: totoRem(1440)) {
 			font-size: totoRem(11);
@@ -305,7 +309,7 @@
 			font-weight: 400;
 			font-size: toRem(14);
 			line-height: 1.71;
-			color: var(--text-primary);
+			color: var(--text-accent);
 		}
 	}
 }
@@ -318,7 +322,7 @@
 	max-width: 33.75rem;
 	font-weight: 400;
 	font-size: toRem(12);
-	color: var(--text-primary);
+	color: var(--text-accent);
 
 	&:has(.checkbox__input:checked) {
 		.checkbox__svg {
@@ -451,11 +455,12 @@
 		height: 100%;
 		font-weight: 400;
 		font-size: 12px;
-		color: #333;
+		color: var(--text-primary);
 	}
 	&__svg {
 		display: flex;
 		height: 100%;
 		width: toRem(24);
+		color: var(--text-primary);
 	}
 }
