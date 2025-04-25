@@ -418,6 +418,19 @@
 									color: var(--text-inverse);
 								}
 							}
+
+							@media (any-hover: hover) {
+								&:hover {
+									& > .menu__link {
+										color: var(--primary);
+									}
+									& > .menu__svg {
+										& > .svg-arrow-down {
+											color: var(--primary);
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -531,6 +544,19 @@
 							& > .menu__svg {
 								& > .svg-arrow-down {
 									color: var(--text-primary);
+								}
+							}
+
+							@media (any-hover: hover) {
+								&:hover {
+									& > .menu__link {
+										color: var(--primary);
+									}
+									& > .menu__svg {
+										& > .svg-arrow-down {
+											color: var(--primary);
+										}
+									}
 								}
 							}
 						}

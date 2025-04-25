@@ -213,6 +213,12 @@
 		}
 	}
 
+	& .contacts-block {
+		&__social {
+			justify-content: flex-start;
+		}
+	}
+
 	& .svg-arrow-close {
 		width: 27px;
 		height: 27px;

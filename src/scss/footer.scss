@@ -120,6 +120,11 @@
 				color: var(--text-inverse);
 			}
 		}
+		& .contacts-block {
+			&__social {
+				justify-content: flex-start;
+			}
+		}
 
 		& .contacts__block {
 			gap: toRem(13);
